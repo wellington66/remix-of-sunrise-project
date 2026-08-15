@@ -2,13 +2,13 @@ import { createFileRoute } from "@tanstack/react-router";
 import { motion } from "framer-motion";
 import { CheckCircle2, Star, ShieldCheck, ArrowRight, Minus, Plus, Zap, Clock, Smartphone, Gift, Heart, UserCheck, Play, ArrowDown, Timer } from "lucide-react";
 import { useState, useEffect } from "react";
-import cuscuzQueijoAsset from "@/assets/cuscuz_queijo.png.asset.json";
-import shakshukaAsset from "@/assets/shakshuka.png.asset.json";
-import bananaCrepeAsset from "@/assets/banana_crepe.png.asset.json";
-import cuscuzOvoAsset from "@/assets/cuscuz_ovo.png.asset.json";
-import bananaCupcakeBowlAsset from "@/assets/banana_cupcake_bowl.png.asset.json";
-import crepiocaFrangoAsset from "@/assets/crepioca_frango.png.asset.json";
-import guiaMockupAsset from "@/assets/book_mockup_new.jpg.asset.json";
+const cuscuzQueijoUrl = "/assets/cuscuz_queijo.png";
+const shakshukaUrl = "/assets/shakshuka.png";
+const bananaCrepeUrl = "/assets/banana_crepe.png";
+const cuscuzOvoUrl = "/assets/cuscuz_ovo.png";
+const bananaCupcakeBowlUrl = "/assets/banana_cupcake_bowl.png";
+const crepiocaFrangoUrl = "/assets/crepioca_frango.png";
+const guiaMockupUrl = "/assets/book_mockup.jpg";
 
 
 
@@ -70,7 +70,7 @@ function Index() {
               <div className="relative group">
                 <div className="absolute -inset-4 bg-[#D64D3F]/10 rounded-[3rem] blur-2xl group-hover:bg-[#D64D3F]/20 transition-all duration-500" />
                 <img 
-                  src={guiaMockupAsset.url}
+                  src={guiaMockupUrl}
                   alt="Guia das 101 Receitas Mockup"
                   className="relative w-full rounded-[2.5rem] shadow-2xl border-[12px] border-white transform -rotate-1 hover:rotate-0 transition-transform duration-700"
                 />
@@ -161,7 +161,7 @@ function Index() {
             <div className="relative">
               <div className="absolute -inset-4 bg-[#1B4332]/5 rounded-full blur-3xl" />
               <img 
-                src={shakshukaAsset.url} 
+                src={shakshukaUrl} 
                 className="relative rounded-[3rem] shadow-2xl border-8 border-[#F5F0E8] z-10" 
                 alt="Transformação Saudável" 
               />
@@ -182,12 +182,12 @@ function Index() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
           {[
-            { img: cuscuzQueijoAsset.url, title: "CUSCUZ ANTI-INFLAMATÓRIO", desc: "Substitua o pão por energia limpa e saciedade prolongada." },
-            { img: shakshukaAsset.url, title: "SHAKSHUKA QUEIMA-GORDURA", desc: "Poder termogênico natural para acelerar seu metabolismo." },
-            { img: bananaCrepeAsset.url, title: "DOCE SEM CULPA", desc: "Mate a vontade de açúcar com ingredientes que nutrem suas células." },
-            { img: cuscuzOvoAsset.url, title: "COMBO PROTEICO MATINAL", desc: "Músculos firmes e fome controlada até o almoço." },
-            { img: bananaCupcakeBowlAsset.url, title: "CAFÉ RÁPIDO PARA A PRESSA", desc: "5 minutos para um dia inteiro de disposição mental." },
-            { img: crepiocaFrangoAsset.url, title: "CREPIOCA ESTRUTURAL", desc: "O substituto perfeito para o sanduíche da manhã." }
+            { img: cuscuzQueijoUrl, title: "CUSCUZ ANTI-INFLAMATÓRIO", desc: "Substitua o pão por energia limpa e saciedade prolongada." },
+            { img: shakshukaUrl, title: "SHAKSHUKA QUEIMA-GORDURA", desc: "Poder termogênico natural para acelerar seu metabolismo." },
+            { img: bananaCrepeUrl, title: "DOCE SEM CULPA", desc: "Mate a vontade de açúcar com ingredientes que nutrem suas células." },
+            { img: cuscuzOvoUrl, title: "COMBO PROTEICO MATINAL", desc: "Músculos firmes e fome controlada até o almoço." },
+            { img: bananaCupcakeBowlUrl, title: "CAFÉ RÁPIDO PARA A PRESSA", desc: "5 minutos para um dia inteiro de disposição mental." },
+            { img: crepiocaFrangoUrl, title: "CREPIOCA ESTRUTURAL", desc: "O substituto perfeito para o sanduíche da manhã." }
           ].map((item, i) => (
             <motion.div 
               key={i}
