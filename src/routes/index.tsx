@@ -6,6 +6,13 @@ import pancakeBananaAsset from "@/assets/pancake_banana.webp.asset.json";
 import paoQueijoFitAsset from "@/assets/pão_queijo_fit.webp.asset.json";
 import omeleteAsset from "@/assets/omelete_mediterraneo.png.asset.json";
 import panquecaPremiumAsset from "@/assets/panqueca_banana_premium.png.asset.json";
+import cuscuzQueijoAsset from "@/assets/cuscuz_queijo.png.asset.json";
+import shakshukaAsset from "@/assets/shakshuka.png.asset.json";
+import bananaCrepeAsset from "@/assets/banana_crepe.png.asset.json";
+import cuscuzOvoAsset from "@/assets/cuscuz_ovo.png.asset.json";
+import bananaCupcakeBowlAsset from "@/assets/banana_cupcake_bowl.png.asset.json";
+import crepiocaFrangoAsset from "@/assets/crepioca_frango.png.asset.json";
+
 
 
 export const Route = createFileRoute("/")({
