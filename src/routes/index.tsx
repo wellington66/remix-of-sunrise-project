@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { motion } from "framer-motion";
+import { CheckCircle2, Clock, Zap } from "lucide-react";
 
 export const Route = createFileRoute("/")({
   component: Index,
