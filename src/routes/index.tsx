@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+// oferta com as fotos
 import { motion } from "framer-motion";
 import { CheckCircle2, Star, ShieldCheck, ArrowRight, Minus, Plus, Zap, Clock, Smartphone, Gift, Heart, UserCheck, Play, ArrowDown, Timer } from "lucide-react";
 import { useState, useEffect } from "react";
