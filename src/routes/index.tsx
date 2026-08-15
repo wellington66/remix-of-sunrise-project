@@ -182,12 +182,12 @@ function Index() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
           {[
-            { img: cuscuzQueijoUrl, calories: "185 kcal", desc: "Substitua o pão por energia limpa e saciedade prolongada." },
-            { img: shakshukaUrl, calories: "210 kcal", desc: "Poder termogênico natural para acelerar seu metabolismo." },
-            { img: bananaCrepeUrl, calories: "195 kcal", desc: "Mate a vontade de açúcar com ingredientes que nutrem suas células." },
-            { img: cuscuzOvoUrl, calories: "220 kcal", desc: "Músculos firmes e fome controlada até o almoço." },
-            { img: bananaCupcakeBowlUrl, calories: "175 kcal", desc: "5 minutos para um dia inteiro de disposição mental." },
-            { img: crepiocaFrangoUrl, calories: "245 kcal", desc: "O substituto perfeito para o sanduíche da manhã." }
+            { img: cuscuzQueijoUrl, calories: "185 kcal" },
+            { img: shakshukaUrl, calories: "210 kcal" },
+            { img: bananaCrepeUrl, calories: "195 kcal" },
+            { img: cuscuzOvoUrl, calories: "220 kcal" },
+            { img: bananaCupcakeBowlUrl, calories: "175 kcal" },
+            { img: crepiocaFrangoUrl, calories: "245 kcal" }
           ].map((item, i) => (
             <motion.div 
               key={i}
