@@ -67,7 +67,7 @@ function Index() {
             </h1>
             
             <p className="text-lg md:text-2xl text-[#1B4332]/70 font-medium mb-12 max-w-3xl mx-auto leading-tight">
-              Aprenda 80 receitas de cafés da manhã <span className="text-[#1B4332] font-black underline decoration-[#D64D3F]/40 underline-offset-4">sem glúten e sem açúcar</span> que desinflamam o corpo e dão energia o dia todo.
+              Aprenda 101 receitas de cafés da manhã <span className="text-[#1B4332] font-black underline decoration-[#D64D3F]/40 underline-offset-4">sem glúten e sem açúcar</span> que desinflamam o corpo e dão energia o dia todo.
             </p>
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mt-12">
