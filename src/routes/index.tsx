@@ -66,23 +66,28 @@ function Index() {
               Descubra como o "vício do pão" está sabotando seu emagrecimento e recupere sua autoestima com o método de <span className="text-[#1B4332] font-black underline decoration-[#D64D3F]/40 underline-offset-4">desinflamação matinal</span> em apenas 7 dias.
             </p>
 
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mt-12">
+            <div className="mt-12 w-full max-w-5xl mx-auto">
               <div className="relative group">
-                <div className="absolute -inset-4 bg-[#D64D3F]/10 rounded-[3rem] blur-2xl group-hover:bg-[#D64D3F]/20 transition-all duration-500" />
-                <img 
+                <div className="absolute -inset-10 bg-[#D64D3F]/5 rounded-full blur-3xl opacity-50 pointer-events-none" />
+                <motion.img 
+                  initial={{ opacity: 0, scale: 0.95 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.8, ease: "easeOut" }}
                   src={guiaMockupUrl}
                   alt="Guia das 101 Receitas Mockup"
-                  className="relative w-full rounded-[2.5rem] shadow-2xl border-[12px] border-white transform -rotate-1 hover:rotate-0 transition-transform duration-700"
+                  className="relative w-full h-auto object-contain z-10"
                 />
                 {/* Floating Badge */}
-                <div className="absolute -top-6 -right-6 md:top-10 md:-right-10 bg-[#D64D3F] text-white w-28 h-28 rounded-full flex flex-col items-center justify-center shadow-2xl border-4 border-white animate-bounce-slow">
+                <div className="absolute top-0 right-0 md:top-10 md:right-10 bg-[#D64D3F] text-white w-28 h-28 rounded-full flex flex-col items-center justify-center shadow-2xl border-4 border-white animate-bounce-slow z-20">
                   <span className="text-[10px] font-bold uppercase">Apenas</span>
                   <span className="text-2xl font-[family-name:var(--font-anton)]">R$ 17,90</span>
                 </div>
               </div>
+            </div>
 
-              <div className="text-left space-y-8 lg:pl-8">
-                <div className="space-y-5">
+            <div className="grid grid-cols-1 lg:grid-cols-1 gap-12 items-center mt-12">
+              <div className="text-center space-y-8 max-w-3xl mx-auto">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   {[
                     "101 Opções práticas de 5 a 10 minutos",
                     "Sem glúten, sem lactose e sem açúcar",
