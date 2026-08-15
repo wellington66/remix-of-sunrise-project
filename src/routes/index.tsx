@@ -36,55 +36,49 @@ function Index() {
   };
 
   return (
-    <div className="min-h-screen bg-[#F5F0E8] text-[#1B4332] font-[family-name:var(--font-inter)] selection:bg-[#D64D3F]/20 overflow-x-hidden w-full relative">
+    <div className="min-h-screen bg-[#FDF9F2] text-[#1B4332] font-[family-name:var(--font-inter)] selection:bg-[#D64D3F]/20 overflow-x-hidden w-full relative">
+      {/* Top Banner */}
+      <div className="bg-[#1B4332] text-white py-2 text-center text-[10px] font-bold uppercase tracking-widest">
+        101 CAFÉS DA MANHÃ SAUDÁVEIS PARA SUBSTITUIR O PÃO
+      </div>
+
       {/* Dynamic Scarcity Header */}
       <div className="bg-[#D64D3F] text-white py-2 text-center text-[clamp(0.6rem,2vw,0.75rem)] font-black uppercase tracking-[0.2em] px-4 sticky top-0 z-[100] shadow-xl w-full">
         🚨 ATENÇÃO: Desconto expira em <span className="font-mono bg-white/20 px-2 py-0.5 rounded ml-1">{formatTime(timeLeft)}</span>
       </div>
 
-      {/* Hero Section - Super Conversion Focused */}
-      <header className="relative pt-[clamp(3rem,8vw,5rem)] pb-[clamp(6rem,12vw,10rem)] overflow-hidden bg-white w-full">
-        {/* Background Pattern */}
-        <div className="absolute inset-0 opacity-[0.03] pointer-events-none" style={{ backgroundImage: 'radial-gradient(#1B4332 1px, transparent 1px)', backgroundSize: '20px 20px' }} />
-        
-        <div className="container mx-auto px-[clamp(1rem,5vw,2.5rem)] relative z-10">
-          <motion.div 
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="text-center max-w-[min(90vw,1200px)] mx-auto"
-          >
-            <span className="inline-flex items-center gap-2 bg-[#1B4332]/5 text-[#1B4332] px-4 py-2 rounded-full text-[clamp(0.6rem,1.5vw,0.75rem)] font-bold uppercase tracking-[0.15em] mb-8 border border-[#1B4332]/10">
-              <Star className="w-3 h-3 fill-current" /> Método testado por +12.487 mulheres
-            </span>
-            
-            <h1 className="text-[clamp(2.2rem,10vw,6.5rem)] font-[family-name:var(--font-anton)] uppercase leading-[0.9] tracking-tighter mb-8 break-words">
-              TRANSFORME SEU <br className="hidden md:block"/>
-              <span className="text-[#D64D3F] drop-shadow-sm">CAFÉ DA MANHÃ</span> <br className="hidden md:block"/>
-              EM UM ALIADO DO CORPO
-            </h1>
-            
-            <p className="text-[clamp(1rem,3vw,1.5rem)] text-[#1B4332]/70 font-medium mb-12 max-w-[800px] mx-auto leading-tight px-2">
-              Abandone o pão e descubra como <span className="text-[#1B4332] font-black underline decoration-[#D64D3F]/40 underline-offset-4">desinflamar seu corpo</span> naturalmente com receitas práticas, saborosas e que aceleram sua queima de gordura logo nas primeiras horas do dia.
-            </p>
+      {/* Hero Section */}
+      <header className="relative pt-8 pb-12 bg-[#FDF9F2] w-full">
+        <div className="container mx-auto px-4 text-center">
+          <h1 className="text-[clamp(1.5rem,5vw,2.5rem)] font-black text-[#1B4332] leading-tight mb-8 uppercase">
+            101 CAFÉS DA MANHÃ SAUDÁVEIS <br/>
+            <span className="text-[#1B4332]/60">PARA SUBSTITUIR O PÃO</span>
+          </h1>
+          
+          <div className="relative max-w-4xl mx-auto mb-8">
+            <img 
+              src={guiaMockupUrl}
+              alt="Guia Mockup"
+              className="w-full h-auto"
+            />
+          </div>
 
-            <div className="mt-12 w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw]">
-              <div className="relative group">
-                <div className="absolute inset-0 bg-[#D64D3F]/5 blur-3xl opacity-30 pointer-events-none" />
-                <motion.img 
-                  initial={{ opacity: 0, scale: 0.98 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.8, ease: "easeOut" }}
-                  src={guiaMockupUrl}
-                  alt="Guia das 101 Receitas Mockup"
-                  className="relative w-full h-auto max-h-[90vh] object-contain z-10 mx-auto"
-                />
-                {/* Floating Badge */}
-                <div className="absolute top-[10%] right-[5%] md:right-[15%] bg-[#D64D3F] text-white w-[clamp(5rem,15vw,7rem)] h-[clamp(5rem,15vw,7rem)] rounded-full flex flex-col items-center justify-center shadow-2xl border-4 border-white animate-bounce-slow z-20">
-                  <span className="text-[clamp(0.5rem,1.5vw,0.65rem)] font-bold uppercase">Apenas</span>
-                  <span className="text-[clamp(1.2rem,3vw,1.5rem)] font-[family-name:var(--font-anton)]">R$ 17,90</span>
-                </div>
-              </div>
+          <div className="flex flex-col items-center gap-4 mb-8">
+            <div className="text-[#1B4332] font-black">
+              <span className="text-sm">POR APENAS</span>
+              <div className="text-4xl font-[family-name:var(--font-anton)]">R$ 17,90</div>
             </div>
+            <button className="bg-[#2D6A4F] text-white px-8 py-4 rounded-full font-black uppercase tracking-widest text-sm shadow-lg hover:scale-105 transition-transform cursor-pointer">
+              QUERO AS RECEITAS AGORA
+            </button>
+            <div className="flex gap-4 text-[10px] font-bold text-[#1B4332]/60">
+              <span className="flex items-center gap-1"><ShieldCheck className="w-3 h-3"/> ACESSO IMEDIATO</span>
+              <span className="flex items-center gap-1"><Zap className="w-3 h-3"/> COMPRA SEGURA</span>
+              <span className="flex items-center gap-1"><Gift className="w-3 h-3"/> 7 DIAS DE GARANTIA</span>
+            </div>
+          </div>
+        </div>
+      </header>
 
             <div className="grid grid-cols-1 lg:grid-cols-1 gap-12 items-center mt-12">
               <div className="text-center space-y-8 max-w-3xl mx-auto">
