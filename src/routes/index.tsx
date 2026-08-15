@@ -88,7 +88,7 @@ function Index() {
               <div className="text-left space-y-8 lg:pl-8">
                 <div className="space-y-5">
                   {[
-                    "80 Opções práticas de 5 a 10 minutos",
+                    "101 Opções práticas de 5 a 10 minutos",
                     "Sem glúten, sem lactose e sem açúcar",
                     "Ingredientes baratos de supermercado",
                     "Acabe com o inchaço matinal",
