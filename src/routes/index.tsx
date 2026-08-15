@@ -325,6 +325,33 @@ function Index() {
         </div>
       </section>
 
+      {/* Urgency Divider 2 */}
+      <div className="py-12 flex flex-col items-center justify-center text-center px-4">
+        <div className="w-px h-12 bg-[#D64D3F]/30 mb-6" />
+        <span className="text-[#D64D3F] font-black uppercase tracking-[0.3em] text-[10px] mb-8">
+          TIRE SUAS DÚVIDAS
+        </span>
+        <div className="w-px h-12 bg-[#D64D3F]/30 mb-12" />
+        
+        <div className="w-full max-w-3xl bg-[#1B4332] rounded-[2rem] p-8 md:p-12 text-white shadow-2xl relative overflow-hidden group">
+          <div className="absolute -bottom-10 -left-10 p-8 opacity-10 rotate-12 transition-transform group-hover:scale-110">
+            <ShieldCheck className="w-32 h-32" />
+          </div>
+          <div className="relative z-10">
+            <h3 className="text-xl md:text-2xl font-[family-name:var(--font-anton)] uppercase leading-tight mb-4">
+              VOCÊ ESTÁ 100% SEGURA
+            </h3>
+            <p className="text-sm opacity-80 max-w-xl mx-auto mb-6">
+              Sua satisfação é nossa prioridade. Se em 7 dias você não amar as receitas, devolvemos cada centavo.
+            </p>
+            <div className="flex justify-center gap-4">
+              <ShieldCheck className="w-8 h-8 text-[#D64D3F]" />
+              <CheckCircle2 className="w-8 h-8 text-[#D64D3F]" />
+            </div>
+          </div>
+        </div>
+      </div>
+
       {/* FAQ */}
       <section className="py-24 container mx-auto px-4 max-w-3xl">
         <h2 className="text-4xl font-[family-name:var(--font-anton)] text-center mb-16 uppercase text-[#1B4332]">
