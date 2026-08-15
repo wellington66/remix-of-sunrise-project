@@ -2,6 +2,11 @@ import { createFileRoute } from "@tanstack/react-router";
 import { motion } from "framer-motion";
 import { CheckCircle2, Star, ShieldCheck, ArrowRight, Minus, Plus, Zap, Clock, Smartphone, Gift, Heart, UserCheck, Play, ArrowDown, Timer } from "lucide-react";
 import { useState, useEffect } from "react";
+import pancakeBananaAsset from "@/assets/pancake_banana.webp.asset.json";
+import paoQueijoFitAsset from "@/assets/pão_queijo_fit.webp.asset.json";
+import omeleteAsset from "@/assets/omelete_mediterraneo.png.asset.json";
+import panquecaPremiumAsset from "@/assets/panqueca_banana_premium.png.asset.json";
+
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -60,8 +65,9 @@ function Index() {
               <div className="relative group">
                 <div className="absolute -inset-4 bg-[#D64D3F]/10 rounded-[3rem] blur-2xl group-hover:bg-[#D64D3F]/20 transition-all duration-500" />
                 <img 
-                  src="https://images.unsplash.com/photo-1494390248081-4e521a5940db?q=80&w=1200&auto=format&fit=crop"
-                  alt="80 Receitas Mockup"
+                  src={panquecaPremiumAsset.url}
+                  alt="Receitas Saudáveis Mockup"
+
                   className="relative w-full rounded-[2.5rem] shadow-2xl border-[12px] border-white transform -rotate-1 hover:rotate-0 transition-transform duration-700"
                 />
                 {/* Floating Badge */}
@@ -135,12 +141,14 @@ function Index() {
           <div className="w-24 h-2 bg-[#D64D3F] mx-auto rounded-full" />
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
           {[
-            { img: "https://images.unsplash.com/photo-1525351484163-7529414344d8?q=80&w=600", title: "ADEUS INCHAÇO", desc: "Reduza o volume abdominal já nos primeiros 7 dias." },
-            { img: "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?q=80&w=600", title: "ENERGIA INFINITA", desc: "Esqueça aquela sonolência após o café da manhã." },
-            { img: "https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?q=80&w=600", title: "PALADAR RENOVADO", desc: "Descubra como comer saudável pode ser delicioso." }
+            { img: panquecaPremiumAsset.url, title: "PANQUECA AMERICANA FIT", desc: "Fofinha, deliciosa e 100% sem açúcar. O segredo para começar o dia com energia." },
+            { img: paoQueijoFitAsset.url, title: "PÃO DE QUEIJO DE FRIGIDEIRA", desc: "A textura perfeita que você ama, pronta em menos de 5 minutos." },
+            { img: omeleteAsset.url, title: "OMELETE MEDITERRÂNEO", desc: "Rico em proteínas e nutrientes que mantêm a saciedade por horas." },
+            { img: pancakeBananaAsset.url, title: "CREPIOCA DOCE DE BANANA", desc: "O equilíbrio perfeito entre o doce e o saudável para quem não abre mão do sabor." }
           ].map((item, i) => (
+
             <motion.div 
               key={i}
               whileHover={{ y: -10 }}
