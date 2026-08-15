@@ -147,5 +147,42 @@
   body {
     background-color: var(--color-background);
     color: var(--color-foreground);
+    -webkit-tap-highlight-color: transparent;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* Utility for safe areas on modern mobile devices */
+  .safe-area-inset-bottom {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+
+  /* Improved touch target for links */
+  a, button {
+    min-height: 44px;
+    min-width: 44px;
+  }
+
+  /* Prevent horizontal scroll from elements that might overflow */
+  .container {
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: clamp(1rem, 5vw, 2.5rem);
+    padding-left: clamp(1rem, 5vw, 2.5rem);
+  }
+}
+
+/* Custom breakpoints for specific content breaks */
+@media (min-width: 480px) {
+  .hero-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (hover: none) and (pointer: coarse) {
+  /* Disable hover effects on touch devices to prevent "sticky hover" */
+  .group:hover .group-hover\:scale-110 {
+    transform: none;
   }
 }

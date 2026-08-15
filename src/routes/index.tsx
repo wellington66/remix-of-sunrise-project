@@ -35,52 +35,52 @@ function Index() {
   };
 
   return (
-    <div className="min-h-screen bg-[#F5F0E8] text-[#1B4332] font-[family-name:var(--font-inter)] selection:bg-[#D64D3F]/20 overflow-x-hidden">
+    <div className="min-h-screen bg-[#F5F0E8] text-[#1B4332] font-[family-name:var(--font-inter)] selection:bg-[#D64D3F]/20 overflow-x-hidden w-full relative">
       {/* Dynamic Scarcity Header */}
-      <div className="bg-[#D64D3F] text-white py-2 text-center text-[10px] md:text-xs font-black uppercase tracking-[0.2em] px-4 sticky top-0 z-[100] shadow-xl">
+      <div className="bg-[#D64D3F] text-white py-2 text-center text-[clamp(0.6rem,2vw,0.75rem)] font-black uppercase tracking-[0.2em] px-4 sticky top-0 z-[100] shadow-xl w-full">
         🚨 ATENÇÃO: Desconto expira em <span className="font-mono bg-white/20 px-2 py-0.5 rounded ml-1">{formatTime(timeLeft)}</span>
       </div>
 
       {/* Hero Section - Super Conversion Focused */}
-      <header className="relative pt-12 md:pt-20 pb-32 overflow-hidden bg-white">
+      <header className="relative pt-[clamp(3rem,8vw,5rem)] pb-[clamp(6rem,12vw,10rem)] overflow-hidden bg-white w-full">
         {/* Background Pattern */}
         <div className="absolute inset-0 opacity-[0.03] pointer-events-none" style={{ backgroundImage: 'radial-gradient(#1B4332 1px, transparent 1px)', backgroundSize: '20px 20px' }} />
         
-        <div className="container mx-auto px-4 relative z-10">
+        <div className="container mx-auto px-[clamp(1rem,5vw,2.5rem)] relative z-10">
           <motion.div 
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            className="text-center max-w-5xl mx-auto"
+            className="text-center max-w-[min(90vw,1200px)] mx-auto"
           >
-            <span className="inline-flex items-center gap-2 bg-[#1B4332]/5 text-[#1B4332] px-4 py-2 rounded-full text-[10px] md:text-xs font-bold uppercase tracking-[0.15em] mb-8 border border-[#1B4332]/10">
+            <span className="inline-flex items-center gap-2 bg-[#1B4332]/5 text-[#1B4332] px-4 py-2 rounded-full text-[clamp(0.6rem,1.5vw,0.75rem)] font-bold uppercase tracking-[0.15em] mb-8 border border-[#1B4332]/10">
               <Star className="w-3 h-3 fill-current" /> Método testado por +12.487 mulheres
             </span>
             
-            <h1 className="text-[2.8rem] md:text-[6.5rem] font-[family-name:var(--font-anton)] uppercase leading-[0.85] tracking-tight mb-8">
-              CANSADA DE SE SENTIR <br/>
-              <span className="text-[#D64D3F] drop-shadow-sm">INCHADA E SEM ENERGIA</span> <br/>
+            <h1 className="text-[clamp(2.2rem,10vw,6.5rem)] font-[family-name:var(--font-anton)] uppercase leading-[0.9] tracking-tighter mb-8 break-words">
+              CANSADA DE SE SENTIR <br className="hidden md:block"/>
+              <span className="text-[#D64D3F] drop-shadow-sm">INCHADA E SEM ENERGIA</span> <br className="hidden md:block"/>
               LOGO PELA MANHÃ?
             </h1>
             
-            <p className="text-lg md:text-2xl text-[#1B4332]/70 font-medium mb-12 max-w-3xl mx-auto leading-tight">
+            <p className="text-[clamp(1rem,3vw,1.5rem)] text-[#1B4332]/70 font-medium mb-12 max-w-[800px] mx-auto leading-tight px-2">
               Descubra como o "vício do pão" está sabotando seu emagrecimento e recupere sua autoestima com o método de <span className="text-[#1B4332] font-black underline decoration-[#D64D3F]/40 underline-offset-4">desinflamação matinal</span> em apenas 7 dias.
             </p>
 
-            <div className="mt-12 w-full max-w-5xl mx-auto">
-              <div className="relative group">
-                <div className="absolute -inset-10 bg-[#D64D3F]/5 rounded-full blur-3xl opacity-50 pointer-events-none" />
+            <div className="mt-12 w-full max-w-5xl mx-auto px-2">
+              <div className="relative group aspect-video md:aspect-auto">
+                <div className="absolute -inset-[clamp(1rem,5vw,2.5rem)] bg-[#D64D3F]/5 rounded-full blur-3xl opacity-50 pointer-events-none" />
                 <motion.img 
                   initial={{ opacity: 0, scale: 0.95 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 0.8, ease: "easeOut" }}
                   src={guiaMockupUrl}
                   alt="Guia das 101 Receitas Mockup"
-                  className="relative w-full h-auto object-contain z-10"
+                  className="relative w-full h-auto max-h-[70vh] object-contain z-10 mx-auto"
                 />
                 {/* Floating Badge */}
-                <div className="absolute top-0 right-0 md:top-10 md:right-10 bg-[#D64D3F] text-white w-28 h-28 rounded-full flex flex-col items-center justify-center shadow-2xl border-4 border-white animate-bounce-slow z-20">
-                  <span className="text-[10px] font-bold uppercase">Apenas</span>
-                  <span className="text-2xl font-[family-name:var(--font-anton)]">R$ 17,90</span>
+                <div className="absolute -top-4 -right-2 md:top-10 md:right-10 bg-[#D64D3F] text-white w-[clamp(5rem,15vw,7rem)] h-[clamp(5rem,15vw,7rem)] rounded-full flex flex-col items-center justify-center shadow-2xl border-4 border-white animate-bounce-slow z-20">
+                  <span className="text-[clamp(0.5rem,1.5vw,0.65rem)] font-bold uppercase">Apenas</span>
+                  <span className="text-[clamp(1.2rem,3vw,1.5rem)] font-[family-name:var(--font-anton)]">R$ 17,90</span>
                 </div>
               </div>
             </div>
@@ -95,15 +95,15 @@ function Index() {
                     "Acabe com o inchaço matinal",
                     "5 Bônus exclusivos (Lista de compras + Detox)"
                   ].map((text, i) => (
-                    <div key={i} className="flex items-center gap-4 bg-[#F5F0E8]/50 p-4 rounded-2xl border border-[#1B4332]/5 hover:border-[#1B4332]/20 transition-all">
+                    <div key={i} className="flex items-center gap-4 bg-[#F5F0E8]/50 p-4 rounded-2xl border border-[#1B4332]/5 hover:border-[#1B4332]/20 transition-all min-h-[44px]">
                       <CheckCircle2 className="w-6 h-6 text-[#1B4332] shrink-0" />
-                      <span className="text-sm font-bold uppercase tracking-tight">{text}</span>
+                      <span className="text-[clamp(0.75rem,2vw,0.875rem)] font-bold uppercase tracking-tight text-left">{text}</span>
                     </div>
                   ))}
                 </div>
 
                 <div className="space-y-6 pt-4 max-w-xl mx-auto">
-                  <button className="w-full bg-[#1B4332] text-white py-7 rounded-[2rem] font-black uppercase tracking-[0.2em] text-xl md:text-2xl shadow-[0_20px_60px_rgba(27,67,50,0.3)] hover:scale-[1.02] hover:shadow-[0_25px_70px_rgba(27,67,50,0.4)] active:scale-95 transition-all relative overflow-hidden group">
+                  <button className="w-full bg-[#1B4332] text-white py-[clamp(1.2rem,4vw,1.75rem)] rounded-[2rem] font-black uppercase tracking-[0.2em] text-[clamp(1rem,3vw,1.5rem)] shadow-[0_20px_60px_rgba(27,67,50,0.3)] hover:scale-[1.02] hover:shadow-[0_25px_70px_rgba(27,67,50,0.4)] active:scale-95 transition-all relative overflow-hidden group min-h-[44px] cursor-pointer touch-manipulation">
                     <span className="relative z-10">SIM! QUERO MEU E-BOOK</span>
                     <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
                   </button>
@@ -144,9 +144,9 @@ function Index() {
       {/* AIDA: Interest - Why this is for them */}
       <section className="py-24 bg-white">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center max-w-6xl mx-auto">
-            <div className="space-y-6">
-              <h2 className="text-4xl md:text-5xl font-[family-name:var(--font-anton)] uppercase leading-none">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-[clamp(2rem,10vw,4rem)] items-center max-w-7xl mx-auto">
+            <div className="space-y-6 px-2">
+              <h2 className="text-[clamp(1.8rem,6vw,3.5rem)] font-[family-name:var(--font-anton)] uppercase leading-[1.1]">
                 POR QUE VOCÊ CONTINUA <br/>
                 <span className="text-[#D64D3F]">GANHANDO PESO</span> <br/>
                 MESMO COMENDO "POUCO"?
@@ -167,7 +167,7 @@ function Index() {
               <div className="absolute -inset-4 bg-[#1B4332]/5 rounded-full blur-3xl" />
               <img 
                 src={shakshukaUrl} 
-                className="relative rounded-[3rem] shadow-2xl border-8 border-[#F5F0E8] z-10" 
+                className="relative rounded-[clamp(1.5rem,5vw,3rem)] shadow-2xl border-8 border-[#F5F0E8] z-10 w-full h-auto object-cover aspect-[4/3] md:aspect-square" 
                 alt="Transformação Saudável" 
               />
             </div>
@@ -185,7 +185,7 @@ function Index() {
           <p className="text-[#1B4332]/60 font-bold uppercase tracking-widest text-xs">Transforme seu corpo começando pelo prato</p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-[clamp(1rem,4vw,2rem)] max-w-7xl mx-auto">
           {[
             { img: cuscuzQueijoUrl, calories: "185 kcal" },
             { img: shakshukaUrl, calories: "210 kcal" },
@@ -197,10 +197,10 @@ function Index() {
             <motion.div 
               key={i}
               whileHover={{ y: -10 }}
-              className="bg-white rounded-[2rem] overflow-hidden shadow-xl border border-[#1B4332]/5 group relative"
+              className="bg-white rounded-[clamp(1rem,3vw,2rem)] overflow-hidden shadow-xl border border-[#1B4332]/5 group relative w-full"
             >
-              <div className="h-64 overflow-hidden relative">
-                <img src={item.img} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt={`Receita ${i + 1}`} />
+              <div className="aspect-[4/3] md:aspect-square overflow-hidden relative">
+                <img src={item.img} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt={`Receita ${i + 1}`} loading="lazy" />
                 <div className="absolute top-4 right-4 bg-[#D64D3F] text-white px-4 py-2 rounded-full text-xs font-black shadow-lg">
                   {item.calories}
                 </div>
@@ -212,44 +212,44 @@ function Index() {
       </section>
 
       {/* Main CTA (Urgency) */}
-      <section className="py-24 bg-[#1B4332] text-white text-center px-4 relative overflow-hidden">
+      <section className="py-[clamp(4rem,10vw,8rem)] bg-[#1B4332] text-white text-center px-4 relative overflow-hidden w-full">
         <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-transparent via-[#D64D3F] to-transparent" />
         <div className="container mx-auto max-w-4xl space-y-12">
-          <div className="space-y-4">
-            <h2 className="text-5xl md:text-[6.5rem] font-[family-name:var(--font-anton)] leading-[0.85] uppercase">
-              DEIXE O PÃO <br/>
+          <div className="space-y-4 px-2">
+            <h2 className="text-[clamp(2.5rem,8vw,6.5rem)] font-[family-name:var(--font-anton)] leading-[0.9] uppercase break-words">
+              DEIXE O PÃO <br className="hidden md:block"/>
               NO PASSADO!
             </h2>
-            <p className="text-xl md:text-3xl font-[family-name:var(--font-anton)] text-[#D64D3F] uppercase tracking-wider">
+            <p className="text-[clamp(1rem,3vw,1.8rem)] font-[family-name:var(--font-anton)] text-[#D64D3F] uppercase tracking-wider px-2">
               GARANTA SEU ACESSO COM O MELHOR DESCONTO DO ANO
             </p>
           </div>
           
-          <div className="bg-white/5 border border-white/10 p-12 rounded-[3rem] backdrop-blur-md">
-            <div className="flex flex-col md:flex-row items-center justify-center gap-8 mb-12">
-              <div className="text-left">
-                <span className="text-lg line-through opacity-40 block font-bold">DE R$ 97,00</span>
-                <span className="text-8xl font-[family-name:var(--font-anton)] text-white">R$ 17,90</span>
+          <div className="bg-white/5 border border-white/10 p-[clamp(1.5rem,5vw,3rem)] rounded-[clamp(1.5rem,3vw,3rem)] backdrop-blur-md">
+            <div className="flex flex-col md:flex-row items-center justify-center gap-[clamp(1rem,4vw,2rem)] mb-12">
+              <div className="text-center md:text-left">
+                <span className="text-[clamp(0.875rem,2vw,1.125rem)] line-through opacity-40 block font-bold">DE R$ 97,00</span>
+                <span className="text-[clamp(4rem,10vw,8rem)] font-[family-name:var(--font-anton)] text-white leading-none">R$ 17,90</span>
               </div>
               <div className="hidden md:block w-px h-24 bg-white/20" />
-              <div className="text-left space-y-2">
-                <div className="flex items-center gap-2 text-[#D64D3F] font-black uppercase text-xs tracking-widest">
+              <div className="text-center md:text-left space-y-2">
+                <div className="flex items-center justify-center md:justify-start gap-2 text-[#D64D3F] font-black uppercase text-[clamp(0.6rem,1.5vw,0.75rem)] tracking-widest">
                   <Timer className="w-4 h-4" /> Oferta por tempo limitado
                 </div>
-                <p className="text-sm opacity-60">Pagamento único. <br/>Acesso vitalício ao guia.</p>
+                <p className="text-[clamp(0.75rem,2vw,0.875rem)] opacity-60">Pagamento único. <br/>Acesso vitalício ao guia.</p>
               </div>
             </div>
             
-            <button className="w-full max-w-md bg-[#D64D3F] text-white py-8 rounded-full font-black uppercase tracking-[0.2em] text-2xl shadow-[0_20px_60px_rgba(214,77,63,0.4)] hover:scale-105 active:scale-95 transition-all">
+            <button className="w-full max-w-md bg-[#D64D3F] text-white py-[clamp(1.2rem,4vw,1.75rem)] rounded-full font-black uppercase tracking-[0.2em] text-[clamp(1.2rem,3vw,1.5rem)] shadow-[0_20px_60px_rgba(214,77,63,0.4)] hover:scale-105 active:scale-95 transition-all cursor-pointer touch-manipulation">
               QUERO MEU E-BOOK AGORA
             </button>
           </div>
           
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 opacity-60 max-w-3xl mx-auto">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 opacity-60 max-w-3xl mx-auto px-2">
             {["Acesso Imediato", "Garantia 7 Dias", "Compra Segura", "PDF Digital"].map((text, i) => (
               <div key={i} className="flex flex-col items-center gap-2">
-                <ShieldCheck className="w-6 h-6" />
-                <span className="text-[10px] font-bold uppercase tracking-widest">{text}</span>
+                <ShieldCheck className="w-[clamp(1.2rem,3vw,1.5rem)] h-[clamp(1.2rem,3vw,1.5rem)]" />
+                <span className="text-[clamp(0.5rem,1.5vw,0.65rem)] font-bold uppercase tracking-widest">{text}</span>
               </div>
             ))}
           </div>
@@ -258,22 +258,22 @@ function Index() {
 
       {/* FAQ Accordion */}
       <section className="py-24 container mx-auto px-4 max-w-3xl">
-        <h2 className="text-3xl md:text-5xl font-[family-name:var(--font-anton)] text-center mb-16 uppercase">
+        <h2 className="text-[clamp(1.8rem,5vw,3rem)] font-[family-name:var(--font-anton)] text-center mb-[clamp(2rem,6vw,4rem)] uppercase px-2">
           PERGUNTAS FREQUENTES
         </h2>
-        <div className="space-y-4">
+        <div className="space-y-4 px-2">
           {[
             { q: "Vou receber o livro na minha casa?", a: "Não, o E-book é 100% digital (PDF). O acesso é enviado imediatamente para o seu e-mail após a confirmação do pagamento." },
             { q: "As receitas são difíceis?", a: "Pelo contrário. Foram pensadas para a vida corrida, com preparos que levam de 5 a 10 minutos no máximo." },
             { q: "Preciso de ingredientes caros?", a: "Não. Utilizamos ingredientes simples que você já tem em casa ou encontra em qualquer mercado de bairro." },
             { q: "Tem garantia?", a: "Sim! Você tem 7 dias de garantia incondicional. Se não gostar, devolvemos 100% do seu dinheiro." }
           ].map((item, i) => (
-            <details key={i} className="group bg-white rounded-3xl border border-[#1B4332]/5 shadow-sm overflow-hidden transition-all duration-300">
-              <summary className="flex items-center justify-between p-8 cursor-pointer list-none font-black text-[#1B4332] uppercase text-xs md:text-sm tracking-widest group-open:bg-[#F5F0E8]/50">
+            <details key={i} className="group bg-white rounded-[clamp(1rem,2vw,1.5rem)] border border-[#1B4332]/5 shadow-sm overflow-hidden transition-all duration-300">
+              <summary className="flex items-center justify-between p-[clamp(1rem,3vw,1.5rem)] cursor-pointer list-none font-black text-[#1B4332] uppercase text-[clamp(0.65rem,1.8vw,0.85rem)] tracking-widest group-open:bg-[#F5F0E8]/50 outline-none focus-visible:ring-2 focus-visible:ring-[#1B4332]/20">
                 {item.q}
                 <ArrowDown className="w-4 h-4 text-[#D64D3F] transition-transform duration-300 group-open:rotate-180" />
               </summary>
-              <div className="p-8 pt-0 text-sm md:text-base opacity-70 leading-relaxed font-medium border-t border-[#1B4332]/5">
+              <div className="p-[clamp(1rem,3vw,1.5rem)] pt-0 text-[clamp(0.875rem,2vw,1rem)] opacity-70 leading-relaxed font-medium border-t border-[#1B4332]/5">
                 {item.a}
               </div>
             </details>
@@ -282,18 +282,18 @@ function Index() {
       </section>
 
       {/* Footer */}
-      <footer className="py-20 bg-[#F5F0E8] border-t border-[#1B4332]/5 text-center px-4">
+      <footer className="py-[clamp(3rem,8vw,5rem)] bg-[#F5F0E8] border-t border-[#1B4332]/5 text-center px-4 w-full mb-[80px] md:mb-0">
         <div className="container mx-auto space-y-12">
           <div className="space-y-6">
-            <h4 className="text-2xl font-[family-name:var(--font-anton)] uppercase text-[#1B4332]">Chef Mônica Maciel</h4>
-            <div className="flex justify-center gap-8 text-[10px] font-black uppercase tracking-[0.2em] text-[#1B4332]/40">
-              <a href="#" className="hover:text-[#D64D3F] transition-colors">Privacidade</a>
-              <a href="#" className="hover:text-[#D64D3F] transition-colors">Termos</a>
-              <a href="#" className="hover:text-[#D64D3F] transition-colors">Suporte</a>
+            <h4 className="text-[clamp(1.2rem,3vw,1.5rem)] font-[family-name:var(--font-anton)] uppercase text-[#1B4332]">Chef Mônica Maciel</h4>
+            <div className="flex flex-wrap justify-center gap-[clamp(1rem,4vw,2rem)] text-[clamp(0.5rem,1.5vw,0.65rem)] font-black uppercase tracking-[0.2em] text-[#1B4332]/40">
+              <a href="#" className="hover:text-[#D64D3F] transition-colors p-2">Privacidade</a>
+              <a href="#" className="hover:text-[#D64D3F] transition-colors p-2">Termos</a>
+              <a href="#" className="hover:text-[#D64D3F] transition-colors p-2">Suporte</a>
             </div>
           </div>
           
-          <div className="max-w-4xl mx-auto space-y-6 opacity-20 text-[9px] font-black uppercase tracking-[0.1em] leading-relaxed">
+          <div className="max-w-4xl mx-auto space-y-6 opacity-20 text-[clamp(0.5rem,1.2vw,0.6rem)] font-black uppercase tracking-[0.1em] leading-relaxed px-4">
             <p>Este site não faz parte do site do Facebook ou do Facebook Inc. Além disso, este site NÃO é endossado pelo Facebook de nenhuma maneira.</p>
             <p>© 2026 Todos os direitos reservados. Resultados variam de pessoa para pessoa.</p>
           </div>
@@ -301,37 +301,40 @@ function Index() {
       </footer>
 
       {/* High-Conv Sticky Mobile Footer */}
-      <div className="md:hidden fixed bottom-0 left-0 right-0 bg-white border-t border-[#1B4332]/10 p-5 z-[100] flex items-center justify-between shadow-[0_-15px_40px_rgba(0,0,0,0.1)]">
+      <div className="md:hidden fixed bottom-0 left-0 right-0 bg-white border-t border-[#1B4332]/10 p-4 z-[100] flex items-center justify-between shadow-[0_-15px_40px_rgba(0,0,0,0.1)] safe-area-inset-bottom">
         <div className="flex flex-col">
-          <span className="text-[10px] text-[#D64D3F] line-through font-black leading-none">R$ 97,00</span>
-          <span className="text-3xl font-[family-name:var(--font-anton)] text-[#1B4332] leading-none">R$ 17,90</span>
+          <span className="text-[0.65rem] text-[#D64D3F] line-through font-black leading-none">R$ 97,00</span>
+          <span className="text-[1.8rem] font-[family-name:var(--font-anton)] text-[#1B4332] leading-none">R$ 17,90</span>
         </div>
-        <button className="bg-[#D64D3F] text-white px-8 py-4 rounded-full font-black uppercase tracking-widest text-xs shadow-xl animate-pulse-slow">
+        <button className="bg-[#D64D3F] text-white px-6 py-3 rounded-full font-black uppercase tracking-widest text-[0.7rem] shadow-xl animate-pulse-slow min-h-[44px] cursor-pointer touch-manipulation">
           COMPRAR AGORA
         </button>
       </div>
 
       <style>{`
         @keyframes marquee {
-          0% { transform: translateX(0); }
-          100% { transform: translateX(-50%); }
+          0% { transform: translate3d(0, 0, 0); }
+          100% { transform: translate3d(-50%, 0, 0); }
         }
         .animate-marquee {
           animation: marquee 30s linear infinite;
+          will-change: transform;
         }
         @keyframes bounce-slow {
-          0%, 100% { transform: translateY(0) rotate(12deg); }
-          50% { transform: translateY(-10px) rotate(12deg); }
+          0%, 100% { transform: translate3d(0, 0, 0) rotate(12deg); }
+          50% { transform: translate3d(0, -10px, 0) rotate(12deg); }
         }
         .animate-bounce-slow {
           animation: bounce-slow 3s ease-in-out infinite;
+          will-change: transform;
         }
         @keyframes pulse-slow {
-          0%, 100% { transform: scale(1); }
-          50% { transform: scale(1.05); }
+          0%, 100% { transform: scale3d(1, 1, 1); }
+          50% { transform: scale3d(1.05, 1.05, 1); }
         }
         .animate-pulse-slow {
           animation: pulse-slow 2s ease-in-out infinite;
+          will-change: transform;
         }
       `}</style>
     </div>
