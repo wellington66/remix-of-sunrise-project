@@ -9,7 +9,7 @@ const bananaCrepeUrl = "/assets/banana_crepe.png";
 const cuscuzOvoUrl = "/assets/cuscuz_ovo.png";
 const bananaCupcakeBowlUrl = "/assets/banana_cupcake_bowl.png";
 const crepiocaFrangoUrl = "/assets/crepioca_frango.png";
-const guiaMockupUrl = "/assets/guia_mockup_new.jpg";
+const guiaMockupUrl = "/assets/hero_mockup.jpg";
 
 
 
