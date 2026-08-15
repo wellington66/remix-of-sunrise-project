@@ -182,23 +182,25 @@ function Index() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
           {[
-            { img: cuscuzQueijoUrl, title: "Cuscuz com Queijo Derretido", desc: "Substitua o pão por energia limpa e saciedade prolongada." },
-            { img: shakshukaUrl, title: "Shakshuka Nutritiva", desc: "Poder termogênico natural para acelerar seu metabolismo." },
-            { img: bananaCrepeUrl, title: "Crepe de Banana e Canela", desc: "Mate a vontade de açúcar com ingredientes que nutrem suas células." },
-            { img: cuscuzOvoUrl, title: "Cuscuz Nordestino com Ovo", desc: "Músculos firmes e fome controlada até o almoço." },
-            { img: bananaCupcakeBowlUrl, title: "Bowl de Banana e Granola", desc: "5 minutos para um dia inteiro de disposição mental." },
-            { img: crepiocaFrangoUrl, title: "Crepioca Fit de Frango", desc: "O substituto perfeito para o sanduíche da manhã." }
+            { img: cuscuzQueijoUrl, calories: "185 kcal", desc: "Substitua o pão por energia limpa e saciedade prolongada." },
+            { img: shakshukaUrl, calories: "210 kcal", desc: "Poder termogênico natural para acelerar seu metabolismo." },
+            { img: bananaCrepeUrl, calories: "195 kcal", desc: "Mate a vontade de açúcar com ingredientes que nutrem suas células." },
+            { img: cuscuzOvoUrl, calories: "220 kcal", desc: "Músculos firmes e fome controlada até o almoço." },
+            { img: bananaCupcakeBowlUrl, calories: "175 kcal", desc: "5 minutos para um dia inteiro de disposição mental." },
+            { img: crepiocaFrangoUrl, calories: "245 kcal", desc: "O substituto perfeito para o sanduíche da manhã." }
           ].map((item, i) => (
             <motion.div 
               key={i}
               whileHover={{ y: -10 }}
-              className="bg-white rounded-[2rem] overflow-hidden shadow-xl border border-[#1B4332]/5 group"
+              className="bg-white rounded-[2rem] overflow-hidden shadow-xl border border-[#1B4332]/5 group relative"
             >
-              <div className="h-64 overflow-hidden">
-                <img src={item.img} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt={item.title} />
+              <div className="h-64 overflow-hidden relative">
+                <img src={item.img} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt={`Receita ${i + 1}`} />
+                <div className="absolute top-4 right-4 bg-[#D64D3F] text-white px-4 py-2 rounded-full text-xs font-black shadow-lg">
+                  {item.calories}
+                </div>
               </div>
               <div className="p-8 text-center space-y-4">
-                <h3 className="text-2xl font-[family-name:var(--font-anton)] uppercase tracking-tight leading-tight">{item.title}</h3>
                 <p className="text-sm opacity-70 font-medium leading-relaxed">{item.desc}</p>
               </div>
             </motion.div>
