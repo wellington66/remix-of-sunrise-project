@@ -313,25 +313,28 @@ function Index() {
 
       <style>{`
         @keyframes marquee {
-          0% { transform: translateX(0); }
-          100% { transform: translateX(-50%); }
+          0% { transform: translate3d(0, 0, 0); }
+          100% { transform: translate3d(-50%, 0, 0); }
         }
         .animate-marquee {
           animation: marquee 30s linear infinite;
+          will-change: transform;
         }
         @keyframes bounce-slow {
-          0%, 100% { transform: translateY(0) rotate(12deg); }
-          50% { transform: translateY(-10px) rotate(12deg); }
+          0%, 100% { transform: translate3d(0, 0, 0) rotate(12deg); }
+          50% { transform: translate3d(0, -10px, 0) rotate(12deg); }
         }
         .animate-bounce-slow {
           animation: bounce-slow 3s ease-in-out infinite;
+          will-change: transform;
         }
         @keyframes pulse-slow {
-          0%, 100% { transform: scale(1); }
-          50% { transform: scale(1.05); }
+          0%, 100% { transform: scale3d(1, 1, 1); }
+          50% { transform: scale3d(1.05, 1.05, 1); }
         }
         .animate-pulse-slow {
           animation: pulse-slow 2s ease-in-out infinite;
+          will-change: transform;
         }
       `}</style>
     </div>
