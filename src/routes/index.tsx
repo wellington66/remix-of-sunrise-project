@@ -105,7 +105,7 @@ function Index() {
 
                 <div className="space-y-6 pt-4 max-w-xl mx-auto">
                   <button className="w-full bg-[#1B4332] text-white py-[clamp(1.2rem,4vw,1.75rem)] rounded-[2rem] font-black uppercase tracking-[0.2em] text-[clamp(1rem,3vw,1.5rem)] shadow-[0_20px_60px_rgba(27,67,50,0.3)] hover:scale-[1.02] hover:shadow-[0_25px_70px_rgba(27,67,50,0.4)] active:scale-95 transition-all relative overflow-hidden group min-h-[44px] cursor-pointer touch-manipulation">
-                    <span className="relative z-10">SIM! QUERO MEU E-BOOK</span>
+                    <span className="relative z-10">SIM! QUERO AS RECEITAS AGORA</span>
                     <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
                   </button>
                   <div className="flex flex-col items-center gap-3">
