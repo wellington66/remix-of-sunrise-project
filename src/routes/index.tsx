@@ -143,18 +143,20 @@ function Index() {
       </div>
 
       {/* AIDA: Interest - Why this is for them */}
-      <section className="py-24 bg-white">
+      <section className="py-24 bg-white relative">
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-[#D64D3F] text-white px-6 py-2 rounded-full text-[10px] font-black uppercase tracking-[0.2em] shadow-lg z-20">
+          segunda sessão
+        </div>
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-[clamp(2rem,10vw,4rem)] items-center max-w-7xl mx-auto">
             <div className="space-y-6 px-2">
               <h2 className="text-[clamp(1.8rem,6vw,3.5rem)] font-[family-name:var(--font-anton)] uppercase leading-[1.1]">
-                O SEGREDO DE UM <br/>
-                <span className="text-[#D64D3F]">CORPO LEVE</span> <br/>
-                COMEÇA PELA MANHÃ
+                VOCÊ AINDA COME SEMPRE PÃO<br/>
+                <span className="text-[#D64D3F]">NO CAFÈ DA MANHÃ?</span>
               </h2>
               <div className="w-20 h-2 bg-[#D64D3F] rounded-full" />
               <p className="text-lg text-[#1B4332]/80 leading-relaxed font-medium">
-                O pão francês e os cereais "fit" do supermercado estão repletos de glúten e conservantes que geram uma cascata inflamatória no seu intestino. Isso bloqueia a queima de gordura e te deixa exausta antes mesmo das 10h da manhã.
+                O pão é rápido, prático e faz parte da rotina, mas muita gente acaba comendo sempre a mesma coisa por falta de ideias simples e saudáveis. Isso acontece com você?
               </p>
               <ul className="space-y-4">
                 {["Fim da sonolência pós-café", "Intestino funcionando como um relógio", "Redução visível de medidas na primeira semana"].map((item, i) => (
