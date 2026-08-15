@@ -34,7 +34,7 @@ function Index() {
       {/* Hero Section - Super Conversion Focused */}
       <header className="relative pt-12 md:pt-20 pb-32 overflow-hidden bg-white">
         {/* Background Pattern */}
-        <div className="absolute inset-0 opacity-[0.03] pointer-events-none" style={{ backgroundImage: 'radial-gradient(#1B4332 1px, transparent 1px)', size: '20px 20px' }} />
+        <div className="absolute inset-0 opacity-[0.03] pointer-events-none" style={{ backgroundImage: 'radial-gradient(#1B4332 1px, transparent 1px)', backgroundSize: '20px 20px' }} />
         
         <div className="container mx-auto px-4 relative z-10">
           <motion.div 
