@@ -258,22 +258,22 @@ function Index() {
 
       {/* FAQ Accordion */}
       <section className="py-24 container mx-auto px-4 max-w-3xl">
-        <h2 className="text-3xl md:text-5xl font-[family-name:var(--font-anton)] text-center mb-16 uppercase">
+        <h2 className="text-[clamp(1.8rem,5vw,3rem)] font-[family-name:var(--font-anton)] text-center mb-[clamp(2rem,6vw,4rem)] uppercase px-2">
           PERGUNTAS FREQUENTES
         </h2>
-        <div className="space-y-4">
+        <div className="space-y-4 px-2">
           {[
             { q: "Vou receber o livro na minha casa?", a: "Não, o E-book é 100% digital (PDF). O acesso é enviado imediatamente para o seu e-mail após a confirmação do pagamento." },
             { q: "As receitas são difíceis?", a: "Pelo contrário. Foram pensadas para a vida corrida, com preparos que levam de 5 a 10 minutos no máximo." },
             { q: "Preciso de ingredientes caros?", a: "Não. Utilizamos ingredientes simples que você já tem em casa ou encontra em qualquer mercado de bairro." },
             { q: "Tem garantia?", a: "Sim! Você tem 7 dias de garantia incondicional. Se não gostar, devolvemos 100% do seu dinheiro." }
           ].map((item, i) => (
-            <details key={i} className="group bg-white rounded-3xl border border-[#1B4332]/5 shadow-sm overflow-hidden transition-all duration-300">
-              <summary className="flex items-center justify-between p-8 cursor-pointer list-none font-black text-[#1B4332] uppercase text-xs md:text-sm tracking-widest group-open:bg-[#F5F0E8]/50">
+            <details key={i} className="group bg-white rounded-[clamp(1rem,2vw,1.5rem)] border border-[#1B4332]/5 shadow-sm overflow-hidden transition-all duration-300">
+              <summary className="flex items-center justify-between p-[clamp(1rem,3vw,1.5rem)] cursor-pointer list-none font-black text-[#1B4332] uppercase text-[clamp(0.65rem,1.8vw,0.85rem)] tracking-widest group-open:bg-[#F5F0E8]/50 outline-none focus-visible:ring-2 focus-visible:ring-[#1B4332]/20">
                 {item.q}
                 <ArrowDown className="w-4 h-4 text-[#D64D3F] transition-transform duration-300 group-open:rotate-180" />
               </summary>
-              <div className="p-8 pt-0 text-sm md:text-base opacity-70 leading-relaxed font-medium border-t border-[#1B4332]/5">
+              <div className="p-[clamp(1rem,3vw,1.5rem)] pt-0 text-[clamp(0.875rem,2vw,1rem)] opacity-70 leading-relaxed font-medium border-t border-[#1B4332]/5">
                 {item.a}
               </div>
             </details>
@@ -282,18 +282,18 @@ function Index() {
       </section>
 
       {/* Footer */}
-      <footer className="py-20 bg-[#F5F0E8] border-t border-[#1B4332]/5 text-center px-4">
+      <footer className="py-[clamp(3rem,8vw,5rem)] bg-[#F5F0E8] border-t border-[#1B4332]/5 text-center px-4 w-full mb-[80px] md:mb-0">
         <div className="container mx-auto space-y-12">
           <div className="space-y-6">
-            <h4 className="text-2xl font-[family-name:var(--font-anton)] uppercase text-[#1B4332]">Chef Mônica Maciel</h4>
-            <div className="flex justify-center gap-8 text-[10px] font-black uppercase tracking-[0.2em] text-[#1B4332]/40">
-              <a href="#" className="hover:text-[#D64D3F] transition-colors">Privacidade</a>
-              <a href="#" className="hover:text-[#D64D3F] transition-colors">Termos</a>
-              <a href="#" className="hover:text-[#D64D3F] transition-colors">Suporte</a>
+            <h4 className="text-[clamp(1.2rem,3vw,1.5rem)] font-[family-name:var(--font-anton)] uppercase text-[#1B4332]">Chef Mônica Maciel</h4>
+            <div className="flex flex-wrap justify-center gap-[clamp(1rem,4vw,2rem)] text-[clamp(0.5rem,1.5vw,0.65rem)] font-black uppercase tracking-[0.2em] text-[#1B4332]/40">
+              <a href="#" className="hover:text-[#D64D3F] transition-colors p-2">Privacidade</a>
+              <a href="#" className="hover:text-[#D64D3F] transition-colors p-2">Termos</a>
+              <a href="#" className="hover:text-[#D64D3F] transition-colors p-2">Suporte</a>
             </div>
           </div>
           
-          <div className="max-w-4xl mx-auto space-y-6 opacity-20 text-[9px] font-black uppercase tracking-[0.1em] leading-relaxed">
+          <div className="max-w-4xl mx-auto space-y-6 opacity-20 text-[clamp(0.5rem,1.2vw,0.6rem)] font-black uppercase tracking-[0.1em] leading-relaxed px-4">
             <p>Este site não faz parte do site do Facebook ou do Facebook Inc. Além disso, este site NÃO é endossado pelo Facebook de nenhuma maneira.</p>
             <p>© 2026 Todos os direitos reservados. Resultados variam de pessoa para pessoa.</p>
           </div>
