@@ -2,6 +2,11 @@ import { createFileRoute } from "@tanstack/react-router";
 import { motion } from "framer-motion";
 import { CheckCircle2, Star, ShieldCheck, ArrowRight, Minus, Plus, Zap, Clock, Smartphone, Gift, Heart, UserCheck, Play, ArrowDown, Timer } from "lucide-react";
 import { useState, useEffect } from "react";
+import pancakeBananaAsset from "@/assets/pancake_banana.webp.asset.json";
+import paoQueijoFitAsset from "@/assets/pão_queijo_fit.webp.asset.json";
+import omeleteAsset from "@/assets/omelete_mediterraneo.png.asset.json";
+import panquecaPremiumAsset from "@/assets/panqueca_banana_premium.png.asset.json";
+
 
 export const Route = createFileRoute("/")({
   component: Index,
