@@ -74,9 +74,8 @@ function Index() {
               <div className="relative group">
                 <div className="absolute -inset-4 bg-[#D64D3F]/10 rounded-[3rem] blur-2xl group-hover:bg-[#D64D3F]/20 transition-all duration-500" />
                 <img 
-                  src={panquecaPremiumAsset.url}
-                  alt="Receitas Saudáveis Mockup"
-
+                  src={guiaMockupAsset.url}
+                  alt="Guia das 101 Receitas Mockup"
                   className="relative w-full rounded-[2.5rem] shadow-2xl border-[12px] border-white transform -rotate-1 hover:rotate-0 transition-transform duration-700"
                 />
                 {/* Floating Badge */}
