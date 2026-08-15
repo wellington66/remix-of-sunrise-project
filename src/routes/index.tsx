@@ -140,23 +140,58 @@ function Index() {
         </div>
       </div>
 
-      {/* Results Section */}
+      {/* AIDA: Interest - Why this is for them */}
+      <section className="py-24 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center max-w-6xl mx-auto">
+            <div className="space-y-6">
+              <h2 className="text-4xl md:text-5xl font-[family-name:var(--font-anton)] uppercase leading-none">
+                POR QUE VOCÊ CONTINUA <br/>
+                <span className="text-[#D64D3F]">GANHANDO PESO</span> <br/>
+                MESMO COMENDO "POUCO"?
+              </h2>
+              <div className="w-20 h-2 bg-[#D64D3F] rounded-full" />
+              <p className="text-lg text-[#1B4332]/80 leading-relaxed font-medium">
+                O pão francês e os cereais "fit" do supermercado estão repletos de glúten e conservantes que geram uma cascata inflamatória no seu intestino. Isso bloqueia a queima de gordura e te deixa exausta antes mesmo das 10h da manhã.
+              </p>
+              <ul className="space-y-4">
+                {["Fim da sonolência pós-café", "Intestino funcionando como um relógio", "Redução visível de medidas na primeira semana"].map((item, i) => (
+                  <li key={i} className="flex items-center gap-3 font-bold text-sm uppercase tracking-wide">
+                    <CheckCircle2 className="w-5 h-5 text-[#D64D3F]" /> {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div className="relative">
+              <div className="absolute -inset-4 bg-[#1B4332]/5 rounded-full blur-3xl" />
+              <img 
+                src={shakshukaAsset.url} 
+                className="relative rounded-[3rem] shadow-2xl border-8 border-[#F5F0E8] z-10" 
+                alt="Transformação Saudável" 
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* AIDA: Desire - The Solution (Recipes) */}
       <section className="py-24 container mx-auto px-4">
         <div className="text-center max-w-3xl mx-auto mb-20 space-y-4">
           <h2 className="text-4xl md:text-6xl font-[family-name:var(--font-anton)] uppercase leading-none">
-            RESULTADOS QUE VOCÊ VAI SENTIR NA PELE
+            A SOLUÇÃO DELICIOSA PARA <br/>
+            <span className="text-[#D64D3F]">VOCÊ DESINFLAMAR</span>
           </h2>
-          <div className="w-24 h-2 bg-[#D64D3F] mx-auto rounded-full" />
+          <p className="text-[#1B4332]/60 font-bold uppercase tracking-widest text-xs">Transforme seu corpo começando pelo prato</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
           {[
-            { img: cuscuzQueijoAsset.url, title: "CUSCUZ COM QUEIJO DERRETIDO", desc: "A versão fitness do clássico nordestino, rica em fibras e sabor." },
-            { img: shakshukaAsset.url, title: "SHAKSHUKA TERMOGÊNICA", desc: "Ovos pochê em molho de tomate temperado para acelerar o metabolismo." },
-            { img: bananaCrepeAsset.url, title: "CREPE DE BANANA E CANELA", desc: "Um doce saudável que sacia a vontade de sobremesa logo cedo." },
-            { img: cuscuzOvoAsset.url, title: "CUSCUZ RECHEADO COM OVOS", desc: "Máxima saciedade e proteína para quem treina pela manhã." },
-            { img: bananaCupcakeBowlAsset.url, title: "BOWL DE BANANA E ESPECIARIAS", desc: "Praticidade absoluta: misture tudo e tenha um café da manhã de hotel." },
-            { img: crepiocaFrangoAsset.url, title: "CREPIOCA DE FRANGO CREMOSO", desc: "Opção salgada de alta performance para um dia produtivo." }
+            { img: cuscuzQueijoAsset.url, title: "CUSCUZ ANTI-INFLAMATÓRIO", desc: "Substitua o pão por energia limpa e saciedade prolongada." },
+            { img: shakshukaAsset.url, title: "SHAKSHUKA QUEIMA-GORDURA", desc: "Poder termogênico natural para acelerar seu metabolismo." },
+            { img: bananaCrepeAsset.url, title: "DOCE SEM CULPA", desc: "Mate a vontade de açúcar com ingredientes que nutrem suas células." },
+            { img: cuscuzOvoAsset.url, title: "COMBO PROTEICO MATINAL", desc: "Músculos firmes e fome controlada até o almoço." },
+            { img: bananaCupcakeBowlAsset.url, title: "CAFÉ RÁPIDO PARA A PRESSA", desc: "5 minutos para um dia inteiro de disposição mental." },
+            { img: crepiocaFrangoAsset.url, title: "CREPIOCA ESTRUTURAL", desc: "O substituto perfeito para o sanduíche da manhã." }
           ].map((item, i) => (
             <motion.div 
               key={i}
