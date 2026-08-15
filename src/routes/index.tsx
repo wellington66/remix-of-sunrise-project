@@ -225,24 +225,50 @@ function Index() {
             </p>
           </div>
           
-          <div className="bg-white/5 border border-white/10 p-[clamp(1.5rem,5vw,3rem)] rounded-[clamp(1.5rem,3vw,3rem)] backdrop-blur-md">
-            <div className="flex flex-col md:flex-row items-center justify-center gap-[clamp(1rem,4vw,2rem)] mb-12">
-              <div className="text-center md:text-left">
-                <span className="text-[clamp(0.875rem,2vw,1.125rem)] line-through opacity-40 block font-bold">DE R$ 97,00</span>
-                <span className="text-[clamp(4rem,10vw,8rem)] font-[family-name:var(--font-anton)] text-white leading-none">R$ 17,90</span>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
+            {/* Oferta 1: Somente o Guia */}
+            <div className="bg-white/5 border border-white/10 p-[clamp(1.5rem,5vw,2.5rem)] rounded-[clamp(1.5rem,3vw,3rem)] backdrop-blur-md flex flex-col items-center justify-between hover:bg-white/10 transition-all">
+              <div className="text-center mb-6">
+                <h3 className="text-xl font-black uppercase tracking-widest mb-2">Plano Essencial</h3>
+                <p className="text-xs opacity-60 uppercase font-bold">Somente o Guia Digital</p>
               </div>
-              <div className="hidden md:block w-px h-24 bg-white/20" />
-              <div className="text-center md:text-left space-y-2">
-                <div className="flex items-center justify-center md:justify-start gap-2 text-[#D64D3F] font-black uppercase text-[clamp(0.6rem,1.5vw,0.75rem)] tracking-widest">
-                  <Timer className="w-4 h-4" /> Oferta por tempo limitado
-                </div>
-                <p className="text-[clamp(0.75rem,2vw,0.875rem)] opacity-60">Pagamento único. <br/>Acesso vitalício ao guia.</p>
+              <div className="text-center mb-8">
+                <span className="text-sm line-through opacity-40 block font-bold">DE R$ 47,00</span>
+                <span className="text-[clamp(3rem,8vw,5rem)] font-[family-name:var(--font-anton)] text-white leading-none">R$ 17,90</span>
               </div>
+              <ul className="text-left w-full space-y-3 mb-8 text-sm opacity-80">
+                <li className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-[#D64D3F]" /> Guia com 101 Receitas</li>
+                <li className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-[#D64D3F]" /> Acesso Vitalício</li>
+                <li className="flex items-center gap-2 opacity-30 line-through"><Minus className="w-4 h-4" /> Bônus Exclusivos</li>
+              </ul>
+              <button className="w-full bg-white/20 text-white py-4 rounded-full font-black uppercase tracking-widest text-sm hover:bg-white/30 transition-all cursor-pointer touch-manipulation">
+                COMPRAR APENAS GUIA
+              </button>
             </div>
-            
-            <button className="w-full max-w-md bg-[#D64D3F] text-white py-[clamp(1.2rem,4vw,1.75rem)] rounded-full font-black uppercase tracking-[0.2em] text-[clamp(1.2rem,3vw,1.5rem)] shadow-[0_20px_60px_rgba(214,77,63,0.4)] hover:scale-105 active:scale-95 transition-all cursor-pointer touch-manipulation">
-              QUERO MEU E-BOOK AGORA
-            </button>
+
+            {/* Oferta 2: Guia + Bônus */}
+            <div className="bg-white border-2 border-[#D64D3F] p-[clamp(1.5rem,5vw,2.5rem)] rounded-[clamp(1.5rem,3vw,3rem)] flex flex-col items-center justify-between relative shadow-[0_20px_60px_rgba(214,77,63,0.3)] scale-105 z-10">
+              <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-[#D64D3F] text-white px-6 py-1 rounded-full text-[10px] font-black uppercase tracking-widest whitespace-nowrap">
+                Mais Vendido ✨
+              </div>
+              <div className="text-center mb-6">
+                <h3 className="text-xl font-black uppercase tracking-widest mb-2 text-[#1B4332]">Plano Completo</h3>
+                <p className="text-xs text-[#D64D3F] uppercase font-bold">Guia + Todos os Bônus</p>
+              </div>
+              <div className="text-center mb-8">
+                <span className="text-sm line-through text-[#1B4332]/40 block font-bold">DE R$ 97,00</span>
+                <span className="text-[clamp(3rem,8vw,5rem)] font-[family-name:var(--font-anton)] text-[#1B4332] leading-none">R$ 27,90</span>
+              </div>
+              <ul className="text-left w-full space-y-3 mb-8 text-sm text-[#1B4332]">
+                <li className="flex items-center gap-2 font-bold"><CheckCircle2 className="w-4 h-4 text-[#D64D3F]" /> Guia com 101 Receitas</li>
+                <li className="flex items-center gap-2 font-bold"><CheckCircle2 className="w-4 h-4 text-[#D64D3F]" /> Todos os 5 Bônus Inclusos</li>
+                <li className="flex items-center gap-2 font-bold"><CheckCircle2 className="w-4 h-4 text-[#D64D3F]" /> Lista de Compras Inteligente</li>
+                <li className="flex items-center gap-2 font-bold"><CheckCircle2 className="w-4 h-4 text-[#D64D3F]" /> Suporte Prioritário</li>
+              </ul>
+              <button className="w-full bg-[#D64D3F] text-white py-5 rounded-full font-black uppercase tracking-widest text-lg shadow-[0_15px_40px_rgba(214,77,63,0.4)] hover:scale-105 active:scale-95 transition-all cursor-pointer touch-manipulation">
+                QUERO O COMBO COMPLETO
+              </button>
+            </div>
           </div>
           
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 opacity-60 max-w-3xl mx-auto px-2">
