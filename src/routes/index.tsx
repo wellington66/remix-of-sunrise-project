@@ -148,14 +148,15 @@ function Index() {
           <div className="w-24 h-2 bg-[#D64D3F] mx-auto rounded-full" />
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
           {[
-            { img: panquecaPremiumAsset.url, title: "PANQUECA AMERICANA FIT", desc: "Fofinha, deliciosa e 100% sem açúcar. O segredo para começar o dia com energia." },
-            { img: paoQueijoFitAsset.url, title: "PÃO DE QUEIJO DE FRIGIDEIRA", desc: "A textura perfeita que você ama, pronta em menos de 5 minutos." },
-            { img: omeleteAsset.url, title: "OMELETE MEDITERRÂNEO", desc: "Rico em proteínas e nutrientes que mantêm a saciedade por horas." },
-            { img: pancakeBananaAsset.url, title: "CREPIOCA DOCE DE BANANA", desc: "O equilíbrio perfeito entre o doce e o saudável para quem não abre mão do sabor." }
+            { img: cuscuzQueijoAsset.url, title: "CUSCUZ COM QUEIJO DERRETIDO", desc: "A versão fitness do clássico nordestino, rica em fibras e sabor." },
+            { img: shakshukaAsset.url, title: "SHAKSHUKA TERMOGÊNICA", desc: "Ovos pochê em molho de tomate temperado para acelerar o metabolismo." },
+            { img: bananaCrepeAsset.url, title: "CREPE DE BANANA E CANELA", desc: "Um doce saudável que sacia a vontade de sobremesa logo cedo." },
+            { img: cuscuzOvoAsset.url, title: "CUSCUZ RECHEADO COM OVOS", desc: "Máxima saciedade e proteína para quem treina pela manhã." },
+            { img: bananaCupcakeBowlAsset.url, title: "BOWL DE BANANA E ESPECIARIAS", desc: "Praticidade absoluta: misture tudo e tenha um café da manhã de hotel." },
+            { img: crepiocaFrangoAsset.url, title: "CREPIOCA DE FRANGO CREMOSO", desc: "Opção salgada de alta performance para um dia produtivo." }
           ].map((item, i) => (
-
             <motion.div 
               key={i}
               whileHover={{ y: -10 }}
@@ -165,12 +166,13 @@ function Index() {
                 <img src={item.img} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt={item.title} />
               </div>
               <div className="p-8 text-center space-y-4">
-                <h3 className="text-2xl font-[family-name:var(--font-anton)] uppercase tracking-tight">{item.title}</h3>
+                <h3 className="text-2xl font-[family-name:var(--font-anton)] uppercase tracking-tight leading-tight">{item.title}</h3>
                 <p className="text-sm opacity-70 font-medium leading-relaxed">{item.desc}</p>
               </div>
             </motion.div>
           ))}
         </div>
+
       </section>
 
       {/* Main CTA (Urgency) */}
