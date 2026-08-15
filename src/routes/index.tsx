@@ -212,44 +212,44 @@ function Index() {
       </section>
 
       {/* Main CTA (Urgency) */}
-      <section className="py-24 bg-[#1B4332] text-white text-center px-4 relative overflow-hidden">
+      <section className="py-[clamp(4rem,10vw,8rem)] bg-[#1B4332] text-white text-center px-4 relative overflow-hidden w-full">
         <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-transparent via-[#D64D3F] to-transparent" />
         <div className="container mx-auto max-w-4xl space-y-12">
-          <div className="space-y-4">
-            <h2 className="text-5xl md:text-[6.5rem] font-[family-name:var(--font-anton)] leading-[0.85] uppercase">
-              DEIXE O PÃO <br/>
+          <div className="space-y-4 px-2">
+            <h2 className="text-[clamp(2.5rem,8vw,6.5rem)] font-[family-name:var(--font-anton)] leading-[0.9] uppercase break-words">
+              DEIXE O PÃO <br className="hidden md:block"/>
               NO PASSADO!
             </h2>
-            <p className="text-xl md:text-3xl font-[family-name:var(--font-anton)] text-[#D64D3F] uppercase tracking-wider">
+            <p className="text-[clamp(1rem,3vw,1.8rem)] font-[family-name:var(--font-anton)] text-[#D64D3F] uppercase tracking-wider px-2">
               GARANTA SEU ACESSO COM O MELHOR DESCONTO DO ANO
             </p>
           </div>
           
-          <div className="bg-white/5 border border-white/10 p-12 rounded-[3rem] backdrop-blur-md">
-            <div className="flex flex-col md:flex-row items-center justify-center gap-8 mb-12">
-              <div className="text-left">
-                <span className="text-lg line-through opacity-40 block font-bold">DE R$ 97,00</span>
-                <span className="text-8xl font-[family-name:var(--font-anton)] text-white">R$ 17,90</span>
+          <div className="bg-white/5 border border-white/10 p-[clamp(1.5rem,5vw,3rem)] rounded-[clamp(1.5rem,3vw,3rem)] backdrop-blur-md">
+            <div className="flex flex-col md:flex-row items-center justify-center gap-[clamp(1rem,4vw,2rem)] mb-12">
+              <div className="text-center md:text-left">
+                <span className="text-[clamp(0.875rem,2vw,1.125rem)] line-through opacity-40 block font-bold">DE R$ 97,00</span>
+                <span className="text-[clamp(4rem,10vw,8rem)] font-[family-name:var(--font-anton)] text-white leading-none">R$ 17,90</span>
               </div>
               <div className="hidden md:block w-px h-24 bg-white/20" />
-              <div className="text-left space-y-2">
-                <div className="flex items-center gap-2 text-[#D64D3F] font-black uppercase text-xs tracking-widest">
+              <div className="text-center md:text-left space-y-2">
+                <div className="flex items-center justify-center md:justify-start gap-2 text-[#D64D3F] font-black uppercase text-[clamp(0.6rem,1.5vw,0.75rem)] tracking-widest">
                   <Timer className="w-4 h-4" /> Oferta por tempo limitado
                 </div>
-                <p className="text-sm opacity-60">Pagamento único. <br/>Acesso vitalício ao guia.</p>
+                <p className="text-[clamp(0.75rem,2vw,0.875rem)] opacity-60">Pagamento único. <br/>Acesso vitalício ao guia.</p>
               </div>
             </div>
             
-            <button className="w-full max-w-md bg-[#D64D3F] text-white py-8 rounded-full font-black uppercase tracking-[0.2em] text-2xl shadow-[0_20px_60px_rgba(214,77,63,0.4)] hover:scale-105 active:scale-95 transition-all">
+            <button className="w-full max-w-md bg-[#D64D3F] text-white py-[clamp(1.2rem,4vw,1.75rem)] rounded-full font-black uppercase tracking-[0.2em] text-[clamp(1.2rem,3vw,1.5rem)] shadow-[0_20px_60px_rgba(214,77,63,0.4)] hover:scale-105 active:scale-95 transition-all cursor-pointer touch-manipulation">
               QUERO MEU E-BOOK AGORA
             </button>
           </div>
           
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 opacity-60 max-w-3xl mx-auto">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 opacity-60 max-w-3xl mx-auto px-2">
             {["Acesso Imediato", "Garantia 7 Dias", "Compra Segura", "PDF Digital"].map((text, i) => (
               <div key={i} className="flex flex-col items-center gap-2">
-                <ShieldCheck className="w-6 h-6" />
-                <span className="text-[10px] font-bold uppercase tracking-widest">{text}</span>
+                <ShieldCheck className="w-[clamp(1.2rem,3vw,1.5rem)] h-[clamp(1.2rem,3vw,1.5rem)]" />
+                <span className="text-[clamp(0.5rem,1.5vw,0.65rem)] font-bold uppercase tracking-widest">{text}</span>
               </div>
             ))}
           </div>
