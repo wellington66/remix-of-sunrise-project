@@ -182,12 +182,12 @@ function Index() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
           {[
-            { img: cuscuzQueijoAsset.url, title: "CUSCUZ ANTI-INFLAMATÓRIO", desc: "Substitua o pão por energia limpa e saciedade prolongada." },
-            { img: shakshukaAsset.url, title: "SHAKSHUKA QUEIMA-GORDURA", desc: "Poder termogênico natural para acelerar seu metabolismo." },
-            { img: bananaCrepeAsset.url, title: "DOCE SEM CULPA", desc: "Mate a vontade de açúcar com ingredientes que nutrem suas células." },
-            { img: cuscuzOvoAsset.url, title: "COMBO PROTEICO MATINAL", desc: "Músculos firmes e fome controlada até o almoço." },
-            { img: bananaCupcakeBowlAsset.url, title: "CAFÉ RÁPIDO PARA A PRESSA", desc: "5 minutos para um dia inteiro de disposição mental." },
-            { img: crepiocaFrangoAsset.url, title: "CREPIOCA ESTRUTURAL", desc: "O substituto perfeito para o sanduíche da manhã." }
+            { img: cuscuzQueijoUrl, title: "CUSCUZ ANTI-INFLAMATÓRIO", desc: "Substitua o pão por energia limpa e saciedade prolongada." },
+            { img: shakshukaUrl, title: "SHAKSHUKA QUEIMA-GORDURA", desc: "Poder termogênico natural para acelerar seu metabolismo." },
+            { img: bananaCrepeUrl, title: "DOCE SEM CULPA", desc: "Mate a vontade de açúcar com ingredientes que nutrem suas células." },
+            { img: cuscuzOvoUrl, title: "COMBO PROTEICO MATINAL", desc: "Músculos firmes e fome controlada até o almoço." },
+            { img: bananaCupcakeBowlUrl, title: "CAFÉ RÁPIDO PARA A PRESSA", desc: "5 minutos para um dia inteiro de disposição mental." },
+            { img: crepiocaFrangoUrl, title: "CREPIOCA ESTRUTURAL", desc: "O substituto perfeito para o sanduíche da manhã." }
           ].map((item, i) => (
             <motion.div 
               key={i}
