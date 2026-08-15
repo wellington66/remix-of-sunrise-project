@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { motion } from "framer-motion";
-import { CheckCircle2, Clock, Zap, Star, ShieldCheck, ArrowRight, Minus, Plus } from "lucide-react";
+import { CheckCircle2, Star, ShieldCheck, ArrowRight, Minus, Plus, Zap, Clock, Smartphone, Gift, Heart, UserCheck } from "lucide-react";
 import { useState } from "react";
 
 export const Route = createFileRoute("/")({
@@ -11,234 +11,219 @@ function Index() {
   const [activePlan, setActivePlan] = useState("premium");
 
   return (
-    <div className="min-h-screen bg-[#FCFBF8] text-[#2D2D2D] font-[family-name:var(--font-inter)] selection:bg-primary/20">
+    <div className="min-h-screen bg-[#FDF9F2] text-[#2D2D2D] font-[family-name:var(--font-inter)] selection:bg-primary/20">
       {/* Top Banner */}
-      <div className="bg-[#1A4D2E] text-white py-2 text-center text-xs font-bold uppercase tracking-wider">
-        Oferta exclusiva disponível por tempo limitado
+      <div className="bg-[#1B4332] text-white py-2.5 text-center text-[10px] md:text-xs font-bold uppercase tracking-widest px-4">
+        VOCÊ RECEBERÁ 05 BÔNUS EXCLUSIVOS
       </div>
 
       {/* Hero Section */}
-      <header className="container mx-auto px-4 py-12 flex flex-col items-center text-center">
+      <header className="container mx-auto px-4 pt-12 pb-16 flex flex-col items-center text-center">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           className="space-y-4 max-w-4xl"
         >
-          <h1 className="text-4xl md:text-7xl font-[family-name:var(--font-anton)] text-[#1A4D2E] uppercase leading-none tracking-tight">
+          <h1 className="text-4xl md:text-7xl font-[family-name:var(--font-anton)] text-[#1B4332] uppercase leading-[0.9] tracking-tight">
             80 Cafés da Manhã Saudáveis
-            <span className="block text-[#E67E22] mt-2">Para Substituir o Pão</span>
+            <span className="block text-[#1B4332] mt-2">Para Substituir o Pão</span>
           </h1>
-          <p className="text-xl md:text-2xl font-[family-name:var(--font-bebas)] text-[#4A4A4A] tracking-wide">
-            Sem glúten, sem açúcar e sem complicação
-          </p>
+          <div className="inline-block bg-[#D64D3F] text-white px-4 py-1 rounded text-sm md:text-base font-bold uppercase tracking-widest mt-4">
+            SEM GLÚTEN E SEM AÇÚCAR
+          </div>
         </motion.div>
 
-        <div className="mt-12 relative w-full max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16">
+        <div className="mt-12 relative w-full max-w-4xl mx-auto">
           <motion.div 
-            initial={{ opacity: 0, scale: 0.9 }}
+            initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.2 }}
-            className="relative z-10 w-full md:w-1/2 max-w-[450px]"
+            className="relative"
           >
             <img 
-              src="https://images.unsplash.com/photo-1525351484163-7529414344d8?q=80&w=800&auto=format&fit=crop"
-              alt="E-book Mockup"
-              className="rounded-[2rem] shadow-[0_32px_64px_-12px_rgba(26,77,46,0.25)] border-8 border-white transform -rotate-2"
+              src="https://images.unsplash.com/photo-1494390248081-4e521a5940db?q=80&w=1200&auto=format&fit=crop"
+              alt="80 Cafés da Manhã Mockup"
+              className="w-full h-auto drop-shadow-2xl rounded-2xl"
             />
-            <div className="absolute -top-6 -right-6 bg-[#E67E22] text-white w-24 h-24 rounded-full flex flex-col items-center justify-center font-bold shadow-lg transform rotate-12 border-4 border-white">
-              <span className="text-xs uppercase">Apenas</span>
-              <span className="text-xl">R$ 17</span>
-            </div>
-          </motion.div>
-
-          <motion.div 
-            initial={{ opacity: 0, x: 20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ delay: 0.4 }}
-            className="md:w-1/2 text-left space-y-8"
-          >
-            <div className="space-y-4">
-              {[
-                "80 Receitas exclusivas testadas e aprovadas",
-                "Opções doces e salgadas sem glúten",
-                "Preparos rápidos de até 5 a 10 minutos",
-                "Ingredientes simples que você tem em casa",
-                "Ideal para quem quer emagrecer comendo bem"
-              ].map((item, i) => (
-                <div key={i} className="flex items-start gap-3 group">
-                  <div className="mt-1 bg-[#1A4D2E]/10 rounded-full p-1 group-hover:bg-[#1A4D2E] transition-colors">
-                    <CheckCircle2 className="w-5 h-5 text-[#1A4D2E] group-hover:text-white transition-colors" />
-                  </div>
-                  <span className="text-lg font-medium">{item}</span>
-                </div>
-              ))}
-            </div>
-
-            <div className="space-y-4">
-              <motion.button
-                whileHover={{ scale: 1.02, y: -2 }}
-                whileTap={{ scale: 0.98 }}
-                className="w-full bg-[#E67E22] text-white py-6 rounded-2xl font-bold text-2xl uppercase tracking-widest shadow-[0_20px_40px_-10px_rgba(230,126,34,0.4)] hover:bg-[#D35400] transition-all"
-              >
-                Quero meu guia agora
-              </motion.button>
-              <div className="flex items-center justify-center gap-4 text-sm text-muted-foreground font-medium">
-                <span className="flex items-center gap-1"><ShieldCheck className="w-4 h-4" /> Compra Segura</span>
-                <span className="flex items-center gap-1"><Star className="w-4 h-4 text-yellow-500" /> 4.9/5 (2.5k+ Alunos)</span>
+            {/* Price Badge */}
+            <div className="absolute -bottom-6 left-1/2 -translate-x-1/2 bg-white rounded-full p-2 shadow-xl border border-[#1B4332]/10 z-20">
+              <div className="bg-[#1B4332] text-white rounded-full px-8 py-4 flex flex-col items-center justify-center min-w-[200px]">
+                <span className="text-[10px] uppercase font-bold tracking-widest opacity-80">Receba hoje por apenas</span>
+                <span className="text-3xl font-[family-name:var(--font-anton)]">R$ 17,90</span>
               </div>
             </div>
           </motion.div>
         </div>
+
+        {/* Benefits Quick View */}
+        <div className="mt-20 grid grid-cols-3 gap-4 w-full max-w-md mx-auto">
+          {[
+            { label: "100%", sub: "Digital" },
+            { label: "05", sub: "Bônus" },
+            { label: "7 Dias", sub: "Garantia" }
+          ].map((item, i) => (
+            <div key={i} className="flex flex-col items-center">
+              <span className="text-xl md:text-2xl font-[family-name:var(--font-anton)] text-[#D64D3F]">{item.label}</span>
+              <span className="text-[10px] uppercase font-bold tracking-widest text-[#1B4332]/60">{item.sub}</span>
+            </div>
+          ))}
+        </div>
       </header>
 
-      {/* Features Grid */}
-      <section className="bg-white py-24 border-y border-[#1A4D2E]/5">
+      {/* Main Benefits Section */}
+      <section className="bg-white py-20 border-y border-[#1B4332]/5">
         <div className="container mx-auto px-4">
           <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
-            <h2 className="text-4xl md:text-5xl font-[family-name:var(--font-bebas)] text-[#1A4D2E] tracking-wider uppercase">
-              Por que substituir o pão pelo nosso guia?
+            <h2 className="text-3xl md:text-5xl font-[family-name:var(--font-anton)] text-[#1B4332] tracking-tight uppercase leading-none">
+              VOCÊ AINDA TEM DÚVIDAS DO QUE O NOSSO E-BOOK PODE FAZER POR VOCÊ?
             </h2>
-            <p className="text-lg text-muted-foreground">
+            <p className="text-sm md:text-base text-[#1B4332]/70 font-medium">
               O pão branco comum causa picos de insulina e inflamação. Nosso guia oferece alternativas nutritivas que mantêm sua saciedade por horas.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
             {[
-              { icon: <Clock className="w-10 h-10" />, title: "Tempo é Vida", desc: "Receitas ultra-rápidas para quem não tem tempo a perder de manhã." },
-              { icon: <Zap className="w-10 h-10" />, title: "Energia Constante", desc: "Ingredientes de baixo índice glicêmico que evitam o cansaço pós-refeição." },
-              { icon: <Star className="w-10 h-10" />, title: "Sabor Irresistível", desc: "Você não vai sentir falta do pão. Panquecas, crepiocas e bowls deliciosos." }
+              { icon: <Clock className="w-6 h-6" />, title: "Preparo rápido", desc: "Receitas de 5 a 10 minutos." },
+              { icon: <Heart className="w-6 h-6" />, title: "Saúde em primeiro lugar", desc: "Sem glúten e sem açúcar." },
+              { icon: <Zap className="w-6 h-6" />, title: "Mais energia", desc: "Energia estável para o dia todo." },
+              { icon: <Gift className="w-6 h-6" />, title: "Bônus exclusivos", desc: "5 Guias extras de presente." },
+              { icon: <Smartphone className="w-6 h-6" />, title: "Acesso imediato", desc: "Receba tudo no seu e-mail." },
+              { icon: <UserCheck className="w-6 h-6" />, title: "Chef Mônica Maciel", desc: "Receitas testadas e aprovadas." }
             ].map((item, i) => (
-              <motion.div 
-                key={i}
-                whileHover={{ y: -10 }}
-                className="bg-[#FCFBF8] p-10 rounded-[2.5rem] border border-[#1A4D2E]/10 text-center space-y-6 shadow-sm hover:shadow-xl transition-all"
-              >
-                <div className="inline-flex p-5 bg-[#1A4D2E]/5 rounded-3xl text-[#1A4D2E]">
+              <div key={i} className="bg-[#1B4332]/5 p-6 rounded-2xl flex items-center gap-4">
+                <div className="bg-[#1B4332] text-white p-3 rounded-xl shrink-0">
                   {item.icon}
                 </div>
-                <h3 className="text-3xl font-[family-name:var(--font-bebas)] tracking-wide text-[#1A4D2E]">{item.title}</h3>
-                <p className="text-[#5A5A5A] leading-relaxed">{item.desc}</p>
-              </motion.div>
+                <div>
+                  <h3 className="font-bold text-[#1B4332] text-sm uppercase tracking-wide">{item.title}</h3>
+                  <p className="text-xs text-[#1B4332]/60 font-medium">{item.desc}</p>
+                </div>
+              </div>
             ))}
+          </div>
+
+          <div className="mt-16 flex flex-col items-center">
+            <button className="bg-[#1B4332] text-white px-12 py-4 rounded-full font-bold uppercase tracking-widest text-sm hover:bg-[#2D5A47] transition-all shadow-xl">
+              QUERO MEU GUIA AGORA
+            </button>
           </div>
         </div>
       </section>
 
-      {/* Preview Recipes */}
-      <section className="py-24 overflow-hidden">
-        <div className="container mx-auto px-4 mb-12 flex flex-col md:flex-row justify-between items-end gap-6">
-          <div className="space-y-4 text-left max-w-2xl">
-            <h2 className="text-4xl md:text-6xl font-[family-name:var(--font-anton)] text-[#1A4D2E] uppercase leading-none">
-              Dê uma espiada no que te espera
-            </h2>
-            <p className="text-xl text-muted-foreground font-medium">80 combinações exclusivas que vão transformar suas manhãs.</p>
-          </div>
-          <motion.button 
-            whileHover={{ x: 5 }}
-            className="flex items-center gap-2 text-[#E67E22] font-bold uppercase tracking-widest group"
-          >
-            Ver catálogo completo <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-          </motion.button>
+      {/* Chef Section */}
+      <section className="py-20 container mx-auto px-4 flex flex-col md:flex-row items-center gap-12 max-w-5xl">
+        <div className="md:w-1/2 relative">
+          <img 
+            src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?q=80&w=800&auto=format&fit=crop"
+            alt="Chef Mônica Maciel"
+            className="rounded-[2.5rem] shadow-2xl"
+          />
         </div>
+        <div className="md:w-1/2 space-y-6">
+          <h2 className="text-3xl md:text-5xl font-[family-name:var(--font-anton)] text-[#1B4332] uppercase leading-tight">
+            VOCÊ ESTÁ A UM PASSO DA SUA MELHOR VERSÃO
+          </h2>
+          <p className="text-[#1B4332]/70 leading-relaxed font-medium">
+            Meu nome é Mônica Maciel, e após anos ajudando milhares de pessoas a transformarem sua alimentação, eu compilei as melhores receitas de café da manhã que substituem o pão sem perder o prazer de comer.
+          </p>
+          <div className="space-y-4">
+            {["80 Receitas exclusivas", "Substitutos perfeitos para o pão", "Ingredientes simples e baratos"].map((item, i) => (
+              <div key={i} className="flex items-center gap-3">
+                <CheckCircle2 className="w-5 h-5 text-[#D64D3F]" />
+                <span className="font-bold text-[#1B4332] text-sm uppercase">{item}</span>
+              </div>
+            ))}
+          </div>
+          <button className="w-full bg-[#1B4332] text-white py-4 rounded-full font-bold uppercase tracking-widest text-sm shadow-lg">
+            QUERO O MEU GUIA AGORA
+          </button>
+        </div>
+      </section>
 
-        <div className="flex gap-6 px-4 md:px-0 container mx-auto overflow-x-auto pb-8 snap-x no-scrollbar">
-          {[
-            { src: "https://images.unsplash.com/photo-1494390248081-4e521a5940db?q=80&w=600&auto=format&fit=crop", title: "Panqueca de Banana Fit", time: "8 min" },
-            { src: "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?q=80&w=600&auto=format&fit=crop", title: "Omelete Mediterrâneo", time: "5 min" },
-            { src: "https://images.unsplash.com/photo-1473093226795-af9932fe5856?q=80&w=600&auto=format&fit=crop", title: "Crepioca de Espinafre", time: "6 min" },
-            { src: "https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?q=80&w=600&auto=format&fit=crop", title: "Bowl de Frutas Tropicais", time: "4 min" }
-          ].map((item, i) => (
-            <motion.div 
-              key={i}
-              whileHover={{ scale: 0.98 }}
-              className="flex-shrink-0 w-[300px] md:w-[400px] group cursor-pointer snap-start"
-            >
-              <div className="relative overflow-hidden rounded-[2rem] aspect-[4/5] shadow-lg">
-                <img 
-                  src={item.src} 
-                  alt={item.title}
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" 
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-8 text-white">
-                  <span className="text-xs font-bold uppercase tracking-widest bg-white/20 backdrop-blur-md w-fit px-3 py-1 rounded-full mb-3">{item.time}</span>
-                  <h4 className="text-2xl font-[family-name:var(--font-bebas)] tracking-wide">{item.title}</h4>
+      {/* Recipe Gallery */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-3xl md:text-5xl font-[family-name:var(--font-anton)] text-[#1B4332] uppercase mb-12">
+            VEJA O QUE VOCÊ VAI ENCONTRAR NO E-BOOK
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+            {[
+              { src: "https://images.unsplash.com/photo-1525351484163-7529414344d8?q=80&w=600&auto=format&fit=crop", name: "Omelete Mediterrâneo" },
+              { src: "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?q=80&w=600&auto=format&fit=crop", name: "Panqueca de Banana Fit" },
+              { src: "https://images.unsplash.com/photo-1473093226795-af9932fe5856?q=80&w=600&auto=format&fit=crop", name: "Crepioca de Espinafre" },
+              { src: "https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?q=80&w=600&auto=format&fit=crop", name: "Bowl de Frutas" },
+              { src: "https://images.unsplash.com/photo-1494390248081-4e521a5940db?q=80&w=600&auto=format&fit=crop", name: "Pão de Frigideira Low Carb" },
+              { src: "https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?q=80&w=600&auto=format&fit=crop", name: "Waffle de Aveia" }
+            ].map((item, i) => (
+              <div key={i} className="relative group overflow-hidden rounded-2xl shadow-lg">
+                <img src={item.src} alt={item.name} className="w-full aspect-square object-cover transition-transform duration-500 group-hover:scale-110" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#1B4332]/90 to-transparent flex flex-col justify-end p-6">
+                  <span className="text-white font-bold uppercase tracking-wider text-sm">{item.name}</span>
                 </div>
               </div>
-            </motion.div>
-          ))}
+            ))}
+          </div>
+          <button className="mt-16 bg-[#1B4332] text-white px-12 py-4 rounded-full font-bold uppercase tracking-widest text-sm shadow-xl">
+            QUERO TER ACESSO A TUDO ISSO!
+          </button>
         </div>
       </section>
 
       {/* Pricing Section */}
-      <section className="py-24 bg-[#1A4D2E] text-white">
-        <div className="container mx-auto px-4">
-          <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-stretch gap-8">
+      <section className="py-24 bg-[#FDF9F2]">
+        <div className="container mx-auto px-4 max-w-5xl text-center">
+          <h2 className="text-4xl md:text-6xl font-[family-name:var(--font-anton)] text-[#1B4332] uppercase mb-4">
+            ESCOLHA SEU PLANO
+          </h2>
+          <p className="text-[#1B4332]/60 mb-12 font-bold uppercase tracking-widest text-sm">Aproveite o desconto de lançamento</p>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
             {/* Plan 1 */}
-            <motion.div 
-              onClick={() => setActivePlan("basic")}
-              className={`flex-1 rounded-[3rem] p-10 border-2 transition-all cursor-pointer flex flex-col justify-between ${activePlan === "basic" ? "bg-white text-[#1A4D2E] border-white scale-105 z-10" : "bg-white/5 border-white/10 hover:border-white/30"}`}
-            >
-              <div>
-                <h3 className="text-3xl font-[family-name:var(--font-bebas)] uppercase tracking-widest mb-2">Guia Digital</h3>
-                <p className={`text-sm mb-8 ${activePlan === "basic" ? "text-muted-foreground" : "text-white/60"}`}>Ideal para começar</p>
-                <div className="space-y-4 mb-8">
-                  {["80 Receitas em PDF", "Lista de Compras", "Guia de Substituições"].map((item, i) => (
-                    <div key={i} className="flex items-center gap-2">
-                      <CheckCircle2 className={`w-5 h-5 ${activePlan === "basic" ? "text-[#1A4D2E]" : "text-white/40"}`} />
-                      <span className="font-medium">{item}</span>
-                    </div>
-                  ))}
-                </div>
+            <div className="bg-white rounded-[2.5rem] p-10 shadow-xl border border-[#1B4332]/5 flex flex-col">
+              <h3 className="text-2xl font-[family-name:var(--font-anton)] text-[#1B4332] uppercase mb-6">GUIA DIGITAL</h3>
+              <div className="space-y-4 mb-8 text-left">
+                {["80 Receitas em PDF", "Lista de Compras", "Guia de Substituições", "Acesso Vitalício"].map((item, i) => (
+                  <div key={i} className="flex items-center gap-3">
+                    <CheckCircle2 className="w-5 h-5 text-[#1B4332]" />
+                    <span className="text-sm font-bold text-[#1B4332]/70 uppercase">{item}</span>
+                  </div>
+                ))}
               </div>
-              <div>
+              <div className="mt-auto">
                 <div className="mb-6">
-                  <span className="text-lg line-through opacity-50 block">R$ 47,00</span>
-                  <span className="text-5xl font-[family-name:var(--font-anton)]">R$ 17,90</span>
+                  <span className="text-sm text-[#D64D3F] line-through block font-bold">DE R$ 47,00</span>
+                  <span className="text-5xl font-[family-name:var(--font-anton)] text-[#1B4332]">R$ 17,90</span>
                 </div>
-                <button className={`w-full py-4 rounded-2xl font-bold uppercase tracking-widest transition-all ${activePlan === "basic" ? "bg-[#1A4D2E] text-white" : "bg-white text-[#1A4D2E] hover:bg-white/90"}`}>
-                  Selecionar
+                <button className="w-full py-4 rounded-full bg-[#1B4332] text-white font-bold uppercase tracking-widest text-sm hover:bg-[#2D5A47] transition-all">
+                  QUERO O GUIA DIGITAL
                 </button>
               </div>
-            </motion.div>
+            </div>
 
             {/* Plan 2 - Featured */}
-            <motion.div 
-              onClick={() => setActivePlan("premium")}
-              className={`flex-1 rounded-[3rem] p-10 border-2 relative overflow-hidden transition-all cursor-pointer flex flex-col justify-between ${activePlan === "premium" ? "bg-white text-[#1A4D2E] border-white scale-105 z-10" : "bg-white/5 border-white/10 hover:border-white/30"}`}
-            >
-              <div className="absolute top-0 right-0 bg-[#E67E22] text-white px-6 py-2 rounded-bl-3xl text-xs font-bold uppercase tracking-widest">
-                Mais Vendido
+            <div className="bg-[#FFF1F0] rounded-[2.5rem] p-10 shadow-2xl border-4 border-[#D64D3F] relative flex flex-col">
+              <div className="absolute -top-5 left-1/2 -translate-x-1/2 bg-[#D64D3F] text-white px-8 py-2 rounded-full text-xs font-bold uppercase tracking-widest whitespace-nowrap">
+                O MAIS COMPLETO
               </div>
-              <div>
-                <h3 className="text-3xl font-[family-name:var(--font-bebas)] uppercase tracking-widest mb-2">Combo Premium</h3>
-                <p className={`text-sm mb-8 ${activePlan === "premium" ? "text-muted-foreground" : "text-white/60"}`}>Transformação completa</p>
-                <div className="space-y-4 mb-8">
-                  {["Guia 80 Receitas", "Bônus: Sucos Detox", "Bônus: Doces Sem Culpa", "Comunidade VIP", "Suporte no WhatsApp"].map((item, i) => (
-                    <div key={i} className="flex items-center gap-2">
-                      <CheckCircle2 className={`w-5 h-5 ${activePlan === "premium" ? "text-[#E67E22]" : "text-[#E67E22]"}`} />
-                      <span className="font-bold">{item}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-              <div>
-                <div className="mb-6">
-                  <span className="text-lg line-through opacity-50 block">R$ 97,00</span>
-                  <div className="flex items-baseline gap-2">
-                    <span className="text-6xl font-[family-name:var(--font-anton)]">R$ 29,90</span>
-                    <span className="text-sm font-bold opacity-70">Pagamento único</span>
+              <h3 className="text-2xl font-[family-name:var(--font-anton)] text-[#1B4332] uppercase mb-6">COMBO PREMIUM</h3>
+              <div className="space-y-4 mb-8 text-left">
+                {["Guia 80 Receitas", "Bônus: Sucos Detox", "Bônus: Doces Sem Culpa", "Bônus: Marmitas Saudáveis", "Comunidade VIP", "Suporte VIP"].map((item, i) => (
+                  <div key={i} className="flex items-center gap-3">
+                    <CheckCircle2 className="w-5 h-5 text-[#D64D3F]" />
+                    <span className="text-sm font-bold text-[#1B4332] uppercase">{item}</span>
                   </div>
+                ))}
+              </div>
+              <div className="mt-auto">
+                <div className="mb-6">
+                  <span className="text-sm text-[#D64D3F] line-through block font-bold">DE R$ 97,00</span>
+                  <span className="text-6xl font-[family-name:var(--font-anton)] text-[#D64D3F]">R$ 29,90</span>
                 </div>
-                <button className={`w-full py-4 rounded-2xl font-bold uppercase tracking-widest transition-all shadow-xl ${activePlan === "premium" ? "bg-[#E67E22] text-white hover:bg-[#D35400]" : "bg-white text-[#1A4D2E]"}`}>
-                  Quero o Combo Completo
+                <button className="w-full py-5 rounded-full bg-[#D64D3F] text-white font-bold uppercase tracking-widest text-sm hover:bg-[#B73C30] transition-all shadow-xl">
+                  QUERO O COMBO PREMIUM
                 </button>
               </div>
-            </motion.div>
-          </div>
-          <div className="mt-16 text-center space-y-4 max-w-2xl mx-auto">
-            <div className="inline-flex items-center gap-2 text-white/60 text-sm font-medium">
-              <ShieldCheck className="w-5 h-5" /> Garantia de satisfação de 7 dias ou seu dinheiro de volta.
             </div>
           </div>
         </div>
@@ -246,8 +231,8 @@ function Index() {
 
       {/* FAQ */}
       <section className="py-24 container mx-auto px-4 max-w-3xl">
-        <h2 className="text-4xl md:text-5xl font-[family-name:var(--font-bebas)] text-[#1A4D2E] text-center mb-16 uppercase tracking-wider">
-          Dúvidas Frequentes
+        <h2 className="text-3xl md:text-5xl font-[family-name:var(--font-anton)] text-[#1B4332] text-center mb-16 uppercase">
+          DÚVIDAS FREQUENTES
         </h2>
         <div className="space-y-4">
           {[
@@ -256,13 +241,13 @@ function Index() {
             { q: "As receitas são difíceis?", a: "Pelo contrário. Foram pensadas para quem tem a vida corrida e precisa de praticidade, com passos claros e simplificados." },
             { q: "Posso acessar pelo celular?", a: "Sim! O guia é otimizado para leitura em smartphones, tablets e computadores." }
           ].map((item, i) => (
-            <details key={i} className="group bg-white rounded-3xl border border-[#1A4D2E]/5 shadow-sm overflow-hidden transition-all">
-              <summary className="flex items-center justify-between p-8 cursor-pointer list-none font-bold text-lg text-[#1A4D2E] group-open:bg-[#1A4D2E]/5 transition-colors">
+            <details key={i} className="group bg-white rounded-2xl border border-[#1B4332]/5 shadow-sm overflow-hidden">
+              <summary className="flex items-center justify-between p-6 cursor-pointer list-none font-bold text-[#1B4332] uppercase text-sm tracking-wide">
                 {item.q}
-                <Plus className="w-5 h-5 text-[#E67E22] group-open:hidden" />
-                <Minus className="w-5 h-5 text-[#E67E22] hidden group-open:block" />
+                <Plus className="w-4 h-4 text-[#D64D3F] group-open:hidden" />
+                <Minus className="w-4 h-4 text-[#D64D3F] hidden group-open:block" />
               </summary>
-              <div className="p-8 text-[#5A5A5A] leading-relaxed border-t border-[#1A4D2E]/5">
+              <div className="p-6 pt-0 text-[#1B4332]/60 text-sm leading-relaxed border-t border-[#1B4332]/5">
                 {item.a}
               </div>
             </details>
@@ -270,37 +255,50 @@ function Index() {
         </div>
       </section>
 
-      {/* Sticky Bottom Bar (Mobile) */}
-      <div className="md:hidden fixed bottom-0 left-0 right-0 bg-white border-t border-border p-4 z-50 flex items-center justify-between shadow-[0_-10px_30px_rgba(0,0,0,0.1)]">
-        <div>
-          <span className="text-xs text-muted-foreground line-through block leading-none">R$ 97,00</span>
-          <span className="text-2xl font-[family-name:var(--font-anton)] text-[#1A4D2E]">R$ 17,90</span>
+      {/* Final CTA Banner */}
+      <section className="bg-[#D64D3F] py-16 text-white text-center px-4">
+        <div className="container mx-auto max-w-3xl space-y-8">
+          <h2 className="text-3xl md:text-6xl font-[family-name:var(--font-anton)] uppercase leading-none">
+            GARANTA O SEU COM DESCONTO HOJE MESMO!
+          </h2>
+          <button className="bg-white text-[#D64D3F] px-12 py-5 rounded-full font-bold uppercase tracking-widest text-lg shadow-2xl hover:bg-gray-100 transition-all">
+            SIM! QUERO MEU E-BOOK AGORA
+          </button>
+          <div className="flex items-center justify-center gap-2 opacity-80">
+            <ShieldCheck className="w-5 h-5" />
+            <span className="text-[10px] uppercase font-bold tracking-widest">Compra 100% Segura e Garantida</span>
+          </div>
         </div>
-        <button className="bg-[#E67E22] text-white px-8 py-3 rounded-xl font-bold uppercase tracking-wider text-sm shadow-lg">
-          Comprar Agora
-        </button>
-      </div>
+      </section>
 
       {/* Footer */}
-      <footer className="bg-[#FCFBF8] pt-24 pb-32 md:pb-24 border-t border-[#1A4D2E]/5">
-        <div className="container mx-auto px-4 text-center space-y-8">
-          <div className="space-y-4">
-            <h4 className="text-2xl font-[family-name:var(--font-anton)] text-[#1A4D2E] uppercase tracking-tighter">Chef Mônica Maciel</h4>
-            <p className="text-muted-foreground max-w-md mx-auto italic">"Minha missão é mostrar que alimentação saudável pode ser deliciosa e acessível para todos."</p>
-          </div>
+      <footer className="bg-[#FDF9F2] py-12 border-t border-[#1B4332]/5 text-center px-4">
+        <div className="container mx-auto space-y-8">
+          <h4 className="text-xl font-[family-name:var(--font-anton)] text-[#1B4332] uppercase">Chef Mônica Maciel</h4>
           
-          <div className="flex justify-center gap-8 text-sm font-bold text-[#1A4D2E] uppercase tracking-widest">
-            <a href="#" className="hover:text-[#E67E22] transition-colors">Privacidade</a>
-            <a href="#" className="hover:text-[#E67E22] transition-colors">Termos</a>
-            <a href="#" className="hover:text-[#E67E22] transition-colors">Suporte</a>
+          <div className="flex justify-center gap-6 text-[10px] font-bold text-[#1B4332]/60 uppercase tracking-widest">
+            <a href="#" className="hover:text-[#D64D3F]">Privacidade</a>
+            <a href="#" className="hover:text-[#D64D3F]">Termos</a>
+            <a href="#" className="hover:text-[#D64D3F]">Suporte</a>
           </div>
 
-          <div className="max-w-3xl mx-auto space-y-4 opacity-40 text-[10px] md:text-xs leading-relaxed uppercase font-medium">
-            <p>Este site não faz parte do site do Facebook ou do Facebook Inc. Além disso, este site NÃO é endossado pelo Facebook de nenhuma maneira. FACEBOOK é uma marca comercial da FACEBOOK, Inc.</p>
-            <p>© 2026 Todos os direitos reservados. Resultados podem variar de pessoa para pessoa.</p>
+          <div className="max-w-3xl mx-auto space-y-4 opacity-30 text-[9px] uppercase font-bold leading-relaxed">
+            <p>Este site não faz parte do site do Facebook ou do Facebook Inc. Além disso, este site NÃO é endossado pelo Facebook de nenhuma maneira.</p>
+            <p>© 2026 Chef Mônica Maciel. Todos os direitos reservados.</p>
           </div>
         </div>
       </footer>
+
+      {/* Sticky Mobile CTA */}
+      <div className="md:hidden fixed bottom-0 left-0 right-0 bg-white border-t border-border p-4 z-50 flex items-center justify-between shadow-[0_-10px_30px_rgba(0,0,0,0.1)]">
+        <div>
+          <span className="text-[10px] text-[#D64D3F] line-through block font-bold">R$ 97,00</span>
+          <span className="text-2xl font-[family-name:var(--font-anton)] text-[#1B4332]">R$ 17,90</span>
+        </div>
+        <button className="bg-[#1B4332] text-white px-6 py-3 rounded-full font-bold uppercase tracking-widest text-[10px] shadow-lg">
+          COMPRAR AGORA
+        </button>
+      </div>
     </div>
   );
 }
