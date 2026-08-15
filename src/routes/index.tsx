@@ -186,7 +186,7 @@ function Index() {
               NO PASSADO!
             </h2>
             <p className="text-xl md:text-3xl font-[family-name:var(--font-anton)] text-[#D64D3F] uppercase tracking-wider">
-              GARANTA SEU ACESSO COM 80% DE DESCONTO
+              GARANTA SEU ACESSO COM O MELHOR DESCONTO DO ANO
             </p>
           </div>
           
