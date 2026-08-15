@@ -61,9 +61,9 @@ function Index() {
             </span>
             
             <h1 className="text-[2.8rem] md:text-[6.5rem] font-[family-name:var(--font-anton)] uppercase leading-[0.85] tracking-tight mb-8">
-              MISTURE EMAGRECIMENTO COM <br/>
-              <span className="text-[#D64D3F] drop-shadow-sm">RECEITAS SABOROSAS</span> <br/>
-              DE CAFÉ DA MANHÃ
+              GUIA DAS <br/>
+              <span className="text-[#D64D3F] drop-shadow-sm">101 RECEITAS</span> <br/>
+              PARA TROCAR O PÃO
             </h1>
             
             <p className="text-lg md:text-2xl text-[#1B4332]/70 font-medium mb-12 max-w-3xl mx-auto leading-tight">
