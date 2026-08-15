@@ -12,6 +12,8 @@ import bananaCrepeAsset from "@/assets/banana_crepe.png.asset.json";
 import cuscuzOvoAsset from "@/assets/cuscuz_ovo.png.asset.json";
 import bananaCupcakeBowlAsset from "@/assets/banana_cupcake_bowl.png.asset.json";
 import crepiocaFrangoAsset from "@/assets/crepioca_frango.png.asset.json";
+import guiaMockupAsset from "@/assets/guia_101_receitas_mockup.png.asset.json";
+
 
 
 
@@ -59,22 +61,21 @@ function Index() {
             </span>
             
             <h1 className="text-[2.8rem] md:text-[6.5rem] font-[family-name:var(--font-anton)] uppercase leading-[0.85] tracking-tight mb-8">
-              MISTURE EMAGRECIMENTO COM <br/>
-              <span className="text-[#D64D3F] drop-shadow-sm">RECEITAS SABOROSAS</span> <br/>
-              DE CAFÉ DA MANHÃ
+              GUIA DAS <br/>
+              <span className="text-[#D64D3F] drop-shadow-sm">101 RECEITAS</span> <br/>
+              PARA TROCAR O PÃO
             </h1>
             
             <p className="text-lg md:text-2xl text-[#1B4332]/70 font-medium mb-12 max-w-3xl mx-auto leading-tight">
-              Aprenda 80 receitas de cafés da manhã <span className="text-[#1B4332] font-black underline decoration-[#D64D3F]/40 underline-offset-4">sem glúten e sem açúcar</span> que desinflamam o corpo e dão energia o dia todo.
+              Aprenda 101 receitas de cafés da manhã <span className="text-[#1B4332] font-black underline decoration-[#D64D3F]/40 underline-offset-4">sem glúten e sem açúcar</span> que desinflamam o corpo e dão energia o dia todo.
             </p>
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mt-12">
               <div className="relative group">
                 <div className="absolute -inset-4 bg-[#D64D3F]/10 rounded-[3rem] blur-2xl group-hover:bg-[#D64D3F]/20 transition-all duration-500" />
                 <img 
-                  src={panquecaPremiumAsset.url}
-                  alt="Receitas Saudáveis Mockup"
-
+                  src={guiaMockupAsset.url}
+                  alt="Guia das 101 Receitas Mockup"
                   className="relative w-full rounded-[2.5rem] shadow-2xl border-[12px] border-white transform -rotate-1 hover:rotate-0 transition-transform duration-700"
                 />
                 {/* Floating Badge */}
@@ -87,7 +88,7 @@ function Index() {
               <div className="text-left space-y-8 lg:pl-8">
                 <div className="space-y-5">
                   {[
-                    "80 Opções práticas de 5 a 10 minutos",
+                    "101 Opções práticas de 5 a 10 minutos",
                     "Sem glúten, sem lactose e sem açúcar",
                     "Ingredientes baratos de supermercado",
                     "Acabe com o inchaço matinal",
@@ -185,7 +186,7 @@ function Index() {
               NO PASSADO!
             </h2>
             <p className="text-xl md:text-3xl font-[family-name:var(--font-anton)] text-[#D64D3F] uppercase tracking-wider">
-              GARANTA SEU ACESSO COM 80% DE DESCONTO
+              GARANTA SEU ACESSO COM O MELHOR DESCONTO DO ANO
             </p>
           </div>
           
