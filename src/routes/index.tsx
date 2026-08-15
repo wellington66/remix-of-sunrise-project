@@ -12,6 +12,8 @@ import bananaCrepeAsset from "@/assets/banana_crepe.png.asset.json";
 import cuscuzOvoAsset from "@/assets/cuscuz_ovo.png.asset.json";
 import bananaCupcakeBowlAsset from "@/assets/banana_cupcake_bowl.png.asset.json";
 import crepiocaFrangoAsset from "@/assets/crepioca_frango.png.asset.json";
+import guiaMockupAsset from "@/assets/guia_101_receitas_mockup.png.asset.json";
+
 
 
 
