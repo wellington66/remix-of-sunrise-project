@@ -77,21 +77,45 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { title: "80 Cafés da Manhã para Substituir o Pão" },
+      { name: "description", content: "App provides 80 healthy breakfast recipes to replace bread, offering quick and practical meal solutions." },
+      { name: "author", content: "Chef Mônica Maciel" },
+      { property: "og:title", content: "80 Cafés da Manhã para Substituir o Pão" },
+      { property: "og:description", content: "App provides 80 healthy breakfast recipes to replace bread, offering quick and practical meal solutions." },
       { property: "og:type", content: "website" },
+      { property: "og:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/MxJJBmWryoTgTvwVm5NbtezPF8H3/social-images/social-1780358555181-878787878.webp" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:title", content: "80 Cafés da Manhã para Substituir o Pão" },
+      { name: "twitter:description", content: "App provides 80 healthy breakfast recipes to replace bread, offering quick and practical meal solutions." },
+      { name: "twitter:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/MxJJBmWryoTgTvwVm5NbtezPF8H3/social-images/social-1780358555181-878787878.webp" },
     ],
     links: [
+      { rel: "preconnect", href: "https://fonts.googleapis.com" },
+      { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
+      { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Inter:wght@400;600;700&display=swap" },
       {
         rel: "stylesheet",
         href: appCss,
       },
       { rel: "icon", href: "/favicon.ico", type: "image/x-icon" },
+    ],
+    scripts: [
+      {
+        src: "https://cdn.utmify.com.br/scripts/utms/latest.js",
+        "data-utmify-prevent-subids": true,
+        async: true,
+        defer: true,
+      },
+      {
+        children: `
+          window.pixelId = "69c43354a238c39f32aa9a6c";
+          var a = document.createElement("script");
+          a.setAttribute("async", "");
+          a.setAttribute("defer", "");
+          a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
+          document.head.appendChild(a);
+        `,
+      },
     ],
   }),
   shellComponent: RootShell,
