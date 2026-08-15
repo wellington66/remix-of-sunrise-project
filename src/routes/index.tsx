@@ -161,7 +161,7 @@ function Index() {
             <div className="relative">
               <div className="absolute -inset-4 bg-[#1B4332]/5 rounded-full blur-3xl" />
               <img 
-                src={shakshukaAsset.url} 
+                src={shakshukaUrl} 
                 className="relative rounded-[3rem] shadow-2xl border-8 border-[#F5F0E8] z-10" 
                 alt="Transformação Saudável" 
               />
