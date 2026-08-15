@@ -2,13 +2,13 @@ import { createFileRoute } from "@tanstack/react-router";
 import { motion } from "framer-motion";
 import { CheckCircle2, Star, ShieldCheck, ArrowRight, Minus, Plus, Zap, Clock, Smartphone, Gift, Heart, UserCheck, Play, ArrowDown, Timer } from "lucide-react";
 import { useState, useEffect } from "react";
-import cuscuzQueijoAsset from "@/assets/cuscuz_queijo.png.asset.json";
-import shakshukaAsset from "@/assets/shakshuka.png.asset.json";
-import bananaCrepeAsset from "@/assets/banana_crepe.png.asset.json";
-import cuscuzOvoAsset from "@/assets/cuscuz_ovo.png.asset.json";
-import bananaCupcakeBowlAsset from "@/assets/banana_cupcake_bowl.png.asset.json";
-import crepiocaFrangoAsset from "@/assets/crepioca_frango.png.asset.json";
-import guiaMockupAsset from "@/assets/book_mockup_new.jpg.asset.json";
+const cuscuzQueijoUrl = "/assets/cuscuz_queijo.png";
+const shakshukaUrl = "/assets/shakshuka.png";
+const bananaCrepeUrl = "/assets/banana_crepe.png";
+const cuscuzOvoUrl = "/assets/cuscuz_ovo.png";
+const bananaCupcakeBowlUrl = "/assets/banana_cupcake_bowl.png";
+const crepiocaFrangoUrl = "/assets/crepioca_frango.png";
+const guiaMockupUrl = "/assets/book_mockup.jpg";
 
 
 
