@@ -87,7 +87,7 @@ function Index() {
 
             <div className="grid grid-cols-1 lg:grid-cols-1 gap-12 items-center mt-12">
               <div className="text-center space-y-8 max-w-3xl mx-auto">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
                   {[
                     "101 Opções práticas de 5 a 10 minutos",
                     "Sem glúten, sem lactose e sem açúcar",
@@ -97,12 +97,12 @@ function Index() {
                   ].map((text, i) => (
                     <div key={i} className="flex items-center gap-4 bg-[#F5F0E8]/50 p-4 rounded-2xl border border-[#1B4332]/5 hover:border-[#1B4332]/20 transition-all">
                       <CheckCircle2 className="w-6 h-6 text-[#1B4332] shrink-0" />
-                      <span className="text-sm md:text-base font-bold uppercase tracking-tight">{text}</span>
+                      <span className="text-sm font-bold uppercase tracking-tight">{text}</span>
                     </div>
                   ))}
                 </div>
 
-                <div className="space-y-4 pt-4">
+                <div className="space-y-6 pt-4 max-w-xl mx-auto">
                   <button className="w-full bg-[#1B4332] text-white py-7 rounded-[2rem] font-black uppercase tracking-[0.2em] text-xl md:text-2xl shadow-[0_20px_60px_rgba(27,67,50,0.3)] hover:scale-[1.02] hover:shadow-[0_25px_70px_rgba(27,67,50,0.4)] active:scale-95 transition-all relative overflow-hidden group">
                     <span className="relative z-10">SIM! QUERO MEU E-BOOK</span>
                     <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
