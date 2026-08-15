@@ -11,7 +11,7 @@ function Index() {
   const [activePlan, setActivePlan] = useState("premium");
 
   return (
-    <div className="min-h-screen bg-[#FDF9F2] text-[#2D2D2D] font-[family-name:var(--font-inter)] selection:bg-primary/20">
+    <div className="min-h-screen bg-[#F5F0E8] text-[#2D2D2D] font-[family-name:var(--font-inter)] selection:bg-primary/20">
       {/* Top Banner */}
       <div className="bg-[#1B4332] text-white py-2.5 text-center text-[10px] md:text-xs font-bold uppercase tracking-widest px-4">
         VOCÊ RECEBERÁ 05 BÔNUS EXCLUSIVOS
@@ -171,7 +171,7 @@ function Index() {
       </section>
 
       {/* Pricing Section */}
-      <section className="py-24 bg-[#FDF9F2]">
+      <section className="py-24 bg-[#F5F0E8]">
         <div className="container mx-auto px-4 max-w-5xl text-center">
           <h2 className="text-4xl md:text-6xl font-[family-name:var(--font-anton)] text-[#1B4332] uppercase mb-4">
             ESCOLHA SEU PLANO
@@ -272,7 +272,7 @@ function Index() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-[#FDF9F2] py-12 border-t border-[#1B4332]/5 text-center px-4">
+      <footer className="bg-[#F5F0E8] py-12 border-t border-[#1B4332]/5 text-center px-4">
         <div className="container mx-auto space-y-8">
           <h4 className="text-xl font-[family-name:var(--font-anton)] text-[#1B4332] uppercase">Chef Mônica Maciel</h4>
           
