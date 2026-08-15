@@ -57,13 +57,13 @@ function Index() {
             </span>
             
             <h1 className="text-[clamp(2.2rem,10vw,6.5rem)] font-[family-name:var(--font-anton)] uppercase leading-[0.9] tracking-tighter mb-8 break-words">
-              CANSADA DE SE SENTIR <br className="hidden md:block"/>
-              <span className="text-[#D64D3F] drop-shadow-sm">INCHADA E SEM ENERGIA</span> <br className="hidden md:block"/>
-              LOGO PELA MANHÃ?
+              TRANSFORME SEU <br className="hidden md:block"/>
+              <span className="text-[#D64D3F] drop-shadow-sm">CAFÉ DA MANHÃ</span> <br className="hidden md:block"/>
+              EM UM ALIADO DO CORPO
             </h1>
             
             <p className="text-[clamp(1rem,3vw,1.5rem)] text-[#1B4332]/70 font-medium mb-12 max-w-[800px] mx-auto leading-tight px-2">
-              Descubra como o "vício do pão" está sabotando seu emagrecimento e recupere sua autoestima com o método de <span className="text-[#1B4332] font-black underline decoration-[#D64D3F]/40 underline-offset-4">desinflamação matinal</span> em apenas 7 dias.
+              Abandone o pão e descubra como <span className="text-[#1B4332] font-black underline decoration-[#D64D3F]/40 underline-offset-4">desinflamar seu corpo</span> naturalmente com receitas práticas, saborosas e que aceleram sua queima de gordura logo nas primeiras horas do dia.
             </p>
 
             <div className="mt-12 w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw]">
@@ -147,9 +147,9 @@ function Index() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-[clamp(2rem,10vw,4rem)] items-center max-w-7xl mx-auto">
             <div className="space-y-6 px-2">
               <h2 className="text-[clamp(1.8rem,6vw,3.5rem)] font-[family-name:var(--font-anton)] uppercase leading-[1.1]">
-                POR QUE VOCÊ CONTINUA <br/>
-                <span className="text-[#D64D3F]">GANHANDO PESO</span> <br/>
-                MESMO COMENDO "POUCO"?
+                O SEGREDO DE UM <br/>
+                <span className="text-[#D64D3F]">CORPO LEVE</span> <br/>
+                COMEÇA PELA MANHÃ
               </h2>
               <div className="w-20 h-2 bg-[#D64D3F] rounded-full" />
               <p className="text-lg text-[#1B4332]/80 leading-relaxed font-medium">
