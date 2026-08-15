@@ -35,34 +35,34 @@ function Index() {
   };
 
   return (
-    <div className="min-h-screen bg-[#F5F0E8] text-[#1B4332] font-[family-name:var(--font-inter)] selection:bg-[#D64D3F]/20 overflow-x-hidden">
+    <div className="min-h-screen bg-[#F5F0E8] text-[#1B4332] font-[family-name:var(--font-inter)] selection:bg-[#D64D3F]/20 overflow-x-hidden w-full relative">
       {/* Dynamic Scarcity Header */}
-      <div className="bg-[#D64D3F] text-white py-2 text-center text-[10px] md:text-xs font-black uppercase tracking-[0.2em] px-4 sticky top-0 z-[100] shadow-xl">
+      <div className="bg-[#D64D3F] text-white py-2 text-center text-[clamp(0.6rem,2vw,0.75rem)] font-black uppercase tracking-[0.2em] px-4 sticky top-0 z-[100] shadow-xl w-full">
         🚨 ATENÇÃO: Desconto expira em <span className="font-mono bg-white/20 px-2 py-0.5 rounded ml-1">{formatTime(timeLeft)}</span>
       </div>
 
       {/* Hero Section - Super Conversion Focused */}
-      <header className="relative pt-12 md:pt-20 pb-32 overflow-hidden bg-white">
+      <header className="relative pt-[clamp(3rem,8vw,5rem)] pb-[clamp(6rem,12vw,10rem)] overflow-hidden bg-white w-full">
         {/* Background Pattern */}
         <div className="absolute inset-0 opacity-[0.03] pointer-events-none" style={{ backgroundImage: 'radial-gradient(#1B4332 1px, transparent 1px)', backgroundSize: '20px 20px' }} />
         
-        <div className="container mx-auto px-4 relative z-10">
+        <div className="container mx-auto px-[clamp(1rem,5vw,2.5rem)] relative z-10">
           <motion.div 
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            className="text-center max-w-5xl mx-auto"
+            className="text-center max-w-[min(90vw,1200px)] mx-auto"
           >
-            <span className="inline-flex items-center gap-2 bg-[#1B4332]/5 text-[#1B4332] px-4 py-2 rounded-full text-[10px] md:text-xs font-bold uppercase tracking-[0.15em] mb-8 border border-[#1B4332]/10">
+            <span className="inline-flex items-center gap-2 bg-[#1B4332]/5 text-[#1B4332] px-4 py-2 rounded-full text-[clamp(0.6rem,1.5vw,0.75rem)] font-bold uppercase tracking-[0.15em] mb-8 border border-[#1B4332]/10">
               <Star className="w-3 h-3 fill-current" /> Método testado por +12.487 mulheres
             </span>
             
-            <h1 className="text-[2.8rem] md:text-[6.5rem] font-[family-name:var(--font-anton)] uppercase leading-[0.85] tracking-tight mb-8">
-              CANSADA DE SE SENTIR <br/>
-              <span className="text-[#D64D3F] drop-shadow-sm">INCHADA E SEM ENERGIA</span> <br/>
+            <h1 className="text-[clamp(2.2rem,10vw,6.5rem)] font-[family-name:var(--font-anton)] uppercase leading-[0.9] tracking-tighter mb-8 break-words">
+              CANSADA DE SE SENTIR <br className="hidden md:block"/>
+              <span className="text-[#D64D3F] drop-shadow-sm">INCHADA E SEM ENERGIA</span> <br className="hidden md:block"/>
               LOGO PELA MANHÃ?
             </h1>
             
-            <p className="text-lg md:text-2xl text-[#1B4332]/70 font-medium mb-12 max-w-3xl mx-auto leading-tight">
+            <p className="text-[clamp(1rem,3vw,1.5rem)] text-[#1B4332]/70 font-medium mb-12 max-w-[800px] mx-auto leading-tight px-2">
               Descubra como o "vício do pão" está sabotando seu emagrecimento e recupere sua autoestima com o método de <span className="text-[#1B4332] font-black underline decoration-[#D64D3F]/40 underline-offset-4">desinflamação matinal</span> em apenas 7 dias.
             </p>
 
@@ -95,15 +95,15 @@ function Index() {
                     "Acabe com o inchaço matinal",
                     "5 Bônus exclusivos (Lista de compras + Detox)"
                   ].map((text, i) => (
-                    <div key={i} className="flex items-center gap-4 bg-[#F5F0E8]/50 p-4 rounded-2xl border border-[#1B4332]/5 hover:border-[#1B4332]/20 transition-all">
+                    <div key={i} className="flex items-center gap-4 bg-[#F5F0E8]/50 p-4 rounded-2xl border border-[#1B4332]/5 hover:border-[#1B4332]/20 transition-all min-h-[44px]">
                       <CheckCircle2 className="w-6 h-6 text-[#1B4332] shrink-0" />
-                      <span className="text-sm font-bold uppercase tracking-tight">{text}</span>
+                      <span className="text-[clamp(0.75rem,2vw,0.875rem)] font-bold uppercase tracking-tight text-left">{text}</span>
                     </div>
                   ))}
                 </div>
 
                 <div className="space-y-6 pt-4 max-w-xl mx-auto">
-                  <button className="w-full bg-[#1B4332] text-white py-7 rounded-[2rem] font-black uppercase tracking-[0.2em] text-xl md:text-2xl shadow-[0_20px_60px_rgba(27,67,50,0.3)] hover:scale-[1.02] hover:shadow-[0_25px_70px_rgba(27,67,50,0.4)] active:scale-95 transition-all relative overflow-hidden group">
+                  <button className="w-full bg-[#1B4332] text-white py-[clamp(1.2rem,4vw,1.75rem)] rounded-[2rem] font-black uppercase tracking-[0.2em] text-[clamp(1rem,3vw,1.5rem)] shadow-[0_20px_60px_rgba(27,67,50,0.3)] hover:scale-[1.02] hover:shadow-[0_25px_70px_rgba(27,67,50,0.4)] active:scale-95 transition-all relative overflow-hidden group min-h-[44px] cursor-pointer touch-manipulation">
                     <span className="relative z-10">SIM! QUERO MEU E-BOOK</span>
                     <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
                   </button>
@@ -144,9 +144,9 @@ function Index() {
       {/* AIDA: Interest - Why this is for them */}
       <section className="py-24 bg-white">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center max-w-6xl mx-auto">
-            <div className="space-y-6">
-              <h2 className="text-4xl md:text-5xl font-[family-name:var(--font-anton)] uppercase leading-none">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-[clamp(2rem,10vw,4rem)] items-center max-w-7xl mx-auto">
+            <div className="space-y-6 px-2">
+              <h2 className="text-[clamp(1.8rem,6vw,3.5rem)] font-[family-name:var(--font-anton)] uppercase leading-[1.1]">
                 POR QUE VOCÊ CONTINUA <br/>
                 <span className="text-[#D64D3F]">GANHANDO PESO</span> <br/>
                 MESMO COMENDO "POUCO"?
@@ -167,7 +167,7 @@ function Index() {
               <div className="absolute -inset-4 bg-[#1B4332]/5 rounded-full blur-3xl" />
               <img 
                 src={shakshukaUrl} 
-                className="relative rounded-[3rem] shadow-2xl border-8 border-[#F5F0E8] z-10" 
+                className="relative rounded-[clamp(1.5rem,5vw,3rem)] shadow-2xl border-8 border-[#F5F0E8] z-10 w-full h-auto object-cover aspect-[4/3] md:aspect-square" 
                 alt="Transformação Saudável" 
               />
             </div>
@@ -185,7 +185,7 @@ function Index() {
           <p className="text-[#1B4332]/60 font-bold uppercase tracking-widest text-xs">Transforme seu corpo começando pelo prato</p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-[clamp(1rem,4vw,2rem)] max-w-7xl mx-auto">
           {[
             { img: cuscuzQueijoUrl, calories: "185 kcal" },
             { img: shakshukaUrl, calories: "210 kcal" },
@@ -197,10 +197,10 @@ function Index() {
             <motion.div 
               key={i}
               whileHover={{ y: -10 }}
-              className="bg-white rounded-[2rem] overflow-hidden shadow-xl border border-[#1B4332]/5 group relative"
+              className="bg-white rounded-[clamp(1rem,3vw,2rem)] overflow-hidden shadow-xl border border-[#1B4332]/5 group relative w-full"
             >
-              <div className="h-64 overflow-hidden relative">
-                <img src={item.img} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt={`Receita ${i + 1}`} />
+              <div className="aspect-[4/3] md:aspect-square overflow-hidden relative">
+                <img src={item.img} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt={`Receita ${i + 1}`} loading="lazy" />
                 <div className="absolute top-4 right-4 bg-[#D64D3F] text-white px-4 py-2 rounded-full text-xs font-black shadow-lg">
                   {item.calories}
                 </div>
@@ -301,12 +301,12 @@ function Index() {
       </footer>
 
       {/* High-Conv Sticky Mobile Footer */}
-      <div className="md:hidden fixed bottom-0 left-0 right-0 bg-white border-t border-[#1B4332]/10 p-5 z-[100] flex items-center justify-between shadow-[0_-15px_40px_rgba(0,0,0,0.1)]">
+      <div className="md:hidden fixed bottom-0 left-0 right-0 bg-white border-t border-[#1B4332]/10 p-4 z-[100] flex items-center justify-between shadow-[0_-15px_40px_rgba(0,0,0,0.1)] safe-area-inset-bottom">
         <div className="flex flex-col">
-          <span className="text-[10px] text-[#D64D3F] line-through font-black leading-none">R$ 97,00</span>
-          <span className="text-3xl font-[family-name:var(--font-anton)] text-[#1B4332] leading-none">R$ 17,90</span>
+          <span className="text-[0.65rem] text-[#D64D3F] line-through font-black leading-none">R$ 97,00</span>
+          <span className="text-[1.8rem] font-[family-name:var(--font-anton)] text-[#1B4332] leading-none">R$ 17,90</span>
         </div>
-        <button className="bg-[#D64D3F] text-white px-8 py-4 rounded-full font-black uppercase tracking-widest text-xs shadow-xl animate-pulse-slow">
+        <button className="bg-[#D64D3F] text-white px-6 py-3 rounded-full font-black uppercase tracking-widest text-[0.7rem] shadow-xl animate-pulse-slow min-h-[44px] cursor-pointer touch-manipulation">
           COMPRAR AGORA
         </button>
       </div>
