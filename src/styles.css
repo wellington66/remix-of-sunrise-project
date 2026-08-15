@@ -68,7 +68,7 @@
 
 :root {
   --radius: 0.625rem;
-  --background: oklch(0.985 0.005 85); /* Tom de creme muito suave */
+  --background: oklch(0.96 0.02 60); /* Tom de marrom leve/creme terroso */
   --foreground: oklch(0.2 0.02 90);
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.2 0.02 90);
