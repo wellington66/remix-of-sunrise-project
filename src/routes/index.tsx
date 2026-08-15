@@ -66,21 +66,21 @@ function Index() {
               Descubra como o "vício do pão" está sabotando seu emagrecimento e recupere sua autoestima com o método de <span className="text-[#1B4332] font-black underline decoration-[#D64D3F]/40 underline-offset-4">desinflamação matinal</span> em apenas 7 dias.
             </p>
 
-            <div className="mt-12 w-full max-w-5xl mx-auto">
-              <div className="relative group">
-                <div className="absolute -inset-10 bg-[#D64D3F]/5 rounded-full blur-3xl opacity-50 pointer-events-none" />
+            <div className="mt-12 w-full max-w-5xl mx-auto px-2">
+              <div className="relative group aspect-video md:aspect-auto">
+                <div className="absolute -inset-[clamp(1rem,5vw,2.5rem)] bg-[#D64D3F]/5 rounded-full blur-3xl opacity-50 pointer-events-none" />
                 <motion.img 
                   initial={{ opacity: 0, scale: 0.95 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 0.8, ease: "easeOut" }}
                   src={guiaMockupUrl}
                   alt="Guia das 101 Receitas Mockup"
-                  className="relative w-full h-auto object-contain z-10"
+                  className="relative w-full h-auto max-h-[70vh] object-contain z-10 mx-auto"
                 />
                 {/* Floating Badge */}
-                <div className="absolute top-0 right-0 md:top-10 md:right-10 bg-[#D64D3F] text-white w-28 h-28 rounded-full flex flex-col items-center justify-center shadow-2xl border-4 border-white animate-bounce-slow z-20">
-                  <span className="text-[10px] font-bold uppercase">Apenas</span>
-                  <span className="text-2xl font-[family-name:var(--font-anton)]">R$ 17,90</span>
+                <div className="absolute -top-4 -right-2 md:top-10 md:right-10 bg-[#D64D3F] text-white w-[clamp(5rem,15vw,7rem)] h-[clamp(5rem,15vw,7rem)] rounded-full flex flex-col items-center justify-center shadow-2xl border-4 border-white animate-bounce-slow z-20">
+                  <span className="text-[clamp(0.5rem,1.5vw,0.65rem)] font-bold uppercase">Apenas</span>
+                  <span className="text-[clamp(1.2rem,3vw,1.5rem)] font-[family-name:var(--font-anton)]">R$ 17,90</span>
                 </div>
               </div>
             </div>
