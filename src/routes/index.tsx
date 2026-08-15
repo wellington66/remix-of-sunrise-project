@@ -200,11 +200,6 @@ function Index() {
                   {item.calories}
                 </div>
               </div>
-              <div className="p-8 text-center space-y-4">
-                <p className="text-sm text-[#1B4332]/60 font-medium leading-relaxed uppercase tracking-tight">
-                  Substitua o pão por energia limpa e saciedade prolongada.
-                </p>
-              </div>
             </motion.div>
           ))}
         </div>
