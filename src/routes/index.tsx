@@ -93,6 +93,34 @@ function Index() {
         </div>
       </div>
 
+      {/* Urgency Divider 1 */}
+      <div className="py-12 flex flex-col items-center justify-center text-center px-4">
+        <div className="w-px h-12 bg-[#D64D3F]/30 mb-6" />
+        <span className="text-[#D64D3F] font-black uppercase tracking-[0.3em] text-[10px] mb-8">
+          EXISTE UMA FORMA MELHOR
+        </span>
+        <div className="w-px h-12 bg-[#D64D3F]/30 mb-12" />
+        
+        <div className="w-full max-w-3xl bg-gradient-to-br from-[#FF5733] to-[#D64D3F] rounded-[2rem] p-8 md:p-12 text-white shadow-2xl relative overflow-hidden group">
+          <div className="absolute top-0 right-0 p-8 opacity-10 rotate-12 transition-transform group-hover:scale-110">
+            <Timer className="w-32 h-32" />
+          </div>
+          <div className="relative z-10 space-y-4">
+            <div className="flex justify-center mb-4">
+              <div className="bg-white/20 p-3 rounded-2xl backdrop-blur-sm">
+                <Timer className="w-8 h-8 text-white animate-pulse" />
+              </div>
+            </div>
+            <h3 className="text-2xl md:text-4xl font-[family-name:var(--font-anton)] uppercase leading-tight">
+              ATENÇÃO! ESSA OFERTA ENCERRA HOJE!
+            </h3>
+            <p className="text-sm md:text-base font-medium opacity-90 max-w-xl mx-auto">
+              Após o encerramento, o preço volta ao normal. <span className="font-black underline decoration-2 underline-offset-4">Garanta agora com 76% de desconto.</span>
+            </p>
+          </div>
+        </div>
+      </div>
+
       {/* AIDA: Interest */}
       <section className="py-24 bg-white relative">
         <div className="container mx-auto px-4">
@@ -296,6 +324,33 @@ function Index() {
           </div>
         </div>
       </section>
+
+      {/* Urgency Divider 2 */}
+      <div className="py-12 flex flex-col items-center justify-center text-center px-4">
+        <div className="w-px h-12 bg-[#D64D3F]/30 mb-6" />
+        <span className="text-[#D64D3F] font-black uppercase tracking-[0.3em] text-[10px] mb-8">
+          TIRE SUAS DÚVIDAS
+        </span>
+        <div className="w-px h-12 bg-[#D64D3F]/30 mb-12" />
+        
+        <div className="w-full max-w-3xl bg-[#1B4332] rounded-[2rem] p-8 md:p-12 text-white shadow-2xl relative overflow-hidden group">
+          <div className="absolute -bottom-10 -left-10 p-8 opacity-10 rotate-12 transition-transform group-hover:scale-110">
+            <ShieldCheck className="w-32 h-32" />
+          </div>
+          <div className="relative z-10">
+            <h3 className="text-xl md:text-2xl font-[family-name:var(--font-anton)] uppercase leading-tight mb-4">
+              VOCÊ ESTÁ 100% SEGURA
+            </h3>
+            <p className="text-sm opacity-80 max-w-xl mx-auto mb-6">
+              Sua satisfação é nossa prioridade. Se em 7 dias você não amar as receitas, devolvemos cada centavo.
+            </p>
+            <div className="flex justify-center gap-4">
+              <ShieldCheck className="w-8 h-8 text-[#D64D3F]" />
+              <CheckCircle2 className="w-8 h-8 text-[#D64D3F]" />
+            </div>
+          </div>
+        </div>
+      </div>
 
       {/* FAQ */}
       <section className="py-24 container mx-auto px-4 max-w-3xl">
