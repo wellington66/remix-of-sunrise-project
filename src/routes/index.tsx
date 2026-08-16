@@ -195,12 +195,12 @@ function Index() {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
           {[
-            { img: cuscuzQueijoUrl, calories: "185 kcal" },
-            { img: shakshukaUrl, calories: "210 kcal" },
-            { img: bananaCrepeUrl, calories: "195 kcal" },
-            { img: cuscuzOvoUrl, calories: "220 kcal" },
-            { img: bananaCupcakeBowlUrl, calories: "175 kcal" },
-            { img: crepiocaFrangoUrl, calories: "245 kcal" }
+            { img: cuscuzQueijoUrl, title: "Cuscuz de Milho com Queijo Coalho", calories: "185 kcal", time: "10 min", level: "Fácil" },
+            { img: omeleteEspecialUrl, title: "Omelete Premium Low Carb", calories: "210 kcal", time: "08 min", level: "Mestre" },
+            { img: bananaCrepeUrl, title: "Crepe Fit de Banana e Canela", calories: "195 kcal", time: "12 min", level: "Médio" },
+            { img: cuscuzOvoUrl, title: "Cuscuz Nordestino com Ovo", calories: "220 kcal", time: "10 min", level: "Fácil" },
+            { img: bananaCupcakeBowlUrl, title: "Muffin de Banana em 5 Minutos", calories: "175 kcal", time: "05 min", level: "Rápido" },
+            { img: crepiocaFrangoUrl, title: "Crepioca de Frango Desfiado", calories: "245 kcal", time: "15 min", level: "Completo" }
           ].map((item, i) => (
             <motion.div 
               key={i}
