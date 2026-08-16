@@ -34,21 +34,41 @@ export const Route = createFileRoute("/")({
   }),
 });
 
+/** Estrutura tipada dos depoimentos: `stars` é opcional (default 5). */
+interface Testimonial {
+  name: string;
+  date: string;
+  text: string;
+  likes: number;
+  avatar: string;
+  stars?: number;
+}
+
 function Index() {
-  const [timeLeft, setTimeLeft] = useState(900); // 15 minutes in seconds
+  const [timeLeft, setTimeLeft] = useState(900); // 15 minutos em segundos
 
   useEffect(() => {
+    // Causa raiz do bug anterior: o intervalo continuava executando (e re-renderizando)
+    // indefinidamente mesmo após o contador chegar a zero. Agora ele se auto-encerra.
     const timer = setInterval(() => {
-      setTimeLeft((prev) => (prev > 0 ? prev - 1 : 0));
+      setTimeLeft((prev) => {
+        if (prev <= 1) {
+          clearInterval(timer);
+          return 0;
+        }
+        return prev - 1;
+      });
     }, 1000);
     return () => clearInterval(timer);
   }, []);
 
   const formatTime = (seconds: number) => {
-    const mins = Math.floor(seconds / 60);
-    const secs = seconds % 60;
+    const safeSeconds = Math.max(0, seconds);
+    const mins = Math.floor(safeSeconds / 60);
+    const secs = safeSeconds % 60;
     return `${mins.toString().padStart(2, "0")}:${secs.toString().padStart(2, "0")}`;
   };
+
 
   return (
     <div className="min-h-screen bg-white text-[#1B4332] font-[family-name:var(--font-inter)] selection:bg-[#D64D3F]/20 overflow-x-hidden w-full relative">
