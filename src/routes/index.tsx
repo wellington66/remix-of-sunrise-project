@@ -3,11 +3,11 @@ import { createFileRoute } from "@tanstack/react-router";
 import { motion } from "framer-motion";
 import { CheckCircle2, Star, ShieldCheck, ArrowRight, Minus, Plus, Zap, Clock, Smartphone, Gift, Heart, UserCheck, Play, ArrowDown, Timer, Calendar, Coffee, Utensils } from "lucide-react";
 import { useState, useEffect } from "react";
-import bonusDesincharAsset from "@/assets/bonus_desinchar.jpg.asset.json";
-import bonusListaComprasAsset from "@/assets/bonus_lista_compras.jpg.asset.json";
-import bonusPlanejamentoAsset from "@/assets/bonus_planejamento.jpg.asset.json";
-import bonusLanchesAsset from "@/assets/bonus_lanches.jpg.asset.json";
-import bonusSobremesasAsset from "@/assets/bonus_sobremesas.jpg.asset.json";
+import bonusDesincharAsset from "@/assets/bonus-cafe-da-manha-sem-fundo.png.asset.json";
+import bonusListaComprasAsset from "@/assets/lista-compras-sem-fundo.png.asset.json";
+import bonusPlanejamentoAsset from "@/assets/planejamento-semanal-sem-fundo.png.asset.json";
+import bonusLanchesAsset from "@/assets/guia-lanches-sem-fundo.png.asset.json";
+import bonusSobremesasAsset from "@/assets/sobremesas-sem-fundo.png.asset.json";
 import bookMockupEssentialAsset from "@/assets/book_mockup_essential.jpg.asset.json";
 import bookMockupCompleteAsset from "@/assets/book_mockup_complete.jpg.asset.json";
 
