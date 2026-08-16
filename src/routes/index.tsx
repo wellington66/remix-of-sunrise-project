@@ -82,7 +82,7 @@ function Index() {
               <span className="text-sm">POR APENAS</span>
               <div className="text-4xl font-[family-name:var(--font-anton)]">R$ 17,90</div>
             </div>
-            <button className="bg-[#2D6A4F] text-white px-8 py-4 rounded-full font-black uppercase tracking-widest text-sm shadow-lg hover:scale-105 transition-transform cursor-pointer">
+            <button type="button" className="bg-[#2D6A4F] text-white px-8 py-4 rounded-full font-black uppercase tracking-widest text-sm shadow-lg hover:scale-105 transition-transform cursor-pointer">
               QUERO AS RECEITAS AGORA
             </button>
             <div className="flex gap-4 text-[10px] font-bold text-[#1B4332]/60">
