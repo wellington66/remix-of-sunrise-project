@@ -118,7 +118,7 @@ function Index() {
             <span className="text-[#1B4332]/60">PARA SUBSTITUIR O PÃO</span>
           </h1>
           
-          <div className="relative w-screen max-w-none -mx-4 md:mx-auto md:w-full md:max-w-5xl mb-12 bg-transparent group left-1/2 -translate-x-1/2 md:left-auto md:translate-x-0">
+          <div className="relative w-screen max-w-none mb-12 bg-transparent group left-1/2 -translate-x-1/2">
             <div className="absolute inset-0 bg-brand-red/5 rounded-full blur-[120px] -z-10 animate-pulse" />
             <img 
               src={lifestyleHeroUrl}
