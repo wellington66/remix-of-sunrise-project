@@ -292,7 +292,7 @@ function Index() {
       </section>
 
       {/* Pricing Section */}
-      <section className="py-24 bg-[#1B4332] text-white text-center px-4 relative overflow-hidden w-full">
+      <section className="py-24 bg-white text-[#1B4332] text-center px-4 relative overflow-hidden w-full">
         <div className="container mx-auto max-w-4xl space-y-12">
           <div className="space-y-4">
             <h2 className="text-[clamp(2.5rem,8vw,5rem)] font-[family-name:var(--font-anton)] leading-[0.9] uppercase">
@@ -303,7 +303,7 @@ function Index() {
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch pt-12">
             {/* Essential */}
-            <div className="bg-white/5 border border-white/10 p-12 rounded-[3rem] backdrop-blur-md flex flex-col items-center hover:bg-white/10 transition-all">
+            <div className="bg-[#FDF9F2] border border-[#1B4332]/10 p-12 rounded-[3rem] flex flex-col items-center hover:shadow-xl transition-all text-[#1B4332]">
               <div className="w-full aspect-square mb-6 overflow-hidden flex items-center justify-center p-4 bg-transparent">
                 <img 
                   src={bookMockupEssentialAsset.url} 
@@ -317,14 +317,14 @@ function Index() {
               </div>
               <div className="text-center mb-8">
                 <span className="text-sm line-through opacity-40 block font-bold">DE R$ 47,00</span>
-                <span className="text-5xl font-[family-name:var(--font-anton)] text-white">R$ 17,90</span>
+                <span className="text-5xl font-[family-name:var(--font-anton)] text-[#1B4332]">R$ 17,90</span>
               </div>
               <ul className="text-left w-full space-y-4 mb-8 text-sm opacity-80">
                 <li className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-[#D64D3F]" /> Guia com 101 Receitas</li>
                 <li className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-[#D64D3F]" /> Acesso Vitalício</li>
                 <li className="flex items-center gap-2 opacity-30 line-through"><Minus className="w-4 h-4" /> Bônus Exclusivos</li>
               </ul>
-              <button className="w-full mt-auto bg-white/20 text-white py-5 rounded-full font-black uppercase tracking-widest text-sm hover:bg-white/30 transition-all">
+              <button className="w-full mt-auto bg-[#1B4332] text-white py-5 rounded-full font-black uppercase tracking-widest text-sm hover:scale-105 transition-all">
                 QUERO O GUIA
               </button>
             </div>
