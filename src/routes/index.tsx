@@ -156,9 +156,10 @@ function Index() {
                 ))}
               </ul>
               <div className="pt-8">
-                <button type="button" className="bg-brand-red text-white px-8 py-4 rounded-full font-black uppercase tracking-widest text-sm shadow-xl hover:scale-105 transition-transform cursor-pointer w-full lg:w-auto ring-4 ring-brand-red/20">
+                <a href={CHECKOUT_COMBO} className="inline-block text-center bg-brand-red text-white px-8 py-4 rounded-full font-black uppercase tracking-widest text-sm shadow-xl hover:scale-105 transition-transform cursor-pointer w-full lg:w-auto ring-4 ring-brand-red/20">
                   QUERO SAIR DA ROTINA DO PÃO
-                </button>
+                </a>
+
               </div>
             </div>
             <div className="relative">
