@@ -1,11 +1,11 @@
 {
-  "version": 1,
   "asset_id": "fbff330d-0905-43c5-8093-f82d3376a9f0",
-  "project_id": "389615b8-4720-42ea-a730-251aa043daa9",
-  "url": "/__l5e/assets-v1/fbff330d-0905-43c5-8093-f82d3376a9f0/book_mockup_essential.jpg",
-  "r2_key": "a/v1/389615b8-4720-42ea-a730-251aa043daa9/fbff330d-0905-43c5-8093-f82d3376a9f0/book_mockup_essential.jpg",
-  "original_filename": "book_mockup_essential.jpg",
-  "size": 177842,
   "content_type": "image/jpeg",
-  "created_at": "2026-08-16T00:24:13Z"
+  "created_at": "2026-08-16T00:24:13Z",
+  "original_filename": "book_mockup_essential.jpg",
+  "project_id": "62d79ac3-c9a5-4be6-ab2f-77b4cd1aef64",
+  "r2_key": "a/v1/62d79ac3-c9a5-4be6-ab2f-77b4cd1aef64/fbff330d-0905-43c5-8093-f82d3376a9f0/book_mockup_essential.jpg",
+  "size": 177842,
+  "url": "/__l5e/assets-v1/fbff330d-0905-43c5-8093-f82d3376a9f0/book_mockup_essential.jpg",
+  "version": 1
 }

@@ -1,11 +1,11 @@
 {
-  "version": 1,
   "asset_id": "c35679f0-cbf2-4546-9793-95747fff4de7",
-  "project_id": "389615b8-4720-42ea-a730-251aa043daa9",
-  "url": "/__l5e/assets-v1/c35679f0-cbf2-4546-9793-95747fff4de7/lista-compras-sem-fundo.png",
-  "r2_key": "a/v1/389615b8-4720-42ea-a730-251aa043daa9/c35679f0-cbf2-4546-9793-95747fff4de7/lista-compras-sem-fundo.png",
-  "original_filename": "lista-compras-sem-fundo.png",
-  "size": 65351,
   "content_type": "image/png",
-  "created_at": "2026-08-16T00:36:51Z"
+  "created_at": "2026-08-16T00:36:51Z",
+  "original_filename": "lista-compras-sem-fundo.png",
+  "project_id": "62d79ac3-c9a5-4be6-ab2f-77b4cd1aef64",
+  "r2_key": "a/v1/62d79ac3-c9a5-4be6-ab2f-77b4cd1aef64/c35679f0-cbf2-4546-9793-95747fff4de7/lista-compras-sem-fundo.png",
+  "size": 65351,
+  "url": "/__l5e/assets-v1/c35679f0-cbf2-4546-9793-95747fff4de7/lista-compras-sem-fundo.png",
+  "version": 1
 }

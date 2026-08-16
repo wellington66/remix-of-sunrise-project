@@ -1,11 +1,11 @@
 {
-  "version": 1,
   "asset_id": "2956d77e-2b47-415b-8707-1abff778bdd0",
-  "project_id": "389615b8-4720-42ea-a730-251aa043daa9",
-  "url": "/__l5e/assets-v1/2956d77e-2b47-415b-8707-1abff778bdd0/mockup-chef.png",
-  "r2_key": "a/v1/389615b8-4720-42ea-a730-251aa043daa9/2956d77e-2b47-415b-8707-1abff778bdd0/mockup-chef.png",
-  "original_filename": "mockup-chef.png",
-  "size": 1816478,
   "content_type": "image/png",
-  "created_at": "2026-08-16T03:03:15Z"
+  "created_at": "2026-08-16T03:03:15Z",
+  "original_filename": "mockup-chef.png",
+  "project_id": "62d79ac3-c9a5-4be6-ab2f-77b4cd1aef64",
+  "r2_key": "a/v1/62d79ac3-c9a5-4be6-ab2f-77b4cd1aef64/2956d77e-2b47-415b-8707-1abff778bdd0/mockup-chef.png",
+  "size": 1816478,
+  "url": "/__l5e/assets-v1/2956d77e-2b47-415b-8707-1abff778bdd0/mockup-chef.png",
+  "version": 1
 }

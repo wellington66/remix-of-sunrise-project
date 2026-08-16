@@ -1,11 +1,11 @@
 {
-  "version": 1,
   "asset_id": "7ec5d20c-7b21-4353-b755-9da0f6c51c85",
-  "project_id": "389615b8-4720-42ea-a730-251aa043daa9",
-  "url": "/__l5e/assets-v1/7ec5d20c-7b21-4353-b755-9da0f6c51c85/cuscuz_queijo.png",
-  "r2_key": "a/v1/389615b8-4720-42ea-a730-251aa043daa9/7ec5d20c-7b21-4353-b755-9da0f6c51c85/cuscuz_queijo.png",
-  "original_filename": "cuscuz_queijo.png",
-  "size": 1782504,
   "content_type": "image/png",
-  "created_at": "2026-08-16T00:52:30Z"
+  "created_at": "2026-08-16T00:52:30Z",
+  "original_filename": "cuscuz_queijo.png",
+  "project_id": "62d79ac3-c9a5-4be6-ab2f-77b4cd1aef64",
+  "r2_key": "a/v1/62d79ac3-c9a5-4be6-ab2f-77b4cd1aef64/7ec5d20c-7b21-4353-b755-9da0f6c51c85/cuscuz_queijo.png",
+  "size": 1782504,
+  "url": "/__l5e/assets-v1/7ec5d20c-7b21-4353-b755-9da0f6c51c85/cuscuz_queijo.png",
+  "version": 1
 }

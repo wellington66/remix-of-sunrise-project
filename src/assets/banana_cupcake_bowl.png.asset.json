@@ -1,11 +1,11 @@
 {
-  "version": 1,
   "asset_id": "bdd81099-aed7-42cd-8fa7-9d27ef847a11",
-  "project_id": "389615b8-4720-42ea-a730-251aa043daa9",
-  "url": "/__l5e/assets-v1/bdd81099-aed7-42cd-8fa7-9d27ef847a11/banana_cupcake_bowl.png",
-  "r2_key": "a/v1/389615b8-4720-42ea-a730-251aa043daa9/bdd81099-aed7-42cd-8fa7-9d27ef847a11/banana_cupcake_bowl.png",
-  "original_filename": "banana_cupcake_bowl.png",
-  "size": 1664832,
   "content_type": "image/png",
-  "created_at": "2026-08-16T00:52:38Z"
+  "created_at": "2026-08-16T00:52:38Z",
+  "original_filename": "banana_cupcake_bowl.png",
+  "project_id": "62d79ac3-c9a5-4be6-ab2f-77b4cd1aef64",
+  "r2_key": "a/v1/62d79ac3-c9a5-4be6-ab2f-77b4cd1aef64/bdd81099-aed7-42cd-8fa7-9d27ef847a11/banana_cupcake_bowl.png",
+  "size": 1664832,
+  "url": "/__l5e/assets-v1/bdd81099-aed7-42cd-8fa7-9d27ef847a11/banana_cupcake_bowl.png",
+  "version": 1
 }

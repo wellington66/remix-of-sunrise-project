@@ -1,11 +1,11 @@
 {
-  "version": 1,
   "asset_id": "4ca398fe-c9c4-4b21-bcc5-cdf411be8568",
-  "project_id": "389615b8-4720-42ea-a730-251aa043daa9",
-  "url": "/__l5e/assets-v1/4ca398fe-c9c4-4b21-bcc5-cdf411be8568/cuscuz_ovo.png",
-  "r2_key": "a/v1/389615b8-4720-42ea-a730-251aa043daa9/4ca398fe-c9c4-4b21-bcc5-cdf411be8568/cuscuz_ovo.png",
-  "original_filename": "cuscuz_ovo.png",
-  "size": 1749752,
   "content_type": "image/png",
-  "created_at": "2026-08-16T00:52:36Z"
+  "created_at": "2026-08-16T00:52:36Z",
+  "original_filename": "cuscuz_ovo.png",
+  "project_id": "62d79ac3-c9a5-4be6-ab2f-77b4cd1aef64",
+  "r2_key": "a/v1/62d79ac3-c9a5-4be6-ab2f-77b4cd1aef64/4ca398fe-c9c4-4b21-bcc5-cdf411be8568/cuscuz_ovo.png",
+  "size": 1749752,
+  "url": "/__l5e/assets-v1/4ca398fe-c9c4-4b21-bcc5-cdf411be8568/cuscuz_ovo.png",
+  "version": 1
 }

@@ -1,11 +1,11 @@
 {
-  "version": 1,
   "asset_id": "c2c42efe-bbaf-4d46-aab4-0039cc3f2403",
-  "project_id": "389615b8-4720-42ea-a730-251aa043daa9",
-  "url": "/__l5e/assets-v1/c2c42efe-bbaf-4d46-aab4-0039cc3f2403/bonus-cafe-da-manha-sem-fundo.png",
-  "r2_key": "a/v1/389615b8-4720-42ea-a730-251aa043daa9/c2c42efe-bbaf-4d46-aab4-0039cc3f2403/bonus-cafe-da-manha-sem-fundo.png",
-  "original_filename": "bonus-cafe-da-manha-sem-fundo.png",
-  "size": 78677,
   "content_type": "image/png",
-  "created_at": "2026-08-16T00:36:56Z"
+  "created_at": "2026-08-16T00:36:56Z",
+  "original_filename": "bonus-cafe-da-manha-sem-fundo.png",
+  "project_id": "62d79ac3-c9a5-4be6-ab2f-77b4cd1aef64",
+  "r2_key": "a/v1/62d79ac3-c9a5-4be6-ab2f-77b4cd1aef64/c2c42efe-bbaf-4d46-aab4-0039cc3f2403/bonus-cafe-da-manha-sem-fundo.png",
+  "size": 78677,
+  "url": "/__l5e/assets-v1/c2c42efe-bbaf-4d46-aab4-0039cc3f2403/bonus-cafe-da-manha-sem-fundo.png",
+  "version": 1
 }

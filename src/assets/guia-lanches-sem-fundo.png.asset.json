@@ -1,11 +1,11 @@
 {
-  "version": 1,
   "asset_id": "27ff9f43-9f4c-48be-a9f1-9dceb5fffa16",
-  "project_id": "389615b8-4720-42ea-a730-251aa043daa9",
-  "url": "/__l5e/assets-v1/27ff9f43-9f4c-48be-a9f1-9dceb5fffa16/guia-lanches-sem-fundo.png",
-  "r2_key": "a/v1/389615b8-4720-42ea-a730-251aa043daa9/27ff9f43-9f4c-48be-a9f1-9dceb5fffa16/guia-lanches-sem-fundo.png",
-  "original_filename": "guia-lanches-sem-fundo.png",
-  "size": 70613,
   "content_type": "image/png",
-  "created_at": "2026-08-16T00:36:54Z"
+  "created_at": "2026-08-16T00:36:54Z",
+  "original_filename": "guia-lanches-sem-fundo.png",
+  "project_id": "62d79ac3-c9a5-4be6-ab2f-77b4cd1aef64",
+  "r2_key": "a/v1/62d79ac3-c9a5-4be6-ab2f-77b4cd1aef64/27ff9f43-9f4c-48be-a9f1-9dceb5fffa16/guia-lanches-sem-fundo.png",
+  "size": 70613,
+  "url": "/__l5e/assets-v1/27ff9f43-9f4c-48be-a9f1-9dceb5fffa16/guia-lanches-sem-fundo.png",
+  "version": 1
 }

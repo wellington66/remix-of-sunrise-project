@@ -1,11 +1,11 @@
 {
-  "version": 1,
   "asset_id": "65993f1d-5768-403e-bdf7-94fc820fbda2",
-  "project_id": "389615b8-4720-42ea-a730-251aa043daa9",
-  "url": "/__l5e/assets-v1/65993f1d-5768-403e-bdf7-94fc820fbda2/banana_cupcake_patties.webp",
-  "r2_key": "a/v1/389615b8-4720-42ea-a730-251aa043daa9/65993f1d-5768-403e-bdf7-94fc820fbda2/banana_cupcake_patties.webp",
-  "original_filename": "banana_cupcake_patties.webp",
-  "size": 123608,
   "content_type": "image/jpeg",
-  "created_at": "2026-08-15T22:50:48Z"
+  "created_at": "2026-08-15T22:50:48Z",
+  "original_filename": "banana_cupcake_patties.webp",
+  "project_id": "62d79ac3-c9a5-4be6-ab2f-77b4cd1aef64",
+  "r2_key": "a/v1/62d79ac3-c9a5-4be6-ab2f-77b4cd1aef64/65993f1d-5768-403e-bdf7-94fc820fbda2/banana_cupcake_patties.webp",
+  "size": 123608,
+  "url": "/__l5e/assets-v1/65993f1d-5768-403e-bdf7-94fc820fbda2/banana_cupcake_patties.webp",
+  "version": 1
 }
