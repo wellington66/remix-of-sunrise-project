@@ -516,7 +516,8 @@ function Index() {
 
           {/* Testimonials Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-6xl mx-auto">
-            {[
+            {([
+
               {
                 name: "Patrícia Almeida",
                 date: "18 de fevereiro de 2026",
