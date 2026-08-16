@@ -597,10 +597,10 @@ function Index() {
                 <Smartphone className="w-4 h-4" /> Falar com Suporte
               </button>
             </div>
-            <div className="flex items-center gap-4 opacity-40 grayscale">
-              <ShieldCheck className="w-12 h-12" />
-              <Zap className="w-12 h-12" />
-              <CheckCircle2 className="w-12 h-12" />
+            <div className="flex items-center gap-4 opacity-40 grayscale group-hover:grayscale-0 transition-all">
+              <ShieldCheck className="w-10 h-10" />
+              <Star className="w-10 h-10" />
+              <Zap className="w-10 h-10" />
             </div>
           </div>
         </div>
