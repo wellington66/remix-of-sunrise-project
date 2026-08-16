@@ -390,11 +390,11 @@ function Index() {
               <div className="absolute -top-6 left-1/2 -translate-x-1/2 bg-brand-red text-white px-8 py-2.5 rounded-full text-xs font-black uppercase tracking-[0.2em] whitespace-nowrap shadow-2xl animate-bounce">
                 OFERTA MAIS POPULAR ✨
               </div>
-              <div className="w-full aspect-square mb-6 overflow-hidden flex items-center justify-center p-6 bg-white rounded-[2rem] border border-brand-red/10">
+              <div className="w-full aspect-square mb-8 overflow-hidden flex items-center justify-center p-8 bg-white rounded-[2.5rem] border border-brand-red/10 shadow-[inset_0_0_20px_rgba(186,28,28,0.02)]">
                 <img 
                   src={kitBundleUrl} 
                   alt="Plano Completo"
-                  className="w-full h-full object-contain drop-shadow-[0_20px_40px_rgba(0,0,0,0.18)] transition-transform duration-700 group-hover:scale-110"
+                  className="w-full h-full object-contain drop-shadow-[0_25px_50px_rgba(186,28,28,0.2)] transition-transform duration-700 group-hover:scale-110"
                 />
               </div>
               <div className="text-center mb-6">
