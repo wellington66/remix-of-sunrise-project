@@ -259,7 +259,7 @@ function Index() {
             <p className="text-[#1B4332]/60 font-bold uppercase tracking-widest text-xs">Aumente seus resultados com materiais complementares</p>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-8 max-w-7xl mx-auto">
+          <div className="grid grid-cols-2 lg:grid-cols-3 gap-4 md:gap-10 max-w-7xl mx-auto px-2">
             {[
               { 
                 title: "Café da Manhã para Desinchar", 
