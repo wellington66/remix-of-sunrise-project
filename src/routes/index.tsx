@@ -370,8 +370,8 @@ function Index() {
                 <li className="flex items-center gap-2 font-bold"><CheckCircle2 className="w-4 h-4 text-[#D64D3F]" /> Guia de Sucos Detox</li>
                 <li className="flex items-center gap-2 font-bold"><CheckCircle2 className="w-4 h-4 text-[#D64D3F]" /> Suporte Prioritário</li>
               </ul>
-              <button type="button" className="w-full mt-auto bg-[#D64D3F] text-white py-6 rounded-full font-black uppercase tracking-widest text-lg shadow-xl hover:scale-105 transition-all">
-                QUERO O COMBO COMPLETO
+              <button type="button" className="w-full mt-auto bg-[#D64D3F] text-white py-8 rounded-full font-black uppercase tracking-[0.2em] text-xl shadow-[0_20px_40px_rgba(214,77,63,0.3)] hover:scale-105 active:scale-95 transition-all cursor-pointer ring-4 ring-white/20">
+                EU QUERO O COMBO COMPLETO!
               </button>
             </div>
 
