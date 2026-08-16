@@ -62,22 +62,31 @@ function Index() {
       </div>
 
       {/* Hero Section */}
-      <header className="relative pt-8 pb-12 bg-white w-full">
-        <div className="container mx-auto px-4 text-center">
-          <h1 className="text-[clamp(1.5rem,5vw,2.5rem)] font-black text-[#1B4332] leading-tight mb-8 uppercase">
-            101 CAFÉS DA MANHÃ SAUDÁVEIS <br/>
-            <span className="text-[#1B4332]/60">PARA SUBSTITUIR O PÃO</span>
-          </h1>
-          
-          <div className="relative max-w-4xl mx-auto mb-8 bg-transparent">
+      <header className="relative w-full overflow-hidden">
+        {/* Full width background container */}
+        <div className="relative w-screen left-1/2 right-1/2 -ml-[50vw] -mr-[50vw]">
+          <div className="relative w-full aspect-[16/9] md:aspect-[21/9] lg:aspect-[3/1] overflow-hidden group">
             <img 
               src={lifestyleHeroUrl}
               alt="Guia Mockup"
-              className="w-full h-auto drop-shadow-[0_20px_50px_rgba(0,0,0,0.15)] group-hover:scale-[1.02] transition-transform duration-700"
+              className="w-full h-full object-cover transition-transform duration-[2s] group-hover:scale-105"
               loading="eager"
               decoding="async"
             />
+            {/* Overlay for text readability */}
+            <div className="absolute inset-0 bg-gradient-to-b from-white/60 via-transparent to-white/90" />
+            
+            {/* Centered Content */}
+            <div className="absolute inset-0 flex flex-col items-center justify-center p-4 text-center">
+              <h1 className="text-[clamp(1.5rem,8vw,4.5rem)] font-black text-[#1B4332] leading-[0.9] mb-4 uppercase drop-shadow-sm">
+                101 CAFÉS DA MANHÃ SAUDÁVEIS <br/>
+                <span className="text-brand-red">PARA SUBSTITUIR O PÃO</span>
+              </h1>
+              <div className="w-24 h-2 bg-brand-red rounded-full mb-8" />
+            </div>
           </div>
+        </div>
+      </header>
 
           <div className="flex flex-col items-center gap-4 mb-8">
             <div className="text-[#1B4332] font-black">
