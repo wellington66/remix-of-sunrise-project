@@ -19,6 +19,7 @@ const bananaCrepeUrl = "/assets/banana_crepe.png";
 const cuscuzOvoUrl = "/assets/cuscuz_ovo.png";
 const bananaCupcakeBowlUrl = "/assets/banana_cupcake_bowl.png";
 const crepiocaFrangoUrl = "/assets/crepioca_frango.png";
+const omeleteEspecialUrl = "/assets/cafe-da-manha-sem-pao-secao-site.png";
 
 export const Route = createFileRoute("/")({
   component: Index,
