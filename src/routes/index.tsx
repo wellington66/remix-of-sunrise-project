@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { motion } from "framer-motion";
-import { CheckCircle2, Star, ShieldCheck, ArrowRight, Minus, Plus, Zap, Clock, Smartphone, Gift, Heart, UserCheck, Play, ArrowDown, Timer, Calendar, Coffee, Utensils } from "lucide-react";
+import { CheckCircle2, Star, ShieldCheck, Zap, ArrowDown, Timer, Calendar, Coffee, Utensils, Smartphone, Gift } from "lucide-react";
 import { useState, useEffect } from "react";
 
 // Caminhos estáticos robustos para a pasta public/assets
@@ -19,28 +19,34 @@ const bananaCrepeUrl = "/assets/banana_crepe.png";
 const cuscuzOvoUrl = "/assets/cuscuz_ovo.png";
 const bananaCupcakeBowlUrl = "/assets/banana_cupcake_bowl.png";
 const crepiocaFrangoUrl = "/assets/crepioca_frango.png";
-const guiaMockupUrl = "/assets/hero_mockup.jpg";
-
 
 export const Route = createFileRoute("/")({
   component: Index,
+  head: () => ({
+    meta: [
+      { title: "101 Receitas de Café da Manhã para Substituir o Pão" },
+      { name: "description", content: "Descubra 101 receitas deliciosas e saudáveis para transformar seu café da manhã, emagrecer com saúde e eliminar o inchaço matinal." },
+      { property: "og:title", content: "101 Receitas de Café da Manhã - Substitua o Pão" },
+      { property: "og:description", content: "Receitas práticas, deliciosas e nutritivas para começar o dia com energia." },
+      { name: "twitter:card", content: "summary_large_image" }
+    ],
+  }),
 });
 
 function Index() {
   const [timeLeft, setTimeLeft] = useState(900); // 15 minutes in seconds
 
   useEffect(() => {
-    if (timeLeft <= 0) return;
     const timer = setInterval(() => {
-      setTimeLeft(prev => prev - 1);
+      setTimeLeft((prev) => (prev > 0 ? prev - 1 : 0));
     }, 1000);
     return () => clearInterval(timer);
-  }, [timeLeft]);
+  }, []);
 
   const formatTime = (seconds: number) => {
     const mins = Math.floor(seconds / 60);
     const secs = seconds % 60;
-    return `${mins.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
+    return `${mins.toString().padStart(2, "0")}:${secs.toString().padStart(2, "0")}`;
   };
 
   return (
