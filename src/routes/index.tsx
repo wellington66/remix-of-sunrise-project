@@ -229,74 +229,74 @@ function Index() {
             <p className="text-[#1B4332]/60 font-bold uppercase tracking-widest text-xs">Aumente seus resultados com materiais complementares</p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+          <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-8 max-w-7xl mx-auto">
             {[
               { 
                 title: "Café da Manhã para Desinchar", 
-                desc: "Comece o dia mais leve com receitas anti-inflamatórias.",
+                desc: "Receitas anti-inflamatórias.",
                 value: "R$ 47,00",
-                icon: <Zap className="w-8 h-8 text-[#D64D3F]" />,
+                icon: <Zap className="w-4 h-4 md:w-8 md:h-8 text-[#D64D3F]" />,
                 img: bonusDesincharUrl
               },
               { 
                 title: "Lista de Compras Econômica", 
-                desc: "Saiba exatamente o que comprar e economize tempo no mercado.",
+                desc: "Saiba exatamente o que comprar.",
                 value: "R$ 29,00",
-                icon: <Smartphone className="w-8 h-8 text-[#D64D3F]" />,
+                icon: <Smartphone className="w-4 h-4 md:w-8 md:h-8 text-[#D64D3F]" />,
                 img: bonusListaUrl
               },
               { 
                 title: "Planejamento Semanal Pronto", 
-                desc: "Seu café da manhã organizado para toda a semana.",
+                desc: "Organização para toda a semana.",
                 value: "R$ 37,00",
-                icon: <Calendar className="w-8 h-8 text-[#D64D3F]" />,
+                icon: <Calendar className="w-4 h-4 md:w-8 md:h-8 text-[#D64D3F]" />,
                 img: bonusPlanejamentoUrl
               },
               { 
                 title: "Guia de Lanches Saudáveis", 
-                desc: "Ideias práticas e leves para o dia a dia.",
+                desc: "Ideias práticas e leves.",
                 value: "R$ 39,00",
-                icon: <Coffee className="w-8 h-8 text-[#D64D3F]" />,
+                icon: <Coffee className="w-4 h-4 md:w-8 md:h-8 text-[#D64D3F]" />,
                 img: bonusLanchesUrl
               },
               { 
                 title: "+50 Sobremesas Zero Açúcar", 
-                desc: "Receitas doces, práticas e deliciosas sem culpa.",
+                desc: "Doces práticos e sem culpa.",
                 value: "R$ 57,00",
-                icon: <Utensils className="w-8 h-8 text-[#D64D3F]" />,
+                icon: <Utensils className="w-4 h-4 md:w-8 md:h-8 text-[#D64D3F]" />,
                 img: bonusSobremesasUrl
               }
             ].map((bonus, i) => (
-              <div key={i} className="bg-white rounded-[2rem] border border-[#1B4332]/5 flex flex-col items-center text-center group hover:scale-[1.02] transition-all overflow-hidden shadow-sm hover:shadow-md">
-                <div className="w-full aspect-[3/4] overflow-hidden relative bg-white flex items-center justify-center p-4">
+              <div key={i} className="bg-white rounded-[1.5rem] md:rounded-[2rem] border border-[#1B4332]/5 flex flex-col items-center text-center group hover:scale-[1.02] transition-all overflow-hidden shadow-sm hover:shadow-md">
+                <div className="w-full aspect-[3/4] overflow-hidden relative bg-white flex items-center justify-center p-2 md:p-4">
                   <img 
                     src={bonus.img} 
                     alt={bonus.title}
                     className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-110 drop-shadow-2xl"
                   />
-                  <div className="absolute top-4 right-4 p-2 bg-white/90 backdrop-blur-sm rounded-xl shadow-sm">
+                  <div className="absolute top-2 right-2 md:top-4 md:right-4 p-1 md:p-2 bg-white/90 backdrop-blur-sm rounded-lg md:rounded-xl shadow-sm">
                     {bonus.icon}
                   </div>
                 </div>
-                <div className="p-8 flex flex-col items-center flex-grow">
-                  <h3 className="text-xl font-black text-[#1B4332] uppercase mb-2 leading-tight">{bonus.title}</h3>
-                  <p className="text-sm opacity-60 font-medium mb-6 leading-relaxed">{bonus.desc}</p>
+                <div className="p-3 md:p-8 flex flex-col items-center flex-grow">
+                  <h3 className="text-[10px] md:text-xl font-black text-[#1B4332] uppercase mb-1 md:mb-2 leading-tight">{bonus.title}</h3>
+                  <p className="hidden md:block text-sm opacity-60 font-medium mb-6 leading-relaxed">{bonus.desc}</p>
                   <div className="mt-auto">
-                    <span className="text-[10px] font-black uppercase tracking-widest text-[#D64D3F] line-through block opacity-50">DE {bonus.value}</span>
-                    <span className="text-sm font-black uppercase tracking-widest text-[#1B4332]">POR R$ 0,00</span>
+                    <span className="text-[8px] md:text-[10px] font-black uppercase tracking-widest text-[#D64D3F] line-through block opacity-50">DE {bonus.value}</span>
+                    <span className="text-[9px] md:text-sm font-black uppercase tracking-widest text-[#1B4332]">POR R$ 0,00</span>
                   </div>
                 </div>
               </div>
             ))}
             
             {/* Total Value Summary */}
-            <div className="lg:col-span-1 bg-[#1B4332] p-8 rounded-[2rem] flex flex-col items-center justify-center text-center text-white relative overflow-hidden group min-h-[400px]">
+            <div className="col-span-2 md:col-span-1 bg-[#1B4332] p-6 md:p-8 rounded-[1.5rem] md:rounded-[2rem] flex flex-col items-center justify-center text-center text-white relative overflow-hidden group min-h-[200px] md:min-h-[400px]">
               <div className="absolute top-0 right-0 p-4 opacity-10">
-                <Gift className="w-32 h-32" />
+                <Gift className="w-16 h-16 md:w-32 md:h-32" />
               </div>
-              <h3 className="text-2xl font-[family-name:var(--font-anton)] uppercase mb-4 relative z-10">VALOR TOTAL DOS BÔNUS</h3>
-              <div className="text-4xl font-[family-name:var(--font-anton)] text-[#D64D3F] mb-2 relative z-10">R$ 209,00</div>
-              <p className="text-[10px] font-black uppercase tracking-widest opacity-60 relative z-10">Tudo incluso no Plano Completo</p>
+              <h3 className="text-lg md:text-2xl font-[family-name:var(--font-anton)] uppercase mb-2 md:mb-4 relative z-10">VALOR TOTAL DOS BÔNUS</h3>
+              <div className="text-3xl md:text-4xl font-[family-name:var(--font-anton)] text-[#D64D3F] mb-1 md:mb-2 relative z-10">R$ 209,00</div>
+              <p className="text-[8px] md:text-[10px] font-black uppercase tracking-widest opacity-60 relative z-10">Tudo incluso no Plano Completo</p>
             </div>
           </div>
         </div>
