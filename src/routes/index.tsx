@@ -399,8 +399,8 @@ function Index() {
               Sua satisfação é nossa prioridade. Se em 7 dias você não amar as receitas, devolvemos cada centavo.
             </p>
             <div className="flex justify-center gap-4">
-              <ShieldCheck className="w-8 h-8 text-[#D64D3F]" />
-              <CheckCircle2 className="w-8 h-8 text-[#D64D3F]" />
+              <ShieldCheck className="w-8 h-8 text-brand-red" />
+              <CheckCircle2 className="w-8 h-8 text-brand-red" />
             </div>
           </div>
         </div>
