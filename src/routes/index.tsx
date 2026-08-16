@@ -143,6 +143,7 @@ function Index() {
                 src={shakshukaUrl} 
                 className="relative rounded-[clamp(1.5rem,5vw,3rem)] shadow-2xl border-8 border-[#FDF9F2] z-10 w-full h-auto object-cover aspect-square" 
                 alt="Transformação Saudável" 
+                loading="lazy"
               />
             </div>
           </div>
