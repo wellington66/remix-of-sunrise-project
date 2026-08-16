@@ -334,8 +334,8 @@ function Index() {
                 <span className="text-5xl font-[family-name:var(--font-anton)] text-[#1B4332]">R$ 17,90</span>
               </div>
               <ul className="text-left w-full space-y-4 mb-8 text-sm opacity-80">
-                <li className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-[#D64D3F]" /> Guia com 101 Receitas</li>
-                <li className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-[#D64D3F]" /> Acesso Vitalício</li>
+                <li className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-brand-red" /> Guia com 101 Receitas</li>
+                <li className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-brand-red" /> Acesso Vitalício</li>
                 <li className="flex items-center gap-2 opacity-30 line-through"><Minus className="w-4 h-4" /> Bônus Exclusivos</li>
               </ul>
               <button type="button" className="w-full mt-auto bg-[#1B4332] text-white py-5 rounded-full font-black uppercase tracking-widest text-sm hover:scale-105 transition-all">
