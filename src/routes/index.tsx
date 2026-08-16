@@ -448,12 +448,15 @@ function Index() {
       </footer>
 
       {/* Mobile Sticky CTA */}
-      <div className="md:hidden fixed bottom-0 left-0 right-0 bg-white border-t border-[#1B4332]/10 p-4 z-[100] flex items-center justify-between shadow-2xl safe-area-inset-bottom">
+      <div className="md:hidden fixed bottom-0 left-0 right-0 bg-white/90 backdrop-blur-md border-t border-[#1B4332]/10 p-4 z-[100] flex items-center justify-between shadow-[0_-10px_30px_rgba(0,0,0,0.08)] safe-area-inset-bottom">
         <div className="flex flex-col">
-          <span className="text-[0.65rem] text-[#D64D3F] line-through font-black leading-none">R$ 97,00</span>
-          <span className="text-2xl font-[family-name:var(--font-anton)] text-[#1B4332] leading-none">R$ 17,90</span>
+          <span className="text-[0.6rem] text-[#D64D3F] line-through font-black leading-none opacity-50">R$ 97,00</span>
+          <div className="flex items-baseline gap-1">
+            <span className="text-[0.7rem] font-bold text-[#1B4332]/60">R$</span>
+            <span className="text-2xl font-[family-name:var(--font-anton)] text-[#1B4332] leading-none">17,90</span>
+          </div>
         </div>
-        <button type="button" className="bg-[#D64D3F] text-white px-8 py-3 rounded-full font-black uppercase tracking-widest text-[0.7rem] shadow-xl animate-pulse cursor-pointer">
+        <button type="button" className="bg-[#D64D3F] text-white px-8 py-3 rounded-full font-black uppercase tracking-widest text-[0.7rem] shadow-xl animate-pulse active:scale-95 transition-transform cursor-pointer">
           COMPRAR AGORA
         </button>
       </div>
