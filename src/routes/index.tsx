@@ -19,8 +19,8 @@ const bananaCrepeUrl = "/assets/banana_crepe.png";
 const cuscuzOvoUrl = "/assets/cuscuz_ovo.png";
 const bananaCupcakeBowlUrl = "/assets/banana_cupcake_bowl.png";
 const crepiocaFrangoUrl = "/assets/crepioca_frango.png";
-const omeleteEspecialUrl = "/__l5e/assets-v1/1ee31db0-2d66-4a51-9203-96a3a7656cb6/omelete_misto.png";
-const mockupChefUrl = "/__l5e/assets-v1/2956d77e-2b47-415b-8707-1abff778bdd0/mockup-chef.png";
+const omeleteEspecialUrl = "/assets/omelete_misto.png";
+const mockupChefUrl = "/assets/mockup-chef.png";
 
 /** Links de checkout (Cakto) */
 const CHECKOUT_ESSENCIAL = "https://pay.cakto.com.br/yxpuem5"; // R$ 17,90
