@@ -710,10 +710,58 @@ function Index() {
             <span className="text-2xl font-[family-name:var(--font-anton)] text-[#1B4332] leading-none">17,90</span>
           </div>
         </div>
-        <button type="button" className="bg-brand-red text-white px-8 py-3 rounded-full font-black uppercase tracking-widest text-[0.7rem] shadow-xl animate-pulse active:scale-95 transition-transform cursor-pointer">
+        <button type="button" onClick={openDownsell} className="bg-brand-red text-white px-8 py-3 rounded-full font-black uppercase tracking-widest text-[0.7rem] shadow-xl animate-pulse active:scale-95 transition-transform cursor-pointer">
           COMPRAR AGORA
         </button>
       </div>
+
+      {/* Pop-up de desconto (saída + clique na oferta essencial) */}
+      {showDownsell && (
+        <div
+          className="fixed inset-0 z-[200] flex items-center justify-center bg-black/60 backdrop-blur-sm p-4"
+          role="dialog"
+          aria-modal="true"
+          aria-label="Oferta com desconto"
+        >
+          <div className="relative bg-white rounded-3xl max-w-md w-full p-8 text-center shadow-2xl border-4 border-brand-red">
+            <button
+              type="button"
+              onClick={() => setShowDownsell(false)}
+              aria-label="Fechar"
+              className="absolute top-3 right-4 text-[#1B4332]/40 hover:text-[#1B4332] text-2xl font-black"
+            >
+              ×
+            </button>
+            <span className="inline-block bg-brand-red text-white text-[10px] font-black uppercase tracking-widest px-4 py-1.5 rounded-full mb-4">
+              Espere! Desconto exclusivo
+            </span>
+            <h3 className="text-2xl font-black uppercase text-[#1B4332] mb-3 leading-tight">
+              Leve o guia completo com desconto
+            </h3>
+            <p className="text-sm text-[#1B4332]/70 mb-5">
+              Só por agora: destrave o guia com <strong>tudo incluso</strong> por um preço menor.
+            </p>
+            <div className="mb-6">
+              <span className="block text-sm line-through opacity-40 font-bold">DE R$ 27,90</span>
+              <span className="text-5xl font-[family-name:var(--font-anton)] text-brand-red">R$ 23,90</span>
+            </div>
+            <a
+              href={CHECKOUT_DESCONTO}
+              className="block w-full bg-brand-red text-white py-5 rounded-full font-black uppercase tracking-widest text-sm shadow-xl hover:scale-105 transition-transform"
+            >
+              Quero com desconto
+            </a>
+            <button
+              type="button"
+              onClick={() => setShowDownsell(false)}
+              className="mt-4 text-[11px] font-bold uppercase tracking-widest text-[#1B4332]/40 hover:text-[#1B4332]"
+            >
+              Não, prefiro pagar mais caro
+            </button>
+          </div>
+        </div>
+      )}
+
 
       <style>{`
         @keyframes marquee {
