@@ -8,8 +8,8 @@ import bonusListaComprasAsset from "@/assets/lista-compras-sem-fundo.png.asset.j
 import bonusPlanejamentoAsset from "@/assets/planejamento-semanal-sem-fundo.png.asset.json";
 import bonusLanchesAsset from "@/assets/guia-lanches-sem-fundo.png.asset.json";
 import bonusSobremesasAsset from "@/assets/sobremesas-sem-fundo.png.asset.json";
-import bookMockupEssentialAsset from "@/assets/essential-offer.png.asset.json";
-import bookMockupCompleteAsset from "@/assets/complete-offer.png.asset.json";
+import heroBookAsset from "@/assets/hero-book.png.asset.json";
+import kitBundleAsset from "@/assets/kit-bundle.png.asset.json";
 
 
 const cuscuzQueijoUrl = "/assets/cuscuz_queijo.png";
@@ -63,7 +63,7 @@ function Index() {
           
           <div className="relative max-w-4xl mx-auto mb-8 bg-transparent">
             <img 
-              src={guiaMockupUrl}
+              src={heroBookAsset.url}
               alt="Guia Mockup"
               className="w-full h-auto drop-shadow-2xl"
             />
@@ -306,7 +306,7 @@ function Index() {
             <div className="bg-[#FDF9F2] border border-[#1B4332]/10 p-12 rounded-[3rem] flex flex-col items-center hover:shadow-xl transition-all text-[#1B4332]">
               <div className="w-full aspect-square mb-6 overflow-hidden flex items-center justify-center p-4 bg-transparent">
                 <img 
-                  src={bookMockupEssentialAsset.url} 
+                  src={heroBookAsset.url} 
                   alt="Plano Essencial"
                   className="w-full h-full object-contain drop-shadow-2xl"
                 />
@@ -337,7 +337,7 @@ function Index() {
               </div>
               <div className="w-full aspect-square mb-6 overflow-hidden flex items-center justify-center p-4">
                 <img 
-                  src={bookMockupCompleteAsset.url} 
+                  src={kitBundleAsset.url} 
                   alt="Plano Completo"
                   className="w-full h-full object-contain drop-shadow-2xl"
                 />
