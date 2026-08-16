@@ -357,8 +357,8 @@ function Index() {
                 />
               </div>
               <div className="text-center mb-6">
-                <h3 className="text-xl font-black uppercase tracking-widest mb-2 text-[#1B4332]">Plano Completo</h3>
-                <p className="text-xs text-[#D64D3F] uppercase font-bold">Guia + Todos os Bônus</p>
+                <h3 className="text-2xl md:text-3xl font-black uppercase tracking-widest mb-2 text-[#1B4332]">Plano Completo</h3>
+                <p className="text-sm text-[#D64D3F] uppercase font-black tracking-widest">Guia + Todos os 5 Bônus</p>
               </div>
               <div className="text-center mb-8">
                 <span className="text-sm line-through text-[#1B4332]/40 block font-bold">DE R$ 97,00</span>
