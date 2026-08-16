@@ -456,7 +456,7 @@ function Index() {
             <span className="text-2xl font-[family-name:var(--font-anton)] text-[#1B4332] leading-none">17,90</span>
           </div>
         </div>
-        <button type="button" className="bg-[#D64D3F] text-white px-8 py-3 rounded-full font-black uppercase tracking-widest text-[0.7rem] shadow-xl animate-pulse active:scale-95 transition-transform cursor-pointer">
+        <button type="button" className="bg-brand-red text-white px-8 py-3 rounded-full font-black uppercase tracking-widest text-[0.7rem] shadow-xl animate-pulse active:scale-95 transition-transform cursor-pointer">
           COMPRAR AGORA
         </button>
       </div>
