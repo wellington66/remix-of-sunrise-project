@@ -96,7 +96,7 @@ function Index() {
                 <div className="text-6xl md:text-7xl font-[family-name:var(--font-anton)] text-brand-red leading-none mt-2">R$ 17,90</div>
               </div>
               
-              <button type="button" className="w-full bg-brand-red text-white px-10 py-6 rounded-full font-black uppercase tracking-[0.2em] text-lg shadow-[0_20px_40px_rgba(186,28,28,0.3)] hover:scale-105 active:scale-95 transition-all cursor-pointer animate-pulse-ring">
+              <button type="button" className="w-full bg-brand-red text-white px-6 md:px-10 py-5 md:py-6 rounded-full font-black uppercase tracking-[0.15em] md:tracking-[0.2em] text-base md:text-lg shadow-[0_20px_40px_rgba(186,28,28,0.3)] hover:scale-105 active:scale-95 transition-all cursor-pointer animate-pulse-ring leading-tight">
                 SIM! QUERO AS RECEITAS AGORA
               </button>
               
