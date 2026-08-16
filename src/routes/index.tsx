@@ -349,7 +349,7 @@ function Index() {
               <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-[#D64D3F] text-white px-6 py-1.5 rounded-full text-[10px] font-black uppercase tracking-widest whitespace-nowrap shadow-lg">
                 Recomendado ✨
               </div>
-              <div className="w-full aspect-square mb-6 overflow-hidden flex items-center justify-center p-6 bg-[#FDF9F2] rounded-[2rem] border border-[#D64D3F]/10">
+              <div className="w-full aspect-square mb-6 overflow-hidden flex items-center justify-center p-6 bg-white rounded-[2rem] border border-[#D64D3F]/10">
                 <img 
                   src={kitBundleUrl} 
                   alt="Plano Completo"
