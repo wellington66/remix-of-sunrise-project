@@ -222,7 +222,7 @@ function Index() {
       <section className="py-24 bg-white overflow-hidden">
         <div className="container mx-auto px-4">
           <div className="text-center max-w-3xl mx-auto mb-20 space-y-4">
-            <span className="bg-[#D64D3F]/10 text-[#D64D3F] px-4 py-2 rounded-full text-[10px] font-black uppercase tracking-widest">
+            <span className="bg-brand-red/10 text-brand-red px-4 py-2 rounded-full text-[10px] font-black uppercase tracking-widest">
               Oferta Limitada 🎁
             </span>
             <h2 className="text-4xl md:text-6xl font-[family-name:var(--font-anton)] uppercase leading-none text-[#1B4332]">
