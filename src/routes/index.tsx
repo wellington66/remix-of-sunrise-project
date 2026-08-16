@@ -73,7 +73,7 @@ function Index() {
             <img 
               src={lifestyleHeroUrl}
               alt="Guia Mockup"
-              className="w-full h-auto drop-shadow-2xl"
+              className="w-full h-auto drop-shadow-[0_20px_50px_rgba(0,0,0,0.15)] group-hover:scale-[1.02] transition-transform duration-700"
               loading="eager"
               decoding="async"
             />
