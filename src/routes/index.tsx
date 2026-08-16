@@ -306,7 +306,7 @@ function Index() {
             <div className="bg-[#FDF9F2] border border-[#1B4332]/10 p-12 rounded-[3rem] flex flex-col items-center hover:shadow-xl transition-all text-[#1B4332]">
               <div className="w-full aspect-square mb-6 overflow-hidden flex items-center justify-center p-4 bg-transparent">
                 <img 
-                  src={bookMockupEssentialAsset.url} 
+                  src={heroBookAsset.url} 
                   alt="Plano Essencial"
                   className="w-full h-full object-contain drop-shadow-2xl"
                 />
