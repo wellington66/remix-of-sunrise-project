@@ -75,27 +75,6 @@ function Index() {
 
 
 
-  useEffect(() => {
-    // Causa raiz do bug anterior: o intervalo continuava executando (e re-renderizando)
-    // indefinidamente mesmo após o contador chegar a zero. Agora ele se auto-encerra.
-    const timer = setInterval(() => {
-      setTimeLeft((prev) => {
-        if (prev <= 1) {
-          clearInterval(timer);
-          return 0;
-        }
-        return prev - 1;
-      });
-    }, 1000);
-    return () => clearInterval(timer);
-  }, []);
-
-  const formatTime = (seconds: number) => {
-    const safeSeconds = Math.max(0, seconds);
-    const mins = Math.floor(safeSeconds / 60);
-    const secs = safeSeconds % 60;
-    return `${mins.toString().padStart(2, "0")}:${secs.toString().padStart(2, "0")}`;
-  };
 
   // Data final da oferta = sempre o dia em que o lead acessa (evita mismatch de SSR).
   const [offerDate, setOfferDate] = useState("");
