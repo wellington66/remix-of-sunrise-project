@@ -318,13 +318,7 @@ function Index() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch pt-12">
             {/* Essential */}
             <div className="bg-white border border-[#1B4332]/10 p-8 md:p-12 rounded-[2.5rem] md:rounded-[3.5rem] flex flex-col items-center hover:shadow-[0_30px_60px_rgba(0,0,0,0.08)] transition-all text-[#1B4332] group relative">
-              {/* Pointer to the better offer */}
-              <div className="absolute -top-12 md:-top-16 left-1/2 -translate-x-1/2 flex flex-col items-center w-full z-20">
-                <span className="bg-[#1B4332] text-white px-4 py-1.5 rounded-full text-[9px] font-black uppercase tracking-tighter mb-2 shadow-lg animate-bounce whitespace-nowrap">
-                  ⚠️ 98% DAS PESSOAS ESCOLHEM O PLANO COMPLETO
-                </span>
-                <ArrowDown className="w-6 h-6 text-[#1B4332] animate-bounce" />
-              </div>
+              {/* Pointer content moved below the CTA */}
 
               <div className="w-full aspect-square mb-6 overflow-hidden flex items-center justify-center p-6 bg-white rounded-[2rem] border border-[#1B4332]/5">
                 <img 
@@ -349,6 +343,30 @@ function Index() {
               <button type="button" className="w-full mt-auto bg-[#1B4332] text-white py-5 rounded-full font-black uppercase tracking-widest text-sm hover:scale-105 transition-all">
                 QUERO O GUIA
               </button>
+              
+              {/* Pointer to the better offer - Positioned below the first CTA */}
+              <div className="mt-8 flex flex-col items-center w-full group/pointer">
+                <div className="bg-brand-red text-white px-6 py-2 rounded-full text-[10px] font-black uppercase tracking-widest shadow-xl animate-pulse whitespace-nowrap border-2 border-white/20">
+                  ⚠️ 98% DAS PESSOAS ESCOLHEM O PLANO COMPLETO
+                </div>
+                <div className="mt-2 flex items-center justify-center gap-2 text-brand-red font-black text-[10px] uppercase tracking-tighter">
+                  <span>VEJA POR QUE</span>
+                  <motion.div
+                    animate={{ x: [0, 10, 0] }}
+                    transition={{ repeat: Infinity, duration: 1.5 }}
+                    className="hidden md:block"
+                  >
+                    <ArrowDown className="w-5 h-5 -rotate-90" />
+                  </motion.div>
+                  <motion.div
+                    animate={{ y: [0, 10, 0] }}
+                    transition={{ repeat: Infinity, duration: 1.5 }}
+                    className="md:hidden"
+                  >
+                    <ArrowDown className="w-5 h-5" />
+                  </motion.div>
+                </div>
+              </div>
             </div>
 
 
