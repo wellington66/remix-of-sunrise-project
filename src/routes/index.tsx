@@ -187,7 +187,7 @@ function Index() {
         <div className="text-center max-w-3xl mx-auto mb-20 space-y-4">
           <h2 className="text-4xl md:text-6xl font-[family-name:var(--font-anton)] uppercase leading-none text-[#1B4332]">
             VEJA O QUE VOCÊ VAI <br/>
-            <span className="text-[#D64D3F]">ENCONTRAR NO GUIA</span>
+            <span className="text-brand-red">ENCONTRAR NO GUIA</span>
           </h2>
           <p className="text-[#1B4332]/60 font-bold uppercase tracking-widest text-xs">Transforme sua saúde com cada refeição</p>
         </div>
