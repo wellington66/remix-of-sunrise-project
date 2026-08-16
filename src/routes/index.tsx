@@ -51,8 +51,8 @@ interface Testimonial {
 }
 
 function Index() {
-  const [timeLeft, setTimeLeft] = useState(900); // 15 minutos em segundos
   const [showDownsell, setShowDownsell] = useState(false);
+
   const [downsellShown, setDownsellShown] = useState(false);
 
   const openDownsell = () => {
@@ -75,27 +75,6 @@ function Index() {
 
 
 
-  useEffect(() => {
-    // Causa raiz do bug anterior: o intervalo continuava executando (e re-renderizando)
-    // indefinidamente mesmo após o contador chegar a zero. Agora ele se auto-encerra.
-    const timer = setInterval(() => {
-      setTimeLeft((prev) => {
-        if (prev <= 1) {
-          clearInterval(timer);
-          return 0;
-        }
-        return prev - 1;
-      });
-    }, 1000);
-    return () => clearInterval(timer);
-  }, []);
-
-  const formatTime = (seconds: number) => {
-    const safeSeconds = Math.max(0, seconds);
-    const mins = Math.floor(safeSeconds / 60);
-    const secs = safeSeconds % 60;
-    return `${mins.toString().padStart(2, "0")}:${secs.toString().padStart(2, "0")}`;
-  };
 
   // Data final da oferta = sempre o dia em que o lead acessa (evita mismatch de SSR).
   const [offerDate, setOfferDate] = useState("");
@@ -115,10 +94,10 @@ function Index() {
       </div>
 
       {/* Dynamic Scarcity Header */}
-      <div className="bg-brand-red text-white py-2.5 text-center text-[clamp(0.65rem,2.2vw,0.85rem)] font-black uppercase tracking-[0.25em] px-4 sticky top-0 z-[100] shadow-2xl w-full border-b border-white/10">
-        🚨 ATENÇÃO: Desconto expira em <span className="font-mono bg-white/30 px-2 py-0.5 rounded ml-1 tabular-nums">{formatTime(timeLeft)}</span>
-        {offerDate && <span className="block sm:inline sm:ml-2 normal-case tracking-normal font-bold text-[0.95em]">Oferta válida somente hoje, {offerDate}</span>}
+      <div className="bg-brand-red text-white py-3 text-center text-[clamp(0.8rem,3vw,1.1rem)] font-black uppercase tracking-[0.15em] px-4 sticky top-0 z-[100] shadow-2xl w-full border-b border-white/10">
+        🚨 OFERTA VÁLIDA SOMENTE HOJE{offerDate && <span className="ml-1 bg-white/30 px-2 py-0.5 rounded tabular-nums">{offerDate}</span>}
       </div>
+
 
 
       {/* Hero Section */}
