@@ -63,48 +63,36 @@ function Index() {
       </div>
 
       {/* Hero Section */}
-      <header className="relative w-full overflow-hidden">
-        {/* Full width background image container */}
-        <div className="relative w-full aspect-[4/3] md:aspect-[21/9] lg:aspect-[3/1] overflow-hidden">
-          <img 
-            src={lifestyleHeroUrl}
-            alt="Café da Manhã Saudável Lifestyle"
-            className="w-full h-full object-cover"
-            loading="eager"
-            decoding="async"
-          />
-          {/* Gradient for readability */}
-          <div className="absolute inset-0 bg-gradient-to-b from-[#1B4332]/20 via-white/10 to-white" />
+      <header className="relative pt-8 pb-12 bg-white w-full">
+        <div className="container mx-auto px-4 text-center">
+          <h1 className="text-[clamp(1.5rem,5vw,2.5rem)] font-black text-[#1B4332] leading-tight mb-8 uppercase">
+            101 CAFÉS DA MANHÃ SAUDÁVEIS <br/>
+            <span className="text-[#1B4332]/60">PARA SUBSTITUIR O PÃO</span>
+          </h1>
           
-          {/* Hero Content Overlay */}
-          <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-4 pt-12">
-            <h1 className="text-[clamp(1.5rem,8vw,4.5rem)] font-[family-name:var(--font-anton)] text-[#1B4332] leading-[0.9] mb-4 uppercase drop-shadow-md">
-              101 CAFÉS DA MANHÃ SAUDÁVEIS <br/>
-              <span className="text-brand-red">PARA SUBSTITUIR O PÃO</span>
-            </h1>
-            <p className="text-[clamp(0.8rem,3vw,1.2rem)] font-black text-[#1B4332] uppercase tracking-[0.2em] mb-8 bg-white/60 backdrop-blur-sm px-6 py-2 rounded-full border border-white/40">
-              Transforme seu corpo começando pela primeira refeição
-            </p>
+          <div className="relative max-w-5xl mx-auto mb-12 bg-transparent group">
+            <div className="absolute inset-0 bg-brand-red/5 rounded-full blur-[120px] -z-10 animate-pulse" />
+            <img 
+              src={lifestyleHeroUrl}
+              alt="Guia Mockup Premium"
+              className="w-full h-auto drop-shadow-[0_30px_60px_rgba(0,0,0,0.18)] group-hover:scale-[1.02] transition-transform duration-700 relative z-10"
+              loading="eager"
+              decoding="async"
+            />
           </div>
-        </div>
 
-        <div className="container mx-auto px-4 -mt-16 md:-mt-28 relative z-20 pb-16">
-          <div className="flex flex-col items-center gap-6">
-            <div className="bg-white p-8 md:p-12 rounded-[3rem] shadow-[0_30px_70px_rgba(0,0,0,0.15)] border border-[#1B4332]/5 flex flex-col items-center max-w-lg w-full">
-              <div className="text-[#1B4332] font-black text-center mb-6">
-                <span className="text-[10px] tracking-widest uppercase opacity-60">ACESSE AGORA POR APENAS</span>
-                <div className="text-6xl md:text-7xl font-[family-name:var(--font-anton)] text-brand-red leading-none mt-2">R$ 17,90</div>
-              </div>
-              
-              <button type="button" className="w-full bg-brand-red text-white px-10 py-6 rounded-full font-black uppercase tracking-[0.2em] text-lg shadow-[0_20px_40px_rgba(186,28,28,0.3)] hover:scale-105 active:scale-95 transition-all cursor-pointer animate-pulse-ring">
-                SIM! QUERO AS RECEITAS AGORA
-              </button>
-              
-              <div className="flex flex-wrap justify-center gap-4 mt-8 text-[10px] font-bold text-[#1B4332]/60 uppercase tracking-widest">
-                <span className="flex items-center gap-1.5"><ShieldCheck className="w-4 h-4 text-brand-red"/> ACESSO IMEDIATO</span>
-                <span className="flex items-center gap-1.5"><Zap className="w-4 h-4 text-brand-red"/> COMPRA SEGURA</span>
-                <span className="flex items-center gap-1.5 bg-brand-red/10 text-brand-red px-3 py-1 rounded-full"><Gift className="w-4 h-4"/> 15 DIAS DE GARANTIA</span>
-              </div>
+          <div className="flex flex-col items-center gap-4 mb-8">
+            <div className="text-[#1B4332] font-black">
+              <span className="text-sm">POR APENAS</span>
+              <div className="text-4xl font-[family-name:var(--font-anton)]">R$ 17,90</div>
+            </div>
+            <button type="button" className="bg-transparent border-2 border-[#2D6A4F] text-[#2D6A4F] px-8 py-4 rounded-full font-black uppercase tracking-widest text-sm shadow-sm hover:bg-[#2D6A4F]/5 hover:scale-105 transition-all cursor-pointer">
+              QUERO AS RECEITAS AGORA
+            </button>
+            <div className="flex flex-wrap justify-center gap-4 text-[10px] font-bold text-[#1B4332]/60">
+              <span className="flex items-center gap-1"><ShieldCheck className="w-3 h-3"/> ACESSO IMEDIATO</span>
+              <span className="flex items-center gap-1"><Zap className="w-3 h-3"/> COMPRA SEGURA</span>
+              <span className="flex items-center gap-1 bg-brand-red/10 text-brand-red px-2 py-1 rounded-full"><Gift className="w-3 h-3"/> 15 DIAS DE GARANTIA</span>
             </div>
           </div>
         </div>
