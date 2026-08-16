@@ -312,7 +312,7 @@ function Index() {
             <h2 className="text-[clamp(2.5rem,8vw,5rem)] font-[family-name:var(--font-anton)] leading-[0.9] uppercase">
               ESCOLHA SEU PLANO
             </h2>
-            <p className="text-[#D64D3F] font-bold uppercase tracking-widest text-sm">Acesso imediato após a confirmação</p>
+            <p className="text-brand-red font-bold uppercase tracking-widest text-sm">Acesso imediato após a confirmação</p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch pt-12">
