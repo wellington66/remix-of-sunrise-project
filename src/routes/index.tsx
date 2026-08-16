@@ -8,6 +8,9 @@ import bonusListaComprasAsset from "@/assets/bonus_lista_compras.jpg.asset.json"
 import bonusPlanejamentoAsset from "@/assets/bonus_planejamento.jpg.asset.json";
 import bonusLanchesAsset from "@/assets/bonus_lanches.jpg.asset.json";
 import bonusSobremesasAsset from "@/assets/bonus_sobremesas.jpg.asset.json";
+import bookMockupEssentialAsset from "@/assets/book_mockup_essential.jpg.asset.json";
+import bookMockupCompleteAsset from "@/assets/book_mockup_complete.jpg.asset.json";
+
 
 const cuscuzQueijoUrl = "/assets/cuscuz_queijo.png";
 const shakshukaUrl = "/assets/shakshuka.png";
@@ -300,7 +303,14 @@ function Index() {
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch pt-12">
             {/* Essential */}
-            <div className="bg-white/5 border border-white/10 p-12 rounded-[3rem] backdrop-blur-md flex flex-col items-center justify-between hover:bg-white/10 transition-all">
+            <div className="bg-white/5 border border-white/10 p-12 rounded-[3rem] backdrop-blur-md flex flex-col items-center hover:bg-white/10 transition-all">
+              <div className="w-full aspect-square mb-6 overflow-hidden flex items-center justify-center p-4">
+                <img 
+                  src={bookMockupEssentialAsset.url} 
+                  alt="Plano Essencial"
+                  className="w-full h-full object-contain drop-shadow-2xl"
+                />
+              </div>
               <div className="text-center mb-6">
                 <h3 className="text-xl font-black uppercase tracking-widest mb-2">Plano Essencial</h3>
                 <p className="text-xs opacity-60 uppercase font-bold">Guia Digital em PDF</p>
@@ -314,15 +324,23 @@ function Index() {
                 <li className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-[#D64D3F]" /> Acesso Vitalício</li>
                 <li className="flex items-center gap-2 opacity-30 line-through"><Minus className="w-4 h-4" /> Bônus Exclusivos</li>
               </ul>
-              <button className="w-full bg-white/20 text-white py-5 rounded-full font-black uppercase tracking-widest text-sm hover:bg-white/30 transition-all">
+              <button className="w-full mt-auto bg-white/20 text-white py-5 rounded-full font-black uppercase tracking-widest text-sm hover:bg-white/30 transition-all">
                 QUERO O GUIA
               </button>
             </div>
 
+
             {/* Complete */}
-            <div className="bg-white border-2 border-[#D64D3F] p-12 rounded-[3rem] flex flex-col items-center justify-between relative shadow-2xl scale-105 z-10">
+            <div className="bg-white border-2 border-[#D64D3F] p-12 rounded-[3rem] flex flex-col items-center relative shadow-2xl scale-105 z-10">
               <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-[#D64D3F] text-white px-6 py-1 rounded-full text-[10px] font-black uppercase tracking-widest whitespace-nowrap">
                 Recomendado ✨
+              </div>
+              <div className="w-full aspect-square mb-6 overflow-hidden flex items-center justify-center p-4">
+                <img 
+                  src={bookMockupCompleteAsset.url} 
+                  alt="Plano Completo"
+                  className="w-full h-full object-contain drop-shadow-2xl"
+                />
               </div>
               <div className="text-center mb-6">
                 <h3 className="text-xl font-black uppercase tracking-widest mb-2 text-[#1B4332]">Plano Completo</h3>
@@ -338,10 +356,11 @@ function Index() {
                 <li className="flex items-center gap-2 font-bold"><CheckCircle2 className="w-4 h-4 text-[#D64D3F]" /> Guia de Sucos Detox</li>
                 <li className="flex items-center gap-2 font-bold"><CheckCircle2 className="w-4 h-4 text-[#D64D3F]" /> Suporte Prioritário</li>
               </ul>
-              <button className="w-full bg-[#D64D3F] text-white py-6 rounded-full font-black uppercase tracking-widest text-lg shadow-xl hover:scale-105 transition-all">
+              <button className="w-full mt-auto bg-[#D64D3F] text-white py-6 rounded-full font-black uppercase tracking-widest text-lg shadow-xl hover:scale-105 transition-all">
                 QUERO O COMBO COMPLETO
               </button>
             </div>
+
           </div>
         </div>
       </section>
