@@ -64,7 +64,7 @@ function Index() {
           
           <div className="relative max-w-4xl mx-auto mb-8 bg-transparent">
             <img 
-              src={lifestyleHeroAsset.url}
+              src="/assets/hero_mockup.jpg"
               alt="Guia Mockup"
               className="w-full h-auto drop-shadow-2xl"
             />
@@ -307,7 +307,7 @@ function Index() {
             <div className="bg-[#FDF9F2] border border-[#1B4332]/10 p-12 rounded-[3rem] flex flex-col items-center hover:shadow-xl transition-all text-[#1B4332]">
               <div className="w-full aspect-square mb-6 overflow-hidden flex items-center justify-center p-4 bg-transparent">
                 <img 
-                  src={heroBookAsset.url} 
+                  src="/assets/book_mockup.jpg" 
                   alt="Plano Essencial"
                   className="w-full h-full object-contain drop-shadow-2xl"
                 />
@@ -338,7 +338,7 @@ function Index() {
               </div>
               <div className="w-full aspect-square mb-6 overflow-hidden flex items-center justify-center p-4">
                 <img 
-                  src={kitBundleAsset.url} 
+                  src="/assets/guia_mockup_new.jpg" 
                   alt="Plano Completo"
                   className="w-full h-full object-contain drop-shadow-2xl"
                 />
