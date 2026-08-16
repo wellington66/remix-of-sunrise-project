@@ -318,7 +318,7 @@ function Index() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch pt-12">
             {/* Essential */}
             <div className="bg-white border border-[#1B4332]/10 p-8 md:p-12 rounded-[2.5rem] md:rounded-[3.5rem] flex flex-col items-center hover:shadow-[0_30px_60px_rgba(0,0,0,0.08)] transition-all text-[#1B4332] group">
-              <div className="w-full aspect-square mb-6 overflow-hidden flex items-center justify-center p-6 bg-[#FDF9F2] rounded-[2rem] border border-[#1B4332]/5">
+              <div className="w-full aspect-square mb-6 overflow-hidden flex items-center justify-center p-6 bg-white rounded-[2rem] border border-[#1B4332]/5">
                 <img 
                   src={heroBookUrl} 
                   alt="Plano Essencial"
