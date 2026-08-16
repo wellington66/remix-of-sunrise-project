@@ -62,18 +62,27 @@ function Index() {
       </div>
 
       {/* Hero Section */}
-      <header className="relative pt-8 pb-12 bg-[#FDF9F2] w-full">
-        <div className="container mx-auto px-4 text-center">
-          <h1 className="text-[clamp(1.5rem,5vw,2.5rem)] font-black text-[#1B4332] leading-tight mb-8 uppercase">
+      <header className="relative bg-[#FDF9F2] w-full min-h-[60vh] flex items-center overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <img 
+            src={lifestyleHeroUrl} 
+            alt="Fundo lifestyle" 
+            className="w-full h-full object-cover opacity-20 lg:opacity-30 blur-[2px]"
+          />
+        </div>
+        
+        <div className="container mx-auto px-4 text-center relative z-10 py-16">
+          <h1 className="text-[clamp(1.8rem,6vw,3.5rem)] font-black text-[#1B4332] leading-tight mb-8 uppercase drop-shadow-sm">
             101 CAFÉS DA MANHÃ SAUDÁVEIS <br/>
-            <span className="text-[#1B4332]/60">PARA SUBSTITUIR O PÃO</span>
+            <span className="text-[#D64D3F]">PARA SUBSTITUIR O PÃO</span>
           </h1>
           
-          <div className="relative max-w-4xl mx-auto mb-8 bg-transparent">
+          <div className="relative max-w-5xl mx-auto mb-10 group">
+            <div className="absolute -inset-4 bg-[#1B4332]/5 rounded-full blur-3xl group-hover:bg-[#1B4332]/10 transition-colors" />
             <img 
               src={lifestyleHeroUrl}
               alt="Guia Mockup"
-              className="w-full h-auto drop-shadow-2xl"
+              className="w-full h-auto drop-shadow-[0_20px_50px_rgba(0,0,0,0.15)] relative z-10 rounded-2xl"
               loading="eager"
               decoding="async"
             />
