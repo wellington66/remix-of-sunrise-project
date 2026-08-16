@@ -270,14 +270,14 @@ function Index() {
                 img: bonusSobremesasUrl
               }
             ].map((bonus, i) => (
-              <div key={i} className="bg-white rounded-[1.5rem] md:rounded-[2rem] border border-[#1B4332]/5 flex flex-col items-center text-center group hover:scale-[1.02] transition-all overflow-hidden shadow-sm hover:shadow-md">
-                <div className="w-full aspect-[3/4] overflow-hidden relative bg-white flex items-center justify-center p-2 md:p-4">
+              <div key={i} className="bg-white rounded-[1.5rem] md:rounded-[2.5rem] border border-[#1B4332]/5 flex flex-col items-center text-center group hover:shadow-[0_20px_50px_rgba(0,0,0,0.08)] transition-all overflow-hidden shadow-sm">
+                <div className="w-full aspect-[4/5] overflow-hidden relative bg-gradient-to-b from-[#FDF9F2] to-white flex items-center justify-center p-4 md:p-8">
                   <img 
                     src={bonus.img} 
                     alt={bonus.title}
-                    className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-110 drop-shadow-2xl"
+                    className="w-full h-full object-contain transition-transform duration-700 group-hover:scale-110 drop-shadow-[0_15px_30px_rgba(0,0,0,0.12)]"
                   />
-                  <div className="absolute top-2 right-2 md:top-4 md:right-4 p-1 md:p-2 bg-white/90 backdrop-blur-sm rounded-lg md:rounded-xl shadow-sm">
+                  <div className="absolute top-2 right-2 md:top-4 md:right-4 p-1.5 md:p-2 bg-white/95 backdrop-blur-sm rounded-lg md:rounded-xl shadow-sm border border-[#1B4332]/5">
                     {bonus.icon}
                   </div>
                 </div>
