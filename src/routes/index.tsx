@@ -51,7 +51,7 @@ interface Testimonial {
 }
 
 function Index() {
-  const [timeLeft, setTimeLeft] = useState(900); // 15 minutos em segundos
+  const [showDownsell, setShowDownsell] = useState(false);
   const [showDownsell, setShowDownsell] = useState(false);
   const [downsellShown, setDownsellShown] = useState(false);
 
