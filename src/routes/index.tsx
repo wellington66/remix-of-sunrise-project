@@ -144,9 +144,9 @@ function Index() {
               <div className="absolute -inset-4 bg-[#1B4332]/5 rounded-full blur-3xl opacity-50" />
               <div className="relative group overflow-hidden rounded-[clamp(1.5rem,5vw,3rem)] shadow-[0_20px_60px_rgba(27,67,50,0.15)]">
                 <img 
-                  src={shakshukaUrl} 
+                  src={omeleteEspecialUrl} 
                   className="w-full h-auto object-cover aspect-square border-8 border-white transition-transform duration-700 group-hover:scale-105" 
-                  alt="Transformação Saudável" 
+                  alt="Transformação Saudável - Omelete Especial" 
                   loading="lazy"
                 />
               </div>
