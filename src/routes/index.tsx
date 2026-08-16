@@ -204,14 +204,27 @@ function Index() {
           ].map((item, i) => (
             <motion.div 
               key={i}
-              whileHover={{ y: -10 }}
-              className="bg-white rounded-[1.5rem] md:rounded-[2.5rem] overflow-hidden shadow-[0_15px_40px_rgba(0,0,0,0.06)] border border-[#1B4332]/5 group relative w-full"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: i * 0.1 }}
+              whileHover={{ y: -8 }}
+              className="bg-white rounded-[2rem] overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.04)] border border-[#1B4332]/5 group relative w-full flex flex-col"
             >
-              <div className="aspect-[4/5] overflow-hidden relative">
-                <img src={item.img} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt={`Receita ${i + 1}`} loading="lazy" decoding="async" />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
-                <div className="absolute top-4 right-4 bg-brand-red text-white px-4 py-2 rounded-full text-[10px] md:text-xs font-black shadow-lg z-10">
+              <div className="aspect-[4/3] overflow-hidden relative">
+                <img src={item.img} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt={item.title} loading="lazy" decoding="async" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+                <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-md text-[#1B4332] px-3 py-1.5 rounded-full text-[9px] font-black shadow-sm z-10 border border-[#1B4332]/5">
+                  {item.level}
+                </div>
+                <div className="absolute top-4 right-4 bg-brand-red text-white px-3 py-1.5 rounded-full text-[9px] font-black shadow-lg z-10">
                   {item.calories}
+                </div>
+              </div>
+              <div className="p-6 space-y-3">
+                <h3 className="text-sm font-black text-[#1B4332] uppercase tracking-tight leading-tight group-hover:text-brand-red transition-colors">{item.title}</h3>
+                <div className="flex items-center gap-4 text-[9px] font-bold text-[#1B4332]/40 uppercase tracking-widest">
+                  <span className="flex items-center gap-1.5"><Timer className="w-3 h-3" /> {item.time}</span>
+                  <span className="flex items-center gap-1.5"><CheckCircle2 className="w-3 h-3" /> Saudável</span>
                 </div>
               </div>
             </motion.div>
