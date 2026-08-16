@@ -103,10 +103,17 @@ function Index() {
       {/* Hero Section */}
       <header className="relative pt-8 pb-12 bg-white w-full">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="text-[clamp(1.5rem,5vw,2.5rem)] font-black text-[#1B4332] leading-tight mb-8 uppercase">
+          <h1 className="text-[clamp(1.5rem,5vw,2.5rem)] font-black text-[#1B4332] leading-tight mb-4 uppercase">
             101 CAFÉS DA MANHÃ SAUDÁVEIS <br/>
             <span className="text-[#1B4332]/60">PARA SUBSTITUIR O PÃO</span>
           </h1>
+
+          <p className="max-w-2xl mx-auto text-[clamp(0.95rem,2.2vw,1.15rem)] text-[#1B4332]/75 font-medium leading-relaxed mb-8">
+            Receitas rápidas de até <strong className="text-[#1B4332] font-black">15 minutos</strong> para
+            desinchar, ter mais energia pela manhã e emagrecer sem passar fome — mesmo que você
+            não saiba cozinhar.
+          </p>
+
           
           <div className="relative w-screen max-w-none mb-12 bg-transparent group left-1/2 -translate-x-1/2">
             <div className="absolute inset-0 bg-brand-red/5 rounded-full blur-[120px] -z-10 animate-pulse" />
