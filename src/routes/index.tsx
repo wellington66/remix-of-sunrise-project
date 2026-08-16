@@ -422,7 +422,7 @@ function Index() {
               VOCÊ ESTÁ 100% SEGURA
             </h3>
             <p className="text-sm opacity-80 max-w-xl mx-auto mb-6">
-              Sua satisfação é nossa prioridade. Se em 7 dias você não amar as receitas, devolvemos cada centavo.
+              Sua satisfação é nossa prioridade. Se em <span className="font-black text-brand-red underline decoration-2 underline-offset-4">15 dias</span> você não amar as receitas, devolvemos cada centavo.
             </p>
             <div className="flex justify-center gap-4">
               <ShieldCheck className="w-8 h-8 text-brand-red" />
