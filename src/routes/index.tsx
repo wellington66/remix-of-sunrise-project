@@ -432,6 +432,136 @@ function Index() {
         </div>
       </div>
 
+      {/* Testimonials Section */}
+      <section className="py-24 bg-[#FDF9F2]/30 overflow-hidden">
+        <div className="container mx-auto px-4">
+          <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
+            <h2 className="text-[clamp(2rem,6vw,4rem)] font-[family-name:var(--font-anton)] uppercase leading-[0.9] text-[#1B4332]">
+              2.425 PESSOAS JÁ <br/>
+              <span className="text-brand-red">TRANSFORMARAM A COZINHA</span>
+            </h2>
+            <p className="text-sm font-medium opacity-60">Resultados reais de quem aplicou as receitas na prática</p>
+          </div>
+
+          {/* Rating Summary Card */}
+          <div className="max-w-4xl mx-auto bg-white rounded-[2rem] p-8 md:p-12 shadow-[0_20px_50px_rgba(0,0,0,0.04)] border border-[#1B4332]/5 mb-16 flex flex-col md:flex-row items-center gap-12">
+            <div className="text-center md:border-r md:border-[#1B4332]/10 md:pr-12">
+              <div className="text-6xl md:text-8xl font-[family-name:var(--font-anton)] text-brand-red leading-none mb-4">4.9</div>
+              <div className="flex justify-center gap-1 mb-2">
+                {Array(5).fill(null).map((_, i) => (
+                  <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
+                ))}
+              </div>
+              <div className="text-[10px] font-black uppercase tracking-widest opacity-40">2.087 avaliações</div>
+            </div>
+            
+            <div className="flex-grow w-full space-y-3">
+              {[
+                { star: 5, width: "92%" },
+                { star: 4, width: "7%" },
+                { star: 3, width: "1%" },
+                { star: 2, width: "0%" },
+                { star: 1, width: "0%" }
+              ].map((row) => (
+                <div key={row.star} className="flex items-center gap-4">
+                  <span className="text-xs font-bold opacity-40 w-4">{row.star}</span>
+                  <Star className="w-3 h-3 fill-yellow-400 text-yellow-400" />
+                  <div className="flex-grow h-2 bg-[#1B4332]/5 rounded-full overflow-hidden">
+                    <motion.div 
+                      initial={{ width: 0 }}
+                      whileInView={{ width: row.width }}
+                      transition={{ duration: 1, delay: 0.2 }}
+                      className="h-full bg-yellow-400"
+                    />
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Testimonials Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-6xl mx-auto">
+            {[
+              {
+                name: "Patrícia Almeida",
+                date: "18 de fevereiro de 2026",
+                text: "Fiz a crepioca de frango e minha família pediu pra repetir no dia seguinte!",
+                likes: 103,
+                avatar: "https://i.pravatar.cc/150?u=patricia"
+              },
+              {
+                name: "Roberta Mendes",
+                date: "27 de fevereiro de 2026",
+                text: "MARAVILHOSO, muita variedade, tá me ajudando bastante na cozinha. Nem acredito que ele é esse valor.",
+                likes: 98,
+                avatar: "https://i.pravatar.cc/150?u=roberta"
+              },
+              {
+                name: "Rafael Cardoso",
+                date: "10 de janeiro de 2026",
+                text: "Gostei muito porque não parece aquelas receitas difíceis de dieta. São ideias práticas mesmo, com ingredientes que eu já tenho em casa.",
+                likes: 87,
+                stars: 4,
+                avatar: "https://i.pravatar.cc/150?u=rafael"
+              },
+              {
+                name: "Juliana Ribeiro",
+                date: "5 de fevereiro de 2026",
+                text: "Nunca imaginei que dava pra fazer tanta coisa no café da manhã! Já testei 4 receitas e todas ficaram uma delícia!",
+                likes: 142,
+                avatar: "https://i.pravatar.cc/150?u=juliana"
+              },
+              {
+                name: "Bruno Martins",
+                date: "23 de janeiro de 2026",
+                text: "Eu queria diminuir o pão, mas não sabia o que comer no lugar. O material me ajudou demais, principalmente pelas receitas rápidas.",
+                likes: 76,
+                avatar: "https://i.pravatar.cc/150?u=bruno"
+              },
+              {
+                name: "Camila Nogueira",
+                date: "12 de março de 2026",
+                text: "Comprei e já fiz a Vitamina de Morango com Banana... ficou incrível! Recomendo pra quem quer economizar e comer bem logo de manhã.",
+                likes: 119,
+                stars: 4,
+                avatar: "https://i.pravatar.cc/150?u=camila"
+              }
+            ].map((t, i) => (
+              <motion.div 
+                key={i}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: i * 0.1 }}
+                className="bg-white p-6 md:p-8 rounded-[2rem] shadow-[0_10px_30px_rgba(0,0,0,0.03)] border border-[#1B4332]/5 flex flex-col h-full"
+              >
+                <div className="flex items-center justify-between mb-6">
+                  <div className="flex items-center gap-3">
+                    <img src={t.avatar} className="w-10 h-10 rounded-full border border-[#1B4332]/10" alt={t.name} />
+                    <div className="flex flex-col">
+                      <span className="text-sm font-black text-[#1B4332]">{t.name}</span>
+                      <span className="text-[10px] opacity-40 font-bold uppercase">{t.date}</span>
+                    </div>
+                  </div>
+                  <div className="flex gap-0.5">
+                    {Array(5).fill(null).map((_, idx) => (
+                      <Star key={idx} className={`w-3 h-3 ${idx < (t.stars || 5) ? 'fill-yellow-400 text-yellow-400' : 'fill-gray-200 text-gray-200'}`} />
+                    ))}
+                  </div>
+                </div>
+                <p className="text-sm font-medium leading-relaxed text-[#1B4332]/80 mb-6 flex-grow italic">
+                  "{t.text}"
+                </p>
+                <div className="flex items-center gap-4 pt-4 border-t border-[#1B4332]/5 text-[10px] font-black uppercase tracking-widest opacity-40">
+                  <span className="flex items-center gap-1.5 text-brand-red opacity-100">❤️ {t.likes}</span>
+                  <button className="hover:text-[#1B4332] transition-colors">Curtir</button>
+                  <button className="hover:text-[#1B4332] transition-colors">Comentar</button>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* FAQ */}
       <section className="py-24 container mx-auto px-4 max-w-3xl">
         <h2 className="text-4xl font-[family-name:var(--font-anton)] text-center mb-16 uppercase text-[#1B4332]">
