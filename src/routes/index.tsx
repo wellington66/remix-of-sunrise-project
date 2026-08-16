@@ -337,7 +337,7 @@ function Index() {
               </div>
               <div className="w-full aspect-square mb-6 overflow-hidden flex items-center justify-center p-4">
                 <img 
-                  src={bookMockupCompleteAsset.url} 
+                  src={kitBundleAsset.url} 
                   alt="Plano Completo"
                   className="w-full h-full object-contain drop-shadow-2xl"
                 />
