@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { motion } from "framer-motion";
-import { CheckCircle2, Star, ShieldCheck, ArrowRight, Minus, Plus, Zap, Clock, Smartphone, Gift, Heart, UserCheck, Play, ArrowDown, Timer, Calendar, Coffee, Utensils } from "lucide-react";
+import { CheckCircle2, Star, ShieldCheck, Zap, ArrowDown, Timer, Calendar, Coffee, Utensils, Smartphone, Gift, Minus } from "lucide-react";
 import { useState, useEffect } from "react";
 
 // Caminhos estáticos robustos para a pasta public/assets
@@ -19,28 +19,34 @@ const bananaCrepeUrl = "/assets/banana_crepe.png";
 const cuscuzOvoUrl = "/assets/cuscuz_ovo.png";
 const bananaCupcakeBowlUrl = "/assets/banana_cupcake_bowl.png";
 const crepiocaFrangoUrl = "/assets/crepioca_frango.png";
-const guiaMockupUrl = "/assets/hero_mockup.jpg";
-
 
 export const Route = createFileRoute("/")({
   component: Index,
+  head: () => ({
+    meta: [
+      { title: "101 Receitas de Café da Manhã para Substituir o Pão" },
+      { name: "description", content: "Descubra 101 receitas deliciosas e saudáveis para transformar seu café da manhã, emagrecer com saúde e eliminar o inchaço matinal." },
+      { property: "og:title", content: "101 Receitas de Café da Manhã - Substitua o Pão" },
+      { property: "og:description", content: "Receitas práticas, deliciosas e nutritivas para começar o dia com energia." },
+      { name: "twitter:card", content: "summary_large_image" }
+    ],
+  }),
 });
 
 function Index() {
   const [timeLeft, setTimeLeft] = useState(900); // 15 minutes in seconds
 
   useEffect(() => {
-    if (timeLeft <= 0) return;
     const timer = setInterval(() => {
-      setTimeLeft(prev => prev - 1);
+      setTimeLeft((prev) => (prev > 0 ? prev - 1 : 0));
     }, 1000);
     return () => clearInterval(timer);
-  }, [timeLeft]);
+  }, []);
 
   const formatTime = (seconds: number) => {
     const mins = Math.floor(seconds / 60);
     const secs = seconds % 60;
-    return `${mins.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
+    return `${mins.toString().padStart(2, "0")}:${secs.toString().padStart(2, "0")}`;
   };
 
   return (
@@ -68,6 +74,8 @@ function Index() {
               src={lifestyleHeroUrl}
               alt="Guia Mockup"
               className="w-full h-auto drop-shadow-2xl"
+              loading="eager"
+              decoding="async"
             />
           </div>
 
@@ -76,7 +84,7 @@ function Index() {
               <span className="text-sm">POR APENAS</span>
               <div className="text-4xl font-[family-name:var(--font-anton)]">R$ 17,90</div>
             </div>
-            <button className="bg-[#2D6A4F] text-white px-8 py-4 rounded-full font-black uppercase tracking-widest text-sm shadow-lg hover:scale-105 transition-transform cursor-pointer">
+            <button type="button" className="bg-[#2D6A4F] text-white px-8 py-4 rounded-full font-black uppercase tracking-widest text-sm shadow-lg hover:scale-105 transition-transform cursor-pointer">
               QUERO AS RECEITAS AGORA
             </button>
             <div className="flex gap-4 text-[10px] font-bold text-[#1B4332]/60">
@@ -126,7 +134,7 @@ function Index() {
                 ))}
               </ul>
               <div className="pt-8">
-                <button className="bg-[#D64D3F] text-white px-8 py-4 rounded-full font-black uppercase tracking-widest text-sm shadow-lg hover:scale-105 transition-transform cursor-pointer w-full lg:w-auto">
+                <button type="button" className="bg-[#D64D3F] text-white px-8 py-4 rounded-full font-black uppercase tracking-widest text-sm shadow-lg hover:scale-105 transition-transform cursor-pointer w-full lg:w-auto">
                   QUERO SAIR DA ROTINA DO PÃO
                 </button>
               </div>
@@ -137,6 +145,7 @@ function Index() {
                 src={shakshukaUrl} 
                 className="relative rounded-[clamp(1.5rem,5vw,3rem)] shadow-2xl border-8 border-[#FDF9F2] z-10 w-full h-auto object-cover aspect-square" 
                 alt="Transformação Saudável" 
+                loading="lazy"
               />
             </div>
           </div>
@@ -196,7 +205,7 @@ function Index() {
               className="bg-white rounded-[2rem] overflow-hidden shadow-xl border border-[#1B4332]/5 group relative w-full"
             >
               <div className="aspect-square overflow-hidden relative">
-                <img src={item.img} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt={`Receita ${i + 1}`} loading="eager" decoding="sync" />
+                <img src={item.img} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt={`Receita ${i + 1}`} loading="lazy" decoding="async" />
                 <div className="absolute top-4 right-4 bg-[#D64D3F] text-white px-4 py-2 rounded-full text-xs font-black shadow-lg">
                   {item.calories}
                 </div>
@@ -326,7 +335,7 @@ function Index() {
                 <li className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-[#D64D3F]" /> Acesso Vitalício</li>
                 <li className="flex items-center gap-2 opacity-30 line-through"><Minus className="w-4 h-4" /> Bônus Exclusivos</li>
               </ul>
-              <button className="w-full mt-auto bg-[#1B4332] text-white py-5 rounded-full font-black uppercase tracking-widest text-sm hover:scale-105 transition-all">
+              <button type="button" className="w-full mt-auto bg-[#1B4332] text-white py-5 rounded-full font-black uppercase tracking-widest text-sm hover:scale-105 transition-all">
                 QUERO O GUIA
               </button>
             </div>
@@ -358,7 +367,7 @@ function Index() {
                 <li className="flex items-center gap-2 font-bold"><CheckCircle2 className="w-4 h-4 text-[#D64D3F]" /> Guia de Sucos Detox</li>
                 <li className="flex items-center gap-2 font-bold"><CheckCircle2 className="w-4 h-4 text-[#D64D3F]" /> Suporte Prioritário</li>
               </ul>
-              <button className="w-full mt-auto bg-[#D64D3F] text-white py-6 rounded-full font-black uppercase tracking-widest text-lg shadow-xl hover:scale-105 transition-all">
+              <button type="button" className="w-full mt-auto bg-[#D64D3F] text-white py-6 rounded-full font-black uppercase tracking-widest text-lg shadow-xl hover:scale-105 transition-all">
                 QUERO O COMBO COMPLETO
               </button>
             </div>
@@ -441,7 +450,7 @@ function Index() {
           <span className="text-[0.65rem] text-[#D64D3F] line-through font-black leading-none">R$ 97,00</span>
           <span className="text-2xl font-[family-name:var(--font-anton)] text-[#1B4332] leading-none">R$ 17,90</span>
         </div>
-        <button className="bg-[#D64D3F] text-white px-8 py-3 rounded-full font-black uppercase tracking-widest text-[0.7rem] shadow-xl animate-pulse cursor-pointer">
+        <button type="button" className="bg-[#D64D3F] text-white px-8 py-3 rounded-full font-black uppercase tracking-widest text-[0.7rem] shadow-xl animate-pulse cursor-pointer">
           COMPRAR AGORA
         </button>
       </div>
