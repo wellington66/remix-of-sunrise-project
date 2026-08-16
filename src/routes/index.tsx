@@ -129,7 +129,7 @@ function Index() {
               <ul className="space-y-4 text-left inline-block">
                 {["Fim da sonolência pós-café", "Intestino funcionando como um relógio", "Redução visível de medidas na primeira semana"].map((item, i) => (
                   <li key={i} className="flex items-center gap-3 font-bold text-sm uppercase tracking-wide">
-                    <CheckCircle2 className="w-5 h-5 text-[#D64D3F]" /> {item}
+                    <CheckCircle2 className="w-5 h-5 text-brand-red" /> {item}
                   </li>
                 ))}
               </ul>
