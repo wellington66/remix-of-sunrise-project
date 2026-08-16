@@ -297,7 +297,7 @@ function Index() {
                 img: bonusSobremesasUrl
               }
             ].map((bonus, i) => (
-              <div key={i} className="bg-white rounded-[1.5rem] md:rounded-[2.5rem] border border-[#1B4332]/5 flex flex-col items-center text-center group hover:shadow-[0_20px_50px_rgba(0,0,0,0.08)] transition-all overflow-hidden shadow-sm">
+              <div key={i} className="bg-white rounded-[1.5rem] md:rounded-[2.5rem] border border-[#1B4332]/10 flex flex-col items-center text-center group hover:shadow-[0_40px_80px_rgba(0,0,0,0.12)] transition-all overflow-hidden shadow-md hover:border-brand-red/20">
                 <div className="w-full aspect-[4/5] overflow-hidden relative bg-white flex items-center justify-center p-4 md:p-8">
                   <img 
                     src={bonus.img} 
