@@ -191,15 +191,16 @@ function Index() {
             </div>
             <div className="relative">
               <div className="absolute -inset-4 bg-[#1B4332]/5 rounded-full blur-3xl opacity-50" />
-              <div className="relative group overflow-hidden rounded-[clamp(1.5rem,5vw,3rem)] shadow-[0_20px_60px_rgba(27,67,50,0.15)]">
-                <img 
-                  src={omeleteEspecialUrl} 
-                  className="w-full h-auto object-cover aspect-square border-8 border-white transition-transform duration-700 group-hover:scale-105" 
-                  alt="Transformação Saudável - Omelete Especial" 
+              <div className="relative group bg-transparent">
+                <img
+                  src={mockupChefUrl}
+                  className="w-full h-auto object-contain bg-transparent drop-shadow-[0_25px_50px_rgba(27,67,50,0.18)] transition-transform duration-700 group-hover:scale-105"
+                  alt="Guia 101 Cafés da Manhã Saudáveis com a chef e o app de receitas"
                   loading="lazy"
                 />
               </div>
             </div>
+
           </div>
         </div>
       </section>
