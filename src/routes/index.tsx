@@ -345,15 +345,15 @@ function Index() {
 
 
             {/* Complete */}
-            <div className="bg-white border-2 border-[#D64D3F] p-12 rounded-[3rem] flex flex-col items-center relative shadow-2xl scale-105 z-10">
-              <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-[#D64D3F] text-white px-6 py-1 rounded-full text-[10px] font-black uppercase tracking-widest whitespace-nowrap">
+            <div className="bg-white border-2 border-[#D64D3F] p-8 md:p-12 rounded-[2.5rem] md:rounded-[3.5rem] flex flex-col items-center relative shadow-[0_40px_80px_rgba(214,77,63,0.15)] md:scale-105 z-10 group">
+              <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-[#D64D3F] text-white px-6 py-1.5 rounded-full text-[10px] font-black uppercase tracking-widest whitespace-nowrap shadow-lg">
                 Recomendado ✨
               </div>
-              <div className="w-full aspect-square mb-6 overflow-hidden flex items-center justify-center p-4">
+              <div className="w-full aspect-square mb-6 overflow-hidden flex items-center justify-center p-6 bg-[#FDF9F2] rounded-[2rem] border border-[#D64D3F]/10">
                 <img 
                   src={kitBundleUrl} 
                   alt="Plano Completo"
-                  className="w-full h-full object-contain drop-shadow-2xl"
+                  className="w-full h-full object-contain drop-shadow-[0_20px_40px_rgba(0,0,0,0.18)] transition-transform duration-700 group-hover:scale-110"
                 />
               </div>
               <div className="text-center mb-6">
