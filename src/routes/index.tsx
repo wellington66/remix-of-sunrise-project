@@ -74,6 +74,8 @@ function Index() {
               src={lifestyleHeroUrl}
               alt="Guia Mockup"
               className="w-full h-auto drop-shadow-2xl"
+              loading="eager"
+              decoding="async"
             />
           </div>
 
