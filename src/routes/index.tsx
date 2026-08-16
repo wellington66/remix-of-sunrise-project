@@ -345,9 +345,9 @@ function Index() {
 
 
             {/* Complete */}
-            <div className="bg-white border-2 border-[#D64D3F] p-8 md:p-12 rounded-[2.5rem] md:rounded-[3.5rem] flex flex-col items-center relative shadow-[0_40px_80px_rgba(214,77,63,0.15)] md:scale-105 z-10 group">
-              <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-[#D64D3F] text-white px-6 py-1.5 rounded-full text-[10px] font-black uppercase tracking-widest whitespace-nowrap shadow-lg">
-                Recomendado ✨
+            <div className="bg-white border-4 border-[#D64D3F] p-8 md:p-14 rounded-[2.5rem] md:rounded-[3.5rem] flex flex-col items-center relative shadow-[0_50px_100px_rgba(214,77,63,0.2)] md:scale-110 z-10 group ring-8 ring-[#D64D3F]/5">
+              <div className="absolute -top-6 left-1/2 -translate-x-1/2 bg-[#D64D3F] text-white px-8 py-2.5 rounded-full text-xs font-black uppercase tracking-[0.2em] whitespace-nowrap shadow-2xl animate-bounce">
+                OFERTA MAIS POPULAR ✨
               </div>
               <div className="w-full aspect-square mb-6 overflow-hidden flex items-center justify-center p-6 bg-white rounded-[2rem] border border-[#D64D3F]/10">
                 <img 
@@ -357,21 +357,21 @@ function Index() {
                 />
               </div>
               <div className="text-center mb-6">
-                <h3 className="text-xl font-black uppercase tracking-widest mb-2 text-[#1B4332]">Plano Completo</h3>
-                <p className="text-xs text-[#D64D3F] uppercase font-bold">Guia + Todos os Bônus</p>
+                <h3 className="text-2xl md:text-3xl font-black uppercase tracking-widest mb-2 text-[#1B4332]">Plano Completo</h3>
+                <p className="text-sm text-[#D64D3F] uppercase font-black tracking-widest">Guia + Todos os 5 Bônus</p>
               </div>
               <div className="text-center mb-8">
                 <span className="text-sm line-through text-[#1B4332]/40 block font-bold">DE R$ 97,00</span>
-                <span className="text-5xl font-[family-name:var(--font-anton)] text-[#1B4332]">R$ 27,90</span>
+                <span className="text-6xl md:text-7xl font-[family-name:var(--font-anton)] text-[#1B4332] drop-shadow-sm">R$ 27,90</span>
               </div>
               <ul className="text-left w-full space-y-4 mb-8 text-sm text-[#1B4332]">
-                <li className="flex items-center gap-2 font-bold"><CheckCircle2 className="w-4 h-4 text-[#D64D3F]" /> Guia com 101 Receitas</li>
-                <li className="flex items-center gap-2 font-bold"><CheckCircle2 className="w-4 h-4 text-[#D64D3F]" /> Todos os 5 Bônus Inclusos</li>
-                <li className="flex items-center gap-2 font-bold"><CheckCircle2 className="w-4 h-4 text-[#D64D3F]" /> Guia de Sucos Detox</li>
-                <li className="flex items-center gap-2 font-bold"><CheckCircle2 className="w-4 h-4 text-[#D64D3F]" /> Suporte Prioritário</li>
+                <li className="flex items-center gap-3 font-black text-base"><CheckCircle2 className="w-5 h-5 text-[#D64D3F] shrink-0" /> Guia com 101 Receitas</li>
+                <li className="flex items-center gap-3 font-black text-base text-[#D64D3F]"><CheckCircle2 className="w-5 h-5 text-[#D64D3F] shrink-0" /> +5 BÔNUS EXCLUSIVOS</li>
+                <li className="flex items-center gap-3 font-black text-base"><CheckCircle2 className="w-5 h-5 text-[#D64D3F] shrink-0" /> Guia de Sucos Detox</li>
+                <li className="flex items-center gap-3 font-black text-base"><CheckCircle2 className="w-5 h-5 text-[#D64D3F] shrink-0" /> Suporte Prioritário VIP</li>
               </ul>
-              <button type="button" className="w-full mt-auto bg-[#D64D3F] text-white py-6 rounded-full font-black uppercase tracking-widest text-lg shadow-xl hover:scale-105 transition-all">
-                QUERO O COMBO COMPLETO
+              <button type="button" className="w-full mt-auto bg-[#D64D3F] text-white py-8 rounded-full font-black uppercase tracking-[0.2em] text-xl shadow-[0_20px_40px_rgba(214,77,63,0.3)] hover:scale-105 active:scale-95 transition-all cursor-pointer ring-4 ring-white/20">
+                EU QUERO O COMBO COMPLETO!
               </button>
             </div>
 
