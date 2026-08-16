@@ -245,7 +245,7 @@ function Index() {
                 title: "Lista de Compras Econômica", 
                 desc: "Saiba exatamente o que comprar.",
                 value: "R$ 29,00",
-                icon: <Smartphone className="w-4 h-4 md:w-8 md:h-8 text-[#D64D3F]" />,
+                icon: <Smartphone className="w-4 h-4 md:w-8 md:h-8 text-brand-red" />,
                 img: bonusListaUrl
               },
               { 
