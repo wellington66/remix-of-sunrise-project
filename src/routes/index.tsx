@@ -50,7 +50,7 @@ function Index() {
   };
 
   return (
-    <div className="min-h-screen bg-[#FDF9F2] text-[#1B4332] font-[family-name:var(--font-inter)] selection:bg-[#D64D3F]/20 overflow-x-hidden w-full relative">
+    <div className="min-h-screen bg-white text-[#1B4332] font-[family-name:var(--font-inter)] selection:bg-[#D64D3F]/20 overflow-x-hidden w-full relative">
       {/* Top Banner */}
       <div className="bg-[#1B4332] text-white py-2 text-center text-[10px] font-bold uppercase tracking-widest">
         101 CAFÉS DA MANHÃ SAUDÁVEIS PARA SUBSTITUIR O PÃO
@@ -62,7 +62,7 @@ function Index() {
       </div>
 
       {/* Hero Section */}
-      <header className="relative pt-8 pb-12 bg-[#FDF9F2] w-full">
+      <header className="relative pt-8 pb-12 bg-white w-full">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-[clamp(1.5rem,5vw,2.5rem)] font-black text-[#1B4332] leading-tight mb-8 uppercase">
             101 CAFÉS DA MANHÃ SAUDÁVEIS <br/>
@@ -271,7 +271,7 @@ function Index() {
               }
             ].map((bonus, i) => (
               <div key={i} className="bg-white rounded-[1.5rem] md:rounded-[2.5rem] border border-[#1B4332]/5 flex flex-col items-center text-center group hover:shadow-[0_20px_50px_rgba(0,0,0,0.08)] transition-all overflow-hidden shadow-sm">
-                <div className="w-full aspect-[4/5] overflow-hidden relative bg-gradient-to-b from-[#FDF9F2] to-white flex items-center justify-center p-4 md:p-8">
+                <div className="w-full aspect-[4/5] overflow-hidden relative bg-gradient-to-b from-white to-[#FDF9F2]/20 flex items-center justify-center p-4 md:p-8">
                   <img 
                     src={bonus.img} 
                     alt={bonus.title}
@@ -318,7 +318,7 @@ function Index() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch pt-12">
             {/* Essential */}
             <div className="bg-white border border-[#1B4332]/10 p-8 md:p-12 rounded-[2.5rem] md:rounded-[3.5rem] flex flex-col items-center hover:shadow-[0_30px_60px_rgba(0,0,0,0.08)] transition-all text-[#1B4332] group">
-              <div className="w-full aspect-square mb-6 overflow-hidden flex items-center justify-center p-6 bg-[#FDF9F2] rounded-[2rem] border border-[#1B4332]/5">
+              <div className="w-full aspect-square mb-6 overflow-hidden flex items-center justify-center p-6 bg-white rounded-[2rem] border border-[#1B4332]/5">
                 <img 
                   src={heroBookUrl} 
                   alt="Plano Essencial"
@@ -349,7 +349,7 @@ function Index() {
               <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-[#D64D3F] text-white px-6 py-1.5 rounded-full text-[10px] font-black uppercase tracking-widest whitespace-nowrap shadow-lg">
                 Recomendado ✨
               </div>
-              <div className="w-full aspect-square mb-6 overflow-hidden flex items-center justify-center p-6 bg-[#FDF9F2] rounded-[2rem] border border-[#D64D3F]/10">
+              <div className="w-full aspect-square mb-6 overflow-hidden flex items-center justify-center p-6 bg-white rounded-[2rem] border border-[#D64D3F]/10">
                 <img 
                   src={kitBundleUrl} 
                   alt="Plano Completo"
