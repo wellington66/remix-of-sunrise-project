@@ -70,11 +70,12 @@ function Index() {
             <span className="text-[#1B4332]/60">PARA SUBSTITUIR O PÃO</span>
           </h1>
           
-          <div className="relative max-w-4xl mx-auto mb-8 bg-transparent">
+          <div className="relative max-w-5xl mx-auto mb-12 bg-transparent group">
+            <div className="absolute inset-0 bg-brand-red/5 rounded-full blur-[120px] -z-10 animate-pulse" />
             <img 
               src={lifestyleHeroUrl}
-              alt="Guia Mockup"
-              className="w-full h-auto drop-shadow-[0_20px_50px_rgba(0,0,0,0.15)] group-hover:scale-[1.02] transition-transform duration-700"
+              alt="Guia Mockup Premium"
+              className="w-full h-auto drop-shadow-[0_30px_60px_rgba(0,0,0,0.18)] group-hover:scale-[1.02] transition-transform duration-700 relative z-10"
               loading="eager"
               decoding="async"
             />
