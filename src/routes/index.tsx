@@ -71,7 +71,7 @@ function Index() {
 
 
   return (
-    <div className="min-h-screen bg-white text-[#1B4332] font-[family-name:var(--font-inter)] selection:bg-[#D64D3F]/20 overflow-x-hidden w-full relative">
+    <div className="min-h-screen bg-white text-[#1B4332] font-[family-name:var(--font-inter)] selection:bg-[#D64D3F]/20 overflow-x-hidden w-full relative pb-24 md:pb-0">
       {/* Top Banner */}
       <div className="bg-[#1B4332]/5 text-[#1B4332] py-2 text-center text-[10px] font-bold uppercase tracking-widest border-b border-[#1B4332]/10">
         101 CAFÉS DA MANHÃ SAUDÁVEIS PARA SUBSTITUIR O PÃO
