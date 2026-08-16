@@ -290,13 +290,13 @@ function Index() {
             ))}
             
             {/* Total Value Summary */}
-            <div className="lg:col-span-1 bg-[#1B4332] p-8 rounded-[2rem] flex flex-col items-center justify-center text-center text-white relative overflow-hidden group min-h-[400px]">
+            <div className="col-span-2 md:col-span-1 bg-[#1B4332] p-6 md:p-8 rounded-[1.5rem] md:rounded-[2rem] flex flex-col items-center justify-center text-center text-white relative overflow-hidden group min-h-[200px] md:min-h-[400px]">
               <div className="absolute top-0 right-0 p-4 opacity-10">
-                <Gift className="w-32 h-32" />
+                <Gift className="w-16 h-16 md:w-32 md:h-32" />
               </div>
-              <h3 className="text-2xl font-[family-name:var(--font-anton)] uppercase mb-4 relative z-10">VALOR TOTAL DOS BÔNUS</h3>
-              <div className="text-4xl font-[family-name:var(--font-anton)] text-[#D64D3F] mb-2 relative z-10">R$ 209,00</div>
-              <p className="text-[10px] font-black uppercase tracking-widest opacity-60 relative z-10">Tudo incluso no Plano Completo</p>
+              <h3 className="text-lg md:text-2xl font-[family-name:var(--font-anton)] uppercase mb-2 md:mb-4 relative z-10">VALOR TOTAL DOS BÔNUS</h3>
+              <div className="text-3xl md:text-4xl font-[family-name:var(--font-anton)] text-[#D64D3F] mb-1 md:mb-2 relative z-10">R$ 209,00</div>
+              <p className="text-[8px] md:text-[10px] font-black uppercase tracking-widest opacity-60 relative z-10">Tudo incluso no Plano Completo</p>
             </div>
           </div>
         </div>
