@@ -630,7 +630,7 @@ function Index() {
             <div className="bg-brand-red/5 p-8 rounded-[2.5rem] border border-brand-red/10 w-full">
               <h3 className="text-xl font-black text-[#1B4332] uppercase mb-4">Ainda tem alguma dúvida?</h3>
               <p className="text-sm font-medium opacity-60 mb-6">Nossa equipe de suporte está pronta para te ajudar a qualquer momento.</p>
-              <a href={CHECKOUT_COMBO} className="w-full bg-[#1B4332] text-white py-4 rounded-full font-black uppercase tracking-widest text-xs hover:scale-105 transition-transform flex items-center justify-center gap-3">
+              <button type="button" className="w-full bg-[#1B4332] text-white py-4 rounded-full font-black uppercase tracking-widest text-xs hover:scale-105 transition-transform flex items-center justify-center gap-3">
 
                 <Smartphone className="w-4 h-4" /> Falar com Suporte
               </button>
