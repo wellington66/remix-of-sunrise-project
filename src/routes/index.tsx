@@ -10,6 +10,7 @@ import bonusLanchesAsset from "@/assets/bonus_lanches.jpg.asset.json";
 import bonusSobremesasAsset from "@/assets/bonus_sobremesas.jpg.asset.json";
 import bookMockupEssentialAsset from "@/assets/book_mockup_essential.jpg.asset.json";
 import bookMockupCompleteAsset from "@/assets/book_mockup_complete.jpg.asset.json";
+import bookCoverNewAsset from "@/assets/book_cover_new.jpg.asset.json";
 
 
 const cuscuzQueijoUrl = "/assets/cuscuz_queijo.png";
