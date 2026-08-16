@@ -385,7 +385,7 @@ function Index() {
         <span className="text-brand-red font-black uppercase tracking-[0.3em] text-[10px] mb-8">
           TIRE SUAS DÚVIDAS
         </span>
-        <div className="w-px h-12 bg-[#D64D3F]/30 mb-12" />
+        <div className="w-px h-12 bg-brand-red/30 mb-12" />
         
         <div className="w-full max-w-3xl bg-[#1B4332] rounded-[2rem] p-8 md:p-12 text-white shadow-2xl relative overflow-hidden group">
           <div className="absolute -bottom-10 -left-10 p-8 opacity-10 rotate-12 transition-transform group-hover:scale-110">
