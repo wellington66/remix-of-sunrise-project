@@ -52,7 +52,7 @@ interface Testimonial {
 
 function Index() {
   const [showDownsell, setShowDownsell] = useState(false);
-  const [showDownsell, setShowDownsell] = useState(false);
+
   const [downsellShown, setDownsellShown] = useState(false);
 
   const openDownsell = () => {
