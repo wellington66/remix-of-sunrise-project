@@ -8,8 +8,8 @@ import bonusListaComprasAsset from "@/assets/lista-compras-sem-fundo.png.asset.j
 import bonusPlanejamentoAsset from "@/assets/planejamento-semanal-sem-fundo.png.asset.json";
 import bonusLanchesAsset from "@/assets/guia-lanches-sem-fundo.png.asset.json";
 import bonusSobremesasAsset from "@/assets/sobremesas-sem-fundo.png.asset.json";
-import bookMockupEssentialAsset from "@/assets/essential-offer.png.asset.json";
-import bookMockupCompleteAsset from "@/assets/complete-offer.png.asset.json";
+import heroBookAsset from "@/assets/hero-book.png.asset.json";
+import kitBundleAsset from "@/assets/kit-bundle.png.asset.json";
 
 
 const cuscuzQueijoUrl = "/assets/cuscuz_queijo.png";
