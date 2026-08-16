@@ -563,26 +563,46 @@ function Index() {
       </section>
 
       {/* FAQ */}
-      <section className="py-24 container mx-auto px-4 max-w-3xl">
-        <h2 className="text-4xl font-[family-name:var(--font-anton)] text-center mb-16 uppercase text-[#1B4332]">
-          PERGUNTAS FREQUENTES
-        </h2>
-        <div className="space-y-4">
-          {[
-            { q: "Vou receber o livro em casa?", a: "Não, o guia é 100% digital em PDF. Você recebe o acesso no seu e-mail imediatamente." },
-            { q: "As receitas são rápidas?", a: "Sim, todas as receitas levam entre 5 e 10 minutos para serem preparadas." },
-            { q: "Tem garantia?", a: "Sim, você tem 15 dias de garantia incondicional." }
-          ].map((item, i) => (
-            <details key={i} className="group bg-white rounded-2xl border border-[#1B4332]/5 shadow-sm overflow-hidden transition-all duration-300">
-              <summary className="flex items-center justify-between p-6 cursor-pointer list-none font-black text-[#1B4332] uppercase text-xs tracking-widest group-open:bg-[#FDF9F2]/50 outline-none">
-                {item.q}
-                <ArrowDown className="w-4 h-4 text-brand-red transition-transform duration-300 group-open:rotate-180" />
-              </summary>
-              <div className="p-6 pt-0 text-sm opacity-70 leading-relaxed font-medium border-t border-[#1B4332]/5">
-                {item.a}
-              </div>
-            </details>
-          ))}
+      <section className="py-24 container mx-auto px-4 max-w-4xl">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+          <div>
+            <h2 className="text-4xl font-[family-name:var(--font-anton)] mb-12 uppercase text-[#1B4332]">
+              DÚVIDAS <br/>
+              <span className="text-brand-red">FREQUENTES</span>
+            </h2>
+            <div className="space-y-4">
+              {[
+                { q: "Vou receber o livro em casa?", a: "Não, o guia é 100% digital em PDF. Você recebe o acesso no seu e-mail imediatamente." },
+                { q: "As receitas são rápidas?", a: "Sim, todas as receitas levam entre 5 e 10 minutos para serem preparadas." },
+                { q: "Tem garantia?", a: "Sim, você tem 15 dias de garantia incondicional." }
+              ].map((item, i) => (
+                <details key={i} className="group bg-white rounded-2xl border border-[#1B4332]/5 shadow-sm overflow-hidden transition-all duration-300">
+                  <summary className="flex items-center justify-between p-6 cursor-pointer list-none font-black text-[#1B4332] uppercase text-[10px] tracking-widest group-open:bg-[#FDF9F2]/50 outline-none">
+                    {item.q}
+                    <ArrowDown className="w-4 h-4 text-brand-red transition-transform duration-300 group-open:rotate-180" />
+                  </summary>
+                  <div className="p-6 pt-0 text-sm opacity-70 leading-relaxed font-medium border-t border-[#1B4332]/5">
+                    {item.a}
+                  </div>
+                </details>
+              ))}
+            </div>
+          </div>
+
+          <div className="flex flex-col justify-center items-center lg:items-start text-center lg:text-left space-y-8">
+            <div className="bg-brand-red/5 p-8 rounded-[2.5rem] border border-brand-red/10 w-full">
+              <h3 className="text-xl font-black text-[#1B4332] uppercase mb-4">Ainda tem alguma dúvida?</h3>
+              <p className="text-sm font-medium opacity-60 mb-6">Nossa equipe de suporte está pronta para te ajudar a qualquer momento.</p>
+              <button className="w-full bg-[#1B4332] text-white py-4 rounded-full font-black uppercase tracking-widest text-xs hover:scale-105 transition-transform flex items-center justify-center gap-3">
+                <Smartphone className="w-4 h-4" /> Falar com Suporte
+              </button>
+            </div>
+            <div className="flex items-center gap-4 opacity-40 grayscale">
+              <ShieldCheck className="w-12 h-12" />
+              <Zap className="w-12 h-12" />
+              <CheckCircle2 className="w-12 h-12" />
+            </div>
+          </div>
         </div>
       </section>
 
