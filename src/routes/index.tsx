@@ -457,20 +457,60 @@ function Index() {
       </section>
 
       {/* Footer */}
-      <footer className="py-24 bg-[#1B4332]/5 text-[#1B4332] text-center px-4 border-t border-[#1B4332]/10">
-        <div className="container mx-auto space-y-12">
-          <div className="space-y-6">
-            <h4 className="text-2xl font-[family-name:var(--font-anton)] uppercase">101 CAFÉS DA MANHÃ</h4>
-            <div className="flex justify-center gap-8 text-[10px] font-bold uppercase tracking-[0.2em] opacity-60">
-              <a href="#" className="hover:text-[#D64D3F] transition-colors">Privacidade</a>
-              <a href="#" className="hover:text-[#D64D3F] transition-colors">Termos</a>
-              <a href="#" className="hover:text-[#D64D3F] transition-colors">Suporte</a>
+      <footer className="py-24 bg-white text-[#1B4332] border-t border-[#1B4332]/5 relative overflow-hidden">
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-24 mb-16">
+            <div className="space-y-6 text-center md:text-left">
+              <h4 className="text-3xl font-[family-name:var(--font-anton)] uppercase tracking-tight">
+                101 CAFÉS <br/>
+                <span className="text-brand-red">DA MANHÃ</span>
+              </h4>
+              <p className="text-sm font-medium opacity-60 leading-relaxed max-w-xs mx-auto md:mx-0">
+                Ajudamos você a transformar a sua saúde através de um café da manhã nutritivo, prático e sem glúten.
+              </p>
+            </div>
+            
+            <div className="flex flex-col items-center space-y-8">
+              <div className="flex items-center gap-6">
+                <div className="w-12 h-12 rounded-2xl bg-[#1B4332]/5 flex items-center justify-center">
+                  <ShieldCheck className="w-6 h-6 text-[#1B4332]" />
+                </div>
+                <div className="w-12 h-12 rounded-2xl bg-[#1B4332]/5 flex items-center justify-center">
+                  <Star className="w-6 h-6 text-[#1B4332]" />
+                </div>
+                <div className="w-12 h-12 rounded-2xl bg-[#1B4332]/5 flex items-center justify-center">
+                  <Zap className="w-6 h-6 text-[#1B4332]" />
+                </div>
+              </div>
+              <div className="text-[10px] font-black uppercase tracking-[0.3em] opacity-40">
+                Segurança & Qualidade
+              </div>
+            </div>
+
+            <div className="flex flex-col items-center md:items-end justify-center space-y-6">
+              <div className="flex flex-wrap justify-center md:justify-end gap-6 text-[10px] font-black uppercase tracking-[0.2em]">
+                <a href="#" className="hover:text-brand-red transition-colors border-b border-transparent hover:border-brand-red">Privacidade</a>
+                <a href="#" className="hover:text-brand-red transition-colors border-b border-transparent hover:border-brand-red">Termos</a>
+                <a href="#" className="hover:text-brand-red transition-colors border-b border-transparent hover:border-brand-red">Suporte</a>
+              </div>
+              <div className="flex items-center gap-3 bg-[#1B4332]/5 px-4 py-2 rounded-full border border-[#1B4332]/5">
+                <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
+                <span className="text-[9px] font-black uppercase tracking-widest opacity-60">Servidor Online</span>
+              </div>
             </div>
           </div>
-          <p className="text-[10px] opacity-20 uppercase tracking-widest max-w-4xl mx-auto">
-            © 2026 Todos os direitos reservados. Os resultados podem variar de pessoa para pessoa.
-          </p>
+          
+          <div className="pt-12 border-t border-[#1B4332]/5 text-center space-y-4">
+            <p className="text-[9px] opacity-30 uppercase tracking-[0.25em] max-w-3xl mx-auto leading-loose">
+              © 2026 101 CAFÉS DA MANHÃ. TODOS OS DIREITOS RESERVADOS. <br/>
+              ESTE SITE NÃO FAZ PARTE DO GOOGLE OU FACEBOOK. OS RESULTADOS VARIAM DE PESSOA PARA PESSOA.
+            </p>
+          </div>
         </div>
+        
+        {/* Subtle Decorative Elements */}
+        <div className="absolute top-0 right-0 w-96 h-96 bg-brand-red/5 rounded-full blur-[100px] -mr-48 -mt-48" />
+        <div className="absolute bottom-0 left-0 w-96 h-96 bg-[#1B4332]/5 rounded-full blur-[100px] -ml-48 -mb-48" />
       </footer>
 
       {/* Mobile Sticky CTA */}
