@@ -11,14 +11,19 @@ import bonusSobremesasAsset from "@/assets/sobremesas-sem-fundo.png.asset.json";
 import heroBookAsset from "@/assets/hero-book.png.asset.json";
 import kitBundleAsset from "@/assets/kit-bundle.png.asset.json";
 import lifestyleHeroAsset from "@/assets/lifestyle-hero.jpg.asset.json";
+import cuscuzQueijoAsset from "@/assets/cuscuz_queijo.png.asset.json";
+import shakshukaAsset from "@/assets/shakshuka.png.asset.json";
+import bananaCrepeAsset from "@/assets/banana_crepe.png.asset.json";
+import cuscuzOvoAsset from "@/assets/cuscuz_ovo.png.asset.json";
+import bananaCupcakeBowlAsset from "@/assets/banana_cupcake_bowl.png.asset.json";
+import crepiocaFrangoAsset from "@/assets/crepioca_frango.png.asset.json";
 
-
-const cuscuzQueijoUrl = "/assets/cuscuz_queijo.png";
-const shakshukaUrl = "/assets/shakshuka.png";
-const bananaCrepeUrl = "/assets/banana_crepe.png";
-const cuscuzOvoUrl = "/assets/cuscuz_ovo.png";
-const bananaCupcakeBowlUrl = "/assets/banana_cupcake_bowl.png";
-const crepiocaFrangoUrl = "/assets/crepioca_frango.png";
+const cuscuzQueijoUrl = cuscuzQueijoAsset.url;
+const shakshukaUrl = shakshukaAsset.url;
+const bananaCrepeUrl = bananaCrepeAsset.url;
+const cuscuzOvoUrl = cuscuzOvoAsset.url;
+const bananaCupcakeBowlUrl = bananaCupcakeBowlAsset.url;
+const crepiocaFrangoUrl = crepiocaFrangoAsset.url;
 const guiaMockupUrl = "/assets/hero_mockup.jpg";
 
 export const Route = createFileRoute("/")({
