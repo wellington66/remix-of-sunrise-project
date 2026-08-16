@@ -218,51 +218,65 @@ function Index() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
             {[
               { 
-                title: "Guia de Sucos Detox", 
-                desc: "Acelere a desinflamação com sucos práticos.",
-                value: "R$ 27,00",
-                icon: <Zap className="w-8 h-8 text-[#D64D3F]" />
+                title: "Café da Manhã para Desinchar", 
+                desc: "Comece o dia mais leve com receitas anti-inflamatórias.",
+                value: "R$ 47,00",
+                icon: <Zap className="w-8 h-8 text-[#D64D3F]" />,
+                img: bonusDesincharAsset.url
               },
               { 
-                title: "Lista de Compras", 
-                desc: "Saiba exatamente o que comprar no mercado.",
-                value: "R$ 19,00",
-                icon: <Smartphone className="w-8 h-8 text-[#D64D3F]" />
-              },
-              { 
-                title: "Diário Alimentar", 
-                desc: "Organize sua rotina e acompanhe seu progresso.",
-                value: "R$ 37,00",
-                icon: <Clock className="w-8 h-8 text-[#D64D3F]" />
-              },
-              { 
-                title: "Comunidade VIP", 
-                desc: "Acesso ao grupo exclusivo de alunas.",
-                value: "R$ 97,00",
-                icon: <UserCheck className="w-8 h-8 text-[#D64D3F]" />
-              },
-              { 
-                title: "Planilha de Resultados", 
-                desc: "Monitore suas medidas e peso semanalmente.",
+                title: "Lista de Compras Econômica", 
+                desc: "Saiba exatamente o que comprar e economize tempo no mercado.",
                 value: "R$ 29,00",
-                icon: <ShieldCheck className="w-8 h-8 text-[#D64D3F]" />
+                icon: <Smartphone className="w-8 h-8 text-[#D64D3F]" />,
+                img: bonusListaComprasAsset.url
+              },
+              { 
+                title: "Planejamento Semanal Pronto", 
+                desc: "Seu café da manhã organizado para toda a semana.",
+                value: "R$ 37,00",
+                icon: <Calendar className="w-8 h-8 text-[#D64D3F]" />,
+                img: bonusPlanejamentoAsset.url
+              },
+              { 
+                title: "Guia de Lanches Saudáveis", 
+                desc: "Ideias práticas e leves para o dia a dia.",
+                value: "R$ 39,00",
+                icon: <Coffee className="w-8 h-8 text-[#D64D3F]" />,
+                img: bonusLanchesAsset.url
+              },
+              { 
+                title: "+50 Sobremesas Zero Açúcar", 
+                desc: "Receitas doces, práticas e deliciosas sem culpa.",
+                value: "R$ 57,00",
+                icon: <Utensils className="w-8 h-8 text-[#D64D3F]" />,
+                img: bonusSobremesasAsset.url
               }
             ].map((bonus, i) => (
-              <div key={i} className="bg-[#FDF9F2] p-8 rounded-[2rem] border border-[#1B4332]/5 flex flex-col items-center text-center group hover:scale-105 transition-all">
-                <div className="mb-6 p-4 bg-white rounded-2xl shadow-sm">
-                  {bonus.icon}
+              <div key={i} className="bg-[#FDF9F2] rounded-[2rem] border border-[#1B4332]/5 flex flex-col items-center text-center group hover:scale-[1.02] transition-all overflow-hidden shadow-sm hover:shadow-md">
+                <div className="w-full aspect-[3/4] overflow-hidden relative bg-white flex items-center justify-center p-4">
+                  <img 
+                    src={bonus.img} 
+                    alt={bonus.title}
+                    className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-110"
+                  />
+                  <div className="absolute top-4 right-4 p-2 bg-white/90 backdrop-blur-sm rounded-xl shadow-sm">
+                    {bonus.icon}
+                  </div>
                 </div>
-                <h3 className="text-xl font-black text-[#1B4332] uppercase mb-2">{bonus.title}</h3>
-                <p className="text-sm opacity-60 font-medium mb-6 leading-relaxed">{bonus.desc}</p>
-                <div className="mt-auto">
-                  <span className="text-[10px] font-black uppercase tracking-widest text-[#D64D3F] line-through block opacity-50">DE {bonus.value}</span>
-                  <span className="text-sm font-black uppercase tracking-widest text-[#1B4332]">POR R$ 0,00</span>
+                <div className="p-8 flex flex-col items-center flex-grow">
+                  <h3 className="text-xl font-black text-[#1B4332] uppercase mb-2 leading-tight">{bonus.title}</h3>
+                  <p className="text-sm opacity-60 font-medium mb-6 leading-relaxed">{bonus.desc}</p>
+                  <div className="mt-auto">
+                    <span className="text-[10px] font-black uppercase tracking-widest text-[#D64D3F] line-through block opacity-50">DE {bonus.value}</span>
+                    <span className="text-sm font-black uppercase tracking-widest text-[#1B4332]">POR R$ 0,00</span>
+                  </div>
                 </div>
               </div>
             ))}
             
             {/* Total Value Summary */}
-            <div className="lg:col-span-1 bg-[#1B4332] p-8 rounded-[2rem] flex flex-col items-center justify-center text-center text-white relative overflow-hidden group">
+            <div className="lg:col-span-1 bg-[#1B4332] p-8 rounded-[2rem] flex flex-col items-center justify-center text-center text-white relative overflow-hidden group min-h-[400px]">
               <div className="absolute top-0 right-0 p-4 opacity-10">
                 <Gift className="w-32 h-32" />
               </div>
