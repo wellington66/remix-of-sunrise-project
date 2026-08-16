@@ -441,7 +441,7 @@ function Index() {
           {[
             { q: "Vou receber o livro em casa?", a: "Não, o guia é 100% digital em PDF. Você recebe o acesso no seu e-mail imediatamente." },
             { q: "As receitas são rápidas?", a: "Sim, todas as receitas levam entre 5 e 10 minutos para serem preparadas." },
-            { q: "Tem garantia?", a: "Sim, você tem 7 dias de garantia incondicional." }
+            { q: "Tem garantia?", a: "Sim, você tem 15 dias de garantia incondicional." }
           ].map((item, i) => (
             <details key={i} className="group bg-white rounded-2xl border border-[#1B4332]/5 shadow-sm overflow-hidden transition-all duration-300">
               <summary className="flex items-center justify-between p-6 cursor-pointer list-none font-black text-[#1B4332] uppercase text-xs tracking-widest group-open:bg-[#FDF9F2]/50 outline-none">
