@@ -1,8 +1,14 @@
 import { createFileRoute } from "@tanstack/react-router";
 // oferta com as fotos
 import { motion } from "framer-motion";
-import { CheckCircle2, Star, ShieldCheck, ArrowRight, Minus, Plus, Zap, Clock, Smartphone, Gift, Heart, UserCheck, Play, ArrowDown, Timer } from "lucide-react";
+import { CheckCircle2, Star, ShieldCheck, ArrowRight, Minus, Plus, Zap, Clock, Smartphone, Gift, Heart, UserCheck, Play, ArrowDown, Timer, Calendar, Coffee, Utensils } from "lucide-react";
 import { useState, useEffect } from "react";
+import bonusDesincharAsset from "@/assets/bonus_desinchar.jpg.asset.json";
+import bonusListaComprasAsset from "@/assets/bonus_lista_compras.jpg.asset.json";
+import bonusPlanejamentoAsset from "@/assets/bonus_planejamento.jpg.asset.json";
+import bonusLanchesAsset from "@/assets/bonus_lanches.jpg.asset.json";
+import bonusSobremesasAsset from "@/assets/bonus_sobremesas.jpg.asset.json";
+
 const cuscuzQueijoUrl = "/assets/cuscuz_queijo.png";
 const shakshukaUrl = "/assets/shakshuka.png";
 const bananaCrepeUrl = "/assets/banana_crepe.png";
