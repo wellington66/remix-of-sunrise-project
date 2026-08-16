@@ -97,6 +97,15 @@ function Index() {
     return `${mins.toString().padStart(2, "0")}:${secs.toString().padStart(2, "0")}`;
   };
 
+  // Data final da oferta = sempre o dia em que o lead acessa (evita mismatch de SSR).
+  const [offerDate, setOfferDate] = useState("");
+  useEffect(() => {
+    const now = new Date();
+    const dd = now.getDate().toString().padStart(2, "0");
+    const mm = (now.getMonth() + 1).toString().padStart(2, "0");
+    setOfferDate(`${dd}/${mm}/${now.getFullYear()}`);
+  }, []);
+
 
   return (
     <div className="min-h-screen bg-white text-[#1B4332] font-[family-name:var(--font-inter)] selection:bg-[#D64D3F]/20 overflow-x-hidden w-full relative pb-24 md:pb-0">
@@ -108,7 +117,9 @@ function Index() {
       {/* Dynamic Scarcity Header */}
       <div className="bg-brand-red text-white py-2.5 text-center text-[clamp(0.65rem,2.2vw,0.85rem)] font-black uppercase tracking-[0.25em] px-4 sticky top-0 z-[100] shadow-2xl w-full border-b border-white/10">
         🚨 ATENÇÃO: Desconto expira em <span className="font-mono bg-white/30 px-2 py-0.5 rounded ml-1 tabular-nums">{formatTime(timeLeft)}</span>
+        {offerDate && <span className="block sm:inline sm:ml-2 normal-case tracking-normal font-bold text-[0.95em]">Oferta válida somente hoje, {offerDate}</span>}
       </div>
+
 
       {/* Hero Section */}
       <header className="relative pt-8 pb-12 bg-white w-full">
