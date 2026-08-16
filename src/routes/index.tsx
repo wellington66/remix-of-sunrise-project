@@ -562,7 +562,7 @@ function Index() {
                 stars: 4,
                 avatar: "https://i.pravatar.cc/150?u=camila"
               }
-            ].map((t, i) => (
+            ] satisfies Testimonial[]).map((t, i) => (
               <motion.div 
                 key={i}
                 initial={{ opacity: 0, y: 20 }}
