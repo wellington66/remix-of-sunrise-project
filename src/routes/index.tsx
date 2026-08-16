@@ -2,16 +2,17 @@ import { createFileRoute } from "@tanstack/react-router";
 import { motion } from "framer-motion";
 import { CheckCircle2, Star, ShieldCheck, ArrowRight, Minus, Plus, Zap, Clock, Smartphone, Gift, Heart, UserCheck, Play, ArrowDown, Timer, Calendar, Coffee, Utensils } from "lucide-react";
 import { useState, useEffect } from "react";
-import bonusDesincharAsset from "@/assets/bonus-cafe-da-manha-sem-fundo.png.asset.json";
-import bonusListaComprasAsset from "@/assets/lista-compras-sem-fundo.png.asset.json";
-import bonusPlanejamentoAsset from "@/assets/planejamento-semanal-sem-fundo.png.asset.json";
-import bonusLanchesAsset from "@/assets/guia-lanches-sem-fundo.png.asset.json";
-import bonusSobremesasAsset from "@/assets/sobremesas-sem-fundo.png.asset.json";
-import heroBookAsset from "@/assets/hero-book.png.asset.json";
-import kitBundleAsset from "@/assets/kit-bundle.png.asset.json";
-import lifestyleHeroAsset from "@/assets/lifestyle-hero.jpg.asset.json";
 
-// Caminhos estáticos para maior confiabilidade no domínio
+// Caminhos estáticos robustos para a pasta public/assets
+const heroBookUrl = "/assets/hero-book.png";
+const kitBundleUrl = "/assets/kit-bundle.png";
+const lifestyleHeroUrl = "/assets/lifestyle-hero.jpg";
+const bonusDesincharUrl = "/assets/bonus-desinchar.png";
+const bonusListaUrl = "/assets/bonus-lista.png";
+const bonusPlanejamentoUrl = "/assets/bonus-planejamento.png";
+const bonusLanchesUrl = "/assets/bonus-lanches.png";
+const bonusSobremesasUrl = "/assets/bonus-sobremesas.png";
+
 const cuscuzQueijoUrl = "/assets/cuscuz_queijo.png";
 const shakshukaUrl = "/assets/shakshuka.png";
 const bananaCrepeUrl = "/assets/banana_crepe.png";
@@ -64,7 +65,7 @@ function Index() {
           
           <div className="relative max-w-4xl mx-auto mb-8 bg-transparent">
             <img 
-              src="/assets/hero_mockup.jpg"
+              src={lifestyleHeroUrl}
               alt="Guia Mockup"
               className="w-full h-auto drop-shadow-2xl"
             />
@@ -226,35 +227,35 @@ function Index() {
                 desc: "Comece o dia mais leve com receitas anti-inflamatórias.",
                 value: "R$ 47,00",
                 icon: <Zap className="w-8 h-8 text-[#D64D3F]" />,
-                img: bonusDesincharAsset.url
+                img: bonusDesincharUrl
               },
               { 
                 title: "Lista de Compras Econômica", 
                 desc: "Saiba exatamente o que comprar e economize tempo no mercado.",
                 value: "R$ 29,00",
                 icon: <Smartphone className="w-8 h-8 text-[#D64D3F]" />,
-                img: bonusListaComprasAsset.url
+                img: bonusListaUrl
               },
               { 
                 title: "Planejamento Semanal Pronto", 
                 desc: "Seu café da manhã organizado para toda a semana.",
                 value: "R$ 37,00",
                 icon: <Calendar className="w-8 h-8 text-[#D64D3F]" />,
-                img: bonusPlanejamentoAsset.url
+                img: bonusPlanejamentoUrl
               },
               { 
                 title: "Guia de Lanches Saudáveis", 
                 desc: "Ideias práticas e leves para o dia a dia.",
                 value: "R$ 39,00",
                 icon: <Coffee className="w-8 h-8 text-[#D64D3F]" />,
-                img: bonusLanchesAsset.url
+                img: bonusLanchesUrl
               },
               { 
                 title: "+50 Sobremesas Zero Açúcar", 
                 desc: "Receitas doces, práticas e deliciosas sem culpa.",
                 value: "R$ 57,00",
                 icon: <Utensils className="w-8 h-8 text-[#D64D3F]" />,
-                img: bonusSobremesasAsset.url
+                img: bonusSobremesasUrl
               }
             ].map((bonus, i) => (
               <div key={i} className="bg-white rounded-[2rem] border border-[#1B4332]/5 flex flex-col items-center text-center group hover:scale-[1.02] transition-all overflow-hidden shadow-sm hover:shadow-md">
@@ -307,7 +308,7 @@ function Index() {
             <div className="bg-[#FDF9F2] border border-[#1B4332]/10 p-12 rounded-[3rem] flex flex-col items-center hover:shadow-xl transition-all text-[#1B4332]">
               <div className="w-full aspect-square mb-6 overflow-hidden flex items-center justify-center p-4 bg-transparent">
                 <img 
-                  src="/assets/book_mockup.jpg" 
+                  src={heroBookUrl} 
                   alt="Plano Essencial"
                   className="w-full h-full object-contain drop-shadow-2xl"
                 />
@@ -338,7 +339,7 @@ function Index() {
               </div>
               <div className="w-full aspect-square mb-6 overflow-hidden flex items-center justify-center p-4">
                 <img 
-                  src="/assets/guia_mockup_new.jpg" 
+                  src={kitBundleUrl} 
                   alt="Plano Completo"
                   className="w-full h-full object-contain drop-shadow-2xl"
                 />
