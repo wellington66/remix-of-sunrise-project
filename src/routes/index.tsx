@@ -21,6 +21,12 @@ const bananaCupcakeBowlUrl = "/assets/banana_cupcake_bowl.png";
 const crepiocaFrangoUrl = "/assets/crepioca_frango.png";
 const omeleteEspecialUrl = "/__l5e/assets-v1/1ee31db0-2d66-4a51-9203-96a3a7656cb6/omelete_misto.png";
 
+/** Links de checkout (Cakto) */
+const CHECKOUT_ESSENCIAL = "https://pay.cakto.com.br/yxpuem5"; // R$ 17,90
+const CHECKOUT_COMBO = "https://pay.cakto.com.br/3ck4gyx_1043502"; // R$ 27,90
+const CHECKOUT_DESCONTO = "https://pay.cakto.com.br/7isvqqv"; // R$ 23,90 (downsell)
+
+
 export const Route = createFileRoute("/")({
   component: Index,
   head: () => ({
@@ -46,6 +52,28 @@ interface Testimonial {
 
 function Index() {
   const [timeLeft, setTimeLeft] = useState(900); // 15 minutos em segundos
+  const [showDownsell, setShowDownsell] = useState(false);
+  const [downsellShown, setDownsellShown] = useState(false);
+
+  const openDownsell = () => {
+    setDownsellShown(true);
+    setShowDownsell(true);
+  };
+
+  // Exit intent: exibe a oferta com desconto uma única vez ao sair da página (desktop).
+  useEffect(() => {
+    if (downsellShown) return;
+    const handleMouseOut = (event: MouseEvent) => {
+      if (event.clientY <= 0 && !event.relatedTarget) {
+        setDownsellShown(true);
+        setShowDownsell(true);
+      }
+    };
+    document.addEventListener("mouseout", handleMouseOut);
+    return () => document.removeEventListener("mouseout", handleMouseOut);
+  }, [downsellShown]);
+
+
 
   useEffect(() => {
     // Causa raiz do bug anterior: o intervalo continuava executando (e re-renderizando)
@@ -106,9 +134,10 @@ function Index() {
               <span className="text-sm">POR APENAS</span>
               <div className="text-4xl font-[family-name:var(--font-anton)]">R$ 17,90</div>
             </div>
-            <button type="button" className="bg-transparent border-2 border-[#2D6A4F] text-[#2D6A4F] px-8 py-4 rounded-full font-black uppercase tracking-widest text-sm shadow-sm hover:bg-[#2D6A4F]/5 hover:scale-105 transition-all cursor-pointer">
+            <a href={CHECKOUT_ESSENCIAL} className="inline-block text-center bg-transparent border-2 border-[#2D6A4F] text-[#2D6A4F] px-8 py-4 rounded-full font-black uppercase tracking-widest text-sm shadow-sm hover:bg-[#2D6A4F]/5 hover:scale-105 transition-all cursor-pointer">
               QUERO AS RECEITAS AGORA
-            </button>
+            </a>
+
             <div className="flex flex-wrap justify-center gap-4 text-[10px] font-bold text-[#1B4332]/60">
               <span className="flex items-center gap-1"><ShieldCheck className="w-3 h-3"/> ACESSO IMEDIATO</span>
               <span className="flex items-center gap-1"><Zap className="w-3 h-3"/> COMPRA SEGURA</span>
@@ -156,9 +185,10 @@ function Index() {
                 ))}
               </ul>
               <div className="pt-8">
-                <button type="button" className="bg-brand-red text-white px-8 py-4 rounded-full font-black uppercase tracking-widest text-sm shadow-xl hover:scale-105 transition-transform cursor-pointer w-full lg:w-auto ring-4 ring-brand-red/20">
+                <a href={CHECKOUT_COMBO} className="inline-block text-center bg-brand-red text-white px-8 py-4 rounded-full font-black uppercase tracking-widest text-sm shadow-xl hover:scale-105 transition-transform cursor-pointer w-full lg:w-auto ring-4 ring-brand-red/20">
                   QUERO SAIR DA ROTINA DO PÃO
-                </button>
+                </a>
+
               </div>
             </div>
             <div className="relative">
@@ -375,9 +405,10 @@ function Index() {
                 <li className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-brand-red" /> Acesso Vitalício</li>
                 <li className="flex items-center gap-2 opacity-30 line-through"><Minus className="w-4 h-4" /> Bônus Exclusivos</li>
               </ul>
-              <button type="button" className="w-full mt-auto bg-transparent border-2 border-[#1B4332] text-[#1B4332] py-5 rounded-full font-black uppercase tracking-widest text-sm hover:bg-[#1B4332]/5 hover:scale-105 transition-all">
+              <button type="button" onClick={openDownsell} className="w-full mt-auto bg-transparent border-2 border-[#1B4332] text-[#1B4332] py-5 rounded-full font-black uppercase tracking-widest text-sm hover:bg-[#1B4332]/5 hover:scale-105 transition-all cursor-pointer">
                 QUERO O GUIA
               </button>
+
               
               {/* Pointer to the better offer - Positioned below the first CTA */}
               <div className="mt-8 flex flex-col items-center w-full group/pointer">
@@ -431,9 +462,10 @@ function Index() {
                 <li className="flex items-center gap-3 font-black text-base"><CheckCircle2 className="w-5 h-5 text-brand-red shrink-0" /> Guia de Sucos Detox</li>
                 <li className="flex items-center gap-3 font-black text-base"><CheckCircle2 className="w-5 h-5 text-brand-red shrink-0" /> Suporte Prioritário VIP</li>
               </ul>
-              <button type="button" className="w-full mt-auto bg-brand-red text-white py-8 rounded-full font-black uppercase tracking-[0.2em] text-xl shadow-[0_20px_40px_rgba(186,28,28,0.3)] hover:scale-105 active:scale-95 transition-all cursor-pointer ring-4 ring-white/20 animate-pulse-ring">
+              <a href={CHECKOUT_COMBO} className="block text-center w-full mt-auto bg-brand-red text-white py-8 rounded-full font-black uppercase tracking-[0.2em] text-xl shadow-[0_20px_40px_rgba(186,28,28,0.3)] hover:scale-105 active:scale-95 transition-all cursor-pointer ring-4 ring-white/20 animate-pulse-ring">
                 EU QUERO O COMBO COMPLETO!
-              </button>
+              </a>
+
             </div>
 
           </div>
@@ -631,6 +663,7 @@ function Index() {
               <h3 className="text-xl font-black text-[#1B4332] uppercase mb-4">Ainda tem alguma dúvida?</h3>
               <p className="text-sm font-medium opacity-60 mb-6">Nossa equipe de suporte está pronta para te ajudar a qualquer momento.</p>
               <button type="button" className="w-full bg-[#1B4332] text-white py-4 rounded-full font-black uppercase tracking-widest text-xs hover:scale-105 transition-transform flex items-center justify-center gap-3">
+
                 <Smartphone className="w-4 h-4" /> Falar com Suporte
               </button>
             </div>
@@ -710,10 +743,58 @@ function Index() {
             <span className="text-2xl font-[family-name:var(--font-anton)] text-[#1B4332] leading-none">17,90</span>
           </div>
         </div>
-        <button type="button" className="bg-brand-red text-white px-8 py-3 rounded-full font-black uppercase tracking-widest text-[0.7rem] shadow-xl animate-pulse active:scale-95 transition-transform cursor-pointer">
+        <button type="button" onClick={openDownsell} className="bg-brand-red text-white px-8 py-3 rounded-full font-black uppercase tracking-widest text-[0.7rem] shadow-xl animate-pulse active:scale-95 transition-transform cursor-pointer">
           COMPRAR AGORA
         </button>
       </div>
+
+      {/* Pop-up de desconto (saída + clique na oferta essencial) */}
+      {showDownsell && (
+        <div
+          className="fixed inset-0 z-[200] flex items-center justify-center bg-black/60 backdrop-blur-sm p-4"
+          role="dialog"
+          aria-modal="true"
+          aria-label="Oferta com desconto"
+        >
+          <div className="relative bg-white rounded-3xl max-w-md w-full p-8 text-center shadow-2xl border-4 border-brand-red">
+            <button
+              type="button"
+              onClick={() => setShowDownsell(false)}
+              aria-label="Fechar"
+              className="absolute top-3 right-4 text-[#1B4332]/40 hover:text-[#1B4332] text-2xl font-black"
+            >
+              ×
+            </button>
+            <span className="inline-block bg-brand-red text-white text-[10px] font-black uppercase tracking-widest px-4 py-1.5 rounded-full mb-4">
+              Espere! Desconto exclusivo
+            </span>
+            <h3 className="text-2xl font-black uppercase text-[#1B4332] mb-3 leading-tight">
+              Leve o guia completo com desconto
+            </h3>
+            <p className="text-sm text-[#1B4332]/70 mb-5">
+              Só por agora: destrave o guia com <strong>tudo incluso</strong> por um preço menor.
+            </p>
+            <div className="mb-6">
+              <span className="block text-sm line-through opacity-40 font-bold">DE R$ 27,90</span>
+              <span className="text-5xl font-[family-name:var(--font-anton)] text-brand-red">R$ 23,90</span>
+            </div>
+            <a
+              href={CHECKOUT_DESCONTO}
+              className="block w-full bg-brand-red text-white py-5 rounded-full font-black uppercase tracking-widest text-sm shadow-xl hover:scale-105 transition-transform"
+            >
+              Quero com desconto
+            </a>
+            <button
+              type="button"
+              onClick={() => setShowDownsell(false)}
+              className="mt-4 text-[11px] font-bold uppercase tracking-widest text-[#1B4332]/40 hover:text-[#1B4332]"
+            >
+              Não, prefiro pagar mais caro
+            </button>
+          </div>
+        </div>
+      )}
+
 
       <style>{`
         @keyframes marquee {
