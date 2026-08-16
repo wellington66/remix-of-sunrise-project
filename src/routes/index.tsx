@@ -87,10 +87,10 @@ function Index() {
             <button type="button" className="bg-transparent border-2 border-[#2D6A4F] text-[#2D6A4F] px-8 py-4 rounded-full font-black uppercase tracking-widest text-sm shadow-sm hover:bg-[#2D6A4F]/5 hover:scale-105 transition-all cursor-pointer">
               QUERO AS RECEITAS AGORA
             </button>
-            <div className="flex gap-4 text-[10px] font-bold text-[#1B4332]/60">
+            <div className="flex flex-wrap justify-center gap-4 text-[10px] font-bold text-[#1B4332]/60">
               <span className="flex items-center gap-1"><ShieldCheck className="w-3 h-3"/> ACESSO IMEDIATO</span>
               <span className="flex items-center gap-1"><Zap className="w-3 h-3"/> COMPRA SEGURA</span>
-              <span className="flex items-center gap-1"><Gift className="w-3 h-3"/> 7 DIAS DE GARANTIA</span>
+              <span className="flex items-center gap-1 bg-brand-red/10 text-brand-red px-2 py-1 rounded-full"><Gift className="w-3 h-3"/> 15 DIAS DE GARANTIA</span>
             </div>
           </div>
         </div>
@@ -422,7 +422,7 @@ function Index() {
               VOCÊ ESTÁ 100% SEGURA
             </h3>
             <p className="text-sm opacity-80 max-w-xl mx-auto mb-6">
-              Sua satisfação é nossa prioridade. Se em 7 dias você não amar as receitas, devolvemos cada centavo.
+              Sua satisfação é nossa prioridade. Se em <span className="font-black text-brand-red underline decoration-2 underline-offset-4">15 dias</span> você não amar as receitas, devolvemos cada centavo.
             </p>
             <div className="flex justify-center gap-4">
               <ShieldCheck className="w-8 h-8 text-brand-red" />
@@ -441,7 +441,7 @@ function Index() {
           {[
             { q: "Vou receber o livro em casa?", a: "Não, o guia é 100% digital em PDF. Você recebe o acesso no seu e-mail imediatamente." },
             { q: "As receitas são rápidas?", a: "Sim, todas as receitas levam entre 5 e 10 minutos para serem preparadas." },
-            { q: "Tem garantia?", a: "Sim, você tem 7 dias de garantia incondicional." }
+            { q: "Tem garantia?", a: "Sim, você tem 15 dias de garantia incondicional." }
           ].map((item, i) => (
             <details key={i} className="group bg-white rounded-2xl border border-[#1B4332]/5 shadow-sm overflow-hidden transition-all duration-300">
               <summary className="flex items-center justify-between p-6 cursor-pointer list-none font-black text-[#1B4332] uppercase text-xs tracking-widest group-open:bg-[#FDF9F2]/50 outline-none">
