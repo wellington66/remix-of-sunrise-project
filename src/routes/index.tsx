@@ -8,6 +8,9 @@ import bonusListaComprasAsset from "@/assets/bonus_lista_compras.jpg.asset.json"
 import bonusPlanejamentoAsset from "@/assets/bonus_planejamento.jpg.asset.json";
 import bonusLanchesAsset from "@/assets/bonus_lanches.jpg.asset.json";
 import bonusSobremesasAsset from "@/assets/bonus_sobremesas.jpg.asset.json";
+import bookMockupEssentialAsset from "@/assets/book_mockup_essential.jpg.asset.json";
+import bookMockupCompleteAsset from "@/assets/book_mockup_complete.jpg.asset.json";
+
 
 const cuscuzQueijoUrl = "/assets/cuscuz_queijo.png";
 const shakshukaUrl = "/assets/shakshuka.png";
