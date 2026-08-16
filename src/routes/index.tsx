@@ -73,7 +73,7 @@ function Index() {
             <img 
               src={lifestyleHeroUrl}
               alt="Guia Mockup"
-              className="w-full h-auto drop-shadow-2xl"
+              className="w-full h-auto drop-shadow-[0_20px_50px_rgba(0,0,0,0.15)] group-hover:scale-[1.02] transition-transform duration-700"
               loading="eager"
               decoding="async"
             />
@@ -140,13 +140,15 @@ function Index() {
               </div>
             </div>
             <div className="relative">
-              <div className="absolute -inset-4 bg-[#1B4332]/5 rounded-full blur-3xl" />
-              <img 
-                src={shakshukaUrl} 
-                className="relative rounded-[clamp(1.5rem,5vw,3rem)] shadow-2xl border-8 border-[#FDF9F2] z-10 w-full h-auto object-cover aspect-square" 
-                alt="Transformação Saudável" 
-                loading="lazy"
-              />
+              <div className="absolute -inset-4 bg-[#1B4332]/5 rounded-full blur-3xl opacity-50" />
+              <div className="relative group overflow-hidden rounded-[clamp(1.5rem,5vw,3rem)] shadow-[0_20px_60px_rgba(27,67,50,0.15)]">
+                <img 
+                  src={shakshukaUrl} 
+                  className="w-full h-auto object-cover aspect-square border-8 border-white transition-transform duration-700 group-hover:scale-105" 
+                  alt="Transformação Saudável" 
+                  loading="lazy"
+                />
+              </div>
             </div>
           </div>
         </div>
@@ -202,11 +204,12 @@ function Index() {
             <motion.div 
               key={i}
               whileHover={{ y: -10 }}
-              className="bg-white rounded-[2rem] overflow-hidden shadow-xl border border-[#1B4332]/5 group relative w-full"
+              className="bg-white rounded-[1.5rem] md:rounded-[2.5rem] overflow-hidden shadow-[0_15px_40px_rgba(0,0,0,0.06)] border border-[#1B4332]/5 group relative w-full"
             >
-              <div className="aspect-square overflow-hidden relative">
+              <div className="aspect-[4/5] overflow-hidden relative">
                 <img src={item.img} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt={`Receita ${i + 1}`} loading="lazy" decoding="async" />
-                <div className="absolute top-4 right-4 bg-[#D64D3F] text-white px-4 py-2 rounded-full text-xs font-black shadow-lg">
+                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+                <div className="absolute top-4 right-4 bg-[#D64D3F] text-white px-4 py-2 rounded-full text-[10px] md:text-xs font-black shadow-lg z-10">
                   {item.calories}
                 </div>
               </div>
@@ -267,14 +270,14 @@ function Index() {
                 img: bonusSobremesasUrl
               }
             ].map((bonus, i) => (
-              <div key={i} className="bg-white rounded-[1.5rem] md:rounded-[2rem] border border-[#1B4332]/5 flex flex-col items-center text-center group hover:scale-[1.02] transition-all overflow-hidden shadow-sm hover:shadow-md">
-                <div className="w-full aspect-[3/4] overflow-hidden relative bg-white flex items-center justify-center p-2 md:p-4">
+              <div key={i} className="bg-white rounded-[1.5rem] md:rounded-[2.5rem] border border-[#1B4332]/5 flex flex-col items-center text-center group hover:shadow-[0_20px_50px_rgba(0,0,0,0.08)] transition-all overflow-hidden shadow-sm">
+                <div className="w-full aspect-[4/5] overflow-hidden relative bg-gradient-to-b from-[#FDF9F2] to-white flex items-center justify-center p-4 md:p-8">
                   <img 
                     src={bonus.img} 
                     alt={bonus.title}
-                    className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-110 drop-shadow-2xl"
+                    className="w-full h-full object-contain transition-transform duration-700 group-hover:scale-110 drop-shadow-[0_15px_30px_rgba(0,0,0,0.12)]"
                   />
-                  <div className="absolute top-2 right-2 md:top-4 md:right-4 p-1 md:p-2 bg-white/90 backdrop-blur-sm rounded-lg md:rounded-xl shadow-sm">
+                  <div className="absolute top-2 right-2 md:top-4 md:right-4 p-1.5 md:p-2 bg-white/95 backdrop-blur-sm rounded-lg md:rounded-xl shadow-sm border border-[#1B4332]/5">
                     {bonus.icon}
                   </div>
                 </div>
@@ -314,12 +317,12 @@ function Index() {
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch pt-12">
             {/* Essential */}
-            <div className="bg-[#FDF9F2] border border-[#1B4332]/10 p-12 rounded-[3rem] flex flex-col items-center hover:shadow-xl transition-all text-[#1B4332]">
-              <div className="w-full aspect-square mb-6 overflow-hidden flex items-center justify-center p-4 bg-transparent">
+            <div className="bg-white border border-[#1B4332]/10 p-8 md:p-12 rounded-[2.5rem] md:rounded-[3.5rem] flex flex-col items-center hover:shadow-[0_30px_60px_rgba(0,0,0,0.08)] transition-all text-[#1B4332] group">
+              <div className="w-full aspect-square mb-6 overflow-hidden flex items-center justify-center p-6 bg-[#FDF9F2] rounded-[2rem] border border-[#1B4332]/5">
                 <img 
                   src={heroBookUrl} 
                   alt="Plano Essencial"
-                  className="w-full h-full object-contain drop-shadow-2xl"
+                  className="w-full h-full object-contain drop-shadow-[0_20px_40px_rgba(0,0,0,0.15)] transition-transform duration-700 group-hover:scale-110"
                 />
               </div>
               <div className="text-center mb-6">
@@ -342,15 +345,15 @@ function Index() {
 
 
             {/* Complete */}
-            <div className="bg-white border-2 border-[#D64D3F] p-12 rounded-[3rem] flex flex-col items-center relative shadow-2xl scale-105 z-10">
-              <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-[#D64D3F] text-white px-6 py-1 rounded-full text-[10px] font-black uppercase tracking-widest whitespace-nowrap">
+            <div className="bg-white border-2 border-[#D64D3F] p-8 md:p-12 rounded-[2.5rem] md:rounded-[3.5rem] flex flex-col items-center relative shadow-[0_40px_80px_rgba(214,77,63,0.15)] md:scale-105 z-10 group">
+              <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-[#D64D3F] text-white px-6 py-1.5 rounded-full text-[10px] font-black uppercase tracking-widest whitespace-nowrap shadow-lg">
                 Recomendado ✨
               </div>
-              <div className="w-full aspect-square mb-6 overflow-hidden flex items-center justify-center p-4">
+              <div className="w-full aspect-square mb-6 overflow-hidden flex items-center justify-center p-6 bg-[#FDF9F2] rounded-[2rem] border border-[#D64D3F]/10">
                 <img 
                   src={kitBundleUrl} 
                   alt="Plano Completo"
-                  className="w-full h-full object-contain drop-shadow-2xl"
+                  className="w-full h-full object-contain drop-shadow-[0_20px_40px_rgba(0,0,0,0.18)] transition-transform duration-700 group-hover:scale-110"
                 />
               </div>
               <div className="text-center mb-6">
@@ -445,12 +448,15 @@ function Index() {
       </footer>
 
       {/* Mobile Sticky CTA */}
-      <div className="md:hidden fixed bottom-0 left-0 right-0 bg-white border-t border-[#1B4332]/10 p-4 z-[100] flex items-center justify-between shadow-2xl safe-area-inset-bottom">
+      <div className="md:hidden fixed bottom-0 left-0 right-0 bg-white/90 backdrop-blur-md border-t border-[#1B4332]/10 p-4 z-[100] flex items-center justify-between shadow-[0_-10px_30px_rgba(0,0,0,0.08)] safe-area-inset-bottom">
         <div className="flex flex-col">
-          <span className="text-[0.65rem] text-[#D64D3F] line-through font-black leading-none">R$ 97,00</span>
-          <span className="text-2xl font-[family-name:var(--font-anton)] text-[#1B4332] leading-none">R$ 17,90</span>
+          <span className="text-[0.6rem] text-[#D64D3F] line-through font-black leading-none opacity-50">R$ 97,00</span>
+          <div className="flex items-baseline gap-1">
+            <span className="text-[0.7rem] font-bold text-[#1B4332]/60">R$</span>
+            <span className="text-2xl font-[family-name:var(--font-anton)] text-[#1B4332] leading-none">17,90</span>
+          </div>
         </div>
-        <button type="button" className="bg-[#D64D3F] text-white px-8 py-3 rounded-full font-black uppercase tracking-widest text-[0.7rem] shadow-xl animate-pulse cursor-pointer">
+        <button type="button" className="bg-[#D64D3F] text-white px-8 py-3 rounded-full font-black uppercase tracking-widest text-[0.7rem] shadow-xl animate-pulse active:scale-95 transition-transform cursor-pointer">
           COMPRAR AGORA
         </button>
       </div>
