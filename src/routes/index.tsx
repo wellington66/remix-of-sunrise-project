@@ -271,7 +271,7 @@ function Index() {
               }
             ].map((bonus, i) => (
               <div key={i} className="bg-white rounded-[1.5rem] md:rounded-[2.5rem] border border-[#1B4332]/5 flex flex-col items-center text-center group hover:shadow-[0_20px_50px_rgba(0,0,0,0.08)] transition-all overflow-hidden shadow-sm">
-                <div className="w-full aspect-[4/5] overflow-hidden relative bg-gradient-to-b from-[#FDF9F2] to-white flex items-center justify-center p-4 md:p-8">
+                <div className="w-full aspect-[4/5] overflow-hidden relative bg-gradient-to-b from-white to-[#FDF9F2]/20 flex items-center justify-center p-4 md:p-8">
                   <img 
                     src={bonus.img} 
                     alt={bonus.title}
