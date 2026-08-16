@@ -57,8 +57,8 @@ function Index() {
       </div>
 
       {/* Dynamic Scarcity Header */}
-      <div className="bg-[#D64D3F] text-white py-2 text-center text-[clamp(0.6rem,2vw,0.75rem)] font-black uppercase tracking-[0.2em] px-4 sticky top-0 z-[100] shadow-xl w-full">
-        🚨 ATENÇÃO: Desconto expira em <span className="font-mono bg-white/20 px-2 py-0.5 rounded ml-1">{formatTime(timeLeft)}</span>
+      <div className="bg-brand-red text-white py-2.5 text-center text-[clamp(0.65rem,2.2vw,0.85rem)] font-black uppercase tracking-[0.25em] px-4 sticky top-0 z-[100] shadow-2xl w-full border-b border-white/10">
+        🚨 ATENÇÃO: Desconto expira em <span className="font-mono bg-white/30 px-2 py-0.5 rounded ml-1 tabular-nums">{formatTime(timeLeft)}</span>
       </div>
 
       {/* Hero Section */}
