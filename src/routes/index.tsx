@@ -122,7 +122,7 @@ function Index() {
                 VOCÊ AINDA COME SEMPRE PÃO<br/>
                 <span className="text-brand-red">NO CAFÉ DA MANHÃ?</span>
               </h2>
-              <div className="w-20 h-2 bg-[#D64D3F] rounded-full mx-auto lg:mx-0" />
+              <div className="w-20 h-2 bg-brand-red rounded-full mx-auto lg:mx-0" />
               <p className="text-lg text-[#1B4332]/80 leading-relaxed font-medium">
                 O pão é rápido, prático e faz parte da rotina, mas muita gente acaba comendo sempre a mesma coisa por falta de ideias simples e saudáveis. Isso acontece com você?
               </p>
