@@ -19,7 +19,7 @@ const bananaCrepeUrl = "/assets/banana_crepe.png";
 const cuscuzOvoUrl = "/assets/cuscuz_ovo.png";
 const bananaCupcakeBowlUrl = "/assets/banana_cupcake_bowl.png";
 const crepiocaFrangoUrl = "/assets/crepioca_frango.png";
-const omeleteEspecialUrl = "/__l5e/assets-v1/1ee31db0-2d66-4a51-9203-96a3a7656cb6/omelete_misto.png";
+const omeleteEspecialUrl = "/__l5e/assets-v1/2cfd7f4f-98f5-404c-b3ff-ef540644bad5/cafe-da-manha-sem-pao-secao-site-2.png";
 
 export const Route = createFileRoute("/")({
   component: Index,
