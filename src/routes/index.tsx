@@ -115,10 +115,10 @@ function Index() {
       </div>
 
       {/* Dynamic Scarcity Header */}
-      <div className="bg-brand-red text-white py-2.5 text-center text-[clamp(0.65rem,2.2vw,0.85rem)] font-black uppercase tracking-[0.25em] px-4 sticky top-0 z-[100] shadow-2xl w-full border-b border-white/10">
-        🚨 ATENÇÃO: Desconto expira em <span className="font-mono bg-white/30 px-2 py-0.5 rounded ml-1 tabular-nums">{formatTime(timeLeft)}</span>
-        {offerDate && <span className="block sm:inline sm:ml-2 normal-case tracking-normal font-bold text-[0.95em]">Oferta válida somente hoje, {offerDate}</span>}
+      <div className="bg-brand-red text-white py-3 text-center text-[clamp(0.8rem,3vw,1.1rem)] font-black uppercase tracking-[0.15em] px-4 sticky top-0 z-[100] shadow-2xl w-full border-b border-white/10">
+        🚨 OFERTA VÁLIDA SOMENTE HOJE{offerDate && <span className="ml-1 bg-white/30 px-2 py-0.5 rounded tabular-nums">{offerDate}</span>}
       </div>
+
 
 
       {/* Hero Section */}
