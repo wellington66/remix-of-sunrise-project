@@ -252,7 +252,7 @@ function Index() {
                 title: "Planejamento Semanal Pronto", 
                 desc: "Organização para toda a semana.",
                 value: "R$ 37,00",
-                icon: <Calendar className="w-4 h-4 md:w-8 md:h-8 text-[#D64D3F]" />,
+                icon: <Calendar className="w-4 h-4 md:w-8 md:h-8 text-brand-red" />,
                 img: bonusPlanejamentoUrl
               },
               { 
