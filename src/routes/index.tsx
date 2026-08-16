@@ -500,15 +500,28 @@ function Index() {
         </div>
       </div>
 
-      {/* Testimonials Section */}
-      <section className="py-24 bg-[#FDF9F2]/30 overflow-hidden">
-        <div className="container mx-auto px-4">
-          <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
-            <h2 className="text-[clamp(2rem,6vw,4rem)] font-[family-name:var(--font-anton)] uppercase leading-[0.9] text-[#1B4332]">
+      {/* Testimonials Section — Destaque */}
+      <section className="py-24 md:py-32 bg-[#1B4332] overflow-hidden relative">
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-brand-red/10 rounded-full blur-[130px] pointer-events-none" />
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="text-center max-w-3xl mx-auto mb-16 space-y-6">
+            <span className="inline-flex items-center gap-2 bg-brand-red text-white px-5 py-2 rounded-full text-[11px] font-black uppercase tracking-widest shadow-lg">
+              <ShieldCheck className="w-4 h-4" /> Avaliações Reais Verificadas
+            </span>
+            <h2 className="text-[clamp(2.2rem,7vw,4.5rem)] font-[family-name:var(--font-anton)] uppercase leading-[0.9] text-white">
               2.425 PESSOAS JÁ <br/>
               <span className="text-brand-red">TRANSFORMARAM A COZINHA</span>
             </h2>
-            <p className="text-sm font-medium opacity-60">Resultados reais de quem aplicou as receitas na prática</p>
+            <p className="text-sm md:text-base font-medium text-white/70">Resultados reais de quem aplicou as receitas na prática</p>
+            <div className="flex items-center justify-center gap-2 pt-1">
+              <div className="flex gap-1">
+                {Array(5).fill(null).map((_, i) => (
+                  <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
+                ))}
+              </div>
+              <span className="text-white font-black text-sm">4.9/5</span>
+              <span className="text-white/50 text-sm font-bold">· 2.087 avaliações</span>
+            </div>
           </div>
 
           {/* Rating Summary Card */}
@@ -634,13 +647,12 @@ function Index() {
 
       {/* FAQ */}
       <section className="py-24 container mx-auto px-4 max-w-4xl">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
-          <div>
-            <h2 className="text-4xl font-[family-name:var(--font-anton)] mb-12 uppercase text-[#1B4332]">
-              DÚVIDAS <br/>
-              <span className="text-brand-red">FREQUENTES</span>
-            </h2>
-            <div className="space-y-4">
+        <div>
+          <h2 className="text-4xl font-[family-name:var(--font-anton)] mb-12 uppercase text-[#1B4332] text-center">
+            DÚVIDAS <br/>
+            <span className="text-brand-red">FREQUENTES</span>
+          </h2>
+          <div className="space-y-4">
               {[
                 { q: "Vou receber o livro em casa?", a: "Não, o guia é 100% digital em PDF. Você recebe o acesso no seu e-mail imediatamente." },
                 { q: "As receitas são rápidas?", a: "Sim, todas as receitas levam entre 5 e 10 minutos para serem preparadas." },
@@ -656,23 +668,6 @@ function Index() {
                   </div>
                 </details>
               ))}
-            </div>
-          </div>
-
-          <div className="flex flex-col justify-center items-center lg:items-start text-center lg:text-left space-y-8">
-            <div className="bg-brand-red/5 p-8 rounded-[2.5rem] border border-brand-red/10 w-full">
-              <h3 className="text-xl font-black text-[#1B4332] uppercase mb-4">Ainda tem alguma dúvida?</h3>
-              <p className="text-sm font-medium opacity-60 mb-6">Nossa equipe de suporte está pronta para te ajudar a qualquer momento.</p>
-              <button type="button" className="w-full bg-[#1B4332] text-white py-4 rounded-full font-black uppercase tracking-widest text-xs hover:scale-105 transition-transform flex items-center justify-center gap-3">
-
-                <Smartphone className="w-4 h-4" /> Falar com Suporte
-              </button>
-            </div>
-            <div className="group flex items-center gap-4 opacity-40 grayscale hover:grayscale-0 transition-all">
-
-              <ShieldCheck className="w-10 h-10" />
-              <Star className="w-10 h-10" />
-              <Zap className="w-10 h-10" />
             </div>
           </div>
         </div>
@@ -713,7 +708,7 @@ function Index() {
               <div className="flex flex-wrap justify-center md:justify-end gap-6 text-[10px] font-black uppercase tracking-[0.2em]">
                 <a href="#" className="hover:text-brand-red transition-colors border-b border-transparent hover:border-brand-red">Privacidade</a>
                 <a href="#" className="hover:text-brand-red transition-colors border-b border-transparent hover:border-brand-red">Termos</a>
-                <a href="#" className="hover:text-brand-red transition-colors border-b border-transparent hover:border-brand-red">Suporte</a>
+                
               </div>
               <div className="flex items-center gap-3 bg-[#1B4332]/5 px-4 py-2 rounded-full border border-[#1B4332]/5">
                 <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
