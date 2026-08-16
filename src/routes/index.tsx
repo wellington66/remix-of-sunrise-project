@@ -156,11 +156,11 @@ function Index() {
 
       {/* Scarcity Banner Section (Moved) */}
       <div className="py-12 flex flex-col items-center justify-center text-center px-4">
-        <div className="w-px h-12 bg-[#D64D3F]/30 mb-6" />
-        <span className="text-[#D64D3F] font-black uppercase tracking-[0.3em] text-[10px] mb-8">
+        <div className="w-px h-12 bg-brand-red/30 mb-6" />
+        <span className="text-brand-red font-black uppercase tracking-[0.3em] text-[10px] mb-8">
           EXISTE UMA FORMA MELHOR
         </span>
-        <div className="w-px h-12 bg-[#D64D3F]/30 mb-12" />
+        <div className="w-px h-12 bg-brand-red/30 mb-12" />
         
         <div className="w-full max-w-3xl bg-gradient-to-br from-[#FF5733] to-[#D64D3F] rounded-[2rem] p-8 md:p-12 text-white shadow-2xl relative overflow-hidden group">
           <div className="absolute top-0 right-0 p-8 opacity-10 rotate-12 transition-transform group-hover:scale-110">
