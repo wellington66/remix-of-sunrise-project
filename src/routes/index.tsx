@@ -93,7 +93,7 @@ function Index() {
         </div>
       </div>
 
-      {/* Urgency Divider 1 */}
+      {/* Scarcity Banner Section */}
       <div className="py-12 flex flex-col items-center justify-center text-center px-4">
         <div className="w-px h-12 bg-[#D64D3F]/30 mb-6" />
         <span className="text-[#D64D3F] font-black uppercase tracking-[0.3em] text-[10px] mb-8">
