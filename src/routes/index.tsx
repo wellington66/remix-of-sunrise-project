@@ -64,8 +64,8 @@ function Index() {
           
           <div className="relative max-w-4xl mx-auto mb-8 bg-transparent">
             <img 
-              src={guiaMockupUrl}
-              alt="Guia Mockup"
+              src={bookCoverNewAsset.url}
+              alt="101 Cafés da Manhã Saudáveis"
               className="w-full h-auto drop-shadow-2xl"
             />
           </div>
