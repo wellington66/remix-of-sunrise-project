@@ -101,11 +101,11 @@ function Index() {
         <div className="flex whitespace-nowrap animate-marquee items-center gap-12">
           {Array(10).fill(null).map((_, i) => (
             <div key={i} className="flex items-center gap-3 text-sm font-black uppercase tracking-[0.2em]">
-              <Star className="w-4 h-4 fill-[#D64D3F] text-[#D64D3F]" />
+              <Star className="w-4 h-4 fill-brand-red text-brand-red" />
               RECEITAS PRÁTICAS
-              <Star className="w-4 h-4 fill-[#D64D3F] text-[#D64D3F]" />
+              <Star className="w-4 h-4 fill-brand-red text-brand-red" />
               SEM GLÚTEN
-              <Star className="w-4 h-4 fill-[#D64D3F] text-[#D64D3F]" />
+              <Star className="w-4 h-4 fill-brand-red text-brand-red" />
               EMAGRECIMENTO REAL
             </div>
           ))}
