@@ -52,7 +52,7 @@ function Index() {
   return (
     <div className="min-h-screen bg-white text-[#1B4332] font-[family-name:var(--font-inter)] selection:bg-[#D64D3F]/20 overflow-x-hidden w-full relative">
       {/* Top Banner */}
-      <div className="bg-transparent text-[#1B4332] py-2 text-center text-[10px] font-bold uppercase tracking-widest border-b border-[#1B4332]/10">
+      <div className="bg-[#1B4332]/5 text-[#1B4332] py-2 text-center text-[10px] font-bold uppercase tracking-widest border-b border-[#1B4332]/10">
         101 CAFÉS DA MANHÃ SAUDÁVEIS PARA SUBSTITUIR O PÃO
       </div>
 
@@ -97,7 +97,7 @@ function Index() {
       </header>
 
       {/* Social Proof Bar */}
-      <div className="bg-transparent text-[#1B4332] py-6 overflow-hidden border-y border-[#1B4332]/10">
+      <div className="bg-[#1B4332]/5 text-[#1B4332] py-6 overflow-hidden border-y border-[#1B4332]/10">
         <div className="flex whitespace-nowrap animate-marquee items-center gap-12">
           {Array(10).fill(null).map((_, i) => (
             <div key={i} className="flex items-center gap-3 text-sm font-black uppercase tracking-[0.2em]">
@@ -293,7 +293,7 @@ function Index() {
             ))}
             
             {/* Total Value Summary */}
-            <div className="col-span-2 md:col-span-1 bg-transparent border-2 border-[#1B4332]/10 p-6 md:p-8 rounded-[1.5rem] md:rounded-[2rem] flex flex-col items-center justify-center text-center text-[#1B4332] relative overflow-hidden group min-h-[200px] md:min-h-[400px]">
+            <div className="col-span-2 md:col-span-1 bg-[#1B4332]/5 border-2 border-[#1B4332]/10 p-6 md:p-8 rounded-[1.5rem] md:rounded-[2rem] flex flex-col items-center justify-center text-center text-[#1B4332] relative overflow-hidden group min-h-[200px] md:min-h-[400px]">
               <div className="absolute top-0 right-0 p-4 opacity-10">
                 <Gift className="w-16 h-16 md:w-32 md:h-32" />
               </div>
@@ -413,7 +413,7 @@ function Index() {
         </span>
         <div className="w-px h-12 bg-brand-red/30 mb-12" />
         
-        <div className="w-full max-w-3xl bg-transparent border-2 border-[#1B4332]/10 rounded-[2rem] p-8 md:p-12 text-[#1B4332] shadow-sm relative overflow-hidden group">
+        <div className="w-full max-w-3xl bg-[#1B4332]/5 border-2 border-[#1B4332]/10 rounded-[2rem] p-8 md:p-12 text-[#1B4332] shadow-sm relative overflow-hidden group">
           <div className="absolute -bottom-10 -left-10 p-8 opacity-10 rotate-12 transition-transform group-hover:scale-110">
             <ShieldCheck className="w-32 h-32" />
           </div>
@@ -457,7 +457,7 @@ function Index() {
       </section>
 
       {/* Footer */}
-      <footer className="py-24 bg-transparent text-[#1B4332] text-center px-4 border-t border-[#1B4332]/10">
+      <footer className="py-24 bg-[#1B4332]/5 text-[#1B4332] text-center px-4 border-t border-[#1B4332]/10">
         <div className="container mx-auto space-y-12">
           <div className="space-y-6">
             <h4 className="text-2xl font-[family-name:var(--font-anton)] uppercase">101 CAFÉS DA MANHÃ</h4>
