@@ -21,6 +21,12 @@ const bananaCupcakeBowlUrl = "/assets/banana_cupcake_bowl.png";
 const crepiocaFrangoUrl = "/assets/crepioca_frango.png";
 const omeleteEspecialUrl = "/__l5e/assets-v1/1ee31db0-2d66-4a51-9203-96a3a7656cb6/omelete_misto.png";
 
+/** Links de checkout (Cakto) */
+const CHECKOUT_ESSENCIAL = "https://pay.cakto.com.br/yxpuem5"; // R$ 17,90
+const CHECKOUT_COMBO = "https://pay.cakto.com.br/3ck4gyx_1043502"; // R$ 27,90
+const CHECKOUT_DESCONTO = "https://pay.cakto.com.br/7isvqqv"; // R$ 23,90 (downsell)
+
+
 export const Route = createFileRoute("/")({
   component: Index,
   head: () => ({
