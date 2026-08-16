@@ -375,9 +375,10 @@ function Index() {
                 <li className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-brand-red" /> Acesso Vitalício</li>
                 <li className="flex items-center gap-2 opacity-30 line-through"><Minus className="w-4 h-4" /> Bônus Exclusivos</li>
               </ul>
-              <button type="button" className="w-full mt-auto bg-transparent border-2 border-[#1B4332] text-[#1B4332] py-5 rounded-full font-black uppercase tracking-widest text-sm hover:bg-[#1B4332]/5 hover:scale-105 transition-all">
+              <button type="button" onClick={openDownsell} className="w-full mt-auto bg-transparent border-2 border-[#1B4332] text-[#1B4332] py-5 rounded-full font-black uppercase tracking-widest text-sm hover:bg-[#1B4332]/5 hover:scale-105 transition-all cursor-pointer">
                 QUERO O GUIA
               </button>
+
               
               {/* Pointer to the better offer - Positioned below the first CTA */}
               <div className="mt-8 flex flex-col items-center w-full group/pointer">
