@@ -162,7 +162,7 @@ function Index() {
         </span>
         <div className="w-px h-12 bg-brand-red/30 mb-12" />
         
-        <div className="w-full max-w-3xl bg-gradient-to-br from-[#FF5733] to-[#D64D3F] rounded-[2rem] p-8 md:p-12 text-white shadow-2xl relative overflow-hidden group">
+        <div className="w-full max-w-3xl bg-gradient-to-br from-brand-red to-brand-red/90 rounded-[2rem] p-8 md:p-12 text-white shadow-2xl relative overflow-hidden group">
           <div className="absolute top-0 right-0 p-8 opacity-10 rotate-12 transition-transform group-hover:scale-110">
             <Timer className="w-32 h-32" />
           </div>
