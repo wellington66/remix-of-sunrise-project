@@ -227,7 +227,7 @@ function Index() {
             </span>
             <h2 className="text-4xl md:text-6xl font-[family-name:var(--font-anton)] uppercase leading-none text-[#1B4332]">
               GANHE 5 BÔNUS <br/>
-              <span className="text-[#D64D3F]">EXCLUSIVOS HOJE</span>
+              <span className="text-brand-red">EXCLUSIVOS HOJE</span>
             </h2>
             <p className="text-[#1B4332]/60 font-bold uppercase tracking-widest text-xs">Aumente seus resultados com materiais complementares</p>
           </div>
