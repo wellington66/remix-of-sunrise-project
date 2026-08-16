@@ -70,11 +70,12 @@ function Index() {
             <span className="text-[#1B4332]/60">PARA SUBSTITUIR O PÃO</span>
           </h1>
           
-          <div className="relative max-w-4xl mx-auto mb-8 bg-transparent">
+          <div className="relative max-w-5xl mx-auto mb-12 bg-transparent group">
+            <div className="absolute inset-0 bg-brand-red/5 rounded-full blur-[120px] -z-10 animate-pulse" />
             <img 
               src={lifestyleHeroUrl}
-              alt="Guia Mockup"
-              className="w-full h-auto drop-shadow-[0_20px_50px_rgba(0,0,0,0.15)] group-hover:scale-[1.02] transition-transform duration-700"
+              alt="Guia Mockup Premium"
+              className="w-full h-auto drop-shadow-[0_30px_60px_rgba(0,0,0,0.18)] group-hover:scale-[1.02] transition-transform duration-700 relative z-10"
               loading="eager"
               decoding="async"
             />
@@ -195,23 +196,36 @@ function Index() {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
           {[
-            { img: cuscuzQueijoUrl, calories: "185 kcal" },
-            { img: shakshukaUrl, calories: "210 kcal" },
-            { img: bananaCrepeUrl, calories: "195 kcal" },
-            { img: cuscuzOvoUrl, calories: "220 kcal" },
-            { img: bananaCupcakeBowlUrl, calories: "175 kcal" },
-            { img: crepiocaFrangoUrl, calories: "245 kcal" }
+            { img: cuscuzQueijoUrl, title: "Cuscuz de Milho com Queijo Coalho", calories: "185 kcal", time: "10 min", level: "Fácil" },
+            { img: omeleteEspecialUrl, title: "Omelete Premium Low Carb", calories: "210 kcal", time: "08 min", level: "Mestre" },
+            { img: bananaCrepeUrl, title: "Crepe Fit de Banana e Canela", calories: "195 kcal", time: "12 min", level: "Médio" },
+            { img: cuscuzOvoUrl, title: "Cuscuz Nordestino com Ovo", calories: "220 kcal", time: "10 min", level: "Fácil" },
+            { img: bananaCupcakeBowlUrl, title: "Muffin de Banana em 5 Minutos", calories: "175 kcal", time: "05 min", level: "Rápido" },
+            { img: crepiocaFrangoUrl, title: "Crepioca de Frango Desfiado", calories: "245 kcal", time: "15 min", level: "Completo" }
           ].map((item, i) => (
             <motion.div 
               key={i}
-              whileHover={{ y: -10 }}
-              className="bg-white rounded-[1.5rem] md:rounded-[2.5rem] overflow-hidden shadow-[0_15px_40px_rgba(0,0,0,0.06)] border border-[#1B4332]/5 group relative w-full"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: i * 0.1 }}
+              whileHover={{ y: -8 }}
+              className="bg-white rounded-[2rem] overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.04)] border border-[#1B4332]/5 group relative w-full flex flex-col"
             >
-              <div className="aspect-[4/5] overflow-hidden relative">
-                <img src={item.img} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt={`Receita ${i + 1}`} loading="lazy" decoding="async" />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
-                <div className="absolute top-4 right-4 bg-brand-red text-white px-4 py-2 rounded-full text-[10px] md:text-xs font-black shadow-lg z-10">
+              <div className="aspect-[4/3] overflow-hidden relative">
+                <img src={item.img} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt={item.title} loading="lazy" decoding="async" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+                <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-md text-[#1B4332] px-3 py-1.5 rounded-full text-[9px] font-black shadow-sm z-10 border border-[#1B4332]/5">
+                  {item.level}
+                </div>
+                <div className="absolute top-4 right-4 bg-brand-red text-white px-3 py-1.5 rounded-full text-[9px] font-black shadow-lg z-10">
                   {item.calories}
+                </div>
+              </div>
+              <div className="p-6 space-y-3">
+                <h3 className="text-sm font-black text-[#1B4332] uppercase tracking-tight leading-tight group-hover:text-brand-red transition-colors">{item.title}</h3>
+                <div className="flex items-center gap-4 text-[9px] font-bold text-[#1B4332]/40 uppercase tracking-widest">
+                  <span className="flex items-center gap-1.5"><Timer className="w-3 h-3" /> {item.time}</span>
+                  <span className="flex items-center gap-1.5"><CheckCircle2 className="w-3 h-3" /> Saudável</span>
                 </div>
               </div>
             </motion.div>
@@ -321,11 +335,11 @@ function Index() {
             <div className="bg-white border border-[#1B4332]/10 p-8 md:p-12 rounded-[2.5rem] md:rounded-[3.5rem] flex flex-col items-center hover:shadow-[0_30px_60px_rgba(0,0,0,0.08)] transition-all text-[#1B4332] group relative">
               {/* Pointer content moved below the CTA */}
 
-              <div className="w-full aspect-square mb-6 overflow-hidden flex items-center justify-center p-6 bg-white rounded-[2rem] border border-[#1B4332]/5">
+              <div className="w-full aspect-square mb-8 overflow-hidden flex items-center justify-center p-8 bg-white rounded-[2.5rem] border border-[#1B4332]/5 shadow-inner">
                 <img 
                   src={heroBookUrl} 
                   alt="Plano Essencial"
-                  className="w-full h-full object-contain drop-shadow-[0_20px_40px_rgba(0,0,0,0.15)] transition-transform duration-700 group-hover:scale-110"
+                  className="w-full h-full object-contain drop-shadow-[0_20px_40px_rgba(0,0,0,0.12)] transition-transform duration-700 group-hover:scale-110"
                 />
               </div>
               <div className="text-center mb-6">
@@ -376,11 +390,11 @@ function Index() {
               <div className="absolute -top-6 left-1/2 -translate-x-1/2 bg-brand-red text-white px-8 py-2.5 rounded-full text-xs font-black uppercase tracking-[0.2em] whitespace-nowrap shadow-2xl animate-bounce">
                 OFERTA MAIS POPULAR ✨
               </div>
-              <div className="w-full aspect-square mb-6 overflow-hidden flex items-center justify-center p-6 bg-white rounded-[2rem] border border-brand-red/10">
+              <div className="w-full aspect-square mb-8 overflow-hidden flex items-center justify-center p-8 bg-white rounded-[2.5rem] border border-brand-red/10 shadow-[inset_0_0_20px_rgba(186,28,28,0.02)]">
                 <img 
                   src={kitBundleUrl} 
                   alt="Plano Completo"
-                  className="w-full h-full object-contain drop-shadow-[0_20px_40px_rgba(0,0,0,0.18)] transition-transform duration-700 group-hover:scale-110"
+                  className="w-full h-full object-contain drop-shadow-[0_25px_50px_rgba(186,28,28,0.2)] transition-transform duration-700 group-hover:scale-110"
                 />
               </div>
               <div className="text-center mb-6">
