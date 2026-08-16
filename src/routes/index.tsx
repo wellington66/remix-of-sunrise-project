@@ -266,7 +266,7 @@ function Index() {
                 title: "+50 Sobremesas Zero Açúcar", 
                 desc: "Doces práticos e sem culpa.",
                 value: "R$ 57,00",
-                icon: <Utensils className="w-4 h-4 md:w-8 md:h-8 text-[#D64D3F]" />,
+                icon: <Utensils className="w-4 h-4 md:w-8 md:h-8 text-brand-red" />,
                 img: bonusSobremesasUrl
               }
             ].map((bonus, i) => (
