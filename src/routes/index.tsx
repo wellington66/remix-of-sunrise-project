@@ -340,7 +340,7 @@ function Index() {
                 <li className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-brand-red" /> Acesso Vitalício</li>
                 <li className="flex items-center gap-2 opacity-30 line-through"><Minus className="w-4 h-4" /> Bônus Exclusivos</li>
               </ul>
-              <button type="button" className="w-full mt-auto bg-[#1B4332] text-white py-5 rounded-full font-black uppercase tracking-widest text-sm hover:scale-105 transition-all">
+              <button type="button" className="w-full mt-auto bg-transparent border-2 border-[#1B4332] text-[#1B4332] py-5 rounded-full font-black uppercase tracking-widest text-sm hover:bg-[#1B4332]/5 hover:scale-105 transition-all">
                 QUERO O GUIA
               </button>
               
@@ -413,7 +413,7 @@ function Index() {
         </span>
         <div className="w-px h-12 bg-brand-red/30 mb-12" />
         
-        <div className="w-full max-w-3xl bg-[#1B4332] rounded-[2rem] p-8 md:p-12 text-white shadow-2xl relative overflow-hidden group">
+        <div className="w-full max-w-3xl bg-transparent border-2 border-[#1B4332]/10 rounded-[2rem] p-8 md:p-12 text-[#1B4332] shadow-sm relative overflow-hidden group">
           <div className="absolute -bottom-10 -left-10 p-8 opacity-10 rotate-12 transition-transform group-hover:scale-110">
             <ShieldCheck className="w-32 h-32" />
           </div>
