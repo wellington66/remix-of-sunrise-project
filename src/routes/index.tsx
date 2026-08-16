@@ -246,7 +246,11 @@ function Index() {
       </section>
 
       {/* Bonus Section */}
-      <section className="py-24 bg-white overflow-hidden">
+      <section className="py-24 bg-[#FDF9F2]/20 overflow-hidden relative">
+        {/* Decorative elements */}
+        <div className="absolute top-0 left-0 w-64 h-64 bg-brand-red/5 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2" />
+        <div className="absolute bottom-0 right-0 w-96 h-96 bg-[#1B4332]/5 rounded-full blur-3xl translate-x-1/2 translate-y-1/2" />
+
         <div className="container mx-auto px-4">
           <div className="text-center max-w-3xl mx-auto mb-20 space-y-4">
             <span className="bg-brand-red/10 text-brand-red px-4 py-2 rounded-full text-[10px] font-black uppercase tracking-widest">
@@ -259,7 +263,7 @@ function Index() {
             <p className="text-[#1B4332]/60 font-bold uppercase tracking-widest text-xs">Aumente seus resultados com materiais complementares</p>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-8 max-w-7xl mx-auto">
+          <div className="grid grid-cols-2 lg:grid-cols-3 gap-4 md:gap-10 max-w-7xl mx-auto px-2">
             {[
               { 
                 title: "Café da Manhã para Desinchar", 
@@ -297,19 +301,19 @@ function Index() {
                 img: bonusSobremesasUrl
               }
             ].map((bonus, i) => (
-              <div key={i} className="bg-white rounded-[1.5rem] md:rounded-[2.5rem] border border-[#1B4332]/5 flex flex-col items-center text-center group hover:shadow-[0_20px_50px_rgba(0,0,0,0.08)] transition-all overflow-hidden shadow-sm">
-                <div className="w-full aspect-[4/5] overflow-hidden relative bg-gradient-to-b from-white to-[#FDF9F2]/20 flex items-center justify-center p-4 md:p-8">
+              <div key={i} className="bg-white rounded-[1.5rem] md:rounded-[2.5rem] border border-[#1B4332]/10 flex flex-col items-center text-center group hover:shadow-[0_40px_80px_rgba(0,0,0,0.12)] transition-all overflow-hidden shadow-md hover:border-brand-red/20">
+                <div className="w-full aspect-[4/5] overflow-hidden relative bg-white flex items-center justify-center p-4 md:p-8">
                   <img 
                     src={bonus.img} 
                     alt={bonus.title}
-                    className="w-full h-full object-contain transition-transform duration-700 group-hover:scale-110 drop-shadow-[0_15px_30px_rgba(0,0,0,0.12)]"
+                    className="w-full h-full object-contain transition-transform duration-700 group-hover:scale-110 drop-shadow-[0_25px_50px_rgba(0,0,0,0.15)] filter saturate-[1.1] contrast-[1.05]"
                   />
                   <div className="absolute top-2 right-2 md:top-4 md:right-4 p-1.5 md:p-2 bg-white/95 backdrop-blur-sm rounded-lg md:rounded-xl shadow-sm border border-[#1B4332]/5">
                     {bonus.icon}
                   </div>
                 </div>
                 <div className="p-3 md:p-8 flex flex-col items-center flex-grow">
-                  <h3 className="text-[10px] md:text-xl font-black text-[#1B4332] uppercase mb-1 md:mb-2 leading-tight">{bonus.title}</h3>
+                  <h3 className="text-[clamp(0.6rem,3vw,1.25rem)] font-black text-[#1B4332] uppercase mb-1 md:mb-3 leading-tight px-2">{bonus.title}</h3>
                   <p className="hidden md:block text-sm opacity-60 font-medium mb-6 leading-relaxed">{bonus.desc}</p>
                   <div className="mt-auto">
                     <span className="text-[8px] md:text-[10px] font-black uppercase tracking-widest text-brand-red line-through block opacity-50">DE {bonus.value}</span>
