@@ -589,8 +589,9 @@ function Index() {
                 </p>
                 <div className="flex items-center gap-4 pt-4 border-t border-[#1B4332]/5 text-[10px] font-black uppercase tracking-widest opacity-40">
                   <span className="flex items-center gap-1.5 text-brand-red opacity-100">❤️ {t.likes}</span>
-                  <button className="hover:text-[#1B4332] transition-colors">Curtir</button>
-                  <button className="hover:text-[#1B4332] transition-colors">Comentar</button>
+                  <button type="button" className="hover:text-[#1B4332] transition-colors">Curtir</button>
+                  <button type="button" className="hover:text-[#1B4332] transition-colors">Comentar</button>
+
                 </div>
               </motion.div>
             ))}
