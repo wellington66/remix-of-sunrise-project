@@ -362,7 +362,7 @@ function Index() {
               </div>
               <div className="text-center mb-8">
                 <span className="text-sm line-through text-[#1B4332]/40 block font-bold">DE R$ 97,00</span>
-                <span className="text-5xl font-[family-name:var(--font-anton)] text-[#1B4332]">R$ 27,90</span>
+                <span className="text-6xl md:text-7xl font-[family-name:var(--font-anton)] text-[#1B4332] drop-shadow-sm">R$ 27,90</span>
               </div>
               <ul className="text-left w-full space-y-4 mb-8 text-sm text-[#1B4332]">
                 <li className="flex items-center gap-2 font-bold"><CheckCircle2 className="w-4 h-4 text-[#D64D3F]" /> Guia com 101 Receitas</li>
