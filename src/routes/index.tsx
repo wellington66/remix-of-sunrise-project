@@ -61,11 +61,11 @@ function Index() {
             <span className="text-[#1B4332]/60">PARA SUBSTITUIR O PÃO</span>
           </h1>
           
-          <div className="relative max-w-4xl mx-auto mb-8">
+          <div className="relative max-w-4xl mx-auto mb-8 bg-transparent">
             <img 
               src={guiaMockupUrl}
               alt="Guia Mockup"
-              className="w-full h-auto"
+              className="w-full h-auto drop-shadow-2xl"
             />
           </div>
 
