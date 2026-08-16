@@ -317,7 +317,15 @@ function Index() {
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch pt-12">
             {/* Essential */}
-            <div className="bg-white border border-[#1B4332]/10 p-8 md:p-12 rounded-[2.5rem] md:rounded-[3.5rem] flex flex-col items-center hover:shadow-[0_30px_60px_rgba(0,0,0,0.08)] transition-all text-[#1B4332] group">
+            <div className="bg-white border border-[#1B4332]/10 p-8 md:p-12 rounded-[2.5rem] md:rounded-[3.5rem] flex flex-col items-center hover:shadow-[0_30px_60px_rgba(0,0,0,0.08)] transition-all text-[#1B4332] group relative">
+              {/* Pointer to the better offer */}
+              <div className="absolute -top-12 md:-top-16 left-1/2 -translate-x-1/2 flex flex-col items-center w-full z-20">
+                <span className="bg-[#1B4332] text-white px-4 py-1.5 rounded-full text-[9px] font-black uppercase tracking-tighter mb-2 shadow-lg animate-bounce whitespace-nowrap">
+                  ⚠️ 98% DAS PESSOAS ESCOLHEM O PLANO COMPLETO
+                </span>
+                <ArrowDown className="w-6 h-6 text-[#1B4332] animate-bounce" />
+              </div>
+
               <div className="w-full aspect-square mb-6 overflow-hidden flex items-center justify-center p-6 bg-white rounded-[2rem] border border-[#1B4332]/5">
                 <img 
                   src={heroBookUrl} 
@@ -370,7 +378,7 @@ function Index() {
                 <li className="flex items-center gap-3 font-black text-base"><CheckCircle2 className="w-5 h-5 text-brand-red shrink-0" /> Guia de Sucos Detox</li>
                 <li className="flex items-center gap-3 font-black text-base"><CheckCircle2 className="w-5 h-5 text-brand-red shrink-0" /> Suporte Prioritário VIP</li>
               </ul>
-              <button type="button" className="w-full mt-auto bg-brand-red text-white py-8 rounded-full font-black uppercase tracking-[0.2em] text-xl shadow-[0_20px_40px_rgba(186,28,28,0.3)] hover:scale-105 active:scale-95 transition-all cursor-pointer ring-4 ring-white/20">
+              <button type="button" className="w-full mt-auto bg-brand-red text-white py-8 rounded-full font-black uppercase tracking-[0.2em] text-xl shadow-[0_20px_40px_rgba(186,28,28,0.3)] hover:scale-105 active:scale-95 transition-all cursor-pointer ring-4 ring-white/20 animate-pulse-ring">
                 EU QUERO O COMBO COMPLETO!
               </button>
             </div>
