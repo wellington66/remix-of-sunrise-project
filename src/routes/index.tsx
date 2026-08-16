@@ -259,7 +259,7 @@ function Index() {
                 title: "Guia de Lanches Saudáveis", 
                 desc: "Ideias práticas e leves.",
                 value: "R$ 39,00",
-                icon: <Coffee className="w-4 h-4 md:w-8 md:h-8 text-[#D64D3F]" />,
+                icon: <Coffee className="w-4 h-4 md:w-8 md:h-8 text-brand-red" />,
                 img: bonusLanchesUrl
               },
               { 
