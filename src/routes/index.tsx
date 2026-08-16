@@ -285,7 +285,7 @@ function Index() {
                   <h3 className="text-[10px] md:text-xl font-black text-[#1B4332] uppercase mb-1 md:mb-2 leading-tight">{bonus.title}</h3>
                   <p className="hidden md:block text-sm opacity-60 font-medium mb-6 leading-relaxed">{bonus.desc}</p>
                   <div className="mt-auto">
-                    <span className="text-[8px] md:text-[10px] font-black uppercase tracking-widest text-[#D64D3F] line-through block opacity-50">DE {bonus.value}</span>
+                    <span className="text-[8px] md:text-[10px] font-black uppercase tracking-widest text-brand-red line-through block opacity-50">DE {bonus.value}</span>
                     <span className="text-[9px] md:text-sm font-black uppercase tracking-widest text-[#1B4332]">POR R$ 0,00</span>
                   </div>
                 </div>
