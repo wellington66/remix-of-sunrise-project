@@ -10,7 +10,6 @@ import bonusLanchesAsset from "@/assets/bonus_lanches.jpg.asset.json";
 import bonusSobremesasAsset from "@/assets/bonus_sobremesas.jpg.asset.json";
 import bookMockupEssentialAsset from "@/assets/book_mockup_essential.jpg.asset.json";
 import bookMockupCompleteAsset from "@/assets/book_mockup_complete.jpg.asset.json";
-import bookCoverNewAsset from "@/assets/book_cover_new.jpg.asset.json";
 
 
 const cuscuzQueijoUrl = "/assets/cuscuz_queijo.png";
@@ -64,8 +63,8 @@ function Index() {
           
           <div className="relative max-w-4xl mx-auto mb-8 bg-transparent">
             <img 
-              src={bookCoverNewAsset.url}
-              alt="101 Cafés da Manhã Saudáveis"
+              src={guiaMockupUrl}
+              alt="Guia Mockup"
               className="w-full h-auto drop-shadow-2xl"
             />
           </div>
@@ -295,23 +294,10 @@ function Index() {
       {/* Pricing Section */}
       <section className="py-24 bg-white text-[#1B4332] text-center px-4 relative overflow-hidden w-full">
         <div className="container mx-auto max-w-4xl space-y-12">
-          {/* OFERTA IRRESISTÍVEL */}
-          <div className="bg-[#1B4332] text-white py-8 px-6 rounded-[2rem] mb-12 shadow-2xl relative overflow-hidden">
-            <div className="absolute top-0 right-0 p-4 opacity-10">
-              <Zap className="w-24 h-24" />
-            </div>
-            <h2 className="text-3xl md:text-5xl font-[family-name:var(--font-anton)] leading-tight uppercase mb-4 relative z-10">
-              OFERTA IRRESISTÍVEL
-            </h2>
-            <p className="text-sm md:text-lg opacity-80 max-w-2xl mx-auto relative z-10">
-              Garanta agora o seu acesso completo e transforme suas manhãs com 101 receitas deliciosas e saudáveis.
-            </p>
-          </div>
-
           <div className="space-y-4">
-            <h3 className="text-[clamp(2.5rem,8vw,5rem)] font-[family-name:var(--font-anton)] leading-[0.9] uppercase">
+            <h2 className="text-[clamp(2.5rem,8vw,5rem)] font-[family-name:var(--font-anton)] leading-[0.9] uppercase">
               ESCOLHA SEU PLANO
-            </h3>
+            </h2>
             <p className="text-[#D64D3F] font-bold uppercase tracking-widest text-sm">Acesso imediato após a confirmação</p>
           </div>
           
