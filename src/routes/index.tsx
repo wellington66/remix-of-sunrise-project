@@ -669,7 +669,6 @@ function Index() {
                 </details>
               ))}
             </div>
-          </div>
         </div>
       </section>
 
