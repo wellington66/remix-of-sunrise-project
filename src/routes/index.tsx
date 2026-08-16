@@ -18,12 +18,12 @@ import cuscuzOvoAsset from "@/assets/cuscuz_ovo.png.asset.json";
 import bananaCupcakeBowlAsset from "@/assets/banana_cupcake_bowl.png.asset.json";
 import crepiocaFrangoAsset from "@/assets/crepioca_frango.png.asset.json";
 
-const cuscuzQueijoUrl = cuscuzQueijoAsset.url;
-const shakshukaUrl = shakshukaAsset.url;
-const bananaCrepeUrl = bananaCrepeAsset.url;
-const cuscuzOvoUrl = cuscuzOvoAsset.url;
-const bananaCupcakeBowlUrl = bananaCupcakeBowlAsset.url;
-const crepiocaFrangoUrl = crepiocaFrangoAsset.url;
+const cuscuzQueijoUrl = "/assets/cuscuz_queijo.png";
+const shakshukaUrl = "/assets/shakshuka.png";
+const bananaCrepeUrl = "/assets/banana_crepe.png";
+const cuscuzOvoUrl = "/assets/cuscuz_ovo.png";
+const bananaCupcakeBowlUrl = "/assets/banana_cupcake_bowl.png";
+const crepiocaFrangoUrl = "/assets/crepioca_frango.png";
 const guiaMockupUrl = "/assets/hero_mockup.jpg";
 
 export const Route = createFileRoute("/")({
