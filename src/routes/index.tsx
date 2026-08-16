@@ -10,6 +10,7 @@ import bonusLanchesAsset from "@/assets/guia-lanches-sem-fundo.png.asset.json";
 import bonusSobremesasAsset from "@/assets/sobremesas-sem-fundo.png.asset.json";
 import heroBookAsset from "@/assets/hero-book.png.asset.json";
 import kitBundleAsset from "@/assets/kit-bundle.png.asset.json";
+import lifestyleHeroAsset from "@/assets/lifestyle-hero.jpg.asset.json";
 
 
 const cuscuzQueijoUrl = "/assets/cuscuz_queijo.png";
