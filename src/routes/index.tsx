@@ -204,11 +204,12 @@ function Index() {
             <motion.div 
               key={i}
               whileHover={{ y: -10 }}
-              className="bg-white rounded-[2rem] overflow-hidden shadow-xl border border-[#1B4332]/5 group relative w-full"
+              className="bg-white rounded-[1.5rem] md:rounded-[2.5rem] overflow-hidden shadow-[0_15px_40px_rgba(0,0,0,0.06)] border border-[#1B4332]/5 group relative w-full"
             >
-              <div className="aspect-square overflow-hidden relative">
+              <div className="aspect-[4/5] overflow-hidden relative">
                 <img src={item.img} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt={`Receita ${i + 1}`} loading="lazy" decoding="async" />
-                <div className="absolute top-4 right-4 bg-[#D64D3F] text-white px-4 py-2 rounded-full text-xs font-black shadow-lg">
+                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+                <div className="absolute top-4 right-4 bg-[#D64D3F] text-white px-4 py-2 rounded-full text-[10px] md:text-xs font-black shadow-lg z-10">
                   {item.calories}
                 </div>
               </div>
