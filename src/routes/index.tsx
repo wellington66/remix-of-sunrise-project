@@ -62,7 +62,7 @@ function Index() {
       </div>
 
       {/* Hero Section */}
-      <header className="relative pt-8 pb-12 bg-[#FDF9F2] w-full">
+      <header className="relative pt-8 pb-12 bg-white w-full">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-[clamp(1.5rem,5vw,2.5rem)] font-black text-[#1B4332] leading-tight mb-8 uppercase">
             101 CAFÉS DA MANHÃ SAUDÁVEIS <br/>
