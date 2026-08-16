@@ -365,10 +365,10 @@ function Index() {
                 <span className="text-6xl md:text-7xl font-[family-name:var(--font-anton)] text-[#1B4332] drop-shadow-sm">R$ 27,90</span>
               </div>
               <ul className="text-left w-full space-y-4 mb-8 text-sm text-[#1B4332]">
-                <li className="flex items-center gap-3 font-black text-base"><CheckCircle2 className="w-5 h-5 text-[#D64D3F] shrink-0" /> Guia com 101 Receitas</li>
-                <li className="flex items-center gap-3 font-black text-base text-[#D64D3F]"><CheckCircle2 className="w-5 h-5 text-[#D64D3F] shrink-0" /> +5 BÔNUS EXCLUSIVOS</li>
-                <li className="flex items-center gap-3 font-black text-base"><CheckCircle2 className="w-5 h-5 text-[#D64D3F] shrink-0" /> Guia de Sucos Detox</li>
-                <li className="flex items-center gap-3 font-black text-base"><CheckCircle2 className="w-5 h-5 text-[#D64D3F] shrink-0" /> Suporte Prioritário VIP</li>
+                <li className="flex items-center gap-3 font-black text-base"><CheckCircle2 className="w-5 h-5 text-brand-red shrink-0" /> Guia com 101 Receitas</li>
+                <li className="flex items-center gap-3 font-black text-base text-brand-red"><CheckCircle2 className="w-5 h-5 text-brand-red shrink-0" /> +5 BÔNUS EXCLUSIVOS</li>
+                <li className="flex items-center gap-3 font-black text-base"><CheckCircle2 className="w-5 h-5 text-brand-red shrink-0" /> Guia de Sucos Detox</li>
+                <li className="flex items-center gap-3 font-black text-base"><CheckCircle2 className="w-5 h-5 text-brand-red shrink-0" /> Suporte Prioritário VIP</li>
               </ul>
               <button type="button" className="w-full mt-auto bg-[#D64D3F] text-white py-8 rounded-full font-black uppercase tracking-[0.2em] text-xl shadow-[0_20px_40px_rgba(214,77,63,0.3)] hover:scale-105 active:scale-95 transition-all cursor-pointer ring-4 ring-white/20">
                 EU QUERO O COMBO COMPLETO!
