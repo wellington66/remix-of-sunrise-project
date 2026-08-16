@@ -10,6 +10,7 @@ import bonusLanchesAsset from "@/assets/guia-lanches-sem-fundo.png.asset.json";
 import bonusSobremesasAsset from "@/assets/sobremesas-sem-fundo.png.asset.json";
 import heroBookAsset from "@/assets/hero-book.png.asset.json";
 import kitBundleAsset from "@/assets/kit-bundle.png.asset.json";
+import lifestyleHeroAsset from "@/assets/lifestyle-hero.jpg.asset.json";
 
 
 const cuscuzQueijoUrl = "/assets/cuscuz_queijo.png";
@@ -63,7 +64,7 @@ function Index() {
           
           <div className="relative max-w-4xl mx-auto mb-8 bg-transparent">
             <img 
-              src={heroBookAsset.url}
+              src={lifestyleHeroAsset.url}
               alt="Guia Mockup"
               className="w-full h-auto drop-shadow-2xl"
             />
