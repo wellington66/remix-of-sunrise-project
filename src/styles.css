@@ -36,6 +36,7 @@
   --color-primary-foreground: var(--primary-foreground);
   --color-cta: var(--cta);
   --color-cta-foreground: var(--cta-foreground);
+  --color-brand-red: var(--brand-red);
   --color-secondary: var(--secondary);
   --color-secondary-foreground: var(--secondary-foreground);
   --color-muted: var(--muted);
@@ -78,8 +79,8 @@
   --primary-foreground: oklch(1 0 0);
   --cta: oklch(0.7 0.2 40); /* Laranja vibrante para CTA */
   --cta-foreground: oklch(1 0 0);
+  --brand-red: oklch(0.55 0.22 25); /* Vermelho intenso e vibrante */
   --secondary: oklch(0.968 0.007 247.896);
-  --secondary-foreground: oklch(0.208 0.042 265.755);
   --muted: oklch(0.968 0.007 247.896);
   --muted-foreground: oklch(0.554 0.046 257.417);
   --accent: oklch(0.968 0.007 247.896);

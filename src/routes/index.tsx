@@ -57,8 +57,8 @@ function Index() {
       </div>
 
       {/* Dynamic Scarcity Header */}
-      <div className="bg-[#D64D3F] text-white py-2 text-center text-[clamp(0.6rem,2vw,0.75rem)] font-black uppercase tracking-[0.2em] px-4 sticky top-0 z-[100] shadow-xl w-full">
-        🚨 ATENÇÃO: Desconto expira em <span className="font-mono bg-white/20 px-2 py-0.5 rounded ml-1">{formatTime(timeLeft)}</span>
+      <div className="bg-brand-red text-white py-2.5 text-center text-[clamp(0.65rem,2.2vw,0.85rem)] font-black uppercase tracking-[0.25em] px-4 sticky top-0 z-[100] shadow-2xl w-full border-b border-white/10">
+        🚨 ATENÇÃO: Desconto expira em <span className="font-mono bg-white/30 px-2 py-0.5 rounded ml-1 tabular-nums">{formatTime(timeLeft)}</span>
       </div>
 
       {/* Hero Section */}
@@ -101,11 +101,11 @@ function Index() {
         <div className="flex whitespace-nowrap animate-marquee items-center gap-12">
           {Array(10).fill(null).map((_, i) => (
             <div key={i} className="flex items-center gap-3 text-sm font-black uppercase tracking-[0.2em]">
-              <Star className="w-4 h-4 fill-[#D64D3F] text-[#D64D3F]" />
+              <Star className="w-4 h-4 fill-brand-red text-brand-red" />
               RECEITAS PRÁTICAS
-              <Star className="w-4 h-4 fill-[#D64D3F] text-[#D64D3F]" />
+              <Star className="w-4 h-4 fill-brand-red text-brand-red" />
               SEM GLÚTEN
-              <Star className="w-4 h-4 fill-[#D64D3F] text-[#D64D3F]" />
+              <Star className="w-4 h-4 fill-brand-red text-brand-red" />
               EMAGRECIMENTO REAL
             </div>
           ))}
@@ -120,21 +120,21 @@ function Index() {
             <div className="space-y-6 px-2 text-center lg:text-left">
               <h2 className="text-[clamp(1.8rem,6vw,3.5rem)] font-[family-name:var(--font-anton)] uppercase leading-[1.1]">
                 VOCÊ AINDA COME SEMPRE PÃO<br/>
-                <span className="text-[#D64D3F]">NO CAFÈ DA MANHÃ?</span>
+                <span className="text-brand-red">NO CAFÉ DA MANHÃ?</span>
               </h2>
-              <div className="w-20 h-2 bg-[#D64D3F] rounded-full mx-auto lg:mx-0" />
+              <div className="w-20 h-2 bg-brand-red rounded-full mx-auto lg:mx-0" />
               <p className="text-lg text-[#1B4332]/80 leading-relaxed font-medium">
                 O pão é rápido, prático e faz parte da rotina, mas muita gente acaba comendo sempre a mesma coisa por falta de ideias simples e saudáveis. Isso acontece com você?
               </p>
               <ul className="space-y-4 text-left inline-block">
                 {["Fim da sonolência pós-café", "Intestino funcionando como um relógio", "Redução visível de medidas na primeira semana"].map((item, i) => (
                   <li key={i} className="flex items-center gap-3 font-bold text-sm uppercase tracking-wide">
-                    <CheckCircle2 className="w-5 h-5 text-[#D64D3F]" /> {item}
+                    <CheckCircle2 className="w-5 h-5 text-brand-red" /> {item}
                   </li>
                 ))}
               </ul>
               <div className="pt-8">
-                <button type="button" className="bg-[#D64D3F] text-white px-8 py-4 rounded-full font-black uppercase tracking-widest text-sm shadow-lg hover:scale-105 transition-transform cursor-pointer w-full lg:w-auto">
+                <button type="button" className="bg-brand-red text-white px-8 py-4 rounded-full font-black uppercase tracking-widest text-sm shadow-xl hover:scale-105 transition-transform cursor-pointer w-full lg:w-auto ring-4 ring-brand-red/20">
                   QUERO SAIR DA ROTINA DO PÃO
                 </button>
               </div>
@@ -156,13 +156,13 @@ function Index() {
 
       {/* Scarcity Banner Section (Moved) */}
       <div className="py-12 flex flex-col items-center justify-center text-center px-4">
-        <div className="w-px h-12 bg-[#D64D3F]/30 mb-6" />
-        <span className="text-[#D64D3F] font-black uppercase tracking-[0.3em] text-[10px] mb-8">
+        <div className="w-px h-12 bg-brand-red/30 mb-6" />
+        <span className="text-brand-red font-black uppercase tracking-[0.3em] text-[10px] mb-8">
           EXISTE UMA FORMA MELHOR
         </span>
-        <div className="w-px h-12 bg-[#D64D3F]/30 mb-12" />
+        <div className="w-px h-12 bg-brand-red/30 mb-12" />
         
-        <div className="w-full max-w-3xl bg-gradient-to-br from-[#FF5733] to-[#D64D3F] rounded-[2rem] p-8 md:p-12 text-white shadow-2xl relative overflow-hidden group">
+        <div className="w-full max-w-3xl bg-gradient-to-br from-brand-red to-brand-red/90 rounded-[2rem] p-8 md:p-12 text-white shadow-2xl relative overflow-hidden group">
           <div className="absolute top-0 right-0 p-8 opacity-10 rotate-12 transition-transform group-hover:scale-110">
             <Timer className="w-32 h-32" />
           </div>
@@ -187,7 +187,7 @@ function Index() {
         <div className="text-center max-w-3xl mx-auto mb-20 space-y-4">
           <h2 className="text-4xl md:text-6xl font-[family-name:var(--font-anton)] uppercase leading-none text-[#1B4332]">
             VEJA O QUE VOCÊ VAI <br/>
-            <span className="text-[#D64D3F]">ENCONTRAR NO GUIA</span>
+            <span className="text-brand-red">ENCONTRAR NO GUIA</span>
           </h2>
           <p className="text-[#1B4332]/60 font-bold uppercase tracking-widest text-xs">Transforme sua saúde com cada refeição</p>
         </div>
@@ -209,7 +209,7 @@ function Index() {
               <div className="aspect-[4/5] overflow-hidden relative">
                 <img src={item.img} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt={`Receita ${i + 1}`} loading="lazy" decoding="async" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
-                <div className="absolute top-4 right-4 bg-[#D64D3F] text-white px-4 py-2 rounded-full text-[10px] md:text-xs font-black shadow-lg z-10">
+                <div className="absolute top-4 right-4 bg-brand-red text-white px-4 py-2 rounded-full text-[10px] md:text-xs font-black shadow-lg z-10">
                   {item.calories}
                 </div>
               </div>
@@ -222,12 +222,12 @@ function Index() {
       <section className="py-24 bg-white overflow-hidden">
         <div className="container mx-auto px-4">
           <div className="text-center max-w-3xl mx-auto mb-20 space-y-4">
-            <span className="bg-[#D64D3F]/10 text-[#D64D3F] px-4 py-2 rounded-full text-[10px] font-black uppercase tracking-widest">
+            <span className="bg-brand-red/10 text-brand-red px-4 py-2 rounded-full text-[10px] font-black uppercase tracking-widest">
               Oferta Limitada 🎁
             </span>
             <h2 className="text-4xl md:text-6xl font-[family-name:var(--font-anton)] uppercase leading-none text-[#1B4332]">
               GANHE 5 BÔNUS <br/>
-              <span className="text-[#D64D3F]">EXCLUSIVOS HOJE</span>
+              <span className="text-brand-red">EXCLUSIVOS HOJE</span>
             </h2>
             <p className="text-[#1B4332]/60 font-bold uppercase tracking-widest text-xs">Aumente seus resultados com materiais complementares</p>
           </div>
@@ -238,35 +238,35 @@ function Index() {
                 title: "Café da Manhã para Desinchar", 
                 desc: "Receitas anti-inflamatórias.",
                 value: "R$ 47,00",
-                icon: <Zap className="w-4 h-4 md:w-8 md:h-8 text-[#D64D3F]" />,
+                icon: <Zap className="w-4 h-4 md:w-8 md:h-8 text-brand-red" />,
                 img: bonusDesincharUrl
               },
               { 
                 title: "Lista de Compras Econômica", 
                 desc: "Saiba exatamente o que comprar.",
                 value: "R$ 29,00",
-                icon: <Smartphone className="w-4 h-4 md:w-8 md:h-8 text-[#D64D3F]" />,
+                icon: <Smartphone className="w-4 h-4 md:w-8 md:h-8 text-brand-red" />,
                 img: bonusListaUrl
               },
               { 
                 title: "Planejamento Semanal Pronto", 
                 desc: "Organização para toda a semana.",
                 value: "R$ 37,00",
-                icon: <Calendar className="w-4 h-4 md:w-8 md:h-8 text-[#D64D3F]" />,
+                icon: <Calendar className="w-4 h-4 md:w-8 md:h-8 text-brand-red" />,
                 img: bonusPlanejamentoUrl
               },
               { 
                 title: "Guia de Lanches Saudáveis", 
                 desc: "Ideias práticas e leves.",
                 value: "R$ 39,00",
-                icon: <Coffee className="w-4 h-4 md:w-8 md:h-8 text-[#D64D3F]" />,
+                icon: <Coffee className="w-4 h-4 md:w-8 md:h-8 text-brand-red" />,
                 img: bonusLanchesUrl
               },
               { 
                 title: "+50 Sobremesas Zero Açúcar", 
                 desc: "Doces práticos e sem culpa.",
                 value: "R$ 57,00",
-                icon: <Utensils className="w-4 h-4 md:w-8 md:h-8 text-[#D64D3F]" />,
+                icon: <Utensils className="w-4 h-4 md:w-8 md:h-8 text-brand-red" />,
                 img: bonusSobremesasUrl
               }
             ].map((bonus, i) => (
@@ -285,7 +285,7 @@ function Index() {
                   <h3 className="text-[10px] md:text-xl font-black text-[#1B4332] uppercase mb-1 md:mb-2 leading-tight">{bonus.title}</h3>
                   <p className="hidden md:block text-sm opacity-60 font-medium mb-6 leading-relaxed">{bonus.desc}</p>
                   <div className="mt-auto">
-                    <span className="text-[8px] md:text-[10px] font-black uppercase tracking-widest text-[#D64D3F] line-through block opacity-50">DE {bonus.value}</span>
+                    <span className="text-[8px] md:text-[10px] font-black uppercase tracking-widest text-brand-red line-through block opacity-50">DE {bonus.value}</span>
                     <span className="text-[9px] md:text-sm font-black uppercase tracking-widest text-[#1B4332]">POR R$ 0,00</span>
                   </div>
                 </div>
@@ -298,7 +298,7 @@ function Index() {
                 <Gift className="w-16 h-16 md:w-32 md:h-32" />
               </div>
               <h3 className="text-lg md:text-2xl font-[family-name:var(--font-anton)] uppercase mb-2 md:mb-4 relative z-10">VALOR TOTAL DOS BÔNUS</h3>
-              <div className="text-3xl md:text-4xl font-[family-name:var(--font-anton)] text-[#D64D3F] mb-1 md:mb-2 relative z-10">R$ 209,00</div>
+              <div className="text-3xl md:text-4xl font-[family-name:var(--font-anton)] text-brand-red mb-1 md:mb-2 relative z-10">R$ 209,00</div>
               <p className="text-[8px] md:text-[10px] font-black uppercase tracking-widest opacity-60 relative z-10">Tudo incluso no Plano Completo</p>
             </div>
           </div>
@@ -312,7 +312,7 @@ function Index() {
             <h2 className="text-[clamp(2.5rem,8vw,5rem)] font-[family-name:var(--font-anton)] leading-[0.9] uppercase">
               ESCOLHA SEU PLANO
             </h2>
-            <p className="text-[#D64D3F] font-bold uppercase tracking-widest text-sm">Acesso imediato após a confirmação</p>
+            <p className="text-brand-red font-bold uppercase tracking-widest text-sm">Acesso imediato após a confirmação</p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch pt-12">
@@ -334,8 +334,8 @@ function Index() {
                 <span className="text-5xl font-[family-name:var(--font-anton)] text-[#1B4332]">R$ 17,90</span>
               </div>
               <ul className="text-left w-full space-y-4 mb-8 text-sm opacity-80">
-                <li className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-[#D64D3F]" /> Guia com 101 Receitas</li>
-                <li className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-[#D64D3F]" /> Acesso Vitalício</li>
+                <li className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-brand-red" /> Guia com 101 Receitas</li>
+                <li className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-brand-red" /> Acesso Vitalício</li>
                 <li className="flex items-center gap-2 opacity-30 line-through"><Minus className="w-4 h-4" /> Bônus Exclusivos</li>
               </ul>
               <button type="button" className="w-full mt-auto bg-[#1B4332] text-white py-5 rounded-full font-black uppercase tracking-widest text-sm hover:scale-105 transition-all">
@@ -345,11 +345,11 @@ function Index() {
 
 
             {/* Complete */}
-            <div className="bg-white border-4 border-[#D64D3F] p-8 md:p-14 rounded-[2.5rem] md:rounded-[3.5rem] flex flex-col items-center relative shadow-[0_50px_100px_rgba(214,77,63,0.2)] md:scale-110 z-10 group ring-8 ring-[#D64D3F]/5">
-              <div className="absolute -top-6 left-1/2 -translate-x-1/2 bg-[#D64D3F] text-white px-8 py-2.5 rounded-full text-xs font-black uppercase tracking-[0.2em] whitespace-nowrap shadow-2xl animate-bounce">
+            <div className="bg-white border-4 border-brand-red p-8 md:p-14 rounded-[2.5rem] md:rounded-[3.5rem] flex flex-col items-center relative shadow-[0_50px_100px_rgba(186,28,28,0.2)] md:scale-110 z-10 group ring-8 ring-brand-red/5">
+              <div className="absolute -top-6 left-1/2 -translate-x-1/2 bg-brand-red text-white px-8 py-2.5 rounded-full text-xs font-black uppercase tracking-[0.2em] whitespace-nowrap shadow-2xl animate-bounce">
                 OFERTA MAIS POPULAR ✨
               </div>
-              <div className="w-full aspect-square mb-6 overflow-hidden flex items-center justify-center p-6 bg-white rounded-[2rem] border border-[#D64D3F]/10">
+              <div className="w-full aspect-square mb-6 overflow-hidden flex items-center justify-center p-6 bg-white rounded-[2rem] border border-brand-red/10">
                 <img 
                   src={kitBundleUrl} 
                   alt="Plano Completo"
@@ -358,19 +358,19 @@ function Index() {
               </div>
               <div className="text-center mb-6">
                 <h3 className="text-2xl md:text-3xl font-black uppercase tracking-widest mb-2 text-[#1B4332]">Plano Completo</h3>
-                <p className="text-sm text-[#D64D3F] uppercase font-black tracking-widest">Guia + Todos os 5 Bônus</p>
+                <p className="text-sm text-brand-red uppercase font-black tracking-widest">Guia + Todos os 5 Bônus</p>
               </div>
               <div className="text-center mb-8">
                 <span className="text-sm line-through text-[#1B4332]/40 block font-bold">DE R$ 97,00</span>
                 <span className="text-6xl md:text-7xl font-[family-name:var(--font-anton)] text-[#1B4332] drop-shadow-sm">R$ 27,90</span>
               </div>
               <ul className="text-left w-full space-y-4 mb-8 text-sm text-[#1B4332]">
-                <li className="flex items-center gap-3 font-black text-base"><CheckCircle2 className="w-5 h-5 text-[#D64D3F] shrink-0" /> Guia com 101 Receitas</li>
-                <li className="flex items-center gap-3 font-black text-base text-[#D64D3F]"><CheckCircle2 className="w-5 h-5 text-[#D64D3F] shrink-0" /> +5 BÔNUS EXCLUSIVOS</li>
-                <li className="flex items-center gap-3 font-black text-base"><CheckCircle2 className="w-5 h-5 text-[#D64D3F] shrink-0" /> Guia de Sucos Detox</li>
-                <li className="flex items-center gap-3 font-black text-base"><CheckCircle2 className="w-5 h-5 text-[#D64D3F] shrink-0" /> Suporte Prioritário VIP</li>
+                <li className="flex items-center gap-3 font-black text-base"><CheckCircle2 className="w-5 h-5 text-brand-red shrink-0" /> Guia com 101 Receitas</li>
+                <li className="flex items-center gap-3 font-black text-base text-brand-red"><CheckCircle2 className="w-5 h-5 text-brand-red shrink-0" /> +5 BÔNUS EXCLUSIVOS</li>
+                <li className="flex items-center gap-3 font-black text-base"><CheckCircle2 className="w-5 h-5 text-brand-red shrink-0" /> Guia de Sucos Detox</li>
+                <li className="flex items-center gap-3 font-black text-base"><CheckCircle2 className="w-5 h-5 text-brand-red shrink-0" /> Suporte Prioritário VIP</li>
               </ul>
-              <button type="button" className="w-full mt-auto bg-[#D64D3F] text-white py-8 rounded-full font-black uppercase tracking-[0.2em] text-xl shadow-[0_20px_40px_rgba(214,77,63,0.3)] hover:scale-105 active:scale-95 transition-all cursor-pointer ring-4 ring-white/20">
+              <button type="button" className="w-full mt-auto bg-brand-red text-white py-8 rounded-full font-black uppercase tracking-[0.2em] text-xl shadow-[0_20px_40px_rgba(186,28,28,0.3)] hover:scale-105 active:scale-95 transition-all cursor-pointer ring-4 ring-white/20">
                 EU QUERO O COMBO COMPLETO!
               </button>
             </div>
@@ -381,11 +381,11 @@ function Index() {
 
       {/* Urgency Divider 2 */}
       <div className="py-12 flex flex-col items-center justify-center text-center px-4">
-        <div className="w-px h-12 bg-[#D64D3F]/30 mb-6" />
-        <span className="text-[#D64D3F] font-black uppercase tracking-[0.3em] text-[10px] mb-8">
+        <div className="w-px h-12 bg-brand-red/30 mb-6" />
+        <span className="text-brand-red font-black uppercase tracking-[0.3em] text-[10px] mb-8">
           TIRE SUAS DÚVIDAS
         </span>
-        <div className="w-px h-12 bg-[#D64D3F]/30 mb-12" />
+        <div className="w-px h-12 bg-brand-red/30 mb-12" />
         
         <div className="w-full max-w-3xl bg-[#1B4332] rounded-[2rem] p-8 md:p-12 text-white shadow-2xl relative overflow-hidden group">
           <div className="absolute -bottom-10 -left-10 p-8 opacity-10 rotate-12 transition-transform group-hover:scale-110">
@@ -399,8 +399,8 @@ function Index() {
               Sua satisfação é nossa prioridade. Se em 7 dias você não amar as receitas, devolvemos cada centavo.
             </p>
             <div className="flex justify-center gap-4">
-              <ShieldCheck className="w-8 h-8 text-[#D64D3F]" />
-              <CheckCircle2 className="w-8 h-8 text-[#D64D3F]" />
+              <ShieldCheck className="w-8 h-8 text-brand-red" />
+              <CheckCircle2 className="w-8 h-8 text-brand-red" />
             </div>
           </div>
         </div>
@@ -420,7 +420,7 @@ function Index() {
             <details key={i} className="group bg-white rounded-2xl border border-[#1B4332]/5 shadow-sm overflow-hidden transition-all duration-300">
               <summary className="flex items-center justify-between p-6 cursor-pointer list-none font-black text-[#1B4332] uppercase text-xs tracking-widest group-open:bg-[#FDF9F2]/50 outline-none">
                 {item.q}
-                <ArrowDown className="w-4 h-4 text-[#D64D3F] transition-transform duration-300 group-open:rotate-180" />
+                <ArrowDown className="w-4 h-4 text-brand-red transition-transform duration-300 group-open:rotate-180" />
               </summary>
               <div className="p-6 pt-0 text-sm opacity-70 leading-relaxed font-medium border-t border-[#1B4332]/5">
                 {item.a}
@@ -450,13 +450,13 @@ function Index() {
       {/* Mobile Sticky CTA */}
       <div className="md:hidden fixed bottom-0 left-0 right-0 bg-white/90 backdrop-blur-md border-t border-[#1B4332]/10 p-4 z-[100] flex items-center justify-between shadow-[0_-10px_30px_rgba(0,0,0,0.08)] safe-area-inset-bottom">
         <div className="flex flex-col">
-          <span className="text-[0.6rem] text-[#D64D3F] line-through font-black leading-none opacity-50">R$ 97,00</span>
+          <span className="text-[0.6rem] text-brand-red line-through font-black leading-none opacity-50">R$ 97,00</span>
           <div className="flex items-baseline gap-1">
             <span className="text-[0.7rem] font-bold text-[#1B4332]/60">R$</span>
             <span className="text-2xl font-[family-name:var(--font-anton)] text-[#1B4332] leading-none">17,90</span>
           </div>
         </div>
-        <button type="button" className="bg-[#D64D3F] text-white px-8 py-3 rounded-full font-black uppercase tracking-widest text-[0.7rem] shadow-xl animate-pulse active:scale-95 transition-transform cursor-pointer">
+        <button type="button" className="bg-brand-red text-white px-8 py-3 rounded-full font-black uppercase tracking-widest text-[0.7rem] shadow-xl animate-pulse active:scale-95 transition-transform cursor-pointer">
           COMPRAR AGORA
         </button>
       </div>
