@@ -412,9 +412,10 @@ function Index() {
               
               {/* Pointer to the better offer - Positioned below the first CTA */}
               <div className="mt-8 flex flex-col items-center w-full group/pointer">
-                <div className="bg-brand-red text-white px-6 py-2 rounded-full text-[10px] font-black uppercase tracking-widest shadow-xl animate-pulse whitespace-nowrap border-2 border-white/20">
+                <div className="max-w-full bg-brand-red text-white px-3 py-1.5 md:px-6 md:py-2 rounded-full text-[8px] md:text-[10px] leading-tight font-black uppercase tracking-tight md:tracking-widest shadow-xl animate-pulse text-center whitespace-normal md:whitespace-nowrap border-2 border-white/20">
                   ⚠️ 98% DAS PESSOAS ESCOLHEM O PLANO COMPLETO
                 </div>
+
                 <div className="mt-2 flex items-center justify-center gap-2 text-brand-red font-black text-[10px] uppercase tracking-tighter">
                   <span>VEJA POR QUE</span>
                   <motion.div
