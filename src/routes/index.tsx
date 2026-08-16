@@ -58,8 +58,8 @@ function Index() {
       </div>
 
       {/* Dynamic Scarcity Header */}
-      <div className="bg-brand-red text-white py-2.5 text-center text-[clamp(0.65rem,2.2vw,0.85rem)] font-black uppercase tracking-[0.25em] px-4 sticky top-0 z-[100] shadow-2xl w-full border-b border-white/10">
-        🚨 ATENÇÃO: Desconto expira em <span className="font-mono bg-white/30 px-2 py-0.5 rounded ml-1 tabular-nums">{formatTime(timeLeft)}</span>
+      <div className="bg-brand-red text-white py-2 md:py-3 text-center text-[clamp(0.6rem,2vw,0.85rem)] font-black uppercase tracking-[0.15em] md:tracking-[0.25em] px-4 sticky top-0 z-[100] shadow-2xl w-full border-b border-white/10 backdrop-blur-md">
+        🚨 <span className="hidden xs:inline">ATENÇÃO:</span> Desconto expira em <span className="font-mono bg-white/25 px-1.5 md:px-2 py-0.5 rounded ml-1 tabular-nums">{formatTime(timeLeft)}</span>
       </div>
 
       {/* Hero Section */}
@@ -96,7 +96,7 @@ function Index() {
                 <div className="text-6xl md:text-7xl font-[family-name:var(--font-anton)] text-brand-red leading-none mt-2">R$ 17,90</div>
               </div>
               
-              <button type="button" className="w-full bg-brand-red text-white px-10 py-6 rounded-full font-black uppercase tracking-[0.2em] text-lg shadow-[0_20px_40px_rgba(186,28,28,0.3)] hover:scale-105 active:scale-95 transition-all cursor-pointer animate-pulse-ring">
+              <button type="button" className="w-full bg-brand-red text-white px-6 md:px-10 py-5 md:py-6 rounded-full font-black uppercase tracking-[0.15em] md:tracking-[0.2em] text-base md:text-lg shadow-[0_20px_40px_rgba(186,28,28,0.3)] hover:scale-105 active:scale-95 transition-all cursor-pointer animate-pulse-ring leading-tight">
                 SIM! QUERO AS RECEITAS AGORA
               </button>
               
