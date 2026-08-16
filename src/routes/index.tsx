@@ -331,9 +331,16 @@ function Index() {
 
 
             {/* Complete */}
-            <div className="bg-white border-2 border-[#D64D3F] p-12 rounded-[3rem] flex flex-col items-center justify-between relative shadow-2xl scale-105 z-10">
+            <div className="bg-white border-2 border-[#D64D3F] p-12 rounded-[3rem] flex flex-col items-center relative shadow-2xl scale-105 z-10">
               <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-[#D64D3F] text-white px-6 py-1 rounded-full text-[10px] font-black uppercase tracking-widest whitespace-nowrap">
                 Recomendado ✨
+              </div>
+              <div className="w-full aspect-square mb-6 overflow-hidden flex items-center justify-center p-4">
+                <img 
+                  src={bookMockupCompleteAsset.url} 
+                  alt="Plano Completo"
+                  className="w-full h-full object-contain drop-shadow-2xl"
+                />
               </div>
               <div className="text-center mb-6">
                 <h3 className="text-xl font-black uppercase tracking-widest mb-2 text-[#1B4332]">Plano Completo</h3>
@@ -349,10 +356,11 @@ function Index() {
                 <li className="flex items-center gap-2 font-bold"><CheckCircle2 className="w-4 h-4 text-[#D64D3F]" /> Guia de Sucos Detox</li>
                 <li className="flex items-center gap-2 font-bold"><CheckCircle2 className="w-4 h-4 text-[#D64D3F]" /> Suporte Prioritário</li>
               </ul>
-              <button className="w-full bg-[#D64D3F] text-white py-6 rounded-full font-black uppercase tracking-widest text-lg shadow-xl hover:scale-105 transition-all">
+              <button className="w-full mt-auto bg-[#D64D3F] text-white py-6 rounded-full font-black uppercase tracking-widest text-lg shadow-xl hover:scale-105 transition-all">
                 QUERO O COMBO COMPLETO
               </button>
             </div>
+
           </div>
         </div>
       </section>
