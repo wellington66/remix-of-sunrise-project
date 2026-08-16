@@ -52,6 +52,28 @@ interface Testimonial {
 
 function Index() {
   const [timeLeft, setTimeLeft] = useState(900); // 15 minutos em segundos
+  const [showDownsell, setShowDownsell] = useState(false);
+  const [downsellShown, setDownsellShown] = useState(false);
+
+  const openDownsell = () => {
+    setDownsellShown(true);
+    setShowDownsell(true);
+  };
+
+  // Exit intent: exibe a oferta com desconto uma única vez ao sair da página (desktop).
+  useEffect(() => {
+    if (downsellShown) return;
+    const handleMouseOut = (event: MouseEvent) => {
+      if (event.clientY <= 0 && !event.relatedTarget) {
+        setDownsellShown(true);
+        setShowDownsell(true);
+      }
+    };
+    document.addEventListener("mouseout", handleMouseOut);
+    return () => document.removeEventListener("mouseout", handleMouseOut);
+  }, [downsellShown]);
+
+
 
   useEffect(() => {
     // Causa raiz do bug anterior: o intervalo continuava executando (e re-renderizando)
