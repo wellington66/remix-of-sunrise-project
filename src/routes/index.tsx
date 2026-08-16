@@ -345,9 +345,9 @@ function Index() {
 
 
             {/* Complete */}
-            <div className="bg-white border-2 border-[#D64D3F] p-8 md:p-12 rounded-[2.5rem] md:rounded-[3.5rem] flex flex-col items-center relative shadow-[0_40px_80px_rgba(214,77,63,0.15)] md:scale-105 z-10 group">
-              <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-[#D64D3F] text-white px-6 py-1.5 rounded-full text-[10px] font-black uppercase tracking-widest whitespace-nowrap shadow-lg">
-                Recomendado ✨
+            <div className="bg-white border-4 border-[#D64D3F] p-8 md:p-14 rounded-[2.5rem] md:rounded-[3.5rem] flex flex-col items-center relative shadow-[0_50px_100px_rgba(214,77,63,0.2)] md:scale-110 z-10 group ring-8 ring-[#D64D3F]/5">
+              <div className="absolute -top-6 left-1/2 -translate-x-1/2 bg-[#D64D3F] text-white px-8 py-2.5 rounded-full text-xs font-black uppercase tracking-[0.2em] whitespace-nowrap shadow-2xl animate-bounce">
+                OFERTA MAIS POPULAR ✨
               </div>
               <div className="w-full aspect-square mb-6 overflow-hidden flex items-center justify-center p-6 bg-white rounded-[2rem] border border-[#D64D3F]/10">
                 <img 
