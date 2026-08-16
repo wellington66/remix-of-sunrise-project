@@ -335,11 +335,11 @@ function Index() {
             <div className="bg-white border border-[#1B4332]/10 p-8 md:p-12 rounded-[2.5rem] md:rounded-[3.5rem] flex flex-col items-center hover:shadow-[0_30px_60px_rgba(0,0,0,0.08)] transition-all text-[#1B4332] group relative">
               {/* Pointer content moved below the CTA */}
 
-              <div className="w-full aspect-square mb-6 overflow-hidden flex items-center justify-center p-6 bg-white rounded-[2rem] border border-[#1B4332]/5">
+              <div className="w-full aspect-square mb-8 overflow-hidden flex items-center justify-center p-8 bg-white rounded-[2.5rem] border border-[#1B4332]/5 shadow-inner">
                 <img 
                   src={heroBookUrl} 
                   alt="Plano Essencial"
-                  className="w-full h-full object-contain drop-shadow-[0_20px_40px_rgba(0,0,0,0.15)] transition-transform duration-700 group-hover:scale-110"
+                  className="w-full h-full object-contain drop-shadow-[0_20px_40px_rgba(0,0,0,0.12)] transition-transform duration-700 group-hover:scale-110"
                 />
               </div>
               <div className="text-center mb-6">
