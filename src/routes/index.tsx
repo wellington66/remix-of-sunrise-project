@@ -238,7 +238,7 @@ function Index() {
                 title: "Café da Manhã para Desinchar", 
                 desc: "Receitas anti-inflamatórias.",
                 value: "R$ 47,00",
-                icon: <Zap className="w-4 h-4 md:w-8 md:h-8 text-[#D64D3F]" />,
+                icon: <Zap className="w-4 h-4 md:w-8 md:h-8 text-brand-red" />,
                 img: bonusDesincharUrl
               },
               { 
