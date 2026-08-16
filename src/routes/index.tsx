@@ -106,9 +106,10 @@ function Index() {
               <span className="text-sm">POR APENAS</span>
               <div className="text-4xl font-[family-name:var(--font-anton)]">R$ 17,90</div>
             </div>
-            <button type="button" className="bg-transparent border-2 border-[#2D6A4F] text-[#2D6A4F] px-8 py-4 rounded-full font-black uppercase tracking-widest text-sm shadow-sm hover:bg-[#2D6A4F]/5 hover:scale-105 transition-all cursor-pointer">
+            <a href={CHECKOUT_ESSENCIAL} className="inline-block text-center bg-transparent border-2 border-[#2D6A4F] text-[#2D6A4F] px-8 py-4 rounded-full font-black uppercase tracking-widest text-sm shadow-sm hover:bg-[#2D6A4F]/5 hover:scale-105 transition-all cursor-pointer">
               QUERO AS RECEITAS AGORA
-            </button>
+            </a>
+
             <div className="flex flex-wrap justify-center gap-4 text-[10px] font-bold text-[#1B4332]/60">
               <span className="flex items-center gap-1"><ShieldCheck className="w-3 h-3"/> ACESSO IMEDIATO</span>
               <span className="flex items-center gap-1"><Zap className="w-3 h-3"/> COMPRA SEGURA</span>
