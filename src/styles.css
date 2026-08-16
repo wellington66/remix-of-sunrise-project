@@ -181,6 +181,25 @@
   }
 }
 
+@keyframes pulse-ring {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(186, 28, 28, 0.4);
+  }
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 12px rgba(186, 28, 28, 0);
+  }
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(186, 28, 28, 0);
+  }
+}
+
+.animate-pulse-ring {
+  animation: pulse-ring 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
 @media (hover: none) and (pointer: coarse) {
   /* Disable hover effects on touch devices to prevent "sticky hover" */
   .group:hover .group-hover\:scale-110 {
