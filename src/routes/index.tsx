@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { motion } from "framer-motion";
-import { CheckCircle2, Star, ShieldCheck, Zap, ArrowDown, Timer, Calendar, Coffee, Utensils, Smartphone, Gift } from "lucide-react";
+import { CheckCircle2, Star, ShieldCheck, Zap, ArrowDown, Timer, Calendar, Coffee, Utensils, Smartphone, Gift, Minus } from "lucide-react";
 import { useState, useEffect } from "react";
 
 // Caminhos estáticos robustos para a pasta public/assets
