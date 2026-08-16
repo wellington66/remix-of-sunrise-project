@@ -34,24 +34,44 @@ export const Route = createFileRoute("/")({
   }),
 });
 
+/** Estrutura tipada dos depoimentos: `stars` é opcional (default 5). */
+interface Testimonial {
+  name: string;
+  date: string;
+  text: string;
+  likes: number;
+  avatar: string;
+  stars?: number;
+}
+
 function Index() {
-  const [timeLeft, setTimeLeft] = useState(900); // 15 minutes in seconds
+  const [timeLeft, setTimeLeft] = useState(900); // 15 minutos em segundos
 
   useEffect(() => {
+    // Causa raiz do bug anterior: o intervalo continuava executando (e re-renderizando)
+    // indefinidamente mesmo após o contador chegar a zero. Agora ele se auto-encerra.
     const timer = setInterval(() => {
-      setTimeLeft((prev) => (prev > 0 ? prev - 1 : 0));
+      setTimeLeft((prev) => {
+        if (prev <= 1) {
+          clearInterval(timer);
+          return 0;
+        }
+        return prev - 1;
+      });
     }, 1000);
     return () => clearInterval(timer);
   }, []);
 
   const formatTime = (seconds: number) => {
-    const mins = Math.floor(seconds / 60);
-    const secs = seconds % 60;
+    const safeSeconds = Math.max(0, seconds);
+    const mins = Math.floor(safeSeconds / 60);
+    const secs = safeSeconds % 60;
     return `${mins.toString().padStart(2, "0")}:${secs.toString().padStart(2, "0")}`;
   };
 
+
   return (
-    <div className="min-h-screen bg-white text-[#1B4332] font-[family-name:var(--font-inter)] selection:bg-[#D64D3F]/20 overflow-x-hidden w-full relative">
+    <div className="min-h-screen bg-white text-[#1B4332] font-[family-name:var(--font-inter)] selection:bg-[#D64D3F]/20 overflow-x-hidden w-full relative pb-24 md:pb-0">
       {/* Top Banner */}
       <div className="bg-[#1B4332]/5 text-[#1B4332] py-2 text-center text-[10px] font-bold uppercase tracking-widest border-b border-[#1B4332]/10">
         101 CAFÉS DA MANHÃ SAUDÁVEIS PARA SUBSTITUIR O PÃO
@@ -496,7 +516,8 @@ function Index() {
 
           {/* Testimonials Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-6xl mx-auto">
-            {[
+            {([
+
               {
                 name: "Patrícia Almeida",
                 date: "18 de fevereiro de 2026",
@@ -541,7 +562,7 @@ function Index() {
                 stars: 4,
                 avatar: "https://i.pravatar.cc/150?u=camila"
               }
-            ].map((t, i) => (
+            ] satisfies Testimonial[]).map((t, i) => (
               <motion.div 
                 key={i}
                 initial={{ opacity: 0, y: 20 }}
@@ -568,8 +589,9 @@ function Index() {
                 </p>
                 <div className="flex items-center gap-4 pt-4 border-t border-[#1B4332]/5 text-[10px] font-black uppercase tracking-widest opacity-40">
                   <span className="flex items-center gap-1.5 text-brand-red opacity-100">❤️ {t.likes}</span>
-                  <button className="hover:text-[#1B4332] transition-colors">Curtir</button>
-                  <button className="hover:text-[#1B4332] transition-colors">Comentar</button>
+                  <button type="button" className="hover:text-[#1B4332] transition-colors">Curtir</button>
+                  <button type="button" className="hover:text-[#1B4332] transition-colors">Comentar</button>
+
                 </div>
               </motion.div>
             ))}
@@ -608,11 +630,12 @@ function Index() {
             <div className="bg-brand-red/5 p-8 rounded-[2.5rem] border border-brand-red/10 w-full">
               <h3 className="text-xl font-black text-[#1B4332] uppercase mb-4">Ainda tem alguma dúvida?</h3>
               <p className="text-sm font-medium opacity-60 mb-6">Nossa equipe de suporte está pronta para te ajudar a qualquer momento.</p>
-              <button className="w-full bg-[#1B4332] text-white py-4 rounded-full font-black uppercase tracking-widest text-xs hover:scale-105 transition-transform flex items-center justify-center gap-3">
+              <button type="button" className="w-full bg-[#1B4332] text-white py-4 rounded-full font-black uppercase tracking-widest text-xs hover:scale-105 transition-transform flex items-center justify-center gap-3">
                 <Smartphone className="w-4 h-4" /> Falar com Suporte
               </button>
             </div>
-            <div className="flex items-center gap-4 opacity-40 grayscale group-hover:grayscale-0 transition-all">
+            <div className="group flex items-center gap-4 opacity-40 grayscale hover:grayscale-0 transition-all">
+
               <ShieldCheck className="w-10 h-10" />
               <Star className="w-10 h-10" />
               <Zap className="w-10 h-10" />
@@ -681,7 +704,7 @@ function Index() {
       {/* Mobile Sticky CTA */}
       <div className="md:hidden fixed bottom-0 left-0 right-0 bg-white/90 backdrop-blur-md border-t border-[#1B4332]/10 p-4 z-[100] flex items-center justify-between shadow-[0_-10px_30px_rgba(0,0,0,0.08)] safe-area-inset-bottom">
         <div className="flex flex-col">
-          <span className="text-[0.6rem] text-brand-red line-through font-black leading-none opacity-50">R$ 97,00</span>
+          <span className="text-[0.6rem] text-brand-red line-through font-black leading-none opacity-50">R$ 47,00</span>
           <div className="flex items-baseline gap-1">
             <span className="text-[0.7rem] font-bold text-[#1B4332]/60">R$</span>
             <span className="text-2xl font-[family-name:var(--font-anton)] text-[#1B4332] leading-none">17,90</span>
