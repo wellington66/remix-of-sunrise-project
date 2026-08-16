@@ -85,8 +85,8 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:type", content: "website" },
       { property: "og:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/MxJJBmWryoTgTvwVm5NbtezPF8H3/social-images/social-1780358555181-878787878.webp" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "80 Cafés da Manhã para Substituir o Pão" },
-      { name: "twitter:description", content: "App provides 80 healthy breakfast recipes to replace bread, offering quick and practical meal solutions." },
+      { name: "twitter:title", content: "101 Cafés da Manhã para Substituir o Pão" },
+      { name: "twitter:description", content: "App provides 101 healthy breakfast recipes to replace bread, offering quick and practical meal solutions." },
       { name: "twitter:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/MxJJBmWryoTgTvwVm5NbtezPF8H3/social-images/social-1780358555181-878787878.webp" },
     ],
     links: [
