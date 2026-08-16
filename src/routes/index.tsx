@@ -120,7 +120,7 @@ function Index() {
             <div className="space-y-6 px-2 text-center lg:text-left">
               <h2 className="text-[clamp(1.8rem,6vw,3.5rem)] font-[family-name:var(--font-anton)] uppercase leading-[1.1]">
                 VOCÊ AINDA COME SEMPRE PÃO<br/>
-                <span className="text-[#D64D3F]">NO CAFÈ DA MANHÃ?</span>
+                <span className="text-brand-red">NO CAFÉ DA MANHÃ?</span>
               </h2>
               <div className="w-20 h-2 bg-[#D64D3F] rounded-full mx-auto lg:mx-0" />
               <p className="text-lg text-[#1B4332]/80 leading-relaxed font-medium">
