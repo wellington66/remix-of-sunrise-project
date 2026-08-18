@@ -141,7 +141,7 @@ function Index() {
               <div className="text-4xl font-[family-name:var(--font-anton)]">R$ 17,90</div>
             </div>
             <a href={CHECKOUT_ESSENCIAL} className="inline-block text-center bg-transparent border-2 border-[#2D6A4F] text-[#2D6A4F] px-8 py-4 rounded-full font-black uppercase tracking-widest text-sm shadow-sm hover:bg-[#2D6A4F]/5 hover:scale-105 transition-all cursor-pointer">
-              QUERO AS RECEITAS AGORA
+              BAIXAR AS 101 RECEITAS AGORA
             </a>
 
             <div className="flex flex-wrap justify-center gap-4 text-[10px] font-bold text-[#1B4332]/60">
@@ -192,7 +192,7 @@ function Index() {
               </ul>
               <div className="pt-8">
                 <a href={CHECKOUT_COMBO} className="inline-block text-center bg-brand-red text-white px-8 py-4 rounded-full font-black uppercase tracking-widest text-sm shadow-xl hover:scale-105 transition-transform cursor-pointer w-full lg:w-auto ring-4 ring-brand-red/20">
-                  QUERO SAIR DA ROTINA DO PÃO
+                  SIM! QUERO VARIAR MEU CAFÉ DA MANHÃ HOJE
                 </a>
 
               </div>
@@ -413,7 +413,7 @@ function Index() {
                 <li className="flex items-center gap-2 opacity-30 line-through"><Minus className="w-4 h-4" /> Bônus Exclusivos</li>
               </ul>
               <button type="button" onClick={openDownsell} className="w-full mt-auto bg-transparent border-2 border-[#1B4332] text-[#1B4332] py-5 rounded-full font-black uppercase tracking-widest text-sm hover:bg-[#1B4332]/5 hover:scale-105 transition-all cursor-pointer">
-                QUERO O GUIA
+                QUERO SÓ O GUIA POR R$ 17,90
               </button>
 
               
@@ -471,7 +471,7 @@ function Index() {
                 <li className="flex items-center gap-3 font-black text-base"><CheckCircle2 className="w-5 h-5 text-brand-red shrink-0" /> Suporte Prioritário VIP</li>
               </ul>
               <a href={CHECKOUT_COMBO} className="block text-center w-full mt-auto bg-brand-red text-white py-8 rounded-full font-black uppercase tracking-[0.2em] text-xl shadow-[0_20px_40px_rgba(186,28,28,0.3)] hover:scale-105 active:scale-95 transition-all cursor-pointer ring-4 ring-white/20 animate-pulse-ring">
-                EU QUERO O COMBO COMPLETO!
+                QUERO O COMBO + 5 BÔNUS
               </a>
 
             </div>
@@ -830,7 +830,7 @@ function Index() {
           </div>
         </div>
         <button type="button" onClick={openDownsell} className="bg-brand-red text-white px-8 py-3 rounded-full font-black uppercase tracking-widest text-[0.7rem] shadow-xl animate-pulse active:scale-95 transition-transform cursor-pointer">
-          COMPRAR AGORA
+          GARANTIR ACESSO IMEDIATO
         </button>
       </div>
 
@@ -868,7 +868,7 @@ function Index() {
               href={CHECKOUT_DESCONTO}
               className="block w-full bg-brand-red text-white py-5 rounded-full font-black uppercase tracking-widest text-sm shadow-xl hover:scale-105 transition-transform"
             >
-              Quero com desconto
+              Quero garantir por R$ 23,90
             </a>
             <button
               type="button"
