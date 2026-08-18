@@ -830,7 +830,7 @@ function Index() {
           </div>
         </div>
         <button type="button" onClick={openDownsell} className="bg-brand-red text-white px-8 py-3 rounded-full font-black uppercase tracking-widest text-[0.7rem] shadow-xl animate-pulse active:scale-95 transition-transform cursor-pointer">
-          COMPRAR AGORA
+          GARANTIR ACESSO IMEDIATO
         </button>
       </div>
 
