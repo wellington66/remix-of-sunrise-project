@@ -49,7 +49,14 @@ interface Testimonial {
   likes: number;
   avatar: string;
   stars?: number;
+  /** Cidade/UF para dar contexto real ao depoimento. */
+  city?: string;
+  /** Destaca o card (borda vermelha + selo). */
+  highlight?: boolean;
+  /** Resposta pública da equipe, como em comentários reais. */
+  reply?: string;
 }
+
 
 function Index() {
   const [showDownsell, setShowDownsell] = useState(false);
