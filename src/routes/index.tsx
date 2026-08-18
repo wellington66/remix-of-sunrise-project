@@ -471,7 +471,7 @@ function Index() {
                 <li className="flex items-center gap-3 font-black text-base"><CheckCircle2 className="w-5 h-5 text-brand-red shrink-0" /> Suporte Prioritário VIP</li>
               </ul>
               <a href={CHECKOUT_COMBO} className="block text-center w-full mt-auto bg-brand-red text-white py-8 rounded-full font-black uppercase tracking-[0.2em] text-xl shadow-[0_20px_40px_rgba(186,28,28,0.3)] hover:scale-105 active:scale-95 transition-all cursor-pointer ring-4 ring-white/20 animate-pulse-ring">
-                EU QUERO O COMBO COMPLETO!
+                QUERO O COMBO + 5 BÔNUS
               </a>
 
             </div>
