@@ -868,7 +868,7 @@ function Index() {
               href={CHECKOUT_DESCONTO}
               className="block w-full bg-brand-red text-white py-5 rounded-full font-black uppercase tracking-widest text-sm shadow-xl hover:scale-105 transition-transform"
             >
-              Quero com desconto
+              Quero garantir por R$ 23,90
             </a>
             <button
               type="button"
