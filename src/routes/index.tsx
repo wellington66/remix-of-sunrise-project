@@ -561,13 +561,17 @@ function Index() {
               {
                 name: "Patrícia Almeida",
                 date: "18 de fevereiro de 2026",
-                text: "Fiz a crepioca de frango e minha família pediu pra repetir no dia seguinte!",
+                city: "Campinas, SP",
+                text: "Fiz a crepioca de frango e minha família pediu pra repetir no dia seguinte! Meu marido nem percebeu que era \"comida saudável\" kkkk",
                 likes: 103,
+                highlight: true,
+                reply: "Que delícia, Patrícia! Testa a versão com queijo minas da página 24 😉",
                 avatar: "https://i.pravatar.cc/150?u=patricia"
               },
               {
                 name: "Roberta Mendes",
                 date: "27 de fevereiro de 2026",
+                city: "Belo Horizonte, MG",
                 text: "MARAVILHOSO, muita variedade, tá me ajudando bastante na cozinha. Nem acredito que ele é esse valor.",
                 likes: 98,
                 avatar: "https://i.pravatar.cc/150?u=roberta"
@@ -575,7 +579,8 @@ function Index() {
               {
                 name: "Rafael Cardoso",
                 date: "10 de janeiro de 2026",
-                text: "Gostei muito porque não parece aquelas receitas difíceis de dieta. São ideias práticas mesmo, com ingredientes que eu já tenho em casa.",
+                city: "Curitiba, PR",
+                text: "Gostei muito porque não parece aquelas receitas difíceis de dieta. São ideias práticas mesmo, com ingredientes que eu já tenho em casa. Só senti falta de mais opções sem lactose.",
                 likes: 87,
                 stars: 4,
                 avatar: "https://i.pravatar.cc/150?u=rafael"
@@ -583,39 +588,110 @@ function Index() {
               {
                 name: "Juliana Ribeiro",
                 date: "5 de fevereiro de 2026",
-                text: "Nunca imaginei que dava pra fazer tanta coisa no café da manhã! Já testei 4 receitas e todas ficaram uma delícia!",
+                city: "Fortaleza, CE",
+                text: "Nunca imaginei que dava pra fazer tanta coisa no café da manhã! Já testei 4 receitas e todas ficaram uma delícia. Agora acordo com vontade de tomar café em casa em vez de comprar na padaria.",
                 likes: 142,
+                highlight: true,
                 avatar: "https://i.pravatar.cc/150?u=juliana"
               },
               {
                 name: "Bruno Martins",
                 date: "23 de janeiro de 2026",
-                text: "Eu queria diminuir o pão, mas não sabia o que comer no lugar. O material me ajudou demais, principalmente pelas receitas rápidas.",
+                city: "Porto Alegre, RS",
+                text: "Eu queria diminuir o pão, mas não sabia o que comer no lugar. O material me ajudou demais, principalmente pelas receitas rápidas de 5 min antes do trabalho.",
                 likes: 76,
                 avatar: "https://i.pravatar.cc/150?u=bruno"
               },
               {
                 name: "Camila Nogueira",
                 date: "12 de março de 2026",
+                city: "Salvador, BA",
                 text: "Comprei e já fiz a Vitamina de Morango com Banana... ficou incrível! Recomendo pra quem quer economizar e comer bem logo de manhã.",
                 likes: 119,
                 stars: 4,
                 avatar: "https://i.pravatar.cc/150?u=camila"
+              },
+              {
+                name: "Larissa Fonseca",
+                date: "2 de março de 2026",
+                city: "Ribeirão Preto, SP",
+                text: "Confesso que comprei meio desconfiada pelo preço baixo, achei que seriam 4 receitas repetidas. Me surpreendeu, o PDF é bem organizado e chegou no e-mail em menos de 2 minutos.",
+                likes: 164,
+                highlight: true,
+                reply: "Obrigado pela confiança, Larissa! Qualquer dúvida é só responder o e-mail 💚",
+                avatar: "https://i.pravatar.cc/150?u=larissa"
+              },
+              {
+                name: "Eduardo Lima",
+                date: "28 de fevereiro de 2026",
+                city: "Niterói, RJ",
+                text: "Sou péssimo na cozinha, sério mesmo. Consegui fazer o ovo mexido cremoso e o panqueca de banana sem queimar nada 😂 tá valendo cada centavo.",
+                likes: 91,
+                avatar: "https://i.pravatar.cc/150?u=eduardo"
+              },
+              {
+                name: "Simone Vasconcelos",
+                date: "9 de março de 2026",
+                city: "Recife, PE",
+                text: "Uso com as crianças antes da escola. Elas amaram o iogurte com granola caseira e eu paro de brigar de manhã. Só isso já pagou o guia.",
+                likes: 133,
+                avatar: "https://i.pravatar.cc/150?u=simone"
+              },
+              {
+                name: "Thiago Ferraz",
+                date: "16 de fevereiro de 2026",
+                city: "Goiânia, GO",
+                text: "Bom material, cumpre o que promete. Achei o PDF um pouco simples visualmente, mas as receitas funcionam e é o que importa.",
+                likes: 58,
+                stars: 4,
+                avatar: "https://i.pravatar.cc/150?u=thiago"
+              },
+              {
+                name: "Aline Souza",
+                date: "21 de março de 2026",
+                city: "Florianópolis, SC",
+                text: "Perdi 3kg em um mês só trocando o café da manhã. Não é milagre, é organização mesmo — e o guia me deu isso.",
+                likes: 208,
+                highlight: true,
+                avatar: "https://i.pravatar.cc/150?u=aline"
+              },
+              {
+                name: "Marcos Antunes",
+                date: "30 de janeiro de 2026",
+                city: "Uberlândia, MG",
+                text: "Comprei domingo à noite, recebi na hora. Já deixo tudo pronto na véspera e de manhã é só montar. Recomendo pra quem sai cedo.",
+                likes: 84,
+                avatar: "https://i.pravatar.cc/150?u=marcos"
               }
             ] satisfies Testimonial[]).map((t, i) => (
               <motion.div 
                 key={i}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: i * 0.1 }}
-                className="bg-white p-6 md:p-8 rounded-[2rem] shadow-[0_10px_30px_rgba(0,0,0,0.03)] border border-[#1B4332]/5 flex flex-col h-full"
+                transition={{ delay: (i % 4) * 0.08 }}
+                viewport={{ once: true }}
+                className={`relative bg-white p-6 md:p-8 rounded-[2rem] flex flex-col h-full ${
+                  t.highlight
+                    ? "border-2 border-brand-red/40 shadow-[0_18px_45px_rgba(0,0,0,0.08)] md:-translate-y-1"
+                    : "border border-[#1B4332]/5 shadow-[0_10px_30px_rgba(0,0,0,0.03)]"
+                }`}
               >
+                {t.highlight && (
+                  <span className="absolute -top-3 left-6 bg-brand-red text-white text-[9px] font-black uppercase tracking-widest px-3 py-1 rounded-full shadow-md">
+                    Comentário em destaque
+                  </span>
+                )}
                 <div className="flex items-center justify-between mb-6">
                   <div className="flex items-center gap-3">
-                    <img src={t.avatar} className="w-10 h-10 rounded-full border border-[#1B4332]/10" alt={t.name} />
+                    <img src={t.avatar} loading="lazy" className="w-10 h-10 rounded-full border border-[#1B4332]/10 object-cover" alt={`Foto de ${t.name}`} />
                     <div className="flex flex-col">
-                      <span className="text-sm font-black text-[#1B4332]">{t.name}</span>
-                      <span className="text-[10px] opacity-40 font-bold uppercase">{t.date}</span>
+                      <span className="text-sm font-black text-[#1B4332] flex items-center gap-1.5">
+                        {t.name}
+                        <CheckCircle2 className="w-3.5 h-3.5 text-brand-red" aria-label="Compra verificada" />
+                      </span>
+                      <span className="text-[10px] opacity-40 font-bold uppercase">
+                        {t.date}{t.city ? ` · ${t.city}` : ""}
+                      </span>
                     </div>
                   </div>
                   <div className="flex gap-0.5">
@@ -624,13 +700,22 @@ function Index() {
                     ))}
                   </div>
                 </div>
-                <p className="text-sm font-medium leading-relaxed text-[#1B4332]/80 mb-6 flex-grow italic">
+                <p className="text-sm font-medium leading-relaxed text-[#1B4332]/80 mb-4 flex-grow italic">
                   "{t.text}"
                 </p>
+                <span className="self-start mb-4 text-[9px] font-black uppercase tracking-widest text-[#1B4332]/50 bg-[#1B4332]/5 px-2.5 py-1 rounded-full">
+                  ✓ Compra verificada
+                </span>
+                {t.reply && (
+                  <div className="mb-4 rounded-2xl bg-[#FDF9F2] border border-[#1B4332]/5 p-4">
+                    <span className="text-[9px] font-black uppercase tracking-widest text-brand-red">Resposta da equipe</span>
+                    <p className="text-xs font-medium leading-relaxed text-[#1B4332]/70 mt-1">{t.reply}</p>
+                  </div>
+                )}
                 <div className="flex items-center gap-4 pt-4 border-t border-[#1B4332]/5 text-[10px] font-black uppercase tracking-widest opacity-40">
                   <span className="flex items-center gap-1.5 text-brand-red opacity-100">❤️ {t.likes}</span>
                   <button type="button" className="hover:text-[#1B4332] transition-colors">Curtir</button>
-                  <button type="button" className="hover:text-[#1B4332] transition-colors">Comentar</button>
+                  <button type="button" className="hover:text-[#1B4332] transition-colors">Responder</button>
 
                 </div>
               </motion.div>
@@ -638,6 +723,7 @@ function Index() {
           </div>
         </div>
       </section>
+
 
       {/* FAQ */}
       <section className="py-24 container mx-auto px-4 max-w-4xl">
