@@ -139,6 +139,7 @@ function Index() {
             <div className="text-[#1B4332] font-black">
               <span className="text-sm">POR APENAS</span>
               <div className="text-4xl font-[family-name:var(--font-anton)]">R$ 17,00</div>
+              <span className="block text-xs font-bold opacity-60 mt-1">ou 12x de R$ 1,79 no cartão</span>
             </div>
             <a href={CHECKOUT_ESSENCIAL} className="inline-block text-center bg-transparent border-2 border-[#2D6A4F] text-[#2D6A4F] px-8 py-4 rounded-full font-black uppercase tracking-widest text-sm shadow-sm hover:bg-[#2D6A4F]/5 hover:scale-105 transition-all cursor-pointer">
               BAIXAR AS 101 RECEITAS AGORA
@@ -406,6 +407,7 @@ function Index() {
               <div className="text-center mb-8">
                 <span className="text-sm line-through opacity-40 block font-bold">DE R$ 47,00</span>
                 <span className="text-5xl font-[family-name:var(--font-anton)] text-[#1B4332]">R$ 17,00</span>
+                <span className="block text-xs font-bold opacity-60 mt-2">ou 12x de R$ 1,79 no cartão</span>
               </div>
               <ul className="text-left w-full space-y-4 mb-8 text-sm opacity-80">
                 <li className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-brand-red" /> Guia com 101 Receitas</li>
@@ -463,6 +465,7 @@ function Index() {
               <div className="text-center mb-8">
                 <span className="text-sm line-through text-[#1B4332]/40 block font-bold">DE R$ 97,00</span>
                 <span className="text-6xl md:text-7xl font-[family-name:var(--font-anton)] text-[#1B4332] drop-shadow-sm">R$ 27,00</span>
+                <span className="block text-sm font-bold text-[#1B4332]/60 mt-2">ou 12x de R$ 2,84 no cartão</span>
               </div>
               <ul className="text-left w-full space-y-4 mb-8 text-sm text-[#1B4332]">
                 <li className="flex items-center gap-3 font-black text-base"><CheckCircle2 className="w-5 h-5 text-brand-red shrink-0" /> Guia com 101 Receitas</li>
@@ -828,6 +831,7 @@ function Index() {
             <span className="text-[0.7rem] font-bold text-[#1B4332]/60">R$</span>
             <span className="text-2xl font-[family-name:var(--font-anton)] text-[#1B4332] leading-none">17,00</span>
           </div>
+          <span className="text-[0.55rem] font-bold text-[#1B4332]/60 leading-none mt-0.5">ou 12x de R$ 1,79</span>
         </div>
         <button type="button" onClick={openDownsell} className="bg-brand-red text-white px-8 py-3 rounded-full font-black uppercase tracking-widest text-[0.7rem] shadow-xl animate-pulse active:scale-95 transition-transform cursor-pointer">
           GARANTIR ACESSO IMEDIATO
