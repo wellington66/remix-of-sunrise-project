@@ -99,6 +99,8 @@ function Index() {
   }, []);
 
   // Observa a seção da oferta principal (R$ 27,00) para atualizar a sticky bar.
+  // Uma vez que o usuário chega à oferta de R$ 27,00, o preço fica fixo nela
+  // e NÃO retorna mais para R$ 17,00 ao rolar para cima.
   useEffect(() => {
     const el = comboRef.current;
     if (!el) return;
@@ -107,8 +109,6 @@ function Index() {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             setComboInView(true);
-          } else {
-            setComboInView(false);
           }
         });
       },
