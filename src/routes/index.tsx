@@ -244,13 +244,35 @@ function Index() {
 
       {/* Recipe Gallery */}
       <section className="py-24 container mx-auto px-4">
-        <div className="text-center max-w-3xl mx-auto mb-20 space-y-4">
+        <div className="text-center max-w-3xl mx-auto mb-14 space-y-5">
+          <span className="inline-block bg-brand-red/10 text-brand-red px-4 py-2 rounded-full text-[10px] font-black uppercase tracking-widest">
+            Guia completo 🍳
+          </span>
           <h2 className="text-4xl md:text-6xl font-[family-name:var(--font-anton)] uppercase leading-none text-[#1B4332]">
-            VEJA O QUE VOCÊ VAI <br/>
-            <span className="text-brand-red">ENCONTRAR NO GUIA</span>
+            SÃO <span className="text-brand-red">101 RECEITAS</span> <br/>
+            PARA SUBSTITUIR O PÃO
           </h2>
-          <p className="text-[#1B4332]/60 font-bold uppercase tracking-widest text-xs">Transforme sua saúde com cada refeição</p>
+          <p className="text-[#1B4332]/60 font-bold uppercase tracking-widest text-xs">Veja abaixo apenas 6 das 101 receitas do guia</p>
         </div>
+
+        <div className="max-w-3xl mx-auto mb-16">
+          <div className="bg-[#1B4332] text-white rounded-[2rem] px-6 py-8 md:px-10 md:py-10 shadow-[0_25px_60px_rgba(27,67,50,0.25)] relative overflow-hidden">
+            <div className="absolute -top-10 -right-10 w-40 h-40 rounded-full bg-brand-red/20 blur-2xl" />
+            <div className="relative z-10 flex flex-col md:flex-row items-center justify-center gap-6 md:gap-10 text-center md:text-left">
+              <div className="shrink-0">
+                <div className="text-6xl md:text-8xl font-[family-name:var(--font-anton)] leading-none text-white">101</div>
+                <div className="text-[10px] font-black uppercase tracking-[0.3em] text-white/70 mt-1">Receitas</div>
+              </div>
+              <div className="h-px w-24 md:h-20 md:w-px bg-white/20" />
+              <div className="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-1 lg:grid-cols-3 gap-4 text-xs font-bold">
+                <span className="flex items-center gap-2 justify-center md:justify-start"><CheckCircle2 className="w-4 h-4 text-brand-red shrink-0" /> Até 15 minutos</span>
+                <span className="flex items-center gap-2 justify-center md:justify-start"><CheckCircle2 className="w-4 h-4 text-brand-red shrink-0" /> Sem pão e low carb</span>
+                <span className="flex items-center gap-2 justify-center md:justify-start"><CheckCircle2 className="w-4 h-4 text-brand-red shrink-0" /> Ingredientes baratos</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
           {[
@@ -289,7 +311,12 @@ function Index() {
             </motion.div>
           ))}
         </div>
+
+        <p className="text-center mt-10 text-sm font-black uppercase tracking-widest text-[#1B4332]">
+          + <span className="text-brand-red">95 receitas</span> esperando por você dentro do guia
+        </p>
       </section>
+
 
       {/* Bonus Section */}
       <section className="py-24 bg-white overflow-hidden">
