@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { motion } from "framer-motion";
 import { CheckCircle2, Star, ShieldCheck, Zap, ArrowDown, Timer, Calendar, Coffee, Utensils, Smartphone, Gift, Minus, Wallet, BookOpen } from "lucide-react";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 
 // Caminhos estáticos robustos para a pasta public/assets
 const heroBookUrl = "/assets/hero-book.png";
@@ -61,6 +61,11 @@ interface Testimonial {
 function Index() {
   const [showDownsell, setShowDownsell] = useState(false);
 
+  // Quando a oferta de R$ 27,00 (combo principal) entra na tela, a sticky bar
+  // passa a exibir o preço e o checkout dessa oferta principal.
+  const [comboInView, setComboInView] = useState(false);
+  const comboRef = useRef<HTMLDivElement>(null);
+
   const [downsellShown, setDownsellShown] = useState(false);
 
   const openDownsell = () => {
@@ -92,6 +97,27 @@ function Index() {
     const mm = (now.getMonth() + 1).toString().padStart(2, "0");
     setOfferDate(`${dd}/${mm}/${now.getFullYear()}`);
   }, []);
+
+  // Observa a seção da oferta principal (R$ 27,00) para atualizar a sticky bar.
+  useEffect(() => {
+    const el = comboRef.current;
+    if (!el) return;
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setComboInView(true);
+          } else {
+            setComboInView(false);
+          }
+        });
+      },
+      { threshold: 0.4 }
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
+
 
 
   return (
@@ -526,7 +552,7 @@ function Index() {
 
 
             {/* Complete */}
-            <div className="bg-white border-4 border-brand-red p-8 md:p-14 rounded-[2.5rem] md:rounded-[3.5rem] flex flex-col items-center relative shadow-[0_50px_100px_rgba(186,28,28,0.2)] md:scale-110 z-10 group ring-8 ring-brand-red/5">
+            <div ref={comboRef} className="bg-white border-4 border-brand-red p-8 md:p-14 rounded-[2.5rem] md:rounded-[3.5rem] flex flex-col items-center relative shadow-[0_50px_100px_rgba(186,28,28,0.2)] md:scale-110 z-10 group ring-8 ring-brand-red/5">
               <div className="absolute -top-6 left-1/2 -translate-x-1/2 bg-brand-red text-white px-8 py-2.5 rounded-full text-xs font-black uppercase tracking-[0.2em] whitespace-nowrap shadow-2xl animate-bounce">
                 OFERTA MAIS POPULAR ✨
               </div>
@@ -902,19 +928,25 @@ function Index() {
         <div className="absolute bottom-0 left-0 w-96 h-96 bg-[#1B4332]/5 rounded-full blur-[100px] -ml-48 -mb-48" />
       </footer>
 
-      {/* Mobile Sticky CTA */}
+      {/* Mobile Sticky CTA — quando a oferta de R$ 27,00 está visível, atualiza preço e checkout */}
       <div className="md:hidden fixed bottom-0 left-0 right-0 bg-white/90 backdrop-blur-md border-t border-[#1B4332]/10 p-4 z-[100] flex items-center justify-between shadow-[0_-10px_30px_rgba(0,0,0,0.08)] safe-area-inset-bottom">
         <div className="flex flex-col">
-          <span className="text-[0.6rem] text-brand-red line-through font-black leading-none opacity-50">R$ 47,00</span>
+          <span className="text-[0.6rem] text-brand-red line-through font-black leading-none opacity-50">{comboInView ? "R$ 97,00" : "R$ 47,00"}</span>
           <div className="flex items-baseline gap-1">
             <span className="text-[0.7rem] font-bold text-[#1B4332]/60">R$</span>
-            <span className="text-2xl font-[family-name:var(--font-anton)] text-[#1B4332] leading-none">17,00</span>
+            <span className="text-2xl font-[family-name:var(--font-anton)] text-[#1B4332] leading-none">{comboInView ? "27,00" : "17,00"}</span>
           </div>
-          <span className="text-[0.55rem] font-bold text-[#1B4332]/60 leading-none mt-0.5">ou 12x de R$ 1,79</span>
+          <span className="text-[0.55rem] font-bold text-[#1B4332]/60 leading-none mt-0.5">ou 12x de R$ {comboInView ? "2,84" : "1,79"}</span>
         </div>
-        <button type="button" onClick={openDownsell} className="bg-brand-red text-white px-8 py-3 rounded-full font-black uppercase tracking-widest text-[0.7rem] shadow-xl animate-pulse active:scale-95 transition-transform cursor-pointer">
-          GARANTIR ACESSO IMEDIATO
-        </button>
+        {comboInView ? (
+          <a href={CHECKOUT_COMBO} className="bg-brand-red text-white px-8 py-3 rounded-full font-black uppercase tracking-widest text-[0.7rem] shadow-xl animate-pulse active:scale-95 transition-transform cursor-pointer text-center">
+            QUERO O COMBO + 5 BÔNUS
+          </a>
+        ) : (
+          <button type="button" onClick={openDownsell} className="bg-brand-red text-white px-8 py-3 rounded-full font-black uppercase tracking-widest text-[0.7rem] shadow-xl animate-pulse active:scale-95 transition-transform cursor-pointer">
+            GARANTIR ACESSO IMEDIATO
+          </button>
+        )}
       </div>
 
       {/* Pop-up de desconto (saída + clique na oferta essencial) */}
