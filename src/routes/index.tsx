@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { motion } from "framer-motion";
-import { CheckCircle2, Star, ShieldCheck, Zap, ArrowDown, Timer, Calendar, Coffee, Utensils, Smartphone, Gift, Minus, Wallet, BookOpen } from "lucide-react";
+import { CheckCircle2, Star, ShieldCheck, Zap, ArrowDown, Timer, Calendar, Coffee, Utensils, Smartphone, Gift, Minus, Wallet, BookOpen, RefreshCw, Ban, Croissant } from "lucide-react";
 import { useState, useEffect, useRef } from "react";
 
 // Caminhos estáticos robustos para a pasta public/assets
@@ -197,48 +197,55 @@ function Index() {
       </div>
 
 
-      {/* AIDA: Interest */}
-      <section className="py-24 bg-white relative">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-[clamp(2rem,10vw,4rem)] items-center max-w-7xl mx-auto">
-            <div className="space-y-6 px-2 text-center lg:text-left">
-              <h2 className="text-[clamp(1.8rem,6vw,3.5rem)] font-[family-name:var(--font-anton)] uppercase leading-[1.1]">
-                VOCÊ AINDA COME SEMPRE PÃO<br/>
-                <span className="text-brand-red">NO CAFÉ DA MANHÃ?</span>
-              </h2>
-              <div className="w-20 h-2 bg-brand-red rounded-full mx-auto lg:mx-0" />
-              <p className="text-lg text-[#1B4332]/80 leading-relaxed font-medium">
-                O pão é rápido, prático e faz parte da rotina, mas muita gente acaba comendo sempre a mesma coisa por falta de ideias simples e saudáveis. Isso acontece com você?
-              </p>
-              <ul className="space-y-4 text-left inline-block">
-                {["Fim da sonolência pós-café", "Intestino funcionando como um relógio", "Redução visível de medidas na primeira semana"].map((item, i) => (
-                  <li key={i} className="flex items-center gap-3 font-bold text-sm uppercase tracking-wide">
-                    <CheckCircle2 className="w-5 h-5 text-brand-red" /> {item}
-                  </li>
-                ))}
-              </ul>
-              <div className="pt-8">
-                <a href={CHECKOUT_COMBO} className="inline-block text-center bg-brand-red text-white px-8 py-4 rounded-full font-black uppercase tracking-widest text-sm shadow-xl hover:scale-105 transition-transform cursor-pointer w-full lg:w-auto ring-4 ring-brand-red/20">
-                  SIM! QUERO VARIAR MEU CAFÉ DA MANHÃ HOJE
-                </a>
+       {/* AIDA: Interest — pain points (baseado na referência enviada) */}
+       <section className="py-24 bg-[#FFF9F5] relative">
+         <div className="container mx-auto px-4 max-w-6xl">
+           {/* Headline + intro centralizados */}
+           <div className="text-center max-w-3xl mx-auto mb-14">
+             <h2 className="text-[clamp(1.8rem,6vw,3.5rem)] font-[family-name:var(--font-anton)] uppercase leading-[1.1] text-black">
+               VOCÊ AINDA COME SEMPRE PÃO<br/>
+               <span className="text-brand-red">NO CAFÉ DA MANHÃ?</span>
+             </h2>
+             <p className="mt-6 text-base md:text-lg text-[#333333] leading-relaxed font-medium">
+               O pão é rápido, prático e faz parte da rotina, mas muita gente acaba comendo sempre a mesma coisa por falta de ideias simples e saudáveis. Isso acontece com você?
+             </p>
+           </div>
 
-              </div>
-            </div>
-            <div className="relative">
-              <div className="absolute -inset-4 bg-[#1B4332]/5 rounded-full blur-3xl opacity-50" />
-              <div className="relative group bg-transparent">
-                <img
-                  src={mockupChefUrl}
-                  className="w-full h-auto object-contain bg-transparent drop-shadow-[0_25px_50px_rgba(27,67,50,0.18)] transition-transform duration-700 group-hover:scale-105"
-                  alt="Guia 101 Cafés da Manhã Saudáveis com a chef e o app de receitas"
-                  loading="lazy"
-                />
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </section>
+           {/* Grid 2x3 de pain points */}
+           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6">
+             {[
+               { icon: RefreshCw, color: "#3B82F6", bg: "#EFF6FF", text: "Não quer depender do pão no café da manhã todos os dias" },
+               { icon: Croissant, color: "#EAB308", bg: "#FEF9C3", text: "Busca opções simples e saudáveis" },
+               { icon: Wallet, color: "#16A34A", bg: "#F0FDF4", text: "Quer economizar no mercado" },
+               { icon: Ban, color: "#DC2626", bg: "#FEF2F2", text: "Não sabe o que comer no lugar do pão" },
+               { icon: Utensils, color: "#9333EA", bg: "#FAF5FF", text: "Quer opções completas para variar" },
+               { icon: Timer, color: "#EA580C", bg: "#FFF7ED", text: "Quero ideias rápidas para a semana" },
+             ].map((item, i) => {
+               const Icon = item.icon;
+               return (
+                 <motion.div
+                   key={i}
+                   initial={{ opacity: 0, y: 24 }}
+                   whileInView={{ opacity: 1, y: 0 }}
+                   viewport={{ once: true, amount: 0.3 }}
+                   transition={{ duration: 0.5, delay: i * 0.08, ease: "easeOut" }}
+                   className="bg-white rounded-2xl p-6 md:p-7 flex items-center gap-4 shadow-[0_10px_30px_rgba(0,0,0,0.06)] border border-black/[0.04] hover:-translate-y-1 transition-transform"
+                 >
+                   <div
+                     className="shrink-0 w-14 h-14 md:w-16 md:h-16 rounded-2xl flex items-center justify-center"
+                     style={{ backgroundColor: item.bg }}
+                   >
+                     <Icon className="w-7 h-7 md:w-8 md:h-8" style={{ color: item.color }} strokeWidth={2.2} />
+                   </div>
+                   <p className="text-[#1B4332] font-semibold text-sm md:text-base leading-snug">
+                     {item.text}
+                   </p>
+                 </motion.div>
+               );
+             })}
+           </div>
+         </div>
+       </section>
 
       {/* Scarcity Banner Section (Moved) */}
       <div className="py-12 flex flex-col items-center justify-center text-center px-4">
