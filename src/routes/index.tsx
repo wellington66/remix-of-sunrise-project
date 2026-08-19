@@ -23,8 +23,8 @@ const omeleteEspecialUrl = "/assets/omelete_misto.png";
 const mockupChefUrl = "/assets/mockup-chef.png";
 
 /** Links de checkout (Cakto) */
-const CHECKOUT_ESSENCIAL = "https://pay.cakto.com.br/yxpuem5"; // R$ 17,90
-const CHECKOUT_COMBO = "https://pay.cakto.com.br/3ck4gyx_1043502"; // R$ 27,90
+const CHECKOUT_ESSENCIAL = "https://pay.cakto.com.br/yxpuem5"; // R$ 17,00
+const CHECKOUT_COMBO = "https://pay.cakto.com.br/3ck4gyx_1043502"; // R$ 27,00
 const CHECKOUT_DESCONTO = "https://pay.cakto.com.br/7isvqqv"; // R$ 23,90 (downsell)
 
 
@@ -138,7 +138,7 @@ function Index() {
           <div className="flex flex-col items-center gap-4 mb-8">
             <div className="text-[#1B4332] font-black">
               <span className="text-sm">POR APENAS</span>
-              <div className="text-4xl font-[family-name:var(--font-anton)]">R$ 17,90</div>
+              <div className="text-4xl font-[family-name:var(--font-anton)]">R$ 17,00</div>
             </div>
             <a href={CHECKOUT_ESSENCIAL} className="inline-block text-center bg-transparent border-2 border-[#2D6A4F] text-[#2D6A4F] px-8 py-4 rounded-full font-black uppercase tracking-widest text-sm shadow-sm hover:bg-[#2D6A4F]/5 hover:scale-105 transition-all cursor-pointer">
               BAIXAR AS 101 RECEITAS AGORA
@@ -405,7 +405,7 @@ function Index() {
               </div>
               <div className="text-center mb-8">
                 <span className="text-sm line-through opacity-40 block font-bold">DE R$ 47,00</span>
-                <span className="text-5xl font-[family-name:var(--font-anton)] text-[#1B4332]">R$ 17,90</span>
+                <span className="text-5xl font-[family-name:var(--font-anton)] text-[#1B4332]">R$ 17,00</span>
               </div>
               <ul className="text-left w-full space-y-4 mb-8 text-sm opacity-80">
                 <li className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-brand-red" /> Guia com 101 Receitas</li>
@@ -413,7 +413,7 @@ function Index() {
                 <li className="flex items-center gap-2 opacity-30 line-through"><Minus className="w-4 h-4" /> Bônus Exclusivos</li>
               </ul>
               <button type="button" onClick={openDownsell} className="w-full mt-auto bg-transparent border-2 border-[#1B4332] text-[#1B4332] py-5 rounded-full font-black uppercase tracking-widest text-sm hover:bg-[#1B4332]/5 hover:scale-105 transition-all cursor-pointer">
-                QUERO SÓ O GUIA POR R$ 17,90
+                QUERO SÓ O GUIA POR R$ 17,00
               </button>
 
               
@@ -462,7 +462,7 @@ function Index() {
               </div>
               <div className="text-center mb-8">
                 <span className="text-sm line-through text-[#1B4332]/40 block font-bold">DE R$ 97,00</span>
-                <span className="text-6xl md:text-7xl font-[family-name:var(--font-anton)] text-[#1B4332] drop-shadow-sm">R$ 27,90</span>
+                <span className="text-6xl md:text-7xl font-[family-name:var(--font-anton)] text-[#1B4332] drop-shadow-sm">R$ 27,00</span>
               </div>
               <ul className="text-left w-full space-y-4 mb-8 text-sm text-[#1B4332]">
                 <li className="flex items-center gap-3 font-black text-base"><CheckCircle2 className="w-5 h-5 text-brand-red shrink-0" /> Guia com 101 Receitas</li>
@@ -826,7 +826,7 @@ function Index() {
           <span className="text-[0.6rem] text-brand-red line-through font-black leading-none opacity-50">R$ 47,00</span>
           <div className="flex items-baseline gap-1">
             <span className="text-[0.7rem] font-bold text-[#1B4332]/60">R$</span>
-            <span className="text-2xl font-[family-name:var(--font-anton)] text-[#1B4332] leading-none">17,90</span>
+            <span className="text-2xl font-[family-name:var(--font-anton)] text-[#1B4332] leading-none">17,00</span>
           </div>
         </div>
         <button type="button" onClick={openDownsell} className="bg-brand-red text-white px-8 py-3 rounded-full font-black uppercase tracking-widest text-[0.7rem] shadow-xl animate-pulse active:scale-95 transition-transform cursor-pointer">
@@ -861,7 +861,7 @@ function Index() {
               Só por agora: destrave o guia com <strong>tudo incluso</strong> por um preço menor.
             </p>
             <div className="mb-6">
-              <span className="block text-sm line-through opacity-40 font-bold">DE R$ 27,90</span>
+              <span className="block text-sm line-through opacity-40 font-bold">DE R$ 27,00</span>
               <span className="text-5xl font-[family-name:var(--font-anton)] text-brand-red">R$ 23,90</span>
             </div>
             <a
