@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { motion } from "framer-motion";
 import { CheckCircle2, Star, ShieldCheck, Zap, ArrowDown, Timer, Calendar, Coffee, Utensils, Smartphone, Gift, Minus, Wallet, BookOpen } from "lucide-react";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 
 // Caminhos estáticos robustos para a pasta public/assets
 const heroBookUrl = "/assets/hero-book.png";
