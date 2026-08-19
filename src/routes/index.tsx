@@ -61,6 +61,11 @@ interface Testimonial {
 function Index() {
   const [showDownsell, setShowDownsell] = useState(false);
 
+  // Quando a oferta de R$ 27,00 (combo principal) entra na tela, a sticky bar
+  // passa a exibir o preço e o checkout dessa oferta principal.
+  const [comboInView, setComboInView] = useState(false);
+  const comboRef = useRef<HTMLDivElement>(null);
+
   const [downsellShown, setDownsellShown] = useState(false);
 
   const openDownsell = () => {
