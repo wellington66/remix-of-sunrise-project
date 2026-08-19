@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { motion } from "framer-motion";
-import { CheckCircle2, Star, ShieldCheck, Zap, ArrowDown, Timer, Calendar, Coffee, Utensils, Smartphone, Gift, Minus } from "lucide-react";
+import { CheckCircle2, Star, ShieldCheck, Zap, ArrowDown, Timer, Calendar, Coffee, Utensils, Smartphone, Gift, Minus, Wallet, BookOpen } from "lucide-react";
 import { useState, useEffect } from "react";
 
 // Caminhos estáticos robustos para a pasta public/assets
@@ -302,8 +302,75 @@ function Index() {
         </p>
       </section>
 
+      {/* Benefits Grid Section */}
+      <section className="py-24 bg-[#FFF9F5] relative">
+        <div className="container mx-auto px-4">
+          <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
+            <span className="bg-brand-red/10 text-brand-red px-4 py-2 rounded-full text-[10px] font-black uppercase tracking-widest">
+              Por que o guia funciona
+            </span>
+            <h2 className="text-3xl md:text-5xl font-[family-name:var(--font-anton)] uppercase leading-tight text-[#1B4332]">
+              TUDO QUE VOCÊ PRECISA PARA <span className="text-brand-red">VARIAR SEU CAFÉ DA MANHÃ</span>
+            </h2>
+            <p className="text-[#1B4332]/60 font-bold uppercase tracking-widest text-xs">Simples, prático e direto ao ponto</p>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6 max-w-6xl mx-auto">
+            {[
+              {
+                icon: <Utensils className="w-6 h-6 md:w-7 md:h-7 text-[#7C3AED]" />,
+                title: "Saia da rotina do pão todo dia",
+                desc: "101 opções diferentes para você variar seu café da manhã de forma simples e prática.",
+              },
+              {
+                icon: <Wallet className="w-6 h-6 md:w-7 md:h-7 text-[#EA580C]" />,
+                title: "Ingredientes simples e acessíveis",
+                desc: "Use ingredientes baratos e fáceis de encontrar para preparar um café da manhã completo e saboroso.",
+              },
+              {
+                icon: <BookOpen className="w-6 h-6 md:w-7 md:h-7 text-[#2563EB]" />,
+                title: "Passo a passo completo",
+                desc: "Receitas claras, diretas e fáceis de seguir, mesmo para quem não tem muita prática na cozinha.",
+              },
+              {
+                icon: <Zap className="w-6 h-6 md:w-7 md:h-7 text-[#EA580C]" />,
+                title: "Receitas prontas em poucos minutos",
+                desc: "Em apenas 5 a 15 min você terá opções práticas para a sua rotina corrida.",
+              },
+              {
+                icon: <Coffee className="w-6 h-6 md:w-7 md:h-7 text-[#7C3AED]" />,
+                title: "Sem complicação",
+                desc: "Receitas com ingredientes fáceis de encontrar que você já tem na sua cozinha.",
+              },
+              {
+                icon: <Smartphone className="w-6 h-6 md:w-7 md:h-7 text-[#7C3AED]" />,
+                title: "Acesse onde quiser",
+                desc: "Use no celular, tablet ou computador — ou imprima suas receitas favoritas para deixar na cozinha.",
+              },
+            ].map((item, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: i * 0.05 }}
+                className="bg-[#F2F9F5] border border-[#E0E0E0] rounded-[1.25rem] p-5 md:p-6 flex items-start gap-4 shadow-[0_12px_30px_rgba(245,233,226,0.7)] hover:shadow-[0_18px_40px_rgba(245,233,226,0.9)] hover:-translate-y-1 transition-all duration-300"
+              >
+                <div className="shrink-0 w-11 h-11 md:w-12 md:h-12 rounded-xl bg-white flex items-center justify-center shadow-sm">
+                  {item.icon}
+                </div>
+                <div className="space-y-1">
+                  <h3 className="text-base md:text-lg font-black text-[#222222] leading-tight">{item.title}</h3>
+                  <p className="text-sm text-[#555555] leading-relaxed">{item.desc}</p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
 
       {/* Bonus Section */}
+
       <section className="py-24 bg-white overflow-hidden">
         <div className="container mx-auto px-4">
           <div className="text-center max-w-3xl mx-auto mb-20 space-y-4">
