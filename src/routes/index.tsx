@@ -552,7 +552,7 @@ function Index() {
 
 
             {/* Complete */}
-            <div className="bg-white border-4 border-brand-red p-8 md:p-14 rounded-[2.5rem] md:rounded-[3.5rem] flex flex-col items-center relative shadow-[0_50px_100px_rgba(186,28,28,0.2)] md:scale-110 z-10 group ring-8 ring-brand-red/5">
+            <div ref={comboRef} className="bg-white border-4 border-brand-red p-8 md:p-14 rounded-[2.5rem] md:rounded-[3.5rem] flex flex-col items-center relative shadow-[0_50px_100px_rgba(186,28,28,0.2)] md:scale-110 z-10 group ring-8 ring-brand-red/5">
               <div className="absolute -top-6 left-1/2 -translate-x-1/2 bg-brand-red text-white px-8 py-2.5 rounded-full text-xs font-black uppercase tracking-[0.2em] whitespace-nowrap shadow-2xl animate-bounce">
                 OFERTA MAIS POPULAR ✨
               </div>
