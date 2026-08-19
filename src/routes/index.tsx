@@ -98,6 +98,27 @@ function Index() {
     setOfferDate(`${dd}/${mm}/${now.getFullYear()}`);
   }, []);
 
+  // Observa a seção da oferta principal (R$ 27,00) para atualizar a sticky bar.
+  useEffect(() => {
+    const el = comboRef.current;
+    if (!el) return;
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setComboInView(true);
+          } else {
+            setComboInView(false);
+          }
+        });
+      },
+      { threshold: 0.4 }
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
+
+
 
   return (
     <div className="min-h-screen bg-white text-[#1B4332] font-[family-name:var(--font-inter)] selection:bg-[#D64D3F]/20 overflow-x-hidden w-full relative pb-24 md:pb-0">
