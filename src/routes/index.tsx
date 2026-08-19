@@ -311,7 +311,12 @@ function Index() {
             </motion.div>
           ))}
         </div>
+
+        <p className="text-center mt-10 text-sm font-black uppercase tracking-widest text-[#1B4332]">
+          + <span className="text-brand-red">95 receitas</span> esperando por você dentro do guia
+        </p>
       </section>
+
 
       {/* Bonus Section */}
       <section className="py-24 bg-white overflow-hidden">
